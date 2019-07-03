@@ -1,0 +1,3442 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{16AF7C64-A35B-4B5E-BC60-33F67DCB55D9}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>EMR_iCareComponent</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>iCare</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>iCare.frmPatientLabel</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\Bin\debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>true</NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AnaesthesiaService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=90124209a1289553, processorArchitecture=MSIL" />
+    <Reference Include="Anaesthesia_Apparatus_Control">
+      <Name>Anaesthesia_Apparatus_Control</Name>
+      <HintPath>..\..\bin\DEBUG\Anaesthesia_Apparatus_Control.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.GETICUCENTERDATAFORMLib, Version=1.0.0.0, Culture=neutral" />
+    <Reference Include="AxInterop.GETICUDATAFORMLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="AxInterop.NetCASecuForm, Version=1.2.0.0, Culture=neutral" />
+    <Reference Include="AxInterop.SDK_2000Lib">
+      <Name>AxInterop.SDK_2000Lib</Name>
+      <HintPath>..\..\bin\DEBUG\AxInterop.SDK_2000Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.SMS_control">
+      <Name>AxInterop.SMS_control</Name>
+      <HintPath>..\..\bin\Debug\AxInterop.SMS_control.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.WaveMonitorLib, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="BIHOrder, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="BIHOrderService, Version=2.0.0.1, Culture=neutral, PublicKeyToken=a28c1b8bab8f03da, processorArchitecture=MSIL" />
+    <Reference Include="Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CommonInfo">
+      <Name>CommonInfo</Name>
+      <HintPath>..\..\bin\Debug\CommonInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="ctlSecurForm">
+      <Name>ctlSecurForm</Name>
+      <HintPath>..\..\bin\Debug\ctlSecurForm.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomForm">
+      <Name>CustomForm</Name>
+      <HintPath>..\..\BIN\Debug\CustomForm.dll</HintPath>
+    </Reference>
+    <Reference Include="DateUtil">
+      <Name>DateUtil</Name>
+      <HintPath>..\ExternDll\DateUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="Digitalwave.ControlsLib, Version=3.0.0.0, Culture=neutral, PublicKeyToken=bbdca74e493306ff, processorArchitecture=MSIL" />
+    <Reference Include="DigitalWaveControls">
+      <Name>DigitalWaveControls</Name>
+      <HintPath>..\..\bin\Debug\DigitalWaveControls.dll</HintPath>
+    </Reference>
+    <Reference Include="DoctorOrder">
+      <Name>DoctorOrder</Name>
+      <HintPath>..\..\bin\Debug\DoctorOrder.dll</HintPath>
+    </Reference>
+    <Reference Include="DragDropTeeeView">
+      <Name>DragDropTeeeView</Name>
+      <HintPath>..\ExternDll\DragDropTeeeView.dll</HintPath>
+    </Reference>
+    <Reference Include="Emr.AssistModule, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Emr.AssistModuleServ, Version=1.0.0.0, Culture=neutral, PublicKeyToken=623bb7d0b12f64df, processorArchitecture=MSIL" />
+    <Reference Include="Emr.AssistModuleVO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a4cc6314c23ece79, processorArchitecture=MSIL" />
+    <Reference Include="Emr.DomainControls, Version=3.0.0.0, Culture=neutral, PublicKeyToken=3706371e4bc59968, processorArchitecture=MSIL" />
+    <Reference Include="Emr.Initializer, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Emr.LisCheckResult, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Emr.StaticObject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=345ab2ad0324e11c, processorArchitecture=MSIL" />
+    <Reference Include="Emr.Utility.ConfigService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0379e65aac68c0c7, processorArchitecture=MSIL" />
+    <Reference Include="Emr.Utility.DataShare, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7a072c4f6bd852db, processorArchitecture=MSIL" />
+    <Reference Include="EMR_AssistantToolService">
+      <Name>EMR_AssistantToolService</Name>
+      <HintPath>..\..\bin\Debug\EMR_AssistantToolService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_BASE_VO">
+      <Name>EMR_BASE_VO</Name>
+      <HintPath>..\..\bin\Debug\EMR_BASE_VO.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_BEDExplorer_GUI">
+      <Name>EMR_BEDExplorer_GUI</Name>
+      <HintPath>..\..\bin\Debug\EMR_BEDExplorer_GUI.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_CaseArchivingService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=263379e0c347cbef, processorArchitecture=MSIL" />
+    <Reference Include="EMR_CheckOrderService">
+      <Name>EMR_CheckOrderService</Name>
+      <HintPath>..\..\bin\Debug\EMR_CheckOrderService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_clsAfterOperationService">
+      <Name>EMR_clsAfterOperationService</Name>
+      <HintPath>..\..\bin\Debug\EMR_clsAfterOperationService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_clsDiseaseTrackService">
+      <Name>EMR_clsDiseaseTrackService</Name>
+      <HintPath>..\..\bin\Debug\EMR_clsDiseaseTrackService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_clsRecordsService">
+      <Name>EMR_clsRecordsService</Name>
+      <HintPath>..\..\bin\Debug\EMR_clsRecordsService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_DigitalSign">
+      <Name>EMR_DigitalSign</Name>
+      <HintPath>..\..\bin\Debug\EMR_DigitalSign.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_DigitalSign_srv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7708074b634e9f4e, processorArchitecture=MSIL" />
+    <Reference Include="EMR_DoctorRecordService">
+      <Name>EMR_DoctorRecordService</Name>
+      <HintPath>..\..\bin\Debug\EMR_DoctorRecordService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_DomainUserLoginInfoServ">
+      <Name>EMR_DomainUserLoginInfoServ</Name>
+      <HintPath>..\..\bin\Debug\EMR_DomainUserLoginInfoServ.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_EquipmentTypeService">
+      <Name>EMR_EquipmentTypeService</Name>
+      <HintPath>..\..\bin\Debug\EMR_EquipmentTypeService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_EvaluationRecordService">
+      <Name>EMR_EvaluationRecordService</Name>
+      <HintPath>..\ExternDll\EMR_EvaluationRecordService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_HospitalInfoService">
+      <Name>EMR_HospitalInfoService</Name>
+      <HintPath>..\..\bin\Debug\EMR_HospitalInfoService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_HospitalManagerService">
+      <Name>EMR_HospitalManagerService</Name>
+      <HintPath>..\..\bin\Debug\EMR_HospitalManagerService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_HRPControl">
+      <Name>EMR_HRPControl</Name>
+      <HintPath>..\..\bin\DEBUG\EMR_HRPControl.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_iCareControl">
+      <Name>EMR_iCareControl</Name>
+      <HintPath>..\..\bin\Debug\EMR_iCareControl.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_iCareData">
+      <Name>EMR_iCareData</Name>
+      <HintPath>..\..\bin\Debug\EMR_iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_iCareFormBase">
+      <Name>EMR_iCareFormBase</Name>
+      <HintPath>..\..\bin\Debug\EMR_iCareFormBase.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_iCareFunctionBase">
+      <Name>EMR_iCareFunctionBase</Name>
+      <HintPath>..\..\bin\Debug\EMR_iCareFunctionBase.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_iCareHospitalInfoBase">
+      <Name>EMR_iCareHospitalInfoBase</Name>
+      <HintPath>..\..\bin\Debug\EMR_iCareHospitalInfoBase.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_iCareValueObjectBase">
+      <Name>EMR_iCareValueObjectBase</Name>
+      <HintPath>..\..\bin\Debug\EMR_iCareValueObjectBase.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_ICD10Service">
+      <Name>EMR_ICD10Service</Name>
+      <HintPath>..\..\bin\Debug\EMR_ICD10Service.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_ICD10_Tool">
+      <Name>EMR_ICD10_Tool</Name>
+      <HintPath>..\..\bin\Debug\EMR_ICD10_Tool.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_ICD10_ValueObject">
+      <Name>EMR_ICD10_ValueObject</Name>
+      <HintPath>..\..\bin\Debug\EMR_ICD10_ValueObject.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_ICU_Service">
+      <Name>EMR_ICU_Service</Name>
+      <HintPath>..\..\bin\DEBUG\EMR_ICU_Service.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_NurseRecordService">
+      <Name>EMR_NurseRecordService</Name>
+      <HintPath>..\..\bin\DEBUG\EMR_NurseRecordService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_PACSService">
+      <Name>EMR_PACSService</Name>
+      <HintPath>..\..\bin\Debug\EMR_PACSService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_PhysicianOrderService">
+      <Name>EMR_PhysicianOrderService</Name>
+      <HintPath>..\..\bin\Debug\EMR_PhysicianOrderService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_PrintTool">
+      <Name>EMR_PrintTool</Name>
+      <HintPath>..\..\bin\DEBUG\EMR_PrintTool.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_PrivilegeData">
+      <Name>EMR_PrivilegeData</Name>
+      <HintPath>..\..\bin\Debug\EMR_PrivilegeData.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_PrivilegeSystemService">
+      <Name>EMR_PrivilegeSystemService</Name>
+      <HintPath>..\..\bin\Debug\EMR_PrivilegeSystemService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_PublicMiddleTier">
+      <Name>EMR_PublicMiddleTier</Name>
+      <HintPath>..\..\bin\Debug\EMR_PublicMiddleTier.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_RemindMessageClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="EMR_SynchronousCaseServ, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3e8c223de10da2e4, processorArchitecture=MSIL" />
+    <Reference Include="EMR_TrendServiece">
+      <Name>EMR_TrendServiece</Name>
+      <HintPath>..\..\bin\Debug\EMR_TrendServiece.dll</HintPath>
+    </Reference>
+    <Reference Include="exDataGrid, Version=2.0.0.1, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="ExtendPrintTool">
+      <Name>ExtendPrintTool</Name>
+      <HintPath>..\..\bin\Debug\ExtendPrintTool.dll</HintPath>
+    </Reference>
+    <Reference Include="ExternalControlsLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a56eff79bba2d1e, processorArchitecture=MSIL" />
+    <Reference Include="frmPatient">
+      <Name>frmPatient</Name>
+      <HintPath>..\..\bin\Debug\frmPatient.dll</HintPath>
+    </Reference>
+    <Reference Include="GLS_WorkStation">
+      <Name>GLS_WorkStation</Name>
+      <HintPath>..\..\bin\Debug\GLS_WorkStation.dll</HintPath>
+    </Reference>
+    <Reference Include="GUI_Base">
+      <Name>GUI_Base</Name>
+      <HintPath>..\..\bin\Debug\GUI_Base.dll</HintPath>
+    </Reference>
+    <Reference Include="HISBase_SVC, Version=2.0.0.1, Culture=neutral, PublicKeyToken=5d6add604397f439" />
+    <Reference Include="HISControl, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HISMedicineStdManage_SVC, Version=2.0.0.1, Culture=neutral, PublicKeyToken=8c9a78ab958830c3" />
+    <Reference Include="HISMed_SVC, Version=2.0.0.1, Culture=neutral, PublicKeyToken=48dc4b38c75e632b" />
+    <Reference Include="HISRegister">
+      <Name>HISRegister</Name>
+      <HintPath>..\..\bin\Debug\HISRegister.dll</HintPath>
+    </Reference>
+    <Reference Include="HISReg_SVC, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad0b4ebb5aa3281e" />
+    <Reference Include="HRPService, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ce5f7258b42847c9, processorArchitecture=MSIL" />
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL" />
+    <Reference Include="ICU, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ICUDataTransReceiver">
+      <Name>ICUDataTransReceiver</Name>
+      <HintPath>..\ExternDll\ICUDataTransReceiver.dll</HintPath>
+    </Reference>
+    <Reference Include="ICU_Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.GETICUCENTERDATAFORMLib, Version=1.0.0.0, Culture=neutral" />
+    <Reference Include="Interop.GETICUDATAFORMLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.NetCASecuForm, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.SDK_2000Lib">
+      <Name>Interop.SDK_2000Lib</Name>
+      <HintPath>..\..\bin\DEBUG\Interop.SDK_2000Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.SecuInter, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.SMS_control">
+      <Name>Interop.SMS_control</Name>
+      <HintPath>..\..\bin\Debug\Interop.SMS_control.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WaveMonitorLib, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="LIS_GUI">
+      <Name>LIS_GUI</Name>
+      <HintPath>..\..\bin\Debug\LIS_GUI.dll</HintPath>
+    </Reference>
+    <Reference Include="LIS_Svc">
+      <Name>LIS_Svc</Name>
+      <HintPath>..\..\bin\Debug\LIS_Svc.dll</HintPath>
+    </Reference>
+    <Reference Include="LumiSoft.UI">
+      <Name>LumiSoft.UI</Name>
+      <HintPath>..\ExternDll\LumiSoft.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="MagicLibrary">
+      <Name>MagicLibrary</Name>
+      <HintPath>..\ExternDll\MagicLibrary.DLL</HintPath>
+    </Reference>
+    <Reference Include="MenuExtend">
+      <Name>MenuExtend</Name>
+      <HintPath>..\..\bin\Debug\MenuExtend.dll</HintPath>
+    </Reference>
+    <Reference Include="MenuImageLib, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b5136c76be6bb5d5" />
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="MiddleTierBase">
+      <Name>MiddleTierBase</Name>
+      <HintPath>..\..\bin\Debug\MiddleTierBase.dll</HintPath>
+    </Reference>
+    <Reference Include="MonitorParamControl">
+      <Name>MonitorParamControl</Name>
+      <HintPath>..\..\bin\Debug\MonitorParamControl.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectGenerator">
+      <Name>ObjectGenerator</Name>
+      <HintPath>..\..\bin\Debug\ObjectGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=9.2.0.401, Culture=neutral, PublicKeyToken=89b483f429c47342" />
+    <Reference Include="PACS_GUI">
+      <Name>PACS_GUI</Name>
+      <HintPath>..\..\bin\Debug\PACS_GUI.dll</HintPath>
+    </Reference>
+    <Reference Include="PACS_SVC">
+      <Name>PACS_SVC</Name>
+      <HintPath>..\..\bin\Debug\PACS_SVC.dll</HintPath>
+    </Reference>
+    <Reference Include="PatientChain">
+      <Name>PatientChain</Name>
+      <HintPath>..\..\bin\DEBUG\PatientChain.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PinkieControls">
+      <Name>PinkieControls</Name>
+      <HintPath>..\ExternDll\PinkieControls.dll</HintPath>
+    </Reference>
+    <Reference Include="SoundControl, Version=2.0.0.1, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="SourceLibrary, Version=1.2.2.0, Culture=neutral, PublicKeyToken=96907d46c0a9af87" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Name>System.EnterpriseServices</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="TemplateLib">
+      <Name>TemplateLib</Name>
+      <HintPath>..\..\bin\Debug\TemplateLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Utility">
+      <Name>Utility</Name>
+      <HintPath>..\..\bin\Debug\Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="UtilityLibrary">
+      <Name>UtilityLibrary</Name>
+      <HintPath>..\ExternDll\UtilityLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="UtilityLibrary.Win32.WindowsAPI">
+      <Name>UtilityLibrary.Win32.WindowsAPI</Name>
+      <HintPath>..\ExternDll\UtilityLibrary.Win32.WindowsAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="VideoSDK2000">
+      <Name>VideoSDK2000</Name>
+      <HintPath>..\..\bin\DEBUG\VideoSDK2000.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Content Include="App.ico" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\左耳廓.gif" />
+    <None Include="Resources\右耳廓.gif" />
+    <None Include="Resources\咽部.gif" />
+    <None Include="Resources\舌扁桃体.gif" />
+    <None Include="Resources\鼻前庭.gif" />
+    <None Include="Resources\鼻内窥镜检查.gif" />
+    <Compile Include="Adjust\clsAdjustByDept.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Adjust\clsEBHKAdjustMethod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Adjust\clsICUAdjustMethod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Adjust\infAdjustMethod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssitantTool\clsAutoHeight.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssitantTool\clsBugQueryDomain.cs" />
+    <Compile Include="AssitantTool\clsCaseGradeDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssitantTool\clsEMR_HIS_CheckRequisition.cs" />
+    <Compile Include="AssitantTool\clsEMR_HIS_CheckRequisitionDomain.cs" />
+    <Compile Include="AssitantTool\clsSpecialSymbolDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssitantTool\frmBugQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssitantTool\frmBugQuery.Designer.cs">
+      <DependentUpon>frmBugQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssitantTool\frmCaseGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssitantTool\frmCaseGradePatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssitantTool\frmCaseGradePatient.Designer.cs">
+      <DependentUpon>frmCaseGradePatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssitantTool\frmCheckRoomExamine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssitantTool\frmEMR_HIS_CheckRequisition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssitantTool\frmEMR_HIS_CheckRequisition.Designer.cs">
+      <DependentUpon>frmEMR_HIS_CheckRequisition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssitantTool\frmGradeStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssitantTool\frmSendMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssitantTool\frmSpecialSymbolList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssitantTool\frmSpecialSymbolManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssitantTool\frmTodayMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clsComboBoxDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsComboBoxDomainOld.cs" />
+    <Compile Include="clsComboBoxItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsCommonUseDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsDeactiveRecordDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsDeathRecordDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsDeathRecordIn24HoursDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsElectronIdiographDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsEmployeeSignTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsEMR_OPInstrumentDomain.cs" />
+    <Compile Include="clsGridListView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsIniFile.cs" />
+    <Compile Include="clsIntelligentStatisticsDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsListBoxSearchItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsManageExplorerDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsMedicalExamDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsOperationAgreedRecordDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsOperationRecordDoctorDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsAYQBabyAssessmentContentDomain.cs" />
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsBrothRecords_F2Domain.cs" />
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsFetalCustodialRecordDomain.cs" />
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsOperationRecordDoctorCSPrintTool.cs" />
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsOutHospitalDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsOutHospitalIn24HoursDomain.cs">
+    </Compile>
+    <Compile Include="clsOutHospitalInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsPatientInfoManageDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsPhysicianOrderDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsPICUShiftBaseDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsPICUShiftInDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsPICUShiftOutDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsPreviewPrintControllerFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsPrintDateInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsPublicDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsQCRecordDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsRecordsDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsRecordsDomainFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsRichTextListView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsTemplateDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsTemplatesetInvoke.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsTestContentMaker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsTimeDirectionDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsTransferTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsTrendDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsXML_DataGrid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\clsBUltrasonicCheckOrderDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\clsChoosePatientDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\clsCTCheckOrderDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\clsEKGOrderDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\clsHighOxygenDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\clsMRIApplyDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\clsNuclearOrderDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\clsPathologyOrgCheckOrderDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\clsPSGOrderDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\clsSPECTCheckOrderDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\clsXRayCheckOrderDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmBUltrasonicCheckOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmBUltrasonicCheckReport  .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmCheckOrderBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmChoosePatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmCTCheckOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmEKGOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmHighOxygen .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmLabAnalysisOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmLabCheckDeptItemInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmLabCheckItemAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmLabCheckReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmLabCheckSampleManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmLISResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmMRIApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmNuclearOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmPathologyOrgCheckOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmPathologyTissueCheckOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmPSGOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmSPECT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\ApplyRecord\frmXRayCheckOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsAfterOperationInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsApprove_FlowDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsBeforeOperationDiscussInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsBeforeOperationSummaryDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsBornScheduleDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsBornSchedulePrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsCaseDiscussInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsCaseHistoryFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsCheckRoomInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsConsultationDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsConsultationInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsConsultationSearchDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsConveyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsDeadCaseDiscussInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsDeadRecordInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsDiseaseSummaryInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsDiseaseTrackAddBlankDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsDiseaseTrackDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsDiseaseTrackDomainFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsDiseaseTrackInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsDomainUserLoginInfoDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsEMR_SummaryBeforeOPInfo.cs" />
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsEquipmentTypeDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsFirstIllnessNoteInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsGeneralDiseaseInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsHandOverInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsInHospitalMainRecordDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsInHospitalMainRecordDomain_GX.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsInPatientArchivingDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsInPatientCaseHistoryDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsLabAnalysisOrderDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsLabCheckItemAdminDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsNewBabyInRoomRecordDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsOutPatientRevisitDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsSaveRecordInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsTakeOverInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\clsTurnInInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\cls_GestationMisbirthsthrees_F2Domain.cs" />
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmAfterOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmAYQBabyAssessmentRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmAYQBabyAssessmentRecord_Rec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmAYQBabyAssessmentRecord_Rec.Designer.cs">
+      <DependentUpon>frmAYQBabyAssessmentRecord_Rec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmBaseCaseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmBeforeAnaSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmBeforeOperationDiscuss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmBeforeOperationSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmBornScheduleRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmCaseDiscuss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmCaseHistorySummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmCheckRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmCheckRoomRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmChooseCaseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmConsultation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmConsultationSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmConsultationStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmConsultationStatistic.Designer.cs">
+      <DependentUpon>frmConsultationStatistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmConvey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmDeadCaseDiscuss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmDeadRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmDeathCaseDiscuss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmDeathRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmDeathRecordIn24Hours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmDiseaseSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmDiseaseTrackBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmEMR_CesareanRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmEMR_CesareanRecord.Designer.cs">
+      <DependentUpon>frmEMR_CesareanRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmEMR_OutHospitalIn24Hours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmEMR_PullDeliverRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmEMR_PullDeliverRecord.Designer.cs">
+      <DependentUpon>frmEMR_PullDeliverRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmEMR_SummaryBeforeOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmEMR_SummaryBeforeOP.Designer.cs">
+      <DependentUpon>frmEMR_SummaryBeforeOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmFetalCustodialRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmFetalCustodialRecord.Designer.cs">
+      <DependentUpon>frmFetalCustodialRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmFirstIllnessNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmFirstIllnessNote_ZY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmGeneralDisease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmHandOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmIMR_GestationMisbirthsthrees_F2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmIMR_GestationMisbirthsthrees_F2.Designer.cs">
+      <DependentUpon>frmIMR_GestationMisbirthsthrees_F2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmInHospitalMainRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmInHospitalMainRecord_GX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmInHospitalMainRecord_GXForCH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmInHospitalQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmInHospitalQuery.Designer.cs">
+      <DependentUpon>frmInHospitalQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmInPatientCaseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmInPatientCaseHistoryMode1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmInPatientCaseHistory_NewStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmnHospitalMainRecordCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmMedicalExam001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmNewBabyCircsRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmNewBabyInRoomRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmOperationAgreedRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmOperationKeepDrug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmOperationRecordDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmOperationRecordDoctorCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmOutHospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmOutPatientRevisitRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmOutPatientRevisitRemind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmPICUShiftBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmPICUShiftInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmPICUShiftOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmRevistRemindMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmSaveRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmSubDiseaseTrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmTakeOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmTurnIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmVaginalExaminationRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmVaginalExaminationRecord.Designer.cs">
+      <DependentUpon>frmVaginalExaminationRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmLargeConsultation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmInPatientCaseHistory_F2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmFirstIllnessNote_F2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWorkStation\MedicalRecord\frmInHospitalMainRecord_2009.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtility\clsFormRecordSort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormUtility\clsSaveCue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormUtility\DataShare\clsBeforeOperSumShareDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormUtility\DataShare\clsGeneralDiseaseRecordShareDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormUtility\DataShare\clsInPatientCaseHisoryDefaultDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormUtility\DataShare\clsOperationRecordDoctorShareDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormUtility\DataShare\clsThreeMeasureShareDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormUtility\frmCustomFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtility\frmInpatMedRecSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtility\frmInpatMedRecSetting.Designer.cs">
+      <DependentUpon>frmInpatMedRecSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUtility\frmPainter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddBlankInDiseaseTrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddOuterExpert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAutoTestTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckSign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCommonUse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCommonUsePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContainerManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCryReptView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeactiveRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeptDetailInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoctorTemplateFirstPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDutyArrange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeDetailInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEMRBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEquipmentType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGetAllRuningForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHRPBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIllnessReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInPatientCaseHistoryArchiving.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInPatientCaseHistory_SetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIntelligentSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIntelligentStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInvokeTemplateByICD10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModifyStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOPInstrumentSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOPInstrumentSet.Designer.cs">
+      <DependentUpon>frmOPInstrumentSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpraAnaSignAgree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InpatMedRec\clsInpatMedRecPrintToolFactory2.cs" />
+    <Compile Include="NurseWorkStation\frmBloodCleanseRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmBloodCleanseRecordCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_GestationDiabetesCure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_GestationDiabetesCure.designer.cs">
+      <DependentUpon>frmEMR_GestationDiabetesCure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_GestationDiabetesCureCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_GestationDiabetesCureCon.designer.cs">
+      <DependentUpon>frmEMR_GestationDiabetesCureCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_IntBloodSugarWatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_IntBloodSugarWatchcon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_IntBloodSugarWatchcon.Designer.cs">
+      <DependentUpon>frmEMR_IntBloodSugarWatchcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_MicroBooldSugarCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_MicroBooldSugarCheck.Designer.cs">
+      <DependentUpon>frmEMR_MicroBooldSugarCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_MicroBooldSugarCheckCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_MicroBooldSugarCheckCon.Designer.cs">
+      <DependentUpon>frmEMR_MicroBooldSugarCheckCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecordWK_CS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecordWK_CS.Designer.cs">
+      <DependentUpon>frmGeneralNurseRecordWK_CS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecordWK_CSCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecordWK_CSCon.Designer.cs">
+      <DependentUpon>frmGeneralNurseRecordWK_CSCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecordWK_CSRec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecordWK_CSRec.Designer.cs">
+      <DependentUpon>frmGeneralNurseRecordWK_CSRec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_CS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_CS.Designer.cs">
+      <DependentUpon>frmGeneralNurseRecord_CS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_CSCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_CSCon.Designer.cs">
+      <DependentUpon>frmGeneralNurseRecord_CSCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_CSRec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_CSRec.Designer.cs">
+      <DependentUpon>frmGeneralNurseRecord_CSRec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_DGCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_DGCS.Designer.cs">
+      <DependentUpon>frmGeneralNurseRecord_DGCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_DGCSCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_DGCSCon.Designer.cs">
+      <DependentUpon>frmGeneralNurseRecord_DGCSCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_DGCSRec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_DGCSRec.Designer.cs">
+      <DependentUpon>frmGeneralNurseRecord_DGCSRec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurse_ObstetricNewChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurse_ObstetricNewChild.Designer.cs">
+      <DependentUpon>frmGeneralNurse_ObstetricNewChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurse_ObstetricNewChildCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurse_ObstetricNewChildCon.Designer.cs">
+      <DependentUpon>frmGeneralNurse_ObstetricNewChildCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurse_ObstetricNewChildRec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurse_ObstetricNewChildRec.Designer.cs">
+      <DependentUpon>frmGeneralNurse_ObstetricNewChildRec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmICUNurseStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmICUNurseStatistics.Designer.cs">
+      <DependentUpon>frmICUNurseStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntakeAndOutputVolume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntakeAndOutputVolume.Designer.cs">
+      <DependentUpon>frmIntakeAndOutputVolume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntakeAndOutputVolumeCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntakeAndOutputVolumeCon.Designer.cs">
+      <DependentUpon>frmIntakeAndOutputVolumeCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntakeAndOutputVolumeSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntakeAndOutputVolumeSummary.Designer.cs">
+      <DependentUpon>frmIntakeAndOutputVolumeSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensiveTendMain_CSWK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensiveTendMain_CSWK.Designer.cs">
+      <DependentUpon>frmIntensiveTendMain_CSWK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensiveTendMain_CSWKCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensiveTendMain_CSWKCon.Designer.cs">
+      <DependentUpon>frmIntensiveTendMain_CSWKCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensiveTendMain_CSWKRec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensiveTendMain_CSWKRec.Designer.cs">
+      <DependentUpon>frmIntensiveTendMain_CSWKRec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensivetendRecord_CS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensivetendRecord_CS.Designer.cs">
+      <DependentUpon>frmIntensivetendRecord_CS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensivetendRecord_CSCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensivetendRecord_CSCon.Designer.cs">
+      <DependentUpon>frmIntensivetendRecord_CSCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensivetendRecord_CSRec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensivetendRecord_CSRec.Designer.cs">
+      <DependentUpon>frmIntensivetendRecord_CSRec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmNewBorthBabyGeneralNurseRecord_CS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmNewBorthBabyGeneralNurseRecord_CS.Designer.cs">
+      <DependentUpon>frmNewBorthBabyGeneralNurseRecord_CS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmNewBorthBabyGeneralNurseRecord_CSCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmNewBorthBabyGeneralNurseRecord_CSCon.Designer.cs">
+      <DependentUpon>frmNewBorthBabyGeneralNurseRecord_CSCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmNewBorthBabyGeneralNurseRecord_CSRec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmNewBorthBabyGeneralNurseRecord_CSRec.Designer.cs">
+      <DependentUpon>frmNewBorthBabyGeneralNurseRecord_CSRec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmOXTIntravenousDrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmOXTIntravenousDrip.Designer.cs">
+      <DependentUpon>frmOXTIntravenousDrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmOXTIntravenousDripCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmOXTIntravenousDripCon.Designer.cs">
+      <DependentUpon>frmOXTIntravenousDripCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmPartogramPoint_GX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmPartogramPoint_GX.Designer.cs">
+      <DependentUpon>frmPartogramPoint_GX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmPartogramRecordContent_GX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmPartogramRecordContent_GX.Designer.cs">
+      <DependentUpon>frmPartogramRecordContent_GX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPatientDetailInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPatientInfoManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPatientLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhysicianOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrimaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQCRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueryListview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecordsBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReLocate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoleManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRowlAndUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRowlInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSampleManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetCustomDataGridColumn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetRTBChangeTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSystemVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTabTrackBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTemplateManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTemplateSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTemplateSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTemplatesetDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTemplateUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTextTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidateByDirector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidateByDirector.Designer.cs">
+      <DependentUpon>frmValidateByDirector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmValidateDirector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVitalGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRPExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InpatMedRec\clsInpatMedRecDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InpatMedRec\clsInpatMedRecPrintToolFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InpatMedRec\frmIMR_PrePostOperateSee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InpatMedRec\frmInpatMedRecBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InpatMedRec\frmInPatMedRecChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsPartogramDomain.cs" />
+    <Compile Include="NurseWorkStation\frmPartogramRecord_GX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmPartogramRecord_GX.Designer.cs">
+      <DependentUpon>frmPartogramRecord_GX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmPartogramSelected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmPartogramSelected.Designer.cs">
+      <DependentUpon>frmPartogramSelected.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmQuickeningTutelar_Acad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmQuickeningTutelar_AcadCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageDeptTool\clsCommonUseTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ManageDeptTool\clsCommonUseToolColleciton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ManageDeptTool\clsDefaultValueDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ManageDeptTool\clsDefaultValueTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ManageDeptTool\clsManageDocAndNurDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ManageDeptTool\frmEmployeeMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageDeptTool\frmManageDocAndNur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsBedCardManageDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsEMR_InPatientEvaluateDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsGeneralNurseRecordInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsICUBreathInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsICUIntensiveRecordInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsICUIntensiveRecordsDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsICUIntensiveTendRecordDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsInPatientEvaluateDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsIntensiveRecordInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsIntensiveRecordInfo_FC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsMiniBooldSugarChkDomin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsMiniBooldSugarChk_GXDomin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsOperationEqipmentQtyDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsOperationRecordDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsRegisterQuantityDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsThreeMeasureEventManagerDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsThreeMeasureEventManagerDomainGN.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsThreeMeasureRecordDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsThreeMeasureRecordDomainGN.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsWatchItemRecordInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\clsWatchItemRecordsDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmBedCardManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmCardiovascularTendMain_GX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmCardiovascularTend_GX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_InPatientEvaluate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_OPInstrumentQty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_OPInstrumentQty.Designer.cs">
+      <DependentUpon>frmEMR_OPInstrumentQty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_OPNurseRecord_GX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmEMR_OPNurseRecord_GX.Designer.cs">
+      <DependentUpon>frmEMR_OPNurseRecord_GX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_GX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_GXCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseRecord_GXRec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmGeneralNurseWholeRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmHurryVeinRecord_Acad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmHurryVeinRecord_AcadCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmICUIntensiveTendRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmICUNurseRecordContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmICUNurseRecordContent.Designer.cs">
+      <DependentUpon>frmICUNurseRecordContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmICUNurseRecordMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmICUNurseRecordMain.Designer.cs">
+      <DependentUpon>frmICUNurseRecordMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmICUNurseRecord_GX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmICUNurseRecord_GXCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmICUNursingRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmICUTrend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmInPatientEvaluate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensiveTend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensiveTendMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensiveTendMain_FC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensiveTendMain_GX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensiveTend_FC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensiveTend_FContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensiveTend_GX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmIntensiveTend_GXContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmMainGeneralNurseRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmMainICUBreath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmMainICUIntensiveTend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmMiniBooldSugar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmMiniBooldSugar.Designer.cs">
+      <DependentUpon>frmMiniBooldSugar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmMiniBooldSugarChk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmMiniBooldSugarChk_GX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmMiniBooldSugarContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmMiniBooldSugarContent.Designer.cs">
+      <DependentUpon>frmMiniBooldSugarContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmMiniBooldSugarWhole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmMiniBooldSugarWhole.Designer.cs">
+      <DependentUpon>frmMiniBooldSugarWhole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmOperationEquipmentQty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmOperationRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmPostartumSeeRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmPostartumSeeRecordCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmPostPartum_Acad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmPostPartum_AcadCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmRegisterQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmSetBed_Doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmSubICUBreath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmSubICUIntensiveTend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmSubWatchItemRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmSurgeryICUWardship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmSurgeryICUWardshipEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmThreeMeasureRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmThreeMeasureRecordGN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmThreeMeasureRecordNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmVeinSpecialUseDrug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmVeinSpecialUseDrugCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmWaitLayRecord_Acad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmWaitLayRecord_AcadCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmWaitLayRecord_AcadCon_GX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmWaitLayRecord_AcadCon_GX.Designer.cs">
+      <DependentUpon>frmWaitLayRecord_AcadCon_GX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmWaitLayRecord_Acad_GX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmWaitLayRecord_Acad_GX.Designer.cs">
+      <DependentUpon>frmWaitLayRecord_Acad_GX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseWorkStation\frmWatchItemTrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PACS\clsImageReportDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PACS\clsPACSTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PACS\frmImageBookingSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PACS\frmImageReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsAYQBabyAssessmentRecordPrintTool.cs" />
+    <Compile Include="PrintTool\clsBeforeOperationSummaryLJPrintTool.cs" />
+    <Compile Include="PrintTool\clsBeforeOperationSummaryPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsBloodCleanseRecordPrintTool.cs" />
+    <Compile Include="PrintTool\clsBrothRecords_F2PrintTool.cs" />
+    <Compile Include="PrintTool\clsBUltrasonicCheckOrderPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsCardiovascularTendPrintTool.cs" />
+    <Compile Include="PrintTool\clsConsultationPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsContinuousPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsDeathDiscussPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsDeathRecordIn24HoursCSPrintTool.cs" />
+    <Compile Include="PrintTool\clsDeathRecordIn24HoursPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsDeathrecordPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsEMR_CesareanRecordPrintTool.cs" />
+    <Compile Include="PrintTool\clsEMR_GestationDiabetesCure_PrintTool_1.cs" />
+    <Compile Include="PrintTool\clsEMR_InPatientEvaluatePrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsEMR_OPInstrumentQtyPrintTool.cs" />
+    <Compile Include="PrintTool\clsEMR_OPNurseRecordPrintTool.cs" />
+    <Compile Include="PrintTool\clsEMR_OutHospitalIn24HoursPrintTool.cs" />
+    <Compile Include="PrintTool\clsEMR_OutHospitalIn24HoursPrintToolCS.cs" />
+    <Compile Include="PrintTool\clsEMR_OXTIntravenousDripPrintTool.cs" />
+    <Compile Include="PrintTool\clsEMR_PullDeliverRecordPrintTool.cs" />
+    <Compile Include="PrintTool\clsFetalCustodialRecordPrintTool.cs" />
+    <Compile Include="PrintTool\clsGeneralNurceRecord_CSPrintTool.cs" />
+    <Compile Include="PrintTool\clsGeneralNurceRecord_DGCSPrintTool.cs" />
+    <Compile Include="PrintTool\clsGeneralNurseRecordPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsGeneralNurseRecord_GXPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsGeneralNurseRecord_ObstetricNewChildPrintTool.cs" />
+    <Compile Include="PrintTool\clsHurryVeinRecord_AcadPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsICUBreathPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsICUIntensiveTendPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsICUNurseRecordPrintTool.cs" />
+    <Compile Include="PrintTool\clsICUNurseRecord_GX_PrintTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsInHospitalMainRecordCSPrintTool.cs" />
+    <Compile Include="PrintTool\clsInHospitalMainRecordPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsInHospitalMainRecord_GXPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsInPatientCaseHistoryPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsInPatientCaseHistory_F2PrintTool.cs" />
+    <Compile Include="PrintTool\clsInPatientCaseHistory_GXPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsInPatientEvaluatePrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsIntBloodSugarWatchPrintTool.cs" />
+    <Compile Include="PrintTool\clsIntensiveTendMainPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsIntensiveTendMain_CSWKPrintTool.cs" />
+    <Compile Include="PrintTool\clsIntensiveTendMain_FC_PrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsIntensiveTendMain_GX_PrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsIntensivetendRecord_CSPrintTool.cs" />
+    <Compile Include="PrintTool\clsLabAnalysisOrderPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsLabAnalysisReportPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsMiniBooldSugarChkPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsMiniBooldSugarChk_GXPrintTool.cs" />
+    <Compile Include="PrintTool\clsNewBabyInRoomPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsOperationAgreedRecordPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsOperationEquipmentQtyPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsOperationRecordDoctorPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsOperationRecordPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsOutHospitalPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsPartogramPrintTool.cs" />
+    <Compile Include="PrintTool\clsPICUShiftBasePrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsPostartumSeeRecordPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsPostPartum_Acad_PrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsPrintLineBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsPrintPosition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsPrintRecordDesign.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsQuickeningTutelar_AcadPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsRegisterQuantity_PrintTool_GX.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsSubDiseaseTrackPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsSurgeryICUWardship_PrintTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsThreeMeasureRecordPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsThreeMeasureRecordPrintToolGN.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsThreeMeasureRecord_NewPrintTool.cs" />
+    <Compile Include="PrintTool\clsVeinSpecialUseDrugPrintTool.cs">
+    </Compile>
+    <Compile Include="PrintTool\clsWaitLayRecord_AcadPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsWatchItemTrackPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\frmGeneralNurseRecordWK_CSPrintTool.cs" />
+    <Compile Include="PrintTool\clsNewBorthBabyGeneralNurseRecord_CSPrintTool.cs" />
+    <Compile Include="PrintTool\frmPrintPreviewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintTool\frmPrintPreviewDialogAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintTool\frmPrintPreviewDialogPF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintTool\infPrintRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsBloodAcadInHospitalCaseHistoryOnePrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsChildbearingRecordPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsChildbearingRecord_F2PrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsChildHospitalHistoryPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsEMR_PullDeliverRecord_F2PrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsEyeCataractPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsGynecologyCaseHisPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_AB_abbortionPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_AskanceDPSPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_BreathPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_BurnSuergeryPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_CardiovascularDPSPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_CardiovascularPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_CataractSuffererApprovePrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_CerebrovascularPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_CesareanRecordPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_CesareanRecordPrintTool_LJ.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_ChestSurgeryPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_childbirthPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_ChildbirthTransitSectionPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_CKOutHospitalRecPrintTool .cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_DeliverRecordPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_DerivationPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_Derivation_DGPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_DiabetesHospitalPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_EmbeddedOPSPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_EmergenceWoundPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_ForpecsRecordPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_GestationMisbirth_1PrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_GestationMisbirth_2PrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_GestationMisbirth_3PrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_GlassAblatePrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_GlaucomaEyePrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_GynaecologyInHospitalRecordPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_GynecologyF2PrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_GynecologyPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_HeadInjurePrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_HeartHospitalRecordPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_HeartVasSurgeryRecordPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_HerbalismPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_Herbalist_WestPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_IllnessHistoryRecordPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_IllnessInHospitalRecordPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_InducedLaborRecordPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_InducedLaborRecordPrintTool_LJ.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_InHospitalMarksPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_InternalMedicineZYPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_ManpowerAbortionRecordPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_MedcineMiscarryRecordPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_NasopharyngelCarcinomaPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_NeonatalPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_Neonatal_GXPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_NerveMedicineCerebrovascularPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_NerveMedicineRecordPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_NerveSystemPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_NeuromedicinePrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_Neuromedicine_F2PrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_NeurosurgeryPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_Neurosurgery_F2PrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_NewChildPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_NutrientPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_NutrientRecordPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_ObstetricOutHosptialPrintTool_LJ.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_ObstetricOutRecord_DGPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_ObstetricPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_Obstetric_CriterionPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_Obstetric_F2PrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_OphthalmologyNurseRecordPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_OphthalmologyPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_OphthalmologyPrintTool_F2.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_OrthopaedicsSuffererAprrovePrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_OutHosptialResultPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_PaediatricsPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_PaediatricsPrintTool01.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_PalaceBirthControlLaySkillPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_PrePostOperateSeePrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_PrintObstect_LJ.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_PullDeliverRecord_CS.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_RetinaDeviatePrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_RheumatismImmunityPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_ShuLuanGuanJieZaPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_StoIntesChirurgerylPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\clsEMR_VaginalExaminationRecordPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR_WombBirthControlRecordPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsIMR__EyeTakecarePrint.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\clsInpatMedRecPrintBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsKidneyMedicineBeInHospitalPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsManpowerAbortionPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsObstetricCaseHisPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\clsSkinRcreadPrintTool.cs" />
+    <Compile Include="PrintTool\InpatMedRec_Print\cls_EmergencyCallPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintTool\InpatMedRec_Print\cls_MODS_ApparatusObservePrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\clsEdit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Public\clsEMRLogin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Public\clsExternInterface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Public\clsForWholeHosInfoManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Public\clsHRPMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Public\clsJumpControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Public\clsMainMenuFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Public\clsPublicFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Public\frmBusynessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Public\frmImageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Public\frmOutlookBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Public\ToolImages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\clsCaseHistorySearchDomain.cs" />
+    <Compile Include="RecordSearch\clsDataSearchesMake.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\clsRecordSearchDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\ConditionMaker\clsDateConditionMaker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\ConditionMaker\clsLongTextConditionMaker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\ConditionMaker\clsNumberConditionMaker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\ConditionMaker\clsTrueFalseConditionMaker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\ConditionMaker\infConditionMaker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistorySearch_Combin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistorySearch_Combin.Designer.cs">
+      <DependentUpon>frmCaseHistorySearch_Combin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistorySearch_In.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistorySearch_In.Designer.cs">
+      <DependentUpon>frmCaseHistorySearch_In.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistorySearch_OutInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistorySearch_OutInfo.Designer.cs">
+      <DependentUpon>frmCaseHistorySearch_OutInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistorySearch_OutReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistorySearch_OutReg.Designer.cs">
+      <DependentUpon>frmCaseHistorySearch_OutReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistorySearch_unList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistorySearch_unList.Designer.cs">
+      <DependentUpon>frmCaseHistorySearch_unList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistoryStat_CataLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistoryStat_CataLoad.Designer.cs">
+      <DependentUpon>frmCaseHistoryStat_CataLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistoryStat_Diagnose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistoryStat_Diagnose.Designer.cs">
+      <DependentUpon>frmCaseHistoryStat_Diagnose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistoryStat_Operation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\frmCaseHistoryStat_Operation.Designer.cs">
+      <DependentUpon>frmCaseHistoryStat_Operation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecordSearch\frmDataSearches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\frmRecordSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\PatientDetailMaker\clsInHospitalHistoryRecordMaker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\PatientDetailMaker\clsInHospitalMainRecordMaker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\PatientDetailMaker\clsOperationDoctorRecordMaker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\PatientDetailMaker\clsPatientDetailMakerBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\SearchInfoBuilder\clsSearchInfoBuilderBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordSearch\SearchInfoBuilder\clsSearchInfoBuilder_And.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rptBUltrasonicCheckOrder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptPathologyOrgCheckOrder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ColumnStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\CommandBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ctlDataGridBaseTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ctlDataGridPatientLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ctlTemplateEditer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ctlTrendChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ctlTrendList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="AssitantTool\clsAutoHeight.resx">
+      <DependentUpon>clsAutoHeight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssitantTool\frmBugQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBugQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssitantTool\frmCaseGrade.resx">
+      <DependentUpon>frmCaseGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssitantTool\frmCaseGradePatient.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCaseGradePatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssitantTool\frmCheckRoomExamine.resx">
+      <DependentUpon>frmCheckRoomExamine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssitantTool\frmEMR_HIS_CheckRequisition.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEMR_HIS_CheckRequisition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssitantTool\frmGradeStatistic.resx">
+      <DependentUpon>frmGradeStatistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssitantTool\frmSendMessage.resx">
+      <DependentUpon>frmSendMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssitantTool\frmSpecialSymbolList.resx">
+      <DependentUpon>frmSpecialSymbolList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssitantTool\frmSpecialSymbolManage.resx">
+      <DependentUpon>frmSpecialSymbolManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssitantTool\frmTodayMessage.resx">
+      <DependentUpon>frmTodayMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmBUltrasonicCheckOrder.resx">
+      <DependentUpon>frmBUltrasonicCheckOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmBUltrasonicCheckReport  .resx">
+      <DependentUpon>frmBUltrasonicCheckReport  .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmCheckOrderBase.resx">
+      <DependentUpon>frmCheckOrderBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmChoosePatient.resx">
+      <DependentUpon>frmChoosePatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmCTCheckOrder.resx">
+      <DependentUpon>frmCTCheckOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmEKGOrder.resx">
+      <DependentUpon>frmEKGOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmHighOxygen .resx">
+      <DependentUpon>frmHighOxygen .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmLabAnalysisOrder.resx">
+      <DependentUpon>frmLabAnalysisOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmLabCheckDeptItemInfo.resx">
+      <DependentUpon>frmLabCheckDeptItemInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmLabCheckItemAdmin.resx">
+      <DependentUpon>frmLabCheckItemAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmLabCheckReport.resx">
+      <DependentUpon>frmLabCheckReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmLabCheckSampleManage.resx">
+      <DependentUpon>frmLabCheckSampleManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmLISResult.resx">
+      <DependentUpon>frmLISResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmMRIApply.resx">
+      <DependentUpon>frmMRIApply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmNuclearOrder.resx">
+      <DependentUpon>frmNuclearOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmPathologyOrgCheckOrder.resx">
+      <DependentUpon>frmPathologyOrgCheckOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmPathologyTissueCheckOrder.resx">
+      <DependentUpon>frmPathologyTissueCheckOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmPSGOrder.resx">
+      <DependentUpon>frmPSGOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmSPECT.resx">
+      <DependentUpon>frmSPECT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\ApplyRecord\frmXRayCheckOrder.resx">
+      <DependentUpon>frmXRayCheckOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmAfterOperation.resx">
+      <DependentUpon>frmAfterOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmAYQBabyAssessmentRecord.resx">
+      <DependentUpon>frmAYQBabyAssessmentRecord.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmAYQBabyAssessmentRecord_Rec.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAYQBabyAssessmentRecord_Rec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmBaseCaseHistory.resx">
+      <DependentUpon>frmBaseCaseHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmBeforeAnaSummary.resx">
+      <DependentUpon>frmBeforeAnaSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmBeforeOperationDiscuss.resx">
+      <DependentUpon>frmBeforeOperationDiscuss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmBeforeOperationSummary.resx">
+      <DependentUpon>frmBeforeOperationSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmBornScheduleRecord.resx">
+      <DependentUpon>frmBornScheduleRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmCaseDiscuss.resx">
+      <DependentUpon>frmCaseDiscuss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmCaseHistorySummary.resx">
+      <DependentUpon>frmCaseHistorySummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmCheckRoom.resx">
+      <DependentUpon>frmCheckRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmCheckRoomRecord.resx">
+      <DependentUpon>frmCheckRoomRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmChooseCaseHistory.resx">
+      <DependentUpon>frmChooseCaseHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmConsultation.resx">
+      <DependentUpon>frmConsultation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmConsultationSearch.resx">
+      <DependentUpon>frmConsultationSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmConsultationStatistic.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmConsultationStatistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmConvey.resx">
+      <DependentUpon>frmConvey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmDeadCaseDiscuss.resx">
+      <DependentUpon>frmDeadCaseDiscuss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmDeadRecord.resx">
+      <DependentUpon>frmDeadRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmDeathCaseDiscuss.resx">
+      <DependentUpon>frmDeathCaseDiscuss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmDeathRecord.resx">
+      <DependentUpon>frmDeathRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmDeathRecordIn24Hours.resx">
+      <DependentUpon>frmDeathRecordIn24Hours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmDiseaseSummary.resx">
+      <DependentUpon>frmDiseaseSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmDiseaseTrackBase.resx">
+      <DependentUpon>frmDiseaseTrackBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmEMR_CesareanRecord.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEMR_CesareanRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmEMR_OutHospitalIn24Hours.resx">
+      <DependentUpon>frmEMR_OutHospitalIn24Hours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmEMR_PullDeliverRecord.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEMR_PullDeliverRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmEMR_SummaryBeforeOP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEMR_SummaryBeforeOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmFirstIllnessNote.resx">
+      <DependentUpon>frmFirstIllnessNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmFirstIllnessNote_ZY.resx">
+      <DependentUpon>frmFirstIllnessNote_ZY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmGeneralDisease.resx">
+      <DependentUpon>frmGeneralDisease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmHandOver.resx">
+      <DependentUpon>frmHandOver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmIMR_GestationMisbirthsthrees_F2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmIMR_GestationMisbirthsthrees_F2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmInHospitalMainRecord.resx">
+      <DependentUpon>frmInHospitalMainRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmInHospitalMainRecord_GX.resx">
+      <DependentUpon>frmInHospitalMainRecord_GX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmInHospitalMainRecord_GXForCH.resx">
+      <DependentUpon>frmInHospitalMainRecord_GXForCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmInHospitalQuery.resx">
+      <DependentUpon>frmInHospitalQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmInPatientCaseHistory.resx">
+      <DependentUpon>frmInPatientCaseHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmInPatientCaseHistoryMode1.resx">
+      <DependentUpon>frmInPatientCaseHistoryMode1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmInPatientCaseHistory_NewStyle.resx">
+      <DependentUpon>frmInPatientCaseHistory_NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmLargeConsultation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLargeConsultation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmMedicalExam001.resx">
+      <DependentUpon>frmMedicalExam001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmNewBabyCircsRecord.resx">
+      <DependentUpon>frmNewBabyCircsRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmNewBabyInRoomRecord.resx">
+      <DependentUpon>frmNewBabyInRoomRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmnHospitalMainRecordCharge.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmnHospitalMainRecordCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmOperationAgreedRecord.resx">
+      <DependentUpon>frmOperationAgreedRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmOperationKeepDrug.resx">
+      <DependentUpon>frmOperationKeepDrug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmOperationRecordDoctor.resx">
+      <DependentUpon>frmOperationRecordDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmOperationRecordDoctorCS.resx">
+      <DependentUpon>frmOperationRecordDoctorCS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmOutHospital.resx">
+      <DependentUpon>frmOutHospital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmOutPatientRevisitRecord.resx">
+      <DependentUpon>frmOutPatientRevisitRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmOutPatientRevisitRemind.resx">
+      <DependentUpon>frmOutPatientRevisitRemind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmPICUShiftBaseForm.resx">
+      <DependentUpon>frmPICUShiftBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmPICUShiftInForm.resx">
+      <DependentUpon>frmPICUShiftInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmPICUShiftOutForm.resx">
+      <DependentUpon>frmPICUShiftOutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmRevistRemindMessage.resx">
+      <DependentUpon>frmRevistRemindMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmSaveRecord.resx">
+      <DependentUpon>frmSaveRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmSubDiseaseTrack.resx">
+      <DependentUpon>frmSubDiseaseTrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmTakeOver.resx">
+      <DependentUpon>frmTakeOver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmTurnIn.resx">
+      <DependentUpon>frmTurnIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmVaginalExaminationRecord.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmVaginalExaminationRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmInPatientCaseHistory_F2.resx">
+      <DependentUpon>frmInPatientCaseHistory_F2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmFirstIllnessNote_F2.resx">
+      <DependentUpon>frmFirstIllnessNote_F2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWorkStation\MedicalRecord\frmInHospitalMainRecord_2009.resx">
+      <DependentUpon>frmInHospitalMainRecord_2009.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtility\frmCustomFormBase.resx">
+      <DependentUpon>frmCustomFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtility\frmInpatMedRecSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInpatMedRecSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtility\frmPainter.resx">
+      <DependentUpon>frmPainter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddBlankInDiseaseTrack.resx">
+      <DependentUpon>frmAddBlankInDiseaseTrack.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOuterExpert.resx">
+      <DependentUpon>frmAddOuterExpert.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAutoTestTool.resx">
+      <DependentUpon>frmAutoTestTool.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckSign.resx">
+      <DependentUpon>frmCheckSign.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCommonUse.resx">
+      <DependentUpon>frmCommonUse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCommonUsePanel.resx">
+      <DependentUpon>frmCommonUsePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmContainerManage.resx">
+      <DependentUpon>frmContainerManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCryReptView.resx">
+      <DependentUpon>frmCryReptView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeactiveRecord.resx">
+      <DependentUpon>frmDeactiveRecord.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeptDetailInfo.resx">
+      <DependentUpon>frmDeptDetailInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoctorTemplateFirstPage.resx">
+      <DependentUpon>frmDoctorTemplateFirstPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDutyArrange.resx">
+      <DependentUpon>frmDutyArrange.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmail.resx">
+      <DependentUpon>frmEmail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeDetailInfo.resx">
+      <DependentUpon>frmEmployeeDetailInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEMRBaseForm.resx">
+      <DependentUpon>frmEMRBaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEquipmentType.resx">
+      <DependentUpon>frmEquipmentType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGetAllRuningForms.resx">
+      <DependentUpon>frmGetAllRuningForms.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHRPBaseForm.resx">
+      <DependentUpon>frmHRPBaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIllnessReport.resx">
+      <DependentUpon>frmIllnessReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformation.resx">
+      <DependentUpon>frmInformation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInPatientCaseHistoryArchiving.resx">
+      <DependentUpon>frmInPatientCaseHistoryArchiving.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInPatientCaseHistory_SetForm.resx">
+      <DependentUpon>frmInPatientCaseHistory_SetForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputBox.resx">
+      <DependentUpon>frmInputBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputDemo.resx">
+      <DependentUpon>frmInputDemo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIntelligentSearch.resx">
+      <DependentUpon>frmIntelligentSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIntelligentStatistics.resx">
+      <DependentUpon>frmIntelligentStatistics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvokeTemplateByICD10.resx">
+      <DependentUpon>frmInvokeTemplateByICD10.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLabel.resx">
+      <DependentUpon>frmLabel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageExplorer.resx">
+      <DependentUpon>frmManageExplorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageRecordForm.resx">
+      <DependentUpon>frmManageRecordForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageForm.resx">
+      <DependentUpon>frmMessageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModifyStatistics.resx">
+      <DependentUpon>frmModifyStatistics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenStatistics.resx">
+      <DependentUpon>frmOpenStatistics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOPInstrumentSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOPInstrumentSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpraAnaSignAgree.resx">
+      <DependentUpon>frmOpraAnaSignAgree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPatientDetailInfo.resx">
+      <DependentUpon>frmPatientDetailInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPatientInfoManage.resx">
+      <DependentUpon>frmPatientInfoManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPatientLabel.resx">
+      <DependentUpon>frmPatientLabel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhysicianOrder.resx">
+      <DependentUpon>frmPhysicianOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrimaryForm.resx">
+      <DependentUpon>frmPrimaryForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQCRecord.resx">
+      <DependentUpon>frmQCRecord.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQueryListview.resx">
+      <DependentUpon>frmQueryListview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecordsBase.resx">
+      <DependentUpon>frmRecordsBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReLocate.resx">
+      <DependentUpon>frmReLocate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoleManage.resx">
+      <DependentUpon>frmRoleManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRowlAndUser.resx">
+      <DependentUpon>frmRowlAndUser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRowlInfo.resx">
+      <DependentUpon>frmRowlInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSampleManage.resx">
+      <DependentUpon>frmSampleManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetCustomDataGridColumn.resx">
+      <DependentUpon>frmSetCustomDataGridColumn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetRTBChangeTime.resx">
+      <DependentUpon>frmSetRTBChangeTime.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSystemVersion.resx">
+      <DependentUpon>frmSystemVersion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTabTrackBase.resx">
+      <DependentUpon>frmTabTrackBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTemplateManage.resx">
+      <DependentUpon>frmTemplateManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTemplateSelect.resx">
+      <DependentUpon>frmTemplateSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTemplateSet.resx">
+      <DependentUpon>frmTemplateSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTemplatesetDialog.resx">
+      <DependentUpon>frmTemplatesetDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTemplateUnit.resx">
+      <DependentUpon>frmTemplateUnit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTextTemplate.resx">
+      <DependentUpon>frmTextTemplate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateLogin.resx">
+      <DependentUpon>frmUpdateLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValidateByDirector.resx">
+      <DependentUpon>frmValidateByDirector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValidateDirector.resx">
+      <DependentUpon>frmValidateDirector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVitalGroup.resx">
+      <DependentUpon>frmVitalGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRPExplorer.resx">
+      <DependentUpon>HRPExplorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InpatMedRec\frmIMR_PrePostOperateSee.resx">
+      <DependentUpon>frmIMR_PrePostOperateSee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InpatMedRec\frmInpatMedRecBase.resx">
+      <DependentUpon>frmInpatMedRecBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InpatMedRec\frmInPatMedRecChoose.resx">
+      <DependentUpon>frmInPatMedRecChoose.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmBloodCleanseRecord.resx">
+      <DependentUpon>frmBloodCleanseRecord.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmBloodCleanseRecordCon.resx">
+      <DependentUpon>frmBloodCleanseRecordCon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmEMR_GestationDiabetesCure.resx">
+      <DependentUpon>frmEMR_GestationDiabetesCure.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmEMR_GestationDiabetesCureCon.resx">
+      <DependentUpon>frmEMR_GestationDiabetesCureCon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmEMR_IntBloodSugarWatch.resx">
+      <DependentUpon>frmEMR_IntBloodSugarWatch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmEMR_IntBloodSugarWatchcon.resx">
+      <DependentUpon>frmEMR_IntBloodSugarWatchcon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmEMR_MicroBooldSugarCheck.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEMR_MicroBooldSugarCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmEMR_MicroBooldSugarCheckCon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEMR_MicroBooldSugarCheckCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurseRecordWK_CSCon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGeneralNurseRecordWK_CSCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurseRecordWK_CSRec.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGeneralNurseRecordWK_CSRec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurseRecord_CS.resx">
+      <DependentUpon>frmGeneralNurseRecord_CS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurseRecord_CSCon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGeneralNurseRecord_CSCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurseRecord_CSRec.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGeneralNurseRecord_CSRec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurseRecord_DGCS.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGeneralNurseRecord_DGCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurseRecord_DGCSCon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGeneralNurseRecord_DGCSCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurseRecord_DGCSRec.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGeneralNurseRecord_DGCSRec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurse_ObstetricNewChild.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGeneralNurse_ObstetricNewChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurse_ObstetricNewChildCon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGeneralNurse_ObstetricNewChildCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurse_ObstetricNewChildRec.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGeneralNurse_ObstetricNewChildRec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmICUNurseStatistics.resx">
+      <DependentUpon>frmICUNurseStatistics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntakeAndOutputVolume.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmIntakeAndOutputVolume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntakeAndOutputVolumeCon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmIntakeAndOutputVolumeCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntakeAndOutputVolumeSummary.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmIntakeAndOutputVolumeSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntensiveTendMain_CSWK.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmIntensiveTendMain_CSWK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntensiveTendMain_CSWKCon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmIntensiveTendMain_CSWKCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntensiveTendMain_CSWKRec.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmIntensiveTendMain_CSWKRec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntensivetendRecord_CS.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmIntensivetendRecord_CS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntensivetendRecord_CSCon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmIntensivetendRecord_CSCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntensivetendRecord_CSRec.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmIntensivetendRecord_CSRec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmNewBorthBabyGeneralNurseRecord_CS.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNewBorthBabyGeneralNurseRecord_CS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmNewBorthBabyGeneralNurseRecord_CSCon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNewBorthBabyGeneralNurseRecord_CSCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmNewBorthBabyGeneralNurseRecord_CSRec.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNewBorthBabyGeneralNurseRecord_CSRec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmOXTIntravenousDrip.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOXTIntravenousDrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmOXTIntravenousDripCon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOXTIntravenousDripCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmPartogramPoint_GX.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPartogramPoint_GX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmPartogramRecordContent_GX.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPartogramRecordContent_GX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmPartogramRecord_GX.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPartogramRecord_GX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmPartogramSelected.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPartogramSelected.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmQuickeningTutelar_Acad.resx">
+      <DependentUpon>frmQuickeningTutelar_Acad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmQuickeningTutelar_AcadCon.resx">
+      <DependentUpon>frmQuickeningTutelar_AcadCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageDeptTool\frmEmployeeMove.resx">
+      <DependentUpon>frmEmployeeMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageDeptTool\frmManageDocAndNur.resx">
+      <DependentUpon>frmManageDocAndNur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent.resx">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmBedCardManage.resx">
+      <DependentUpon>frmBedCardManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmCardiovascularTendMain_GX.resx">
+      <DependentUpon>frmCardiovascularTendMain_GX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmCardiovascularTend_GX.resx">
+      <DependentUpon>frmCardiovascularTend_GX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmEMR_InPatientEvaluate.resx">
+      <DependentUpon>frmEMR_InPatientEvaluate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmEMR_OPInstrumentQty.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEMR_OPInstrumentQty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmEMR_OPNurseRecord_GX.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEMR_OPNurseRecord_GX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurseRecord.resx">
+      <DependentUpon>frmGeneralNurseRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurseRecord_GX.resx">
+      <DependentUpon>frmGeneralNurseRecord_GX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurseRecord_GXCon.resx">
+      <DependentUpon>frmGeneralNurseRecord_GXCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurseRecord_GXRec.resx">
+      <DependentUpon>frmGeneralNurseRecord_GXRec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmGeneralNurseWholeRecord.resx">
+      <DependentUpon>frmGeneralNurseWholeRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmHurryVeinRecord_Acad.resx">
+      <DependentUpon>frmHurryVeinRecord_Acad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmHurryVeinRecord_AcadCon.resx">
+      <DependentUpon>frmHurryVeinRecord_AcadCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmICUIntensiveTendRecord.resx">
+      <DependentUpon>frmICUIntensiveTendRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmICUNurseRecordContent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmICUNurseRecordContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmICUNurseRecordMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmICUNurseRecordMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmICUNurseRecord_GX.resx">
+      <DependentUpon>frmICUNurseRecord_GX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmICUNurseRecord_GXCon.resx">
+      <DependentUpon>frmICUNurseRecord_GXCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmICUNursingRecord.resx">
+      <DependentUpon>frmICUNursingRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmICUTrend.resx">
+      <DependentUpon>frmICUTrend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmInPatientEvaluate.resx">
+      <DependentUpon>frmInPatientEvaluate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntensiveTend.resx">
+      <DependentUpon>frmIntensiveTend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntensiveTendMain.resx">
+      <DependentUpon>frmIntensiveTendMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntensiveTendMain_FC.resx">
+      <DependentUpon>frmIntensiveTendMain_FC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntensiveTendMain_GX.resx">
+      <DependentUpon>frmIntensiveTendMain_GX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntensiveTend_FC.resx">
+      <DependentUpon>frmIntensiveTend_FC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntensiveTend_FContent.resx">
+      <DependentUpon>frmIntensiveTend_FContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntensiveTend_GX.resx">
+      <DependentUpon>frmIntensiveTend_GX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmIntensiveTend_GXContent.resx">
+      <DependentUpon>frmIntensiveTend_GXContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmMainGeneralNurseRecord.resx">
+      <DependentUpon>frmMainGeneralNurseRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmMainICUBreath.resx">
+      <DependentUpon>frmMainICUBreath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmMainICUIntensiveTend.resx">
+      <DependentUpon>frmMainICUIntensiveTend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmMiniBooldSugar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMiniBooldSugar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmMiniBooldSugarChk.resx">
+      <DependentUpon>frmMiniBooldSugarChk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmMiniBooldSugarChk_GX.resx">
+      <DependentUpon>frmMiniBooldSugarChk_GX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmMiniBooldSugarContent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMiniBooldSugarContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmOperationEquipmentQty.resx">
+      <DependentUpon>frmOperationEquipmentQty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmOperationRecord.resx">
+      <DependentUpon>frmOperationRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmPostartumSeeRecord.resx">
+      <DependentUpon>frmPostartumSeeRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmPostartumSeeRecordCon.resx">
+      <DependentUpon>frmPostartumSeeRecordCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmPostPartum_Acad.resx">
+      <DependentUpon>frmPostPartum_Acad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmPostPartum_AcadCon.resx">
+      <DependentUpon>frmPostPartum_AcadCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmRegisterQuantity.resx">
+      <DependentUpon>frmRegisterQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmSetBed_Doctor.resx">
+      <DependentUpon>frmSetBed_Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmSubICUBreath.resx">
+      <DependentUpon>frmSubICUBreath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmSubICUIntensiveTend.resx">
+      <DependentUpon>frmSubICUIntensiveTend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmSubWatchItemRecord.resx">
+      <DependentUpon>frmSubWatchItemRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmSurgeryICUWardship.resx">
+      <DependentUpon>frmSurgeryICUWardship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmSurgeryICUWardshipEdit.resx">
+      <DependentUpon>frmSurgeryICUWardshipEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmThreeMeasureRecord.resx">
+      <DependentUpon>frmThreeMeasureRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmThreeMeasureRecordGN.resx">
+      <DependentUpon>frmThreeMeasureRecordGN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmThreeMeasureRecordNew.resx">
+      <DependentUpon>frmThreeMeasureRecordNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmVeinSpecialUseDrug.resx">
+      <DependentUpon>frmVeinSpecialUseDrug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmVeinSpecialUseDrugCon.resx">
+      <DependentUpon>frmVeinSpecialUseDrugCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmWaitLayRecord_Acad.resx">
+      <DependentUpon>frmWaitLayRecord_Acad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmWaitLayRecord_AcadCon.resx">
+      <DependentUpon>frmWaitLayRecord_AcadCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmWaitLayRecord_AcadCon_GX.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWaitLayRecord_AcadCon_GX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmWaitLayRecord_Acad_GX.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWaitLayRecord_Acad_GX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseWorkStation\frmWatchItemTrack.resx">
+      <DependentUpon>frmWatchItemTrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PACS\frmImageBookingSearch.resx">
+      <DependentUpon>frmImageBookingSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PACS\frmImageReport.resx">
+      <DependentUpon>frmImageReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTool\frmPrintPreviewDialog.resx">
+      <DependentUpon>frmPrintPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTool\frmPrintPreviewDialogAll.resx">
+      <DependentUpon>frmPrintPreviewDialogAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTool\frmPrintPreviewDialogPF.resx">
+      <DependentUpon>frmPrintPreviewDialogPF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Public\frmBusynessForm.resx">
+      <DependentUpon>frmBusynessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Public\frmImageList.resx">
+      <DependentUpon>frmImageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Public\frmOutlookBar.resx">
+      <DependentUpon>frmOutlookBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordSearch\frmCaseHistorySearch_Combin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCaseHistorySearch_Combin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordSearch\frmCaseHistorySearch_In.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCaseHistorySearch_In.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordSearch\frmCaseHistorySearch_OutInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCaseHistorySearch_OutInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordSearch\frmCaseHistorySearch_OutReg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCaseHistorySearch_OutReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordSearch\frmCaseHistorySearch_unList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCaseHistorySearch_unList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordSearch\frmCaseHistoryStat_CataLoad.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCaseHistoryStat_CataLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordSearch\frmCaseHistoryStat_Diagnose.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCaseHistoryStat_Diagnose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordSearch\frmCaseHistoryStat_Operation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCaseHistoryStat_Operation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordSearch\frmDataSearches.resx">
+      <DependentUpon>frmDataSearches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordSearch\frmRecordSearch.resx">
+      <DependentUpon>frmRecordSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBUltrasonicCheckOrder.resx">
+      <DependentUpon>rptBUltrasonicCheckOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\CommandBar.resx">
+      <DependentUpon>CommandBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ctlDataGridBaseTool.resx">
+      <DependentUpon>ctlDataGridBaseTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ctlDataGridPatientLabel.resx">
+      <DependentUpon>ctlDataGridPatientLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ctlTrendChart.resx">
+      <DependentUpon>ctlTrendChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ctlTrendList.resx">
+      <DependentUpon>ctlTrendList.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Signature_gui\Signature_gui\Signature_gui.csproj">
+      <Project>{951FA830-DC89-4F4A-90D6-F137CA6DEE1D}</Project>
+      <Name>Signature_gui</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

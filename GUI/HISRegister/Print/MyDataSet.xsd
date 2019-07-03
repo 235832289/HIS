@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="MyDataSet" targetNamespace="http://tempuri.org/MyDataSet.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/MyDataSet.xsd" xmlns:mstns="http://tempuri.org/MyDataSet.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="MyDataSet" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="dtChargeCheck">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="诊疗卡号" type="xs:string" minOccurs="0" />
+							<xs:element name="发票编号" type="xs:string" minOccurs="0" />
+							<xs:element name="处方号" type="xs:string" minOccurs="0" />
+							<xs:element name="病人身份" type="xs:string" minOccurs="0" />
+							<xs:element name="病人名称" type="xs:string" minOccurs="0" />
+							<xs:element name="性别" type="xs:string" minOccurs="0" />
+							<xs:element name="支付类型" type="xs:string" minOccurs="0" />
+							<xs:element name="发票日期" type="xs:short" minOccurs="0" />
+							<xs:element name="科室名称" type="xs:string" minOccurs="0" />
+							<xs:element name="医生名称" type="xs:string" minOccurs="0" />
+							<xs:element name="收费员" type="xs:string" minOccurs="0" />
+							<xs:element name="记帐金额" type="xs:decimal" minOccurs="0" />
+							<xs:element name="自付金额" type="xs:decimal" minOccurs="0" />
+							<xs:element name="合计金额" type="xs:decimal" minOccurs="0" />
+							<xs:element name="病人类型" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CryTransfusionReport">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RowNO" type="xs:string" minOccurs="0" />
+							<xs:element name="medName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="crytable">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ItemName" type="xs:string" minOccurs="0" />
+							<xs:element name="ItemSpece" type="xs:string" minOccurs="0" />
+							<xs:element name="Itemcount" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="table1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ItemName" type="xs:string" minOccurs="0" />
+							<xs:element name="ItemSpecs" type="xs:string" minOccurs="0" />
+							<xs:element name="GroudNO" type="xs:string" minOccurs="0" />
+							<xs:element name="UseCount" type="xs:string" minOccurs="0" />
+							<xs:element name="UseType" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

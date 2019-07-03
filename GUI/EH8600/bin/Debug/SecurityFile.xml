@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration text="数据库连接字符串">
+  <OracleServerSecurityStrings text="Oracle">
+    <bytICare text="主体数据库" userid="icare" password="SG1Ouqe+x1fUOZ7F2y9uFg==" />
+	<bytICarezs text="主体数据库" userid="icare" password="7FLCz8Aq/sVfm9jqJ4HfiQ==" />
+    <bytPACS text="影像数据库" servername="dicom" userid="icare" password="IYO+mwiF7qx8gbCpNvP0aw==" />
+    <bytUltraSound text="B超数据库" servername="dicom" userid="icare" password="IYO+mwiF7qx8gbCpNvP0aw==" />
+    <bytReport text="报表数据库" servername="icare" userid="icare" password="IYO+mwiF7qx8gbCpNvP0aw==" />
+    <bytStorage text="存储数据库" servername="icare" userid="icare" password="IYO+mwiF7qx8gbCpNvP0aw==" />
+    <bytLIS text="检验数据库" servername="icare" userid="icare" password="IYO+mwiF7qx8gbCpNvP0aw==" />
+  </OracleServerSecurityStrings>
+ <SQLServerSecurityStrings text="SQL Server">
+      <bytGDCASE text="病案接口数据库" server="10.37.0.22" database="bagl_java" userid="sa" password="cs123" />
+<bytPE text="体检数据库" server="10.37.0.23" database="csyy_pe" userid="sa" password="dgcsxxk" />
+<bytCP1 text="临床路径数据库" server="10.37.0.241" database="cp" userid="sa" password="1234qwer/.,m" />
+<bytCP text="临床路径数据库" server="10.37.0.22" database="cp" userid="sa" password="cs123" />
+<bytPacsNew text="pacs.new数据库" server="10.37.0.24" database="PACSInitial" userid="sa" password="cs123" /> 
+<bytPE text="PE数据库" server="10.37.0.6" database="csyy_pe" userid="sa" password="dgcsxxk" /> 
+ <bytPacsNew text="pacs.new数据库" server="10.37.0.24" database="PACSInitial" userid="sa" password="cs123" /> 
+   </SQLServerSecurityStrings>
+  <ODBCServerSecurityStrings text="ODBC">
+    <!--
+    <bytICare text="主体数据库" userid="emr" password="iNDUJbV6Shx6joPEj35XXQ==" />
+    <bytPACS text="影像数据库" userid="dicom" password="SG1Ouqe+x1fUOZ7F2y9uFg==" />
+    
+    <bytGDCASE text="病案接口数据库" userid="emr" password="dhegRTnN6mFc5iA+Z+5pHw==" />
+	-->
+  </ODBCServerSecurityStrings>
+  <!--
+  <SQLServerSecurityStrings text="SQL Server">
+    <bytGDCASE text="病案接口数据库" userid="emr" password="iNDUJbV6Shx6joPEj35XXQ==" />
+  </SQLServerSecurityStrings>
+  <DB2ServerSecurityStrings text="DB2">
+    <strbytDB2 text="主体数据库" userid="icare" password="oktEZ3YJKjhZ4vUIP8D2+A==" />
+  </DB2ServerSecurityStrings>
+  -->
+</configuration>

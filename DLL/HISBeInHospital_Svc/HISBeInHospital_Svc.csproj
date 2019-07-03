@@ -1,0 +1,166 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49DE7257-3185-4353-A360-336A09A823DC}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>HISBeInHospital_Svc</AssemblyName>
+    <AssemblyOriginatorKeyFile>HISBeInHospital_Svc.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HISBeInHospital_Svc</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>false</SignAssembly>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BIHOrderService, Version=2.0.0.1, Culture=neutral, PublicKeyToken=a28c1b8bab8f03da, processorArchitecture=MSIL" />
+    <Reference Include="HRPService">
+      <Name>HRPService</Name>
+      <HintPath>..\..\..\bin\Debug\HRPService.dll</HintPath>
+    </Reference>
+    <Reference Include="iCareData">
+      <Name>iCareData</Name>
+      <HintPath>..\..\..\bin\Debug\iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="MiddleTierBase">
+      <Name>MiddleTierBase</Name>
+      <HintPath>..\..\..\bin\Debug\MiddleTierBase.dll</HintPath>
+    </Reference>
+    <Reference Include="PatientSvc">
+      <Name>PatientSvc</Name>
+      <HintPath>..\..\..\bin\DEBUG\PatientSvc.dll</HintPath>
+    </Reference>
+    <Reference Include="PrivilegeSystemService">
+      <Name>PrivilegeSystemService</Name>
+      <HintPath>..\..\..\bin\Debug\PrivilegeSystemService.dll</HintPath>
+    </Reference>
+    <Reference Include="RecordMark">
+      <Name>RecordMark</Name>
+      <HintPath>..\..\..\BIN\Debug\RecordMark.dll</HintPath>
+    </Reference>
+    <Reference Include="SynchroTransmitterMessage_Svc, Version=2.0.0.1, Culture=neutral, PublicKeyToken=a652837cf0624f61, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Name>System.EnterpriseServices</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="Utility">
+      <Name>Utility</Name>
+      <HintPath>..\..\..\bin\Debug\Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBedManageSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBeINpatientNOSvc.cs" />
+    <Compile Include="clsBihLeaHosSvc.cs" />
+    <Compile Include="clsBihRegisterSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBihStatQuerySvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBIHTransferSvc.cs" />
+    <Compile Include="clsCheckDeptRoleSvc.cs" />
+    <Compile Include="clsDemandPayment.cs" />
+    <Compile Include="clsInPatientQuerySvc.cs" />
+    <Compile Include="clsOrderBookingSvc.cs" />
+    <Compile Include="clsOrderExecuteReportSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsPatienInfLogSvc.cs" />
+    <Compile Include="clsPrepayCheckoutSvc.cs" />
+    <Compile Include="clsPrepayQuerySvc.cs" />
+    <Compile Include="clsReportSvc.cs" />
+    <Compile Include="clsSpecreMarkSvc.cs" />
+    <None Include="HISBeInHospital_Svc.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

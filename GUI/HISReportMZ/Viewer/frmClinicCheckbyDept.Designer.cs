@@ -1,0 +1,237 @@
+﻿namespace HISReportMZ.Viewer
+{
+    partial class frmClinicCheckbyDept
+    {
+        /// <summary>
+        /// 必需的设计器变量。
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// 清理所有正在使用的资源。
+        /// </summary>
+        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows 窗体设计器生成的代码
+
+        /// <summary>
+        /// 设计器支持所需的方法 - 不要
+        /// 使用代码编辑器修改此方法的内容。
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnPreview = new PinkieControls.ButtonXP();
+            this.btnPrint = new PinkieControls.ButtonXP();
+            this.btnSelect = new PinkieControls.ButtonXP();
+            this.btnExport = new PinkieControls.ButtonXP();
+            this.m_datEndTime = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnClose = new PinkieControls.ButtonXP();
+            this.m_datBegin = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataWindowControl1 = new Sybase.DataWindow.DataWindowControl();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.btnPreview);
+            this.panel1.Controls.Add(this.btnPrint);
+            this.panel1.Controls.Add(this.btnSelect);
+            this.panel1.Controls.Add(this.btnExport);
+            this.panel1.Controls.Add(this.m_datEndTime);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Controls.Add(this.m_datBegin);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1028, 46);
+            this.panel1.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "日结时间",
+            "收费时间"});
+            this.comboBox1.Location = new System.Drawing.Point(416, 16);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(144, 20);
+            this.comboBox1.TabIndex = 26;
+            // 
+            // btnPreview
+            // 
+            this.btnPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.btnPreview.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPreview.DefaultScheme = true;
+            this.btnPreview.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPreview.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPreview.Hint = "";
+            this.btnPreview.Location = new System.Drawing.Point(690, 7);
+            this.btnPreview.Name = "btnPreview";
+            this.btnPreview.Scheme = PinkieControls.ButtonXP.Schemes.Blue;
+            this.btnPreview.Size = new System.Drawing.Size(72, 34);
+            this.btnPreview.TabIndex = 25;
+            this.btnPreview.Text = "预览(&V)";
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.DefaultScheme = true;
+            this.btnPrint.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPrint.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPrint.Hint = "";
+            this.btnPrint.Location = new System.Drawing.Point(862, 7);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Scheme = PinkieControls.ButtonXP.Schemes.Blue;
+            this.btnPrint.Size = new System.Drawing.Size(72, 34);
+            this.btnPrint.TabIndex = 21;
+            this.btnPrint.Text = "打印(&P)";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelect.DefaultScheme = true;
+            this.btnSelect.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSelect.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSelect.Hint = "";
+            this.btnSelect.Location = new System.Drawing.Point(600, 7);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Scheme = PinkieControls.ButtonXP.Schemes.Blue;
+            this.btnSelect.Size = new System.Drawing.Size(72, 34);
+            this.btnSelect.TabIndex = 19;
+            this.btnSelect.Text = "统计(&S)";
+            // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExport.DefaultScheme = true;
+            this.btnExport.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnExport.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnExport.Hint = "";
+            this.btnExport.Location = new System.Drawing.Point(777, 7);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Scheme = PinkieControls.ButtonXP.Schemes.Blue;
+            this.btnExport.Size = new System.Drawing.Size(72, 34);
+            this.btnExport.TabIndex = 20;
+            this.btnExport.Text = "导出(&E)";
+            // 
+            // m_datEndTime
+            // 
+            this.m_datEndTime.CustomFormat = "yyyy年MM月dd日";
+            this.m_datEndTime.Font = new System.Drawing.Font("宋体", 11F);
+            this.m_datEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_datEndTime.Location = new System.Drawing.Point(245, 14);
+            this.m_datEndTime.Name = "m_datEndTime";
+            this.m_datEndTime.Size = new System.Drawing.Size(134, 24);
+            this.m_datEndTime.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(220, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 14);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "到";
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.DefaultScheme = true;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnClose.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnClose.Hint = "";
+            this.btnClose.Location = new System.Drawing.Point(945, 7);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Scheme = PinkieControls.ButtonXP.Schemes.Blue;
+            this.btnClose.Size = new System.Drawing.Size(72, 34);
+            this.btnClose.TabIndex = 22;
+            this.btnClose.Text = "关闭(&C)";
+            // 
+            // m_datBegin
+            // 
+            this.m_datBegin.CustomFormat = "yyyy年MM月dd日";
+            this.m_datBegin.Font = new System.Drawing.Font("宋体", 11F);
+            this.m_datBegin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_datBegin.Location = new System.Drawing.Point(84, 14);
+            this.m_datBegin.Name = "m_datBegin";
+            this.m_datBegin.Size = new System.Drawing.Size(133, 24);
+            this.m_datBegin.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(20, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 14);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "日期：从";
+            // 
+            // dataWindowControl1
+            // 
+            this.dataWindowControl1.DataWindowObject = "";
+            this.dataWindowControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataWindowControl1.LibraryList = "";
+            this.dataWindowControl1.Location = new System.Drawing.Point(0, 46);
+            this.dataWindowControl1.Name = "dataWindowControl1";
+            this.dataWindowControl1.Size = new System.Drawing.Size(1028, 496);
+            this.dataWindowControl1.TabIndex = 4;
+            this.dataWindowControl1.Text = "dataWindowControl1";
+            // 
+            // frmClinicCheckbyDept
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1028, 542);
+            this.Controls.Add(this.dataWindowControl1);
+            this.Controls.Add(this.panel1);
+            this.Name = "frmClinicCheckbyDept";
+            this.Text = "frmClinicCheckbyDept";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        internal PinkieControls.ButtonXP btnPreview;
+        internal PinkieControls.ButtonXP btnPrint;
+        internal PinkieControls.ButtonXP btnSelect;
+        internal PinkieControls.ButtonXP btnExport;
+        internal System.Windows.Forms.DateTimePicker m_datEndTime;
+        private System.Windows.Forms.Label label2;
+        internal PinkieControls.ButtonXP btnClose;
+        internal System.Windows.Forms.DateTimePicker m_datBegin;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private Sybase.DataWindow.DataWindowControl dataWindowControl1;
+    }
+}

@@ -1,0 +1,1243 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Utility</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.Utility.clsStringStream">
+            <summary>
+            简单实现Stream类，主要在XML字符串的使用。
+            只实现写入操作，没有实现读取操作，因为简单的返回有问题。
+            
+            liyi 2002-9-20
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsStringStream.m_sbdText">
+            <summary>
+            记录字符串的缓冲
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsStringStream.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="p_intBufferSize">缓冲的大小</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsStringStream.#ctor">
+            <summary>
+            构造函数，缓冲缺省是100
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsStringStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            写入函数
+            </summary>
+            <param name="buffer"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+        </member>
+        <member name="P:com.digitalwave.Utility.clsStringStream.CanRead">
+            <summary>
+            现在不能读取
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.clsStringStream.Length">
+            <summary>
+            返回长度
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsLogText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsLogText.Log2File(System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strFileName"></param>
+            <param name="blnAllWaysNew"></param>
+            <param name="strText"></param>
+            <param name="strTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsLogText.Log2File(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strFileName"></param>
+            <param name="strText"></param>
+            <param name="strTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsLogText.Log2File(System.String,System.Boolean,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strFileName"></param>
+            <param name="blnAllWaysNew"></param>
+            <param name="strText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsLogText.Log2File(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strFileName"></param>
+            <param name="strText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsLogText.LogError(System.Exception)">
+            <summary>
+            记录错误信息，并抛出异常，需要事务支持时用这个方法
+            </summary>
+            <param name="objEx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsLogText.LogDetailError(System.Exception,System.Boolean)">
+            <summary>
+            记录详细错误信息，包括有内联的错误，p_blnIsThrowException参数为true时抛出异常
+            </summary>
+            <param name="objEx"></param>
+            <param name="p_blnIsThrowException">需要事务支持时＝true</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsLogText.LogError(System.String)">
+            <summary>
+            记录错误信息，此方法不会抛出异常，需要事务支持时请用LogError(System.Exception objEx)
+            </summary>
+            <param name="objEx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsLogText.logthis(System.IO.IOException)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:com.digitalwave.Utility.clsLogText.m_IntLogFileSetting">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsListViewColumnSorter">
+            <summary>
+            继承自IComparer
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsListViewColumnSorter.ColumnToSort">
+            <summary>
+            指定按照哪个列排序
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsListViewColumnSorter.OrderOfSort">
+            <summary>
+            指定排序的方式
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsListViewColumnSorter.ObjectCompare">
+            <summary>
+            声明CaseInsensitiveComparer类对象，
+            参见ms-help://MS.VSCC.2003/MS.MSDNQTR.2003FEB.2052/cpref/html/frlrfSystemCollectionsCaseInsensitiveComparerClassTopic.htm
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsListViewColumnSorter.isNumber">
+            <summary>
+            指定列是否显示数字
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsListViewColumnSorter.RegexText">
+            <summary>
+            正则表达式，测试是否数字
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsListViewColumnSorter.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsListViewColumnSorter.Compare(System.Object,System.Object)">
+            <summary>
+            重写IComparer接口.
+            </summary>
+            <param name="x">要比较的第一个对象</param>
+            <param name="y">要比较的第二个对象</param>
+            <returns>比较的结果.如果相等返回0，如果x大于y返回1，如果x小于y返回-1</returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsListViewColumnSorter.RightNumber(System.String)">
+            <summary>
+            指定列显示数字时返回合要求的数字(字符串以数字开头)
+            </summary>
+            <param name="SortText">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.Utility.clsListViewColumnSorter.SortColumn">
+            <summary>
+            获取或设置按照哪一列排序.
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.clsListViewColumnSorter.Order">
+            <summary>
+            获取或设置排序方式.
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.clsListViewColumnSorter.IsNumber">
+            <summary>
+            获取或设置指定列是否显示数字
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsFootSwitch">
+            <summary>
+            脚踏板控制开关
+            原理：检测串口针脚状态变化来判断开关，当CTS-->DSR-->CTS变化时
+                  则认为脚踏开关被踩下接通，此时以事件的方式传出
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsFootSwitch.sCom">
+            <summary>
+            串口实例
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsFootSwitch.intStatus">
+            <summary>
+            针脚状态 CTS=0 DSR=1
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsFootSwitch.blnSignal">
+            <summary>
+            信号
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsFootSwitch.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsFootSwitch.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsFootSwitch.Dispose">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsFootSwitch.sCom_PinChanged(System.Object,System.IO.Ports.SerialPinChangedEventArgs)">
+            <summary>
+            串口针脚信号变化事件处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsFootSwitch.InitializeSwith">
+            <summary>
+            初始化函数
+            </summary>
+        </member>
+        <member name="E:com.digitalwave.Utility.clsFootSwitch.FireEvent">
+            <summary>
+            通知事件
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsFootSwitch.FireEventHandler">
+            <summary>
+            事件通知模型
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsControlCleanUpUtil">
+            <summary>
+            提供窗口控件清空的功能  刘彬 2004.10.13
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsControlCleanUpUtil_TypePara">
+            <summary>
+            clsControlCleanUpUtil 中使用的辅助类
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsControlCleanUpUtil_TypePara.#ctor(System.Type[],System.Type[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="p_objDoTypeArr">指定要进行清除工作的类型</param>
+            <param name="p_objUndoTypeArr">指定不进行清除工作的类型</param>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsControlCleanUpUtil_ControlPara">
+            <summary>
+             clsControlCleanUpUtil 中使用的辅助类优先于clsControlCleanUpUtil_TypePara
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsControlCleanUpUtil_ControlPara.#ctor(System.Windows.Forms.Control[],System.Windows.Forms.Control[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="p_objDoControlArr">指定要进行清除工作的控件,优先于p_objUndoControlArr</param>
+            <param name="p_objUndoControlArr">指定不进行清除工作的控件</param>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsHexConvert">
+            <summary>
+            HexString的每个ASCII字符十六进制表达式之间用"|"分隔.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsHexConvert.m_strToHexString(System.String)">
+            <summary>
+            将 Hex 形式的字符串转换成普通文本 .
+            </summary>
+            <param name="p_strTextString"></param>
+            <returns>
+            null:p_strTextString　为空,或 p_strTextString 不能正确解析.
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsHexConvert.m_strToTextString(System.String)">
+            <summary>
+            将普通文本转换成 Hex 形式的字符串.
+            </summary>
+            <param name="p_strHexString"></param>
+            <returns>
+            null:p_strHexString　为空,或 p_strHexString 不能正确解析.
+            </returns>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsErrorProviderHandler">
+            <summary>
+            clsErrorProviderHandler 的摘要说明。
+            Alex Huang
+            2004-5-29
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsErrorProviderHandler.#ctor(System.Windows.Forms.ErrorProvider)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="p_epdObject">ErrorProvider 对象</param>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsErrorProviderHandler.m_hstControlArr">
+            <summary>
+            存放控件的对象
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsErrorProviderHandler.m_epdObject">
+            <summary>
+            ErrorProvider 对象
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsErrorProviderHandler.m_mthAddControl(System.Windows.Forms.Control)">
+            <summary>
+            添加控件
+            </summary>
+            <param name="p_ctl"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsErrorProviderHandler.m_mthAddControlRange(System.Windows.Forms.Control[])">
+            <summary>
+            批量添加控件
+            </summary>
+            <param name="p_ctlArr"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsErrorProviderHandler.m_mthClearControl">
+            <summary>
+            清空控件
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsErrorProviderHandler.m_mthShowControlsErrorProvider">
+            <summary>
+            显示控件错误信息图标
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.DataHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsMiscTools">
+            <summary>
+            Summary description for clsMiscTools.
+            </summary>
+        </member>
+        <!-- 对于成员“T:com.digitalwave.Utility.clsIniFile”忽略有格式错误的 XML 注释 -->
+        <member name="T:com.digitalwave.Utility.clsRemotingServer">
+            <summary>
+            远程调用的服务器端，使用它来接收远端的客户端发送的消息
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsRemotingClient">
+            <summary>
+            远程调用的客户端，使用它来发送消息到远端的服务器
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsRemotingClient.#ctor">
+            <summary>
+            初始化客户端实例
+            </summary>
+            <param name="strServerIP">
+            远端服务器的IP地址，如：127.0.0.1
+            </param>
+            <param name="strServerPort">
+            远端服务器的端口，必须和服务器设置的端口一致
+            </param>
+            <param name="strServerLocal">
+            远端服务器的逻辑位置，如 HRP/SomeServer
+            </param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsRemotingClient.blnSendXMLMessage(System.String,System.String,System.String,System.String)">
+            <summary>
+            发送XML信息
+            </summary>
+            <param name="strXMLMessage">
+            需要传输的XML字符串
+            </param>
+            <returns>
+            返回传输成功与否
+            </returns>
+        </member>
+        <member name="P:com.digitalwave.Utility.clsRemotingClient.ClientName">
+            <summary>
+            给客户端名称，省缺为空
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsXML_SQL_Converter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsXML_SQL_Converter.DataTable2Xml(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            把DataTable包含的值拼凑成XML字符串
+            </summary>
+            <param name="datatable"></param>
+            <param name="RootName">XML根结点的名称</param>
+            <param name="ElementName">包含数值的字节点名称</param>
+            <returns>如果失败，返回null</returns>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsDisableIMEUtility">
+            <summary>
+            用于输入法控制的类. 刘彬 2005.04.05
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsCryptoTool">
+            <summary>
+            提供客户端的安全传输
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsCryptoTool.m_objCryptoMem">
+            <summary>
+            存放加/解密的流数据。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsCryptoTool.m_objSA">
+            <summary>
+            对称加密算法。使用它来加密数据。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsCryptoTool.m_objCryptoStream">
+            <summary>
+            进行对称加/解密的流
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsCryptoTool.m_objClientRSA">
+            <summary>
+            客户端的非对称加密算法。使用它来解密对称算法的Key和VI。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsCryptoTool.m_objServerRSA">
+            <summary>
+            服务器端的非对称加密算法。使用它和客户端的公匙来加密对称算法的Key和VI
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsCryptoTool.m_blnCanCrypt">
+            <summary>
+            是否可以进行加/解密
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsCryptoTool.m_bytKeyArr">
+            <summary>
+            对称加密算法的Key
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsCryptoTool.m_bytIVArr">
+            <summary>
+            对称加密算法的IV
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.#ctor(System.Security.Cryptography.SymmetricAlgorithm,System.Security.Cryptography.RSACryptoServiceProvider,System.Security.Cryptography.RSACryptoServiceProvider)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="p_objSA">对称加密算法</param>
+            <param name="p_objClientRSA">客户端的非对称加密算法</param>
+            <param name="p_objServerRSA">服务器端的非对称加密算法</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.m_mthClear">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.m_objGetRSAClientPublicKey">
+            <summary>
+            获取非对称算法的公匙
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.m_strGetRSAClientPublicKey">
+            <summary>
+            获取非对称算法的公匙
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.m_bytGetSAKey">
+            <summary>
+            获取随机数生成的Key
+            </summary>
+            <returns>Key</returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.m_bytGetSAIV">
+            <summary>
+            获取随机数生成的IV
+            </summary>
+            <returns>IV</returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.m_mthEncryptSAInfo(System.Security.Cryptography.RSAParameters,System.Byte[],System.Byte[],System.Byte[]@,System.Byte[]@)">
+            <summary>
+            加密随机生成的Key和IV
+            </summary>
+            <param name="p_objParam">RSA的公匙</param>
+            <param name="p_bytInKey">Key</param>
+            <param name="p_bytInIV">IV</param>
+            <param name="p_bytOutKey">加密后的Key</param>
+            <param name="p_bytOutIV">加密后的IV</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.m_mthEncryptSAInfo(System.String,System.Byte[],System.Byte[],System.Byte[]@,System.Byte[]@)">
+            <summary>
+            加密随机生成的Key和IV
+            </summary>
+            <param name="p_strParam">RSA的公匙</param>
+            <param name="p_bytInKey">Key</param>
+            <param name="p_bytInIV">IV</param>
+            <param name="p_bytOutKey">加密后的Key</param>
+            <param name="p_bytOutIV">加密后的IV</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.m_mthSetEncryptedSAInfo(System.Byte[],System.Byte[])">
+            <summary>
+            设置对称算法的信息。信息使用非对称加密算法加密。
+            </summary>
+            <param name="p_bytKey">加密后的对称算法的Key。（从服务器端获取）</param>
+            <param name="p_bytIV">加密后的对称算法的IV。（从服务器端获取）</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.m_mthSetSAInfo(System.Byte[],System.Byte[])">
+            <summary>
+            设置对称算法的信息。
+            </summary>
+            <param name="p_bytKey">对称算法的Key</param>
+            <param name="p_bytIV">对称算法的IV</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.m_bytDecrypt(System.Byte[])">
+            <summary>
+            对数据解密
+            </summary>
+            <param name="p_bytData">数据</param>
+            <returns>解密后的数据</returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.m_bytEncrypt(System.Byte[])">
+            <summary>
+            对数据加密
+            </summary>
+            <param name="p_bytData">数据</param>
+            <returns>加密后的数据</returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.m_bytCrypt(System.Byte[],System.Boolean)">
+            <summary>
+            对数据加/解密
+            </summary>
+            <param name="p_bytData">数据</param>
+            <param name="p_blnEncryt">是否加密。true，加密；false，解密</param>
+            <returns>加/解密后的数据</returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCryptoTool.m_bytCrypt(System.Byte[],System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            对数据加/解密
+            </summary>
+            <param name="p_bytData">数据</param>
+            <param name="p_intOffset">开始加解密的偏移量</param>
+            <param name="p_intSize">加解密的数据长度</param>
+            <param name="blnEncryt">是否加密。true，加密；false，解密</param>
+            <returns>加/解密后的数据</returns>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsXMLSave">
+            <summary>
+            存储XML的类
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsXMLSave.m_alAttrib">
+            <summary>
+            保存clsXMLSaveAttrib的列表
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsXMLSave.strEnter">
+            <summary>
+            保存回车和内容分隔符
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsXMLSave.strPreTimeSymbol">
+            <summary>
+            保存回车和内容分隔符
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsXMLSave.AddXML(System.String,System.String,System.String)">
+            <summary>
+            添加需要保存的XML
+            </summary>
+            <param name="strTime">保存XML的时间</param>
+            <param name="strXML">保存的XML</param>
+            <param name="strXMLDesc">关于保存的XML的描述</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsXMLSave.RemoveXMLAt(System.Int32)">
+            <summary>
+            移去指定的XML结构
+            </summary>
+            <param name="index">移去的位置</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsXMLSave.RemoveAll">
+            <summary>
+            移去所有XML结构
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsXMLSave.LoadFromFile(System.String)">
+            <summary>
+            从文件读取
+            </summary>
+            <param name="strFileName">文件名称</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsXMLSave.OutToArray">
+            <summary>
+            把结构输出到数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsXMLSave.OutToFile(System.String)">
+            <summary>
+            把结构输出到文件，每次添加到文件的后面
+            </summary>
+            <param name="strFileName">文件名</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsXMLSave.OutToFile(System.String,System.Boolean)">
+            <summary>
+            把结构输出到文件
+            </summary>
+            <param name="strFileName">文件名</param>
+            <param name="blnNewFile">是否生成新文件，如果为true，使用新文件，并覆盖旧文件；如果为false，增加新文件或在旧文件后面添加内容</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsXMLSave.strTransToString">
+            <summary>
+            转换结构到字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsXMLSaveAttrib">
+            <summary>
+            保存XML的类结构
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsXMLSaveAttrib.strXML">
+            <summary>
+            要保存的XML
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsXMLSaveAttrib.strXMLDesc">
+            <summary>
+            关于XML的描述
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsXMLSaveAttrib.strSaveTime">
+            <summary>
+            保存XML的时间
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsXMLSaveAttrib.strSymbol">
+            <summary>
+            分隔结构的分隔标记
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsXMLSaveAttrib.ToString">
+            <summary>
+            已重载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsXMLSaveAttrib.Parse(System.String)">
+            <summary>
+            从字符串获取结构
+            </summary>
+            <param name="strAttrib"></param>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.Utility.clsXMLSaveAttrib.XML">
+            <summary>
+            保存的XML
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.clsXMLSaveAttrib.XMLDesc">
+            <summary>
+            关于XML的描述
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.clsXMLSaveAttrib.SaveTime">
+            <summary>
+            保存XML的时间
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsDoItem">
+            <summary>
+            代表操作信息的类
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsDoItem.m_objUndoItem">
+            <summary>
+            记录前一个可以做撤消操作的节点（只能在包内使用）
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsDoItem.m_objRedoItem">
+            <summary>
+            记录后一个可以做恢复操作的节点（只能在包内使用）
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsDoItem.m_objDoStatus">
+            <summary>
+            操作的状态
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsDoItem.#ctor(System.Object)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="p_objStatus">操作的状态</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsDoItem.m_objGetDoStatus">
+            <summary>
+            操作状态的获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsDoItem.m_objSetDoStatus(System.Object)">
+            <summary>
+            操作状态的设置
+            </summary>
+            <param name="p_objDoStatus">操作状态</param>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsUndoRedo">
+            <summary>
+            实现撤消、恢复操作的类
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsUndoRedo.m_objCurrentDoItem">
+            <summary>
+            当前的操作信息
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsUndoRedo.m_objDefaultDoItem">
+            <summary>
+            缺省的操作信息
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsUndoRedo.m_intItemCount">
+            <summary>
+            当前操作数量
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsUndoRedo.m_intMaxCount">
+            <summary>
+            最大的操作数量
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.clsUndoRedo.s_arlOutDoItems">
+            <summary>
+            存放所有被移出的DoItem
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsUndoRedo.#ctor(com.digitalwave.Utility.clsDoItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="p_objDefaultDoing">缺省的操作信息。撤消最后能达到的操作。</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsUndoRedo.#ctor(com.digitalwave.Utility.clsDoItem,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="p_objDefaultDoing">缺省的操作信息。撤消最后能达到的操作。</param>
+            <param name="p_intMaxCount">最大的操作数量</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsUndoRedo.m_objClearDoItems(com.digitalwave.Utility.clsDoItem)">
+            <summary>
+            清空操作信息，把当前操作设置为缺省操作
+            </summary>
+            <param name="p_objDefaultDoing">缺省的操作信息。撤消最后能达到的操作。</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsUndoRedo.m_objRedo">
+            <summary>
+            恢复操作，并返回恢复到的操作信息。
+            </summary>
+            <returns>恢复到的操作信息。如果不能进行恢复，返回为null。可以使用blnCanRedo方法判断。是否可以进行恢复。</returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsUndoRedo.m_blnCanRedo">
+            <summary>
+            判断是否可以执行恢复操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsUndoRedo.m_objUndo">
+            <summary>
+            撤消操作，并返回撤消到的操作信息。
+            </summary>
+            <returns>如果不能进行撤消，返回为null。可以使用blnCanUndo方法判断。是否可以进行撤消。
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsUndoRedo.m_blnCanUndo">
+            <summary>
+            判断是否可以执行撤消操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsUndoRedo.m_objAddCurrentDoItem(com.digitalwave.Utility.clsDoItem)">
+            <summary>
+            添加当前操作信息
+            </summary>
+            <param name="p_objCurrentDoItem">当前操作信息</param>
+            <returns>如果操作信息超过最大限度，返回被移出的操作信息，否则返回null</returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsUndoRedo.m_mthReleaseOutItem(com.digitalwave.Utility.clsDoItem[])">
+            <summary>
+            释放资源
+            </summary>
+            <param name="p_objOutItemArr"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsUndoRedo.m_mthReleaseDoItem(com.digitalwave.Utility.clsDoItem)">
+            <summary>
+            释放失效的操作信息的关联
+            </summary>
+            <param name="p_objBaseDoItem">释放操作信息的基点，此操作信息不被释放。</param>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsHelpFile">
+            <summary>
+            显示帮助文档
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsHelpFile.m_mthShowHelp(System.String)">
+            <summary>
+            显示帮助文档
+            </summary>
+            <param name="p_strPath"></param>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsConfiguration">
+            <summary>
+            读取.config文件的设置
+            AppSettings和ConnectionStrings  
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsConfiguration.GetAppSettingsValue(System.String)">
+            <summary>
+            获取当前应用程序配置文件指定的Appsettings的value
+            </summary>
+            <param name="pKey">指定AppSetting的key</param>
+            <returns>返回Value －99表示出错 空值表示不存在该key</returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsConfiguration.GetAppSettingsValue(System.String,System.String)">
+            <summary>
+            获取指定config配置文件的指定的Appsettings的value
+            </summary>
+            <param name="pFileName">指定配置文件名</param>
+            <param name="pKey">指定AppSetting的key</param>
+            <returns>返回Value －99表示出错 空值表示不存在该key</returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsConfiguration.GetAppSettingsKeys">
+            <summary>
+            获取当前应用程序配置文件指定的Appsettings的keys集合
+            </summary>
+            <param name="pFileName">指定配置文件名</param>
+            <returns>返回keys集合  </returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsConfiguration.GetAppSettingsKeys(System.String)">
+            <summary>
+            获取指定config配置文件的指定的Appsettings的keys集合
+            </summary>
+            <param name="pFileName">指定配置文件名</param>
+            <returns>返回keys集合  </returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsConfiguration.GetConnectionStringsValue(System.String,System.String)">
+            <summary>
+            获取指定config配置文件的指定的ConnectionStrings的value
+            </summary>
+            <param name="pFileName">指定配置文件名</param>
+            <param name="pKey">指定AppSetting的key</param>
+            <returns>返回Value －99表示出错 空值表示不存在该key</returns>
+        </member>
+        <member name="T:com.digitalwave.Utility.SQLConvert.clsDatabaseSQLConvert">
+            <summary>
+            clsDatabaseSQLConvert 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.SQLConvert.clsDatabaseSQLConvert.s_strGetSQLDateTimeFormat(System.DateTime)">
+            <summary>
+            返回正确的时间格式
+            </summary>
+            <param name="p_dtmDateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.SQLConvert.clsDatabaseSQLConvert.s_strGetSQLDateTimeFormat(System.String)">
+            <summary>
+            返回正确的时间格式
+            </summary>
+            <param name="p_strDateTime">yyyy-mm-dd hh24:mi:ss的格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.SQLConvert.clsDatabaseSQLConvert.s_strGetSQLInvalidDateFormat">
+            <summary>
+            返加默认的时间格式(1900-01-01 00:00:00)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.SQLConvert.clsDatabaseSQLConvert.s_strGetConvertToDateSQL(System.String)">
+            <summary>
+            将字段转换为日期
+            </summary>
+            <param name="p_strDatefield">可以转换为日期的数据表的字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.SQLConvert.clsDatabaseSQLConvert.s_StrGetTurnNumricFuncName(System.String,System.String)">
+            <summary>
+            获取
+            </summary>
+            <param name="p_strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.SQLConvert.clsDatabaseSQLConvert.s_strGetAgeSQL(System.String)">
+            <summary>
+            计算年龄
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.SQLConvert.clsDatabaseSQLConvert.s_strGetDaysBetween2DateSQL(System.String,System.String)">
+            <summary>
+            计算一段日期相减得到的天数
+            </summary>
+            <param name="p_strDateBegin">开始日期</param>
+            <param name="p_strDateEnd">结束日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.SQLConvert.clsDatabaseSQLConvert.s_strGetFuntionSQL(System.String)">
+            <summary>
+            返回正确的函数调用名称
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.SQLConvert.clsDatabaseSQLConvert.s_StrTop1">
+            <summary>
+            SQL2000下取第一条记录的SQL(" top 1 ")
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.SQLConvert.clsDatabaseSQLConvert.s_StrRownum">
+            <summary>
+            Oracle下取第一条记录的SQL，与where联用(" where rownum = 1 ")
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.SQLConvert.clsDatabaseSQLConvert.s_StrGetServDateFuncName">
+            <summary>
+            获取服务器当前时间
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.SQLConvert.clsDatabaseSQLConvert.s_StrGetNullFuncName">
+            <summary>
+            空值函数
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.ChineseCalendarException">
+            <summary>
+            中国日历异常处理
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.ChineseCalendar">
+            <summary>
+            中国农历类 版本V1.0 支持 1900.1.31日起至 2049.12.31日止的数据
+            </summary>
+            <remarks>
+            本程序使用数据来源于网上的万年历查询，并综合了一些其它数据
+            </remarks>
+        </member>
+        <member name="F:com.digitalwave.Utility.ChineseCalendar.LunarDateArray">
+             <summary>
+             来源于网上的农历数据
+             </summary>
+             <remarks>
+             数据结构如下，共使用17位数据
+             第17位：表示闰月天数，0表示29天   1表示30天
+             第16位-第5位（共12位）表示12个月，其中第16位表示第一月，如果该月为30天则为1，29天为0
+             第4位-第1位（共4位）表示闰月是哪个月，如果当年没有闰月，则置0
+            </remarks>
+        </member>
+        <member name="M:com.digitalwave.Utility.ChineseCalendar.#ctor(System.DateTime)">
+            <summary>
+            用一个标准的公历日期来初使化
+            </summary>
+            <param name="dt"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ChineseCalendar.#ctor(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            用农历的日期来初使化
+            </summary>
+            <param name="cy">农历年</param>
+            <param name="cm">农历月</param>
+            <param name="cd">农历日</param>
+            <param name="LeapFlag">闰月标志</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ChineseCalendar.GetChineseYearDays(System.Int32)">
+            <summary>
+            取农历年一年的天数
+            </summary>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.ChineseCalendar.GetChineseHour(System.DateTime)">
+            <summary>
+            获得当前时间的时辰
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:com.digitalwave.Utility.ChineseCalendar.CheckDateLimit(System.DateTime)">
+            <summary>
+            检查公历日期是否符合要求
+            </summary>
+            <param name="dt"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ChineseCalendar.CheckChineseDateLimit(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            检查农历日期是否合理
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <param name="leapMonth"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ChineseCalendar.ConvertNumToChineseNum(System.Char)">
+            <summary>
+            将0-9转成汉字形式
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.ChineseCalendar.BitTest32(System.Int32,System.Int32)">
+            <summary>
+            测试某位是否为真
+            </summary>
+            <param name="num"></param>
+            <param name="bitpostion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.ChineseCalendar.ConvertDayOfWeek(System.DayOfWeek)">
+            <summary>
+            将星期几转成数字表示
+            </summary>
+            <param name="dayOfWeek"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.ChineseCalendar.CompareWeekDayHoliday(System.DateTime,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            比较当天是不是指定的第周几
+            </summary>
+            <param name="date"></param>
+            <param name="month"></param>
+            <param name="week"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.ChineseCalendar.NextDay">
+            <summary>
+            取下一天
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.ChineseCalendar.PervDay">
+            <summary>
+            取前一天
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.ChineseCalendarHoliday">
+            <summary>
+            计算中国农历节日
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.WeekDayHoliday">
+            <summary>
+            按某月第几周第几日计算的节日
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.DateHoliday">
+            <summary>
+            按公历日计算的节日
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.Date">
+            <summary>
+            取对应的公历日期
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.WeekDay">
+            <summary>
+            取星期几
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.WeekDayStr">
+            <summary>
+            周几的字符
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.DateString">
+            <summary>
+            公历日期中文表示法 如一九九七年七月一日
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.IsLeapYear">
+            <summary>
+            当前是否公历闰年
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.ChineseConstellation">
+            <summary>
+            28星宿计算
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.ChineseHour">
+            <summary>
+            时辰
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.IsChineseLeapMonth">
+            <summary>
+            是否闰月
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.IsChineseLeapYear">
+            <summary>
+            当年是否有闰月
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.ChineseDay">
+            <summary>
+            农历日
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.ChineseDayString">
+            <summary>
+            农历日中文表示
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.ChineseMonth">
+            <summary>
+            农历的月份
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.ChineseMonthString">
+            <summary>
+            农历月份字符串
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.ChineseYear">
+            <summary>
+            取农历年份
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.ChineseYearString">
+            <summary>
+            取农历年字符串如，一九九七年
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.ChineseDateString">
+            <summary>
+            取农历日期表示法：农历一九九七年正月初五
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.ChineseTwentyFourDay">
+            <summary>
+            定气法计算二十四节气,二十四节气是按地球公转来计算的，并非是阴历计算的
+            </summary>
+            <remarks>
+            节气的定法有两种。古代历法采用的称为"恒气"，即按时间把一年等分为24份，
+            每一节气平均得15天有余，所以又称"平气"。现代农历采用的称为"定气"，即
+            按地球在轨道上的位置为标准，一周360°，两节气之间相隔15°。由于冬至时地
+            球位于近日点附近，运动速度较快，因而太阳在黄道上移动15°的时间不到15天。
+            夏至前后的情况正好相反，太阳在黄道上移动较慢，一个节气达16天之多。采用
+            定气时可以保证春、秋两分必然在昼夜平分的那两天。
+            </remarks>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.ChineseTwentyFourPrevDay">
+            <summary>
+            当前日期前一个最近节气
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.DateOfChineseTwentyFourPrevDay">
+            <summary>
+            当前日期前一个最近节气的公历日期
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.ChineseTwentyFourNextDay">
+            <summary>
+            当前日期后一个最近节气
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.DateOfChineseTwentyFourNextDay">
+            <summary>
+            当前日期后一个最近节气的公历日期
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.Constellation">
+            <summary>
+            计算指定日期的星座序号 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.Animal">
+            <summary>
+            计算属相的索引，注意虽然属相是以农历年来区别的，但是目前在实际使用中是按公历来计算的
+            鼠年为1,其它类推
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.AnimalString">
+            <summary>
+            取属相字符串
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.GanZhiYearString">
+            <summary>
+            取农历年的干支表示法如 乙丑年
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.GanZhiMonthString">
+            <summary>
+            取干支的月表示字符串，注意农历的闰月不记干支
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.GanZhiDayString">
+            <summary>
+            取干支日表示法
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ChineseCalendar.GanZhiDateString">
+            <summary>
+            取当前日期的干支表示法如 甲子年乙丑月丙庚日
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.clsExpressionEvaluate">
+            <summary>
+            计算表达式的值的类。表达式中可以使用四则运算、
+            数学函数以及自定义函数，可以从一个表中按照关键字的值查找另一个字段的值，表达式支持括符的嵌套。
+            今后还可以很方便地扩展本程序集的功能，使之支持更复杂的查找运算，从而满足今后用户自定义报表的生成工作。
+            郑大鹏 2004-2-29
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,5 @@
+D:\icare\iCare_cs\code\HIS\CriticalValueWS\CriticalValueBiz\bin\Release\CriticalValueBiz.dll
+D:\icare\iCare_cs\code\HIS\CriticalValueWS\CriticalValueBiz\bin\Release\CriticalValueBiz.pdb
+D:\icare\iCare_cs\code\HIS\CriticalValueWS\CriticalValueBiz\bin\Release\Oracle.DataAccess.dll
+D:\icare\iCare_cs\code\HIS\CriticalValueWS\CriticalValueBiz\obj\Release\CriticalValueBiz.dll
+D:\icare\iCare_cs\code\HIS\CriticalValueWS\CriticalValueBiz\obj\Release\CriticalValueBiz.pdb

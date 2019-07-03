@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MK3", "MK3\MK3.csproj", "{4C099113-5082-482C-B5BC-F6B69BCA9709}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3DE05782-F390-4CC7-A2C8-618334BDD0BA} = {3DE05782-F390-4CC7-A2C8-618334BDD0BA}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MK3_Svc", "MK3_Svc\MK3_Svc.csproj", "{3DE05782-F390-4CC7-A2C8-618334BDD0BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C099113-5082-482C-B5BC-F6B69BCA9709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C099113-5082-482C-B5BC-F6B69BCA9709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C099113-5082-482C-B5BC-F6B69BCA9709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C099113-5082-482C-B5BC-F6B69BCA9709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DE05782-F390-4CC7-A2C8-618334BDD0BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE05782-F390-4CC7-A2C8-618334BDD0BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE05782-F390-4CC7-A2C8-618334BDD0BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE05782-F390-4CC7-A2C8-618334BDD0BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

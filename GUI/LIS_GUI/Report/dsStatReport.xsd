@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsStatReport" targetNamespace="http://tempuri.org/dsStatReport.xsd" xmlns:mstns="http://tempuri.org/dsStatReport.xsd" xmlns="http://tempuri.org/dsStatReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsStatReport" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_UserDSName="dsStatReport" msprop:Generator_DataSetName="dsStatReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtbStatDetailReport" msprop:Generator_UserTableName="dtbStatDetailReport" msprop:Generator_RowDeletedName="dtbStatDetailReportRowDeleted" msprop:Generator_TableClassName="dtbStatDetailReportDataTable" msprop:Generator_RowChangedName="dtbStatDetailReportRowChanged" msprop:Generator_RowClassName="dtbStatDetailReportRow" msprop:Generator_RowChangingName="dtbStatDetailReportRowChanging" msprop:Generator_RowEvArgName="dtbStatDetailReportRowChangeEvent" msprop:Generator_RowEvHandlerName="dtbStatDetailReportRowChangeEventHandler" msprop:Generator_TablePropName="dtbStatDetailReport" msprop:Generator_TableVarName="tabledtbStatDetailReport" msprop:Generator_RowDeletingName="dtbStatDetailReportRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="total_stat_group_count" msprop:Generator_UserColumnName="total_stat_group_count" msprop:Generator_ColumnPropNameInRow="total_stat_group_count" msprop:Generator_ColumnVarNameInTable="columntotal_stat_group_count" msprop:Generator_ColumnPropNameInTable="total_stat_group_countColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="total_work_count" msprop:Generator_UserColumnName="total_work_count" msprop:Generator_ColumnPropNameInRow="total_work_count" msprop:Generator_ColumnVarNameInTable="columntotal_work_count" msprop:Generator_ColumnPropNameInTable="total_work_countColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="stat_group_id_chr" msprop:Generator_UserColumnName="stat_group_id_chr" msprop:Generator_ColumnPropNameInRow="stat_group_id_chr" msprop:Generator_ColumnVarNameInTable="columnstat_group_id_chr" msprop:Generator_ColumnPropNameInTable="stat_group_id_chrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="stat_group_name_vchr" msprop:Generator_UserColumnName="stat_group_name_vchr" msprop:Generator_ColumnPropNameInRow="stat_group_name_vchr" msprop:Generator_ColumnVarNameInTable="columnstat_group_name_vchr" msprop:Generator_ColumnPropNameInTable="stat_group_name_vchrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="stat_group_print_title" msprop:Generator_UserColumnName="stat_group_print_title" msprop:Generator_ColumnPropNameInRow="stat_group_print_title" msprop:Generator_ColumnVarNameInTable="columnstat_group_print_title" msprop:Generator_ColumnPropNameInTable="stat_group_print_titleColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="work_group_id_chr" msprop:Generator_UserColumnName="work_group_id_chr" msprop:Generator_ColumnPropNameInRow="work_group_id_chr" msprop:Generator_ColumnVarNameInTable="columnwork_group_id_chr" msprop:Generator_ColumnPropNameInTable="work_group_id_chrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="work_group_name_vchr" msprop:Generator_UserColumnName="work_group_name_vchr" msprop:Generator_ColumnPropNameInRow="work_group_name_vchr" msprop:Generator_ColumnVarNameInTable="columnwork_group_name_vchr" msprop:Generator_ColumnPropNameInTable="work_group_name_vchrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="work_group_print_title" msprop:Generator_UserColumnName="work_group_print_title" msprop:Generator_ColumnPropNameInRow="work_group_print_title" msprop:Generator_ColumnVarNameInTable="columnwork_group_print_title" msprop:Generator_ColumnPropNameInTable="work_group_print_titleColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtbStatTotalReport" msprop:Generator_UserTableName="dtbStatTotalReport" msprop:Generator_RowDeletedName="dtbStatTotalReportRowDeleted" msprop:Generator_TableClassName="dtbStatTotalReportDataTable" msprop:Generator_RowChangedName="dtbStatTotalReportRowChanged" msprop:Generator_RowClassName="dtbStatTotalReportRow" msprop:Generator_RowChangingName="dtbStatTotalReportRowChanging" msprop:Generator_RowEvArgName="dtbStatTotalReportRowChangeEvent" msprop:Generator_RowEvHandlerName="dtbStatTotalReportRowChangeEventHandler" msprop:Generator_TablePropName="dtbStatTotalReport" msprop:Generator_TableVarName="tabledtbStatTotalReport" msprop:Generator_RowDeletingName="dtbStatTotalReportRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="work_group_id_chr" msprop:Generator_UserColumnName="work_group_id_chr" msprop:Generator_ColumnPropNameInRow="work_group_id_chr" msprop:Generator_ColumnVarNameInTable="columnwork_group_id_chr" msprop:Generator_ColumnPropNameInTable="work_group_id_chrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="work_group_name_vchr" msprop:Generator_UserColumnName="work_group_name_vchr" msprop:Generator_ColumnPropNameInRow="work_group_name_vchr" msprop:Generator_ColumnVarNameInTable="columnwork_group_name_vchr" msprop:Generator_ColumnPropNameInTable="work_group_name_vchrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="work_group_print_title" msprop:Generator_UserColumnName="work_group_print_title" msprop:Generator_ColumnPropNameInRow="work_group_print_title" msprop:Generator_ColumnVarNameInTable="columnwork_group_print_title" msprop:Generator_ColumnPropNameInTable="work_group_print_titleColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="total_work_count" msprop:Generator_UserColumnName="total_work_count" msprop:Generator_ColumnPropNameInRow="total_work_count" msprop:Generator_ColumnVarNameInTable="columntotal_work_count" msprop:Generator_ColumnPropNameInTable="total_work_countColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="total_raw_work_count" msprop:Generator_UserColumnName="total_raw_work_count" msprop:Generator_ColumnPropNameInRow="total_raw_work_count" msprop:Generator_ColumnVarNameInTable="columntotal_raw_work_count" msprop:Generator_ColumnPropNameInTable="total_raw_work_countColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtbCheckPriceDetail" msprop:Generator_UserTableName="dtbCheckPriceDetail" msprop:Generator_RowDeletedName="dtbCheckPriceDetailRowDeleted" msprop:Generator_TableClassName="dtbCheckPriceDetailDataTable" msprop:Generator_RowChangedName="dtbCheckPriceDetailRowChanged" msprop:Generator_RowClassName="dtbCheckPriceDetailRow" msprop:Generator_RowChangingName="dtbCheckPriceDetailRowChanging" msprop:Generator_RowEvArgName="dtbCheckPriceDetailRowChangeEvent" msprop:Generator_RowEvHandlerName="dtbCheckPriceDetailRowChangeEventHandler" msprop:Generator_TablePropName="dtbCheckPriceDetail" msprop:Generator_TableVarName="tabledtbCheckPriceDetail" msprop:Generator_RowDeletingName="dtbCheckPriceDetailRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="stat_group_id_chr" msprop:Generator_UserColumnName="stat_group_id_chr" msprop:Generator_ColumnPropNameInRow="stat_group_id_chr" msprop:Generator_ColumnVarNameInTable="columnstat_group_id_chr" msprop:Generator_ColumnPropNameInTable="stat_group_id_chrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="stat_group_name_vchr" msprop:Generator_UserColumnName="stat_group_name_vchr" msprop:Generator_ColumnPropNameInRow="stat_group_name_vchr" msprop:Generator_ColumnVarNameInTable="columnstat_group_name_vchr" msprop:Generator_ColumnPropNameInTable="stat_group_name_vchrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="stat_group_print_title" msprop:Generator_UserColumnName="stat_group_print_title" msprop:Generator_ColumnPropNameInRow="stat_group_print_title" msprop:Generator_ColumnVarNameInTable="columnstat_group_print_title" msprop:Generator_ColumnPropNameInTable="stat_group_print_titleColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="work_group_id_chr" msprop:Generator_UserColumnName="work_group_id_chr" msprop:Generator_ColumnPropNameInRow="work_group_id_chr" msprop:Generator_ColumnVarNameInTable="columnwork_group_id_chr" msprop:Generator_ColumnPropNameInTable="work_group_id_chrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="work_group_name_vchr" msprop:Generator_UserColumnName="work_group_name_vchr" msprop:Generator_ColumnPropNameInRow="work_group_name_vchr" msprop:Generator_ColumnVarNameInTable="columnwork_group_name_vchr" msprop:Generator_ColumnPropNameInTable="work_group_name_vchrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="work_group_print_title" msprop:Generator_UserColumnName="work_group_print_title" msprop:Generator_ColumnPropNameInRow="work_group_print_title" msprop:Generator_ColumnVarNameInTable="columnwork_group_print_title" msprop:Generator_ColumnPropNameInTable="work_group_print_titleColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="cost_num" msprop:Generator_UserColumnName="cost_num" msprop:Generator_ColumnPropNameInRow="cost_num" msprop:Generator_ColumnVarNameInTable="columncost_num" msprop:Generator_ColumnPropNameInTable="cost_numColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="total_apply_unit_count" msprop:Generator_UserColumnName="total_apply_unit_count" msprop:Generator_ColumnPropNameInRow="total_apply_unit_count" msprop:Generator_ColumnVarNameInTable="columntotal_apply_unit_count" msprop:Generator_ColumnPropNameInTable="total_apply_unit_countColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="total_cost_count" msprop:Generator_UserColumnName="total_cost_count" msprop:Generator_ColumnPropNameInRow="total_cost_count" msprop:Generator_ColumnVarNameInTable="columntotal_cost_count" msprop:Generator_ColumnPropNameInTable="total_cost_countColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="apply_unit_name_vchr" msprop:Generator_UserColumnName="apply_unit_name_vchr" msprop:Generator_ColumnPropNameInRow="apply_unit_name_vchr" msprop:Generator_ColumnVarNameInTable="columnapply_unit_name_vchr" msprop:Generator_ColumnPropNameInTable="apply_unit_name_vchrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="apply_unit_id_chr" msprop:Generator_UserColumnName="apply_unit_id_chr" msprop:Generator_ColumnPropNameInRow="apply_unit_id_chr" msprop:Generator_ColumnVarNameInTable="columnapply_unit_id_chr" msprop:Generator_ColumnPropNameInTable="apply_unit_id_chrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="price_num" msprop:Generator_UserColumnName="price_num" msprop:Generator_ColumnPropNameInRow="price_num" msprop:Generator_ColumnVarNameInTable="columnprice_num" msprop:Generator_ColumnPropNameInTable="price_numColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="total_price_count" msprop:Generator_UserColumnName="total_price_count" msprop:Generator_ColumnPropNameInRow="total_price_count" msprop:Generator_ColumnVarNameInTable="columntotal_price_count" msprop:Generator_ColumnPropNameInTable="total_price_countColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtbCheckPriceTotal" msprop:Generator_UserTableName="dtbCheckPriceTotal" msprop:Generator_RowDeletedName="dtbCheckPriceTotalRowDeleted" msprop:Generator_TableClassName="dtbCheckPriceTotalDataTable" msprop:Generator_RowChangedName="dtbCheckPriceTotalRowChanged" msprop:Generator_RowClassName="dtbCheckPriceTotalRow" msprop:Generator_RowChangingName="dtbCheckPriceTotalRowChanging" msprop:Generator_RowEvArgName="dtbCheckPriceTotalRowChangeEvent" msprop:Generator_RowEvHandlerName="dtbCheckPriceTotalRowChangeEventHandler" msprop:Generator_TablePropName="dtbCheckPriceTotal" msprop:Generator_TableVarName="tabledtbCheckPriceTotal" msprop:Generator_RowDeletingName="dtbCheckPriceTotalRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="work_group_id_chr" msprop:Generator_UserColumnName="work_group_id_chr" msprop:Generator_ColumnPropNameInRow="work_group_id_chr" msprop:Generator_ColumnVarNameInTable="columnwork_group_id_chr" msprop:Generator_ColumnPropNameInTable="work_group_id_chrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="work_group_name_vchr" msprop:Generator_UserColumnName="work_group_name_vchr" msprop:Generator_ColumnPropNameInRow="work_group_name_vchr" msprop:Generator_ColumnVarNameInTable="columnwork_group_name_vchr" msprop:Generator_ColumnPropNameInTable="work_group_name_vchrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="work_group_print_title" msprop:Generator_UserColumnName="work_group_print_title" msprop:Generator_ColumnPropNameInRow="work_group_print_title" msprop:Generator_ColumnVarNameInTable="columnwork_group_print_title" msprop:Generator_ColumnPropNameInTable="work_group_print_titleColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="total_price_count" msprop:Generator_UserColumnName="total_price_count" msprop:Generator_ColumnPropNameInRow="total_price_count" msprop:Generator_ColumnVarNameInTable="columntotal_price_count" msprop:Generator_ColumnPropNameInTable="total_price_countColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="total_work_apply_count" msprop:Generator_UserColumnName="total_work_apply_count" msprop:Generator_ColumnPropNameInRow="total_work_apply_count" msprop:Generator_ColumnVarNameInTable="columntotal_work_apply_count" msprop:Generator_ColumnPropNameInTable="total_work_apply_countColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="total_cost_count" msprop:Generator_UserColumnName="total_cost_count" msprop:Generator_ColumnPropNameInRow="total_cost_count" msprop:Generator_ColumnVarNameInTable="columntotal_cost_count" msprop:Generator_ColumnPropNameInTable="total_cost_countColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtbScienceStat" msprop:Generator_UserTableName="dtbScienceStat" msprop:Generator_RowDeletedName="dtbScienceStatRowDeleted" msprop:Generator_TableClassName="dtbScienceStatDataTable" msprop:Generator_RowChangedName="dtbScienceStatRowChanged" msprop:Generator_RowClassName="dtbScienceStatRow" msprop:Generator_RowChangingName="dtbScienceStatRowChanging" msprop:Generator_RowEvArgName="dtbScienceStatRowChangeEvent" msprop:Generator_RowEvHandlerName="dtbScienceStatRowChangeEventHandler" msprop:Generator_TablePropName="dtbScienceStat" msprop:Generator_TableVarName="tabledtbScienceStat" msprop:Generator_RowDeletingName="dtbScienceStatRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RESULT_VCHR" msprop:Generator_UserColumnName="RESULT_VCHR" msprop:Generator_ColumnPropNameInRow="RESULT_VCHR" msprop:Generator_ColumnVarNameInTable="columnRESULT_VCHR" msprop:Generator_ColumnPropNameInTable="RESULT_VCHRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CHECK_DATE_DAT" msprop:Generator_UserColumnName="CHECK_DATE_DAT" msprop:Generator_ColumnPropNameInRow="CHECK_DATE_DAT" msprop:Generator_ColumnVarNameInTable="columnCHECK_DATE_DAT" msprop:Generator_ColumnPropNameInTable="CHECK_DATE_DATColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PATIENT_NAME_VCHR" msprop:Generator_UserColumnName="PATIENT_NAME_VCHR" msprop:Generator_ColumnPropNameInRow="PATIENT_NAME_VCHR" msprop:Generator_ColumnVarNameInTable="columnPATIENT_NAME_VCHR" msprop:Generator_ColumnPropNameInTable="PATIENT_NAME_VCHRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AGE_CHR" msprop:Generator_UserColumnName="AGE_CHR" msprop:Generator_ColumnPropNameInRow="AGE_CHR" msprop:Generator_ColumnVarNameInTable="columnAGE_CHR" msprop:Generator_ColumnPropNameInTable="AGE_CHRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SAMPLE_ID_CHR" msprop:Generator_UserColumnName="SAMPLE_ID_CHR" msprop:Generator_ColumnPropNameInRow="SAMPLE_ID_CHR" msprop:Generator_ColumnVarNameInTable="columnSAMPLE_ID_CHR" msprop:Generator_ColumnPropNameInTable="SAMPLE_ID_CHRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SEX_CHR" msprop:Generator_UserColumnName="SEX_CHR" msprop:Generator_ColumnPropNameInRow="SEX_CHR" msprop:Generator_ColumnVarNameInTable="columnSEX_CHR" msprop:Generator_ColumnPropNameInTable="SEX_CHRColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtbHead" msprop:Generator_UserTableName="dtbHead" msprop:Generator_RowDeletedName="dtbHeadRowDeleted" msprop:Generator_TableClassName="dtbHeadDataTable" msprop:Generator_RowChangedName="dtbHeadRowChanged" msprop:Generator_RowClassName="dtbHeadRow" msprop:Generator_RowChangingName="dtbHeadRowChanging" msprop:Generator_RowEvArgName="dtbHeadRowChangeEvent" msprop:Generator_RowEvHandlerName="dtbHeadRowChangeEventHandler" msprop:Generator_TablePropName="dtbHead" msprop:Generator_TableVarName="tabledtbHead" msprop:Generator_RowDeletingName="dtbHeadRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SAMPLE_ID_CHR" msprop:Generator_UserColumnName="SAMPLE_ID_CHR" msprop:Generator_ColumnPropNameInRow="SAMPLE_ID_CHR" msprop:Generator_ColumnVarNameInTable="columnSAMPLE_ID_CHR" msprop:Generator_ColumnPropNameInTable="SAMPLE_ID_CHRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PATIENT_NAME_VCHR" msprop:Generator_UserColumnName="PATIENT_NAME_VCHR" msprop:Generator_ColumnPropNameInRow="PATIENT_NAME_VCHR" msprop:Generator_ColumnVarNameInTable="columnPATIENT_NAME_VCHR" msprop:Generator_ColumnPropNameInTable="PATIENT_NAME_VCHRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SEX_CHR" msprop:Generator_UserColumnName="SEX_CHR" msprop:Generator_ColumnPropNameInRow="SEX_CHR" msprop:Generator_ColumnVarNameInTable="columnSEX_CHR" msprop:Generator_ColumnPropNameInTable="SEX_CHRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AGE_CHR" msprop:Generator_UserColumnName="AGE_CHR" msprop:Generator_ColumnPropNameInRow="AGE_CHR" msprop:Generator_ColumnVarNameInTable="columnAGE_CHR" msprop:Generator_ColumnPropNameInTable="AGE_CHRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DEPTNAME_VCHR" msprop:Generator_UserColumnName="DEPTNAME_VCHR" msprop:Generator_ColumnPropNameInRow="DEPTNAME_VCHR" msprop:Generator_ColumnVarNameInTable="columnDEPTNAME_VCHR" msprop:Generator_ColumnPropNameInTable="DEPTNAME_VCHRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LASTNAME_VCHR" msprop:Generator_UserColumnName="LASTNAME_VCHR" msprop:Generator_ColumnPropNameInRow="LASTNAME_VCHR" msprop:Generator_ColumnVarNameInTable="columnLASTNAME_VCHR" msprop:Generator_ColumnPropNameInTable="LASTNAME_VCHRColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtbDetail" msprop:Generator_UserTableName="dtbDetail" msprop:Generator_RowDeletedName="dtbDetailRowDeleted" msprop:Generator_TableClassName="dtbDetailDataTable" msprop:Generator_RowChangedName="dtbDetailRowChanged" msprop:Generator_RowClassName="dtbDetailRow" msprop:Generator_RowChangingName="dtbDetailRowChanging" msprop:Generator_RowEvArgName="dtbDetailRowChangeEvent" msprop:Generator_RowEvHandlerName="dtbDetailRowChangeEventHandler" msprop:Generator_TablePropName="dtbDetail" msprop:Generator_TableVarName="tabledtbDetail" msprop:Generator_RowDeletingName="dtbDetailRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CHECK_ITEM_NAME_VCHR" msprop:Generator_UserColumnName="CHECK_ITEM_NAME_VCHR" msprop:Generator_ColumnPropNameInRow="CHECK_ITEM_NAME_VCHR" msprop:Generator_ColumnVarNameInTable="columnCHECK_ITEM_NAME_VCHR" msprop:Generator_ColumnPropNameInTable="CHECK_ITEM_NAME_VCHRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SAMPLE_ID_CHR" msprop:Generator_UserColumnName="SAMPLE_ID_CHR" msprop:Generator_ColumnPropNameInRow="SAMPLE_ID_CHR" msprop:Generator_ColumnVarNameInTable="columnSAMPLE_ID_CHR" msprop:Generator_ColumnPropNameInTable="SAMPLE_ID_CHRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RESULT_VCHR" msprop:Generator_UserColumnName="RESULT_VCHR" msprop:Generator_ColumnPropNameInRow="RESULT_VCHR" msprop:Generator_ColumnVarNameInTable="columnRESULT_VCHR" msprop:Generator_ColumnPropNameInTable="RESULT_VCHRColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

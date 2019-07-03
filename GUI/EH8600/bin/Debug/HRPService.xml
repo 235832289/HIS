@@ -1,0 +1,671 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HRPService</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService">
+            <summary>
+            HRPService
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.cpConnStr">
+            <summary>
+            临床路径数据库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.emrConnStr">
+            <summary>
+            电子病历数据库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.bytDatabase">
+            <summary>
+            默认数据库为iCare
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.s_bytDatabase_Selector">
+            <summary>
+            判断数据库选择
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_bytDatabase_Selector">
+            <summary>
+            数据库选择
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_mthSetDataBase_Selector(System.Byte,System.Byte)">
+            <summary>
+            设置数据库选择，设置值可能与静态属性bytDatabase_Selector不一致，以此值为准
+            </summary>
+            <param name="p_bytDataBase_Selector">数据库类型选择</param>
+            <param name="p_bytDatabase">数据库选择</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_bytCurrentDatabase_Selector">
+            <summary>
+            当前数据库选择
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.GetDBConnDesc">
+            <summary>
+             获取数据库连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.GetDataServ">
+            <summary>
+            获取数据库具体操作类
+            支持oracle、sqlserver、db2
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_lngGenerateNewID(System.String,System.String,System.String@)">
+            <summary>
+             得到新的定长字符型增长ID,使用 COM+ 事务锁来避免冲突
+            </summary>
+            <param name="p_strTableName">表名</param>
+            <param name="p_strColumnName">字段名</param>
+            <param name="p_strNewID">新的ID</param>
+            <returns>
+            -1:在t_aid_table_sequence_id表中无指定的数据;
+            0:执行SQL失败;
+            1:正确执行,并得到新的ID;
+            产生异常;
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_lngGenerateNewID(System.String,System.String,System.Int32@)">
+            <summary>
+             得到新的数字型增长ID,使用 COM+ 事务锁来避免冲突
+            </summary>
+            <param name="p_strTableName">表名</param>
+            <param name="p_strColumnName">字段名</param>
+            <param name="p_intNewID">新的ID</param>
+            <returns>
+            -1:在t_aid_table_sequence_id表中无指定的数据;
+            0:执行SQL失败;
+            1:正确执行,并得到新的ID;
+            产生异常;
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_lngGenerateNewID(System.String,System.String,System.Int32,System.String@)">
+            <summary>
+             得到新的定长字符型增长ID,使用 COM+ 事务锁来避免冲突
+            </summary>
+            <param name="p_strTableName">表名</param>
+            <param name="p_strColumnName">字段名</param>
+            <param name="p_intCount">所需的个数</param>
+            <param name="p_strNewID">新第一个ID</param>
+            <returns>
+            -1:在t_aid_table_sequence_id表中无指定的数据;
+            0:执行SQL失败;
+            1:正确执行,并得到新的ID;
+            产生异常;
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_lngGenerateNewID(System.String,System.String,System.Int32,System.Int32@)">
+            <summary>
+             得到新的数字型增长ID,使用 COM+ 事务锁来避免冲突
+            </summary>
+            <param name="p_strTableName">表名</param>
+            <param name="p_strColumnName">字段名</param>
+            <param name="p_intCount">所需的个数</param>
+            <param name="p_intNewID">新第一个ID</param>
+            <returns>
+            -1:在t_aid_table_sequence_id表中无指定的数据;
+            0:执行SQL失败;
+            1:正确执行,并得到新的ID;
+            产生异常;
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.lngSQLQueryByParam(System.String,com.digitalwave.iCare.ValueObject.clsSQLParamVO[],System.Data.DataTable@)">
+            <summary>
+            
+            </summary>
+            <param name="strSQL"></param>
+            <param name="p_objSQLParamVO"></param>
+            <param name="objResult_DB_Table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_strGetNewID(System.String,System.String)">
+            <summary>
+            获得最大ID
+            </summary>
+            <param name="p_strTableName"></param>
+            <param name="p_strFieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_strGetNewID(System.String,System.String,System.Int32)">
+            <summary>
+            获得最大ID
+            </summary>
+            <param name="p_strTableName"></param>
+            <param name="p_strFieldName"></param>
+            <param name="intLen"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.DoExcute(System.String)">
+            <summary>
+            执行SQL
+            </summary>
+            <param name="strSQLCommand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.DoExcuteForDelete(System.String,System.Int64@)">
+            <summary>
+            Ben 2002-7-7
+            带返回的记录数为适应删除
+            </summary>
+            <param name="strSQLCommand"></param>
+            <param name="aff"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.DoGetDataTable(System.String,System.Data.DataTable@)">
+            <summary>
+            获得查询结果到DATATABLE
+            </summary>
+            <param name="strSQLCommand"></param>
+            <param name="dtResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.lngGetDataTableWithParameters(System.String,System.Data.DataTable@,System.Data.IDataParameter[])">
+            <summary>
+            有参数
+            </summary>
+            <param name="strSQLCommand"></param>
+            <param name="dtResult"></param>
+            <param name="Params"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_lngGetDataTableFromProc(System.String,System.Data.DataTable@)">
+            <summary>
+            从存储过程中返回结果
+            </summary>
+            <param name="strProcName">存储过程名称</param>
+            <param name="dtlData">结果</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.lngGetDataTableWithoutParameters(System.String,System.Data.DataTable@)">
+            <summary>
+            无参数
+            </summary>
+            <param name="strSQLCommand"></param>
+            <param name="dtResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.lngExecuteParameterSQL(System.String,System.Int64@,System.Data.IDataParameter[])">
+            <summary>
+            
+            </summary>
+            <param name="strSQLCommand"></param>
+            <param name="lngRecordsAffected"></param>
+            <param name="Params"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.lngExecuteParameterProc(System.String,com.digitalwave.iCare.ValueObject.clsSQLParamDefinitionVO[])">
+            <summary>
+            
+            </summary>
+            <param name="strSQLCommand"></param>
+            <param name="Params"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.XmlOutQuery(System.String,System.String,System.String,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="strSQLCommand"></param>
+            <param name="strRootName"></param>
+            <param name="strElementName"></param>
+            <param name="strXmlResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.add_new_record(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strTableName"></param>
+            <param name="strFieldXML"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.add_new_Patient(System.String,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="strFieldXML"></param>
+            <param name="strCardNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.modify_record(System.String,System.String,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="strTableName"></param>
+            <param name="strFieldXML"></param>
+            <param name="strWhereField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.lngModifyWithCheck(System.String,System.String,System.String,System.String,System.String,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="strSQLWithStampField"></param>
+            <param name="strStampFieldName"></param>
+            <param name="strStampValue"></param>
+            <param name="strTableName"></param>
+            <param name="strFieldXML"></param>
+            <param name="strWhereField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.Generate_Patient_id">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.bolRecordHasModified(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strSQLWithStampField"></param>
+            <param name="strStampFieldName"></param>
+            <param name="strStampValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.bolRecordExist(System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strTableName"></param>
+            <param name="PatientID"></param>
+            <param name="Date"></param>
+            <param name="PDateOfReception"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.bolMulRecordExist(System.String,System.String,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="strTableName"></param>
+            <param name="strFieldXML"></param>
+            <param name="strWhereField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.bolRecordExist1Parameter(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strTableName"></param>
+            <param name="ValueParameter"></param>
+            <param name="FieldParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.bolRecordExist2Parameter(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strTableName"></param>
+            <param name="ValueParameter1"></param>
+            <param name="FieldParameter1"></param>
+            <param name="ValueParameter2"></param>
+            <param name="FieldParameter2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.bolRecordExist3Parameter(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strTableName"></param>
+            <param name="ValueParameter1"></param>
+            <param name="ValueParameter2"></param>
+            <param name="ValueParameter3"></param>
+            <param name="FieldParameter2"></param>
+            <param name="FieldParameter3"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.lngGetXMLTable(System.String,System.String@,System.Int32@)">
+            <summary>
+            strCommand: select * from bloodcheckrept where patientid=001
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.lngGetXMLTableWithParameter(System.String,System.String@,System.Int32@,System.Data.IDataParameter[])">
+            <summary>
+            strCommand: select * from bloodcheckrept where patientid=001
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.lngGetXMLLikeQuery(System.String,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="strCommand"></param>
+            <param name="strXMLSet"></param>
+            <param name="rows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.lngGenerateID(System.Int32,System.String,System.String,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="intIDLength"></param>
+            <param name="strIDField"></param>
+            <param name="strIDTable"></param>
+            <param name="strIDResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.intGetNewNumericID(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strIDField"></param>
+            <param name="strIDTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.CreateDatabaseParameter(System.Int32,System.Data.IDataParameter[]@)">
+            <summary>
+            
+            </summary>
+            <param name="intParameterNum"></param>
+            <param name="objDPArr"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.lngExecuteParameterSQL(System.String,System.Int64@,com.digitalwave.iCare.ValueObject.clsSQLParamDefinitionVO[])">
+            <summary>
+            
+            </summary>
+            <param name="strSQLCommand"></param>
+            <param name="lngRecordsAffected"></param>
+            <param name="Params"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.lngGetDataTableWithFuzzyCriteria(System.String,System.String,System.String,System.String,System.Boolean,System.Data.DataTable@)">
+            <summary>
+            
+            </summary>
+            <param name="p_strFuzzyTableName"></param>
+            <param name="p_strFuzzyField"></param>
+            <param name="p_strFuzzyValue"></param>
+            <param name="p_strOrderByField"></param>
+            <param name="p_blnDesc"></param>
+            <param name="dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.lngExecuteProc(System.String,System.Data.IDataParameter[])">
+            <summary>
+            
+            </summary>
+            <param name="strProcName"></param>
+            <param name="arrParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_mthCreateParameterWithDbType(System.String,System.String,System.Int32,System.Data.IDataParameter@)">
+            <summary>
+            
+            </summary>
+            <param name="p_strFieldName"></param>
+            <param name="p_strDbType">默认为VARCHAR；其它：DATETIME－时间；</param>
+            <param name="intSize">不需要时填-1</param>
+            <param name="objParam"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_intCheckLogFileSetting(System.String,System.Boolean)">
+            <summary>
+            检查是否需要写LOG.TXT
+            0－不需要 1－全部记录 2－只记录错误信息 3－只记录读写数据库
+            </summary>
+            <param name="p_strCheckID"></param>
+            <param name="blnRefresh">是否需要重新从数据库取值</param>
+            <returns>0－不需要 1－全部记录 2－只记录错误信息 3－只记录读写数据库</returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_lngSaveArrayWithParametersWithAffected(System.String,System.Object[][],System.Int64@,System.Data.DbType[])">
+            <summary>
+            以数组的形式插入记录，即批插入
+            </summary>
+            <param name="strSQL"></param>
+            <param name="p_arlValues">[参数个数][数组长度]</param>
+            <param name="lngRecordsAffected">执行成功的行数</param>
+            <param name="Params">参数的类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_lngSaveArrayWithParameters(System.String,System.Object[][],System.Data.DbType[])">
+            <summary>
+            以数组的形式插入记录，即批插入
+            </summary>
+            <param name="strSQL"></param>
+            <param name="strDSN"></param>
+            <param name="p_arlValues">[参数个数][数组长度]</param>
+            <param name="Params">参数的类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_mthSetDataBase_Selector(com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase_Selector,com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase)">
+            <summary>
+            设置数据库选择，设置值可能与静态属性bytDatabase_Selector不一致，以此值为准
+            </summary>
+            <param name="p_enmDataBase_Selector">数据库类型选择</param>
+            <param name="p_enmDatabase">数据库选择</param>
+        </member>
+        <member name="P:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.bytDatabase_Selector">
+            <summary>
+            数据库选择
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_StrGDCaseDSN">
+            <summary>
+            获取广东病案系统连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.GetPeConnStr">
+            <summary>
+            获取体检数据库链接 
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.GetCpConnStr">
+            <summary>
+            临床路径数据库
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.GetEMRConnStr">
+            <summary>
+            电子病历数据库
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.GetPacsNewConnStr">
+            <summary>
+            获取PACS.New数据库链接
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.GetBLNewConnStr">
+            <summary>
+            获取病理数据库连接
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_StrXJCaseDSN">
+            <summary>
+            获取新疆病案系统连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_StrXJJKDSN">
+            <summary>
+            获取新疆接口连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_StrXJJKCSDSN">
+            <summary>
+            获取新疆接口连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_StrXJJKCSZJDSN">
+            <summary>
+            获取新疆接口连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_StrXJJKDSN65">
+            <summary>
+            获取新疆接口连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_StrSQLServerLISDNS">
+            <summary>
+            获取检验数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.m_bytSetOtherDSN">
+            <summary>
+            设置其他的DSN
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase_Selector">
+            <summary>
+            数据库类型枚举
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase_Selector.bytODBC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase_Selector.bytSQL_Server">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase_Selector.bytOracle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase_Selector.bytSybase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase_Selector.bytDB2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase_Selector.none">
+            <summary>
+            未选择
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase">
+            <summary>
+            数据库连接枚举
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytICare">
+            <summary>
+            icare 数据库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytPACS">
+            <summary>
+            dicom 数据库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytGDCASE">
+            <summary>
+            广东病案系统
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytUltraSound">
+            <summary>
+            B超数据库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytReport">
+            <summary>
+            报表数据库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytStorage">
+            <summary>
+            存储数据库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytLIS">
+            <summary>
+            检验数据库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytUrumqiYiTong">
+            <summary>
+            新疆易通
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.byPathologyReport">
+            <summary>
+            病理数据库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytUrumqiYiTongBA">
+            <summary>
+            新疆易通病案同步
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytUrumqiYiTongTest">
+            <summary>
+            新疆易通接口测试库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytUrumqiYiTongTestZJ">
+            <summary>
+            新疆易通接口测试库中间库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytUrumqiYiTong65">
+            <summary>
+            新疆易通正式库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytYZ_LIS">
+            <summary>
+            扬州苏北LIS接口数据库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytMed">
+            <summary>
+            社区药库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytPE">
+            <summary>
+            体检数据库
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytPacsNew">
+            <summary>
+            PACS新
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytBL">
+            <summary>
+            病理新
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytCP">
+            <summary>
+            临床路径
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.HRPService.clsHRPTableService.enumDatabase.bytEMR">
+            <summary>
+            电子病历-new
+            </summary>
+        </member>
+    </members>
+</doc>

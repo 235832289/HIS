@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="LIS_Data_Acquisition_Controller">
+</Property><Property Name="解决方案文件" Value="D:\iCare\iCare_cs\code\LIS\LIS_Data_Acquisition_Controller\LIS_Data_Acquisition_Controller.sln">
+</Property><Property Name="Date" Value="2015年11月3日">
+</Property><Property Name="Time" Value="22:26">
+</Property></Properties><Event ErrorLevel="0" Project="LIS_Data_Acquisition_Controller" Source="LIS_Data_Acquisition_Controller.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="LIS_Data_Acquisition_Controller" Source="LIS_Data_Acquisition_Controller.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="LIS_Data_Acquisition_Controller.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="LIS_Data_Acquisition_Controller.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="LIS_Data_Acquisition_Controller" Source="LIS_Data_Acquisition_Controller.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

@@ -1,0 +1,1278 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4301F30-19C2-49D1-92B3-6056C8FF2DBF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.digitalwave.iCare.gui.HIS</RootNamespace>
+    <AssemblyName>HISZY</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Bin\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\bin\Debug\HISZY.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.MSComCtl2, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="baseInfo_Svc, Version=2.0.0.1, Culture=neutral, PublicKeyToken=356d01254ca6c808, processorArchitecture=MSIL" />
+    <Reference Include="BIHOrder, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="clsCommonInfoSvc, Version=2.0.0.1, Culture=neutral, PublicKeyToken=e53d7501af14791b, processorArchitecture=MSIL" />
+    <Reference Include="CommonInfo, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ControlLibrary, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CryptographyLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ce5f7258b42847c9, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DataWindow, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Sybase\DataWindow .NET 2.0\DataWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="DigitalWaveControls, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GUI_Base, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HISYB_CS, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HISYB_SVC, Version=2.0.0.1, Culture=neutral, PublicKeyToken=878b18567032aba3, processorArchitecture=MSIL" />
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\Debug\iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.Microsoft.Office.Core, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MiddleTierBase, Version=2.0.0.1, Culture=neutral, PublicKeyToken=bcb959104966b6d1, processorArchitecture=MSIL" />
+    <Reference Include="ObjectGenerator, Version=2.0.0.1, Culture=neutral, PublicKeyToken=f32520148b720498, processorArchitecture=MSIL" />
+    <Reference Include="PinkieControls, Version=1.0.1362.15156, Culture=neutral" />
+    <Reference Include="PrivilegeSystemService, Version=2.0.0.1, Culture=neutral, PublicKeyToken=e7d6b07a23b0a67f, processorArchitecture=MSIL" />
+    <Reference Include="PutMedicine, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="SourceLibrary, Version=1.2.2.0, Culture=neutral, PublicKeyToken=96907d46c0a9af87, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utility, Version=2.0.0.1, Culture=neutral, PublicKeyToken=a48271451c5bd35f, processorArchitecture=MSIL" />
+    <Reference Include="UtilityLibrary, Version=1.0.4.0, Culture=neutral, PublicKeyToken=fe06e967d3cf723d" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bill\rptInChargeInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInChargeInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Bill\rptPrepayInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPrepayInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="clsPBNetPrint.cs" />
+    <Compile Include="clsPublic.cs" />
+    <Compile Include="Controller\clsCtl_AreaBedInfo.cs" />
+    <Compile Include="Controller\clsCtl_BadCharge.cs" />
+    <Compile Include="Controller\clsCtl_Charge.cs" />
+    <Compile Include="Controller\clsCtl_CommonFind.cs" />
+    <Compile Include="Controller\clsCtl_DefaultAddItem.cs" />
+    <Compile Include="Controller\clsCtl_DirCharge.cs" />
+    <Compile Include="Controller\clsCtl_GetSections.cs" />
+    <Compile Include="Controller\clsCtl_LeaveCharge.cs" />
+    <Compile Include="Controller\clsCtl_MidCharge.cs" />
+    <Compile Include="Controller\clsCtl_ModifyZyh.cs" />
+    <Compile Include="Controller\clsCtl_PatchCharge.cs" />
+    <Compile Include="Controller\clsCtl_PrePay.cs" />
+    <Compile Include="Controller\clsCtl_QueryCharge.cs" />
+    <Compile Include="Controller\clsCtl_Reckoning.cs" />
+    <Compile Include="Controller\clsCtl_Report.cs" />
+    <Compile Include="Controller\clsCtl_Shiyingsetting.cs" />
+    <Compile Include="Controller\clsCtl_YBCharge.cs" />
+    <Compile Include="DomainController\clsDcl_AidDictionary.cs" />
+    <Compile Include="DomainController\clsDcl_Charge.cs" />
+    <Compile Include="DomainController\clsDcl_CommonFind.cs" />
+    <Compile Include="DomainController\clsDcl_ModifyZyh.cs" />
+    <Compile Include="DomainController\clsDcl_PrePay.cs" />
+    <Compile Include="DomainController\clsDcl_Report.cs" />
+    <Compile Include="Viewer\frmInvoiceRefundReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInvoiceRefundReason.Designer.cs">
+      <DependentUpon>frmInvoiceRefundReason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmIPInvoiceinput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmIPInvoiceinput.Designer.cs">
+      <DependentUpon>frmIPInvoiceinput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPrintSMListConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPrintSMListConfirm.Designer.cs">
+      <DependentUpon>frmPrintSMListConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAdjustMzAcctSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAdjustMzAcctSum.Designer.cs">
+      <DependentUpon>frmAdjustMzAcctSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAidChooseDept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAidChooseDept.Designer.cs">
+      <DependentUpon>frmAidChooseDept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAidChooseDoct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAidChooseDoct.Designer.cs">
+      <DependentUpon>frmAidChooseDoct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAidChoosePayType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAidChoosePayType.Designer.cs">
+      <DependentUpon>frmAidChoosePayType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAidChooseZyh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAidChooseZyh.Designer.cs">
+      <DependentUpon>frmAidChooseZyh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAidEditAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAidEditAmount.Designer.cs">
+      <DependentUpon>frmAidEditAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAidEditItem_OutPatientDefault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAidEditItem_OutPatientDefault.Designer.cs">
+      <DependentUpon>frmAidEditItem_OutPatientDefault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAidFindItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAidFindItem.Designer.cs">
+      <DependentUpon>frmAidFindItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmBadCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBadCharge.Designer.cs">
+      <DependentUpon>frmBadCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmBIHInvoiceStatRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBIHInvoiceStatRpt.Designer.cs">
+      <DependentUpon>frmBIHInvoiceStatRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCSYBShiyingzheng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCSYBShiyingzheng.Designer.cs">
+      <DependentUpon>frmCSYBShiyingzheng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmDefaultAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmDefaultAddItem.Designer.cs">
+      <DependentUpon>frmDefaultAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmFlash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmFlash.designer.cs">
+      <DependentUpon>frmFlash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Bill\rptInChargeInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInChargeInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bill\rptPrepayInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPrepayInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAdjustMzAcctSum.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAdjustMzAcctSum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAidChooseDept.resx">
+      <DependentUpon>frmAidChooseDept.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAidChooseDoct.resx">
+      <DependentUpon>frmAidChooseDoct.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAidChoosePayType.resx">
+      <DependentUpon>frmAidChoosePayType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAidChooseZyh.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAidChooseZyh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAidEditAmount.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAidEditAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAidEditItem_OutPatientDefault.resx">
+      <DependentUpon>frmAidEditItem_OutPatientDefault.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAidFindItem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAidFindItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBadCharge.resx">
+      <DependentUpon>frmBadCharge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBIHInvoiceStatRpt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBIHInvoiceStatRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCSYBShiyingzheng.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCSYBShiyingzheng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmDefaultAddItem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDefaultAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmFlash.resx">
+      <DependentUpon>frmFlash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAidDayAccountList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAidDayAccountList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAidDeptList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAidDeptList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAidEditItem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAidEditItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAidFind.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAidFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAnimation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAreaBedInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAreaBedInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAutoCharge.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAutoCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAutoChargeDate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAutoChargeDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCharge.resx">
+      <DependentUpon>frmCharge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInvoicePayMode.resx">
+      <DependentUpon>frmInvoicePayMode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMidCharge_Mix.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMidCharge_Mix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMobileServiceOrder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMobileServiceOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInvoiceRefundReason.resx">
+      <DependentUpon>frmInvoiceRefundReason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmIPInvoiceinput.resx">
+      <DependentUpon>frmIPInvoiceinput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPrePayNoInput.resx">
+      <DependentUpon>frmPrePayNoInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPrintSMListConfirm.resx">
+      <DependentUpon>frmPrintSMListConfirm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmProgress.resx">
+      <DependentUpon>frmProgress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmProxySetCaseRole.resx">
+      <DependentUpon>frmProxySetCaseRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmQueryCharge_DiagItem.resx">
+      <DependentUpon>frmQueryCharge_DiagItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptActualReceiveDetail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRptActualReceiveDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptAllDeptIncome.resx">
+      <DependentUpon>frmRptAllDeptIncome.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptBadCharge.resx">
+      <DependentUpon>frmRptBadCharge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptChargeGroup_LJ.resx">
+      <DependentUpon>frmRptChargeGroup_LJ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptChargeLogBu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRptChargeLogBu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmDayReckoningRemark.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDayReckoningRemark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmDefInvoiceBillItems.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDefInvoiceBillItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmDirCharge.resx">
+      <DependentUpon>frmDirCharge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInvoiceNoinput.resx">
+      <DependentUpon>frmInvoiceNoinput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInvoiceRefundment.resx">
+      <DependentUpon>frmInvoiceRefundment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInvoiceRepeatPrt.resx">
+      <DependentUpon>frmInvoiceRepeatPrt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInvoiceRepeatPrtInput.resx">
+      <DependentUpon>frmInvoiceRepeatPrtInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmItemGroup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmItemGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmLeaveCharge.resx">
+      <DependentUpon>frmLeaveCharge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPatchCharge.resx">
+      <DependentUpon>frmPatchCharge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPatchDayAccount.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPatchDayAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPatientInfoSyn.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPatientInfoSyn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPrePay.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrePay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAuditing.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAuditing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPrepayAlert.resx">
+      <DependentUpon>frmPrepayAlert.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPrePayRepeatPrn.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrePayRepeatPrn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPrePayType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrePayType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPrintDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrintDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmQueryCharge.resx">
+      <DependentUpon>frmQueryCharge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmQueryCharge_ItemSum.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQueryCharge_ItemSum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmReckoning.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmReckoning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCommonFind.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCommonFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMidCharge.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMidCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmModifyZyh.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmModifyZyh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptChargeRecSum.resx">
+      <DependentUpon>frmRptChargeRecSum.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptDeptDoctor.resx">
+      <DependentUpon>frmRptDeptDoctor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptDeptIncome.resx">
+      <DependentUpon>frmRptDeptIncome.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptDeptWorkLog.resx">
+      <DependentUpon>frmRptDeptWorkLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptDeptWorkLog_Detail.resx">
+      <DependentUpon>frmRptDeptWorkLog_Detail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptDoctorSum.resx">
+      <DependentUpon>frmRptDoctorSum.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptDoctorPerformance.resx">
+      <DependentUpon>frmRptDoctorPerformance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptEveryDayBill.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRptEveryDayBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptGroupInCome.resx">
+      <DependentUpon>frmRptGroupInCome.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptIncomeClass.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRptIncomeClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptInvoiceEntry.resx">
+      <DependentUpon>frmRptInvoiceEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptInvoiceRefundment.resx">
+      <DependentUpon>frmRptInvoiceRefundment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptInvoiceRefundReason.resx">
+      <DependentUpon>frmRptInvoiceRefundReason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptInvoiceSum.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRptInvoiceSum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptItemDetailStat.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRptItemDetailStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptLisOutside.resx">
+      <DependentUpon>frmRptLisOutside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptLogSettleAccount.resx">
+      <DependentUpon>frmRptLogSettleAccount.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptOutNoCharge.resx">
+      <DependentUpon>frmRptOutNoCharge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptPatientSum.resx">
+      <DependentUpon>frmRptPatientSum.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptPayTypeBill.resx">
+      <DependentUpon>frmRptPayTypeBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptPayTypeClass.resx">
+      <DependentUpon>frmRptPayTypeClass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptPrePayClear.resx">
+      <DependentUpon>frmRptPrePayClear.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptReceiverSum.resx">
+      <DependentUpon>frmRptReceiverSum.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptReckoningDept.resx">
+      <DependentUpon>frmRptReckoningDept.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptReckoningEmp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRptReckoningEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAidUsageAddItem.resx">
+      <DependentUpon>frmAidUsageAddItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptReckoningEmpUnion.resx">
+      <DependentUpon>frmRptReckoningEmpUnion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptStatGroupInComeByDoctor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRptStatGroupInComeByDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptUsedDragStat.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRptUsedDragStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptYBEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRptYBEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptYBOutSum.resx">
+      <DependentUpon>frmRptYBOutSum.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptYbRegLog.resx">
+      <DependentUpon>frmRptYbRegLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmShiying.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmShiying.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYB.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmYB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYBType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmYBType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYB_CS.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmYB_CS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYB_F2Compute.resx">
+      <DependentUpon>frmYB_F2Compute.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYB_F2DownLoad.resx">
+      <DependentUpon>frmYB_F2DownLoad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYB_LJ.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmYB_LJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYB_LJExport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmYB_LJExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYB_TS.resx">
+      <DependentUpon>frmYB_TS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\ucPatientInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ucPatientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Viewer\frmAidDayAccountList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAidDayAccountList.Designer.cs">
+      <DependentUpon>frmAidDayAccountList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAidDeptList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAidDeptList.Designer.cs">
+      <DependentUpon>frmAidDeptList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAidEditItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAidEditItem.Designer.cs">
+      <DependentUpon>frmAidEditItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAidFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAidFind.Designer.cs">
+      <DependentUpon>frmAidFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAnimation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAnimation.Designer.cs">
+      <DependentUpon>frmAnimation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAreaBedInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAreaBedInfo.Designer.cs">
+      <DependentUpon>frmAreaBedInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAutoCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAutoCharge.Designer.cs">
+      <DependentUpon>frmAutoCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAutoChargeDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAutoChargeDate.Designer.cs">
+      <DependentUpon>frmAutoChargeDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCharge.Designer.cs">
+      <DependentUpon>frmCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmInvoicePayMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInvoicePayMode.Designer.cs">
+      <DependentUpon>frmInvoicePayMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMidCharge_Mix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMidCharge_Mix.Designer.cs">
+      <DependentUpon>frmMidCharge_Mix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMobileServiceOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMobileServiceOrder.Designer.cs">
+      <DependentUpon>frmMobileServiceOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmProgress.Designer.cs">
+      <DependentUpon>frmProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmProxySetCaseRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmProxySetCaseRole.Designer.cs">
+      <DependentUpon>frmProxySetCaseRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmQueryCharge_DiagItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmQueryCharge_DiagItem.Designer.cs">
+      <DependentUpon>frmQueryCharge_DiagItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptActualReceiveDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptActualReceiveDetail.Designer.cs">
+      <DependentUpon>frmRptActualReceiveDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptAllDeptIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptAllDeptIncome.Designer.cs">
+      <DependentUpon>frmRptAllDeptIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptBadCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptBadCharge.Designer.cs">
+      <DependentUpon>frmRptBadCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptChargeGroup_LJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptChargeGroup_LJ.Designer.cs">
+      <DependentUpon>frmRptChargeGroup_LJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptChargeLogBu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptChargeLogBu.Designer.cs">
+      <DependentUpon>frmRptChargeLogBu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmDayReckoningRemark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmDayReckoningRemark.Designer.cs">
+      <DependentUpon>frmDayReckoningRemark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmDefInvoiceBillItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmDefInvoiceBillItems.Designer.cs">
+      <DependentUpon>frmDefInvoiceBillItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmDirCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmDirCharge.Designer.cs">
+      <DependentUpon>frmDirCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmInvoiceNoinput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInvoiceNoinput.designer.cs">
+      <DependentUpon>frmInvoiceNoinput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmInvoiceRefundment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInvoiceRefundment.Designer.cs">
+      <DependentUpon>frmInvoiceRefundment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmInvoiceRepeatPrt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInvoiceRepeatPrt.Designer.cs">
+      <DependentUpon>frmInvoiceRepeatPrt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmInvoiceRepeatPrtInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInvoiceRepeatPrtInput.Designer.cs">
+      <DependentUpon>frmInvoiceRepeatPrtInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmItemGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmItemGroup.Designer.cs">
+      <DependentUpon>frmItemGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmLeaveCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmLeaveCharge.Designer.cs">
+      <DependentUpon>frmLeaveCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPatchCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPatchCharge.Designer.cs">
+      <DependentUpon>frmPatchCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPatchDayAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPatchDayAccount.Designer.cs">
+      <DependentUpon>frmPatchDayAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPatientInfoSyn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPatientInfoSyn.Designer.cs">
+      <DependentUpon>frmPatientInfoSyn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPrePay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPrePay.Designer.cs">
+      <DependentUpon>frmPrePay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAuditing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAuditing.Designer.cs">
+      <DependentUpon>frmAuditing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPrepayAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPrepayAlert.designer.cs">
+      <DependentUpon>frmPrepayAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPrePayNoInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPrePayNoInput.Designer.cs">
+      <DependentUpon>frmPrePayNoInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPrePayRepeatPrn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPrePayRepeatPrn.Designer.cs">
+      <DependentUpon>frmPrePayRepeatPrn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPrePayType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPrePayType.Designer.cs">
+      <DependentUpon>frmPrePayType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPrintDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPrintDialog.Designer.cs">
+      <DependentUpon>frmPrintDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmQueryCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmQueryCharge.Designer.cs">
+      <DependentUpon>frmQueryCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmQueryCharge_ItemSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmQueryCharge_ItemSum.Designer.cs">
+      <DependentUpon>frmQueryCharge_ItemSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmReckoning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmReckoning.Designer.cs">
+      <DependentUpon>frmReckoning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCommonFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCommonFind.Designer.cs">
+      <DependentUpon>frmCommonFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMidCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMidCharge.Designer.cs">
+      <DependentUpon>frmMidCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmModifyZyh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmModifyZyh.Designer.cs">
+      <DependentUpon>frmModifyZyh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptChargeRecSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptChargeRecSum.Designer.cs">
+      <DependentUpon>frmRptChargeRecSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptDeptDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptDeptDoctor.Designer.cs">
+      <DependentUpon>frmRptDeptDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptDeptIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptDeptIncome.Designer.cs">
+      <DependentUpon>frmRptDeptIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptDeptWorkLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptDeptWorkLog.Designer.cs">
+      <DependentUpon>frmRptDeptWorkLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptDeptWorkLog_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptDeptWorkLog_Detail.Designer.cs">
+      <DependentUpon>frmRptDeptWorkLog_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptDoctorSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptDoctorSum.Designer.cs">
+      <DependentUpon>frmRptDoctorSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptDoctorPerformance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptDoctorPerformance.Designer.cs">
+      <DependentUpon>frmRptDoctorPerformance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptEveryDayBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptEveryDayBill.Designer.cs">
+      <DependentUpon>frmRptEveryDayBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptGroupInCome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptGroupInCome.Designer.cs">
+      <DependentUpon>frmRptGroupInCome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptIncomeClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptIncomeClass.Designer.cs">
+      <DependentUpon>frmRptIncomeClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptInvoiceEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptInvoiceEntry.Designer.cs">
+      <DependentUpon>frmRptInvoiceEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptInvoiceRefundment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptInvoiceRefundment.Designer.cs">
+      <DependentUpon>frmRptInvoiceRefundment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptInvoiceRefundReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptInvoiceRefundReason.Designer.cs">
+      <DependentUpon>frmRptInvoiceRefundReason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptInvoiceSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptInvoiceSum.Designer.cs">
+      <DependentUpon>frmRptInvoiceSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptItemDetailStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptItemDetailStat.Designer.cs">
+      <DependentUpon>frmRptItemDetailStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptLisOutside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptLisOutside.Designer.cs">
+      <DependentUpon>frmRptLisOutside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptLogSettleAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptLogSettleAccount.Designer.cs">
+      <DependentUpon>frmRptLogSettleAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptOutNoCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptOutNoCharge.Designer.cs">
+      <DependentUpon>frmRptOutNoCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptPatientSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptPatientSum.Designer.cs">
+      <DependentUpon>frmRptPatientSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptPayTypeBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptPayTypeBill.Designer.cs">
+      <DependentUpon>frmRptPayTypeBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptPayTypeClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptPayTypeClass.Designer.cs">
+      <DependentUpon>frmRptPayTypeClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptPrePayClear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptPrePayClear.Designer.cs">
+      <DependentUpon>frmRptPrePayClear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptReceiverSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptReceiverSum.Designer.cs">
+      <DependentUpon>frmRptReceiverSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptReckoningDept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptReckoningDept.Designer.cs">
+      <DependentUpon>frmRptReckoningDept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptReckoningEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptReckoningEmp.Designer.cs">
+      <DependentUpon>frmRptReckoningEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAidUsageAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAidUsageAddItem.Designer.cs">
+      <DependentUpon>frmAidUsageAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptReckoningEmpUnion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptReckoningEmpUnion.Designer.cs">
+      <DependentUpon>frmRptReckoningEmpUnion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptStatGroupInComeByDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptStatGroupInComeByDoctor.Designer.cs">
+      <DependentUpon>frmRptStatGroupInComeByDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptUsedDragStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptUsedDragStat.Designer.cs">
+      <DependentUpon>frmRptUsedDragStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptYBEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptYBEntry.Designer.cs">
+      <DependentUpon>frmRptYBEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptYBOutSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptYBOutSum.Designer.cs">
+      <DependentUpon>frmRptYBOutSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptYbRegLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptYbRegLog.Designer.cs">
+      <DependentUpon>frmRptYbRegLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmShiying.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmShiying.Designer.cs">
+      <DependentUpon>frmShiying.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYB.Designer.cs">
+      <DependentUpon>frmYB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYBType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYBType.Designer.cs">
+      <DependentUpon>frmYBType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYB_CS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYB_CS.Designer.cs">
+      <DependentUpon>frmYB_CS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYB_F2Compute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYB_F2Compute.Designer.cs">
+      <DependentUpon>frmYB_F2Compute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYB_F2DownLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYB_F2DownLoad.Designer.cs">
+      <DependentUpon>frmYB_F2DownLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYB_LJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYB_LJ.Designer.cs">
+      <DependentUpon>frmYB_LJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYB_LJExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYB_LJExport.Designer.cs">
+      <DependentUpon>frmYB_LJExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYB_TS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYB_TS.designer.cs">
+      <DependentUpon>frmYB_TS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\ucPatientInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\ucPatientInfo.Designer.cs">
+      <DependentUpon>ucPatientInfo.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DLL\HISZY_SVC\HISZY_SVC.csproj">
+      <Project>{30CE27B2-BFF9-471F-8966-87744304049E}</Project>
+      <Name>HISZY_SVC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

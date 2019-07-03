@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Document type="Request Get" versionNumber="1.0" value="1.0">
+  <realmCode code="4419.CN"/>
+  <code code="4419.A01.02.101" codeSystem="4419.CN.01" codeSystemName="东莞市妇幼卫生信息交互共享文档分类编码系统"/>
+  <title>请求获取孕产妇基本信息</title>
+  <author>
+    <authorID code="369503250" authorname="东莞东华医院"/>
+    <InformationsystemID code="A74CC68F-B009-4264-A880-FBE87DD91E45" InformationsystemName="惠侨HIS系统"/>
+    <GenerationTime type="TS" value="201603170101"/>
+  </author>
+  <component>
+    <HDSB0101000></HDSB0101000>
+    <HISID></HISID>
+    <HDSB0101001>余佳</HDSB0101001>
+    <HDSB0101004 code="01" codesystem="CV02.01.101">居民身份证</HDSB0101004>
+    <HDSB0101005>362203198811022626</HDSB0101005>
+    <HDSB0101006></HDSB0101006>
+  </component>
+</Document>
+

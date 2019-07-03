@@ -1,0 +1,758 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B87E12A8-B86F-4D7E-9E71-195739793C34}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.digitalwave.iCare.gui.MedicineStore_Maintain</RootNamespace>
+    <AssemblyName>MedicineStore_Maintain</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="clsCommonInfoSvc, Version=2.0.0.1, Culture=neutral, PublicKeyToken=e53d7501af14791b, processorArchitecture=MSIL" />
+    <Reference Include="CommonInfo, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ControlLibrary, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="DataWindow, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Sybase\DataWindow .NET 2.0\DataWindow.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DataWindowInterop, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da" />
+    <Reference Include="Digitalwave.ControlsLib, Version=3.0.0.0, Culture=neutral, PublicKeyToken=bbdca74e493306ff, processorArchitecture=MSIL" />
+    <Reference Include="DigitalWaveControls, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Emr.DomainControls, Version=3.0.0.0, Culture=neutral, PublicKeyToken=3706371e4bc59968, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\MyApp\C#\灏瀚科技技术文档\iCare支持库\自定义控件\deptquery_control\Emr.DomainControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Emr.StaticObject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=345ab2ad0324e11c, processorArchitecture=MSIL" />
+    <Reference Include="GUI_Base, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HisDrugStore_GUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HisDrugStore_SVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3ad1b94e996b7482, processorArchitecture=MSIL" />
+    <Reference Include="HISZY, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HIS_InputControl, Version=1.0.1656.37998, Culture=neutral" />
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL" />
+    <Reference Include="MedicineStore_Control, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MedicineStore_GUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MedicineStore_Serv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f4b8bd8ef2ee9825, processorArchitecture=MSIL" />
+    <Reference Include="MiddleTierBase, Version=2.0.0.1, Culture=neutral, PublicKeyToken=bcb959104966b6d1, processorArchitecture=MSIL" />
+    <Reference Include="ObjectGenerator, Version=2.0.0.1, Culture=neutral, PublicKeyToken=f32520148b720498, processorArchitecture=MSIL" />
+    <Reference Include="Sybase.PowerBuilder.Db, Version=10.5.0.4600, Culture=neutral, PublicKeyToken=9131e8bacdad8fb5" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utility, Version=2.0.0.1, Culture=neutral, PublicKeyToken=a48271451c5bd35f, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsPublic.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_BalanceReport.cs" />
+    <Compile Include="Controller\clsCtl_CheckMedicineOrder.cs" />
+    <Compile Include="Controller\clsCtl_ExportdeptSet.cs" />
+    <Compile Include="Controller\clsCtl_GetStorageCheckMedicine.cs" />
+    <Compile Include="Controller\clsCtl_InOutReport.cs" />
+    <Compile Include="Controller\clsCtl_InstorageDetailReport.cs" />
+    <Compile Include="Controller\clsCtl_InStorageStatisticsReport.cs" />
+    <Compile Include="Controller\clsCtl_MedicineAcceptance.cs" />
+    <Compile Include="Controller\clsCtl_MedIcineCheckReport.cs" />
+    <Compile Include="Controller\clsCtl_MedicineDetailReport.cs" />
+    <Compile Include="Controller\clsCtl_MedicineDetailReport_rq.cs" />
+    <Compile Include="Controller\clsCtl_MedicineGrossProfitRateSet.cs" />
+    <Compile Include="Controller\clsCtl_MedicineLimit.cs" />
+    <Compile Include="Controller\clsCtl_MedicineLimitInfo.cs" />
+    <Compile Include="Controller\clsCtl_MedicineStoreroomSet.cs" />
+    <Compile Include="Controller\clsCtl_MedicineTypeSet.cs" />
+    <Compile Include="Controller\clsCtl_MedicineTypeVisionmSet.cs" />
+    <Compile Include="Controller\clsCtl_NewPurchaseMedicine.cs" />
+    <Compile Include="Controller\clsCtl_OutOrInStorageDeptSet.cs" />
+    <Compile Include="Controller\clsCtl_OutStorageDetailReport.cs" />
+    <Compile Include="Controller\clsCtl_OutStorageDetailReport2.cs" />
+    <Compile Include="Controller\clsCtl_Public.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_QueryMedicineDetail.cs" />
+    <Compile Include="Controller\clsCtl_QueryMedicinePrice.cs" />
+    <Compile Include="Controller\clsCtl_RecipeByDeptReport.cs" />
+    <Compile Include="Controller\clsCtl_RecipeByEachDeptReport.cs" />
+    <Compile Include="Controller\clsCtl_RecipeByIdentityReport.cs" />
+    <Compile Include="Controller\clsCtl_RecipeByMedicineDeptReport.cs" />
+    <Compile Include="Controller\clsCtl_RecipeBySpecialMedicineReport.cs" />
+    <Compile Include="Controller\clsCtl_RecipeMedicineDetailReport.cs" />
+    <Compile Include="Controller\clsCtl_RejectReasonSet.cs" />
+    <Compile Include="Controller\clsCtl_RejectStorageReport.cs" />
+    <Compile Include="Controller\clsCtl_ResultReport.cs" />
+    <Compile Include="Controller\clsCtl_RptAdjustpriceDetail.cs" />
+    <Compile Include="Controller\clsCtl_RptAdjustpricefullloss.cs" />
+    <Compile Include="Controller\clsCtl_RptAdjustpriceRecord.cs" />
+    <Compile Include="Controller\clsCtl_RptGoWayStat.cs" />
+    <Compile Include="Controller\clsCtl_RptGoWayStorageStat.cs" />
+    <Compile Include="Controller\clsCtl_RptInstorageBill.cs" />
+    <Compile Include="Controller\clsCtl_RptInstorageDetailBill.cs" />
+    <Compile Include="Controller\clsCtl_RptInstorageStat.cs" />
+    <Compile Include="Controller\clsCtl_RptMedicineDetailReport.cs" />
+    <Compile Include="Controller\clsCtl_RptOutstorageBillOrDetailBill.cs" />
+    <Compile Include="Controller\clsCtl_RptOutstorageStat.cs" />
+    <Compile Include="Controller\clsCtl_RptOutstroageSumMoney.cs" />
+    <Compile Include="Controller\clsCtl_RptRecipeOutSumStat.cs" />
+    <Compile Include="Controller\clsCtl_StorageQueryReport.cs" />
+    <Compile Include="Controller\clsCtl_StorageRackSet.cs" />
+    <Compile Include="Controller\clsCtl_StorageShelf.cs" />
+    <Compile Include="Controller\clsCtl_TotalAccountReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_VendorSupplyDetail.cs" />
+    <Compile Include="Controller\clsDcl_StorageDetailQuery.cs" />
+    <Compile Include="Domain\clsDcl_BalanceReport.cs" />
+    <Compile Include="Domain\clsDcl_CheckMedicineOrder.cs" />
+    <Compile Include="Domain\clsDcl_ExportdeptSet.cs" />
+    <Compile Include="Domain\clsDcl_GetStorageCheckMedicine.cs" />
+    <Compile Include="Domain\clsDcl_InOutReport.cs" />
+    <Compile Include="Domain\clsDcl_InstorageDetailReport.cs" />
+    <Compile Include="Domain\clsDcl_InStorageStatisticsReport.cs" />
+    <Compile Include="Domain\clsDcl_MedicineAcceptance.cs" />
+    <Compile Include="Domain\clsDcl_MedIcineCheckReport.cs" />
+    <Compile Include="Domain\clsDcl_MedicineDetailReport.cs" />
+    <Compile Include="Domain\clsDcl_MedicineDetailReport_rq.cs" />
+    <Compile Include="Domain\clsDcl_MedicineGrossProfitRateSet.cs" />
+    <Compile Include="Domain\clsDcl_MedicineLimit.cs" />
+    <Compile Include="Domain\clsDcl_MedicineLimitInfo.cs" />
+    <Compile Include="Domain\clsDcl_MedicineStoreroomSet.cs" />
+    <Compile Include="Domain\clsDcl_MedicineTypeSet.cs" />
+    <Compile Include="Domain\clsDcl_MedicineTypeVisionmSet.cs" />
+    <Compile Include="Domain\clsDcl_NewPurchaseMedicine.cs" />
+    <Compile Include="Domain\clsDcl_OutOrInStorageDeptSet.cs" />
+    <Compile Include="Domain\clsDcl_OutStorageDetailReport.cs" />
+    <Compile Include="Domain\clsDcl_OutStorageDetailReport2.cs" />
+    <Compile Include="Domain\clsDcl_QueryMedicineDetail.cs" />
+    <Compile Include="Domain\clsDcl_QueryMedicinePrice.cs" />
+    <Compile Include="Domain\clsDcl_RecipeByDeptReport.cs" />
+    <Compile Include="Domain\clsDcl_RecipeByEachDeptReport.cs" />
+    <Compile Include="Domain\clsDcl_RecipeByIdentityReport.cs" />
+    <Compile Include="Domain\clsDcl_RecipeByMedicineDeptReport.cs" />
+    <Compile Include="Domain\clsDcl_RecipeBySpecialMedicineReport.cs" />
+    <Compile Include="Domain\clsDcl_RecipeDetailReport.cs" />
+    <Compile Include="Domain\clsDcl_RejectReasonSet.cs" />
+    <Compile Include="Domain\clsDcl_ResultReport.cs" />
+    <Compile Include="Domain\clsDcl_RptAdjustpriceDetail.cs" />
+    <Compile Include="Domain\clsDcl_RptAdjustpricefullloss.cs" />
+    <Compile Include="Domain\clsDcl_RptAdjustpriceRecord.cs" />
+    <Compile Include="Domain\clsDcl_RptDetailReport.cs" />
+    <Compile Include="Domain\clsDcl_RptGoWayStat.cs" />
+    <Compile Include="Domain\clsDcl_RptGoWayStorageStat.cs" />
+    <Compile Include="Domain\clsDcl_RptInstorageBill.cs" />
+    <Compile Include="Domain\clsDcl_RptInstorageDetailBill.cs" />
+    <Compile Include="Domain\clsDcl_RptOutstorageBillOrDetailBill.cs" />
+    <Compile Include="Domain\clsDcl_RptRecipeOutSumStat.cs" />
+    <Compile Include="Domain\clsDcl_StorageRacksetSet.cs" />
+    <Compile Include="Domain\clsDcl_StorageShelf.cs" />
+    <Compile Include="Domain\clsDcl_TotalAccountReport.cs" />
+    <Compile Include="Domain\clsDcl_VendorSupplyDetail.cs" />
+    <Compile Include="Domain\clsDomainController_OutStorageStat.cs" />
+    <Compile Include="Domain\clsDomainController_StorageDetailQuery.cs" />
+    <Compile Include="Domain\clsDcl_RejectStorageReport.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmBalanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBalanceReport.Designer.cs">
+      <DependentUpon>frmBalanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCheckMedicineOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCheckMedicineOrder.Designer.cs">
+      <DependentUpon>frmCheckMedicineOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmExportdeptSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmExportdeptSet.Designer.cs">
+      <DependentUpon>frmExportdeptSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmGetStorageCheckMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmGetStorageCheckMedicine.designer.cs">
+      <DependentUpon>frmGetStorageCheckMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmInOutReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInOutReport.Designer.cs">
+      <DependentUpon>frmInOutReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmInstorageDetailReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInstorageDetailReport.Designer.cs">
+      <DependentUpon>frmInstorageDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmInStorageStatisticsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInStorageStatisticsReport.Designer.cs">
+      <DependentUpon>frmInStorageStatisticsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMedicineAcceptance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMedicineAcceptance.Designer.cs">
+      <DependentUpon>FrmMedicineAcceptance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMedIcineCheckReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMedIcineCheckReport.designer.cs">
+      <DependentUpon>frmMedIcineCheckReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMedicineDetailReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMedicineDetailReport.Designer.cs">
+      <DependentUpon>frmMedicineDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMedicineDetailReport_rq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMedicineDetailReport_rq.designer.cs">
+      <DependentUpon>frmMedicineDetailReport_rq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMedicineGrossProfitRateSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMedicineGrossProfitRateSet.Designer.cs">
+      <DependentUpon>frmMedicineGrossProfitRateSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMedicineLimit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMedicineLimit.designer.cs">
+      <DependentUpon>frmMedicineLimit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMedicineStoreroomSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMedicineStoreroomSet.Designer.cs">
+      <DependentUpon>frmMedicineStoreroomSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMedicineTypeVisionmSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMedicineTypeVisionmSet.Designer.cs">
+      <DependentUpon>frmMedicineTypeVisionmSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMedicintTypeSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMedicintTypeSet.Designer.cs">
+      <DependentUpon>frmMedicintTypeSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMidicineLimitInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMidicineLimitInfo.Designer.cs">
+      <DependentUpon>frmMidicineLimitInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmNewPurchaseMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmNewPurchaseMedicine.Designer.cs">
+      <DependentUpon>frmNewPurchaseMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmNewPurchaseMedicineReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmNewPurchaseMedicineReport.Designer.cs">
+      <DependentUpon>frmNewPurchaseMedicineReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOutOrInStorageDeptSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOutOrInStorageDeptSet.Designer.cs">
+      <DependentUpon>frmOutOrInStorageDeptSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOutStorageDetailReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOutStorageDetailReport.Designer.cs">
+      <DependentUpon>frmOutStorageDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOutStorageDetailReport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOutStorageDetailReport2.Designer.cs">
+      <DependentUpon>frmOutStorageDetailReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOutStorageStat_WestemMedicineStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOutStorageStat_WestemMedicineStorage.Designer.cs">
+      <DependentUpon>frmOutStorageStat_WestemMedicineStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmQueryMedicineDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmQueryMedicineDetail.Designer.cs">
+      <DependentUpon>frmQueryMedicineDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmQueryMedicinePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmQueryMedicinePrice.Designer.cs">
+      <DependentUpon>frmQueryMedicinePrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmQueryNavigator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmQueryNavigator.Designer.cs">
+      <DependentUpon>frmQueryNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRecipeByDeptReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRecipeByDeptReport.Designer.cs">
+      <DependentUpon>frmRecipeByDeptReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRecipeByEachDeptReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRecipeByEachDeptReport.Designer.cs">
+      <DependentUpon>frmRecipeByEachDeptReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRecipeByIdentityReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRecipeByIdentityReport.Designer.cs">
+      <DependentUpon>frmRecipeByIdentityReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRecipeByMedicineDeptReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRecipeByMedicineDeptReport.Designer.cs">
+      <DependentUpon>frmRecipeByMedicineDeptReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRecipeBySpecialMedicineReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRecipeBySpecialMedicineReport.Designer.cs">
+      <DependentUpon>frmRecipeBySpecialMedicineReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRecipeMedicineDetailReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRecipeMedicineDetailReport.Designer.cs">
+      <DependentUpon>frmRecipeMedicineDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRejectReasonSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRejectReasonSet.Designer.cs">
+      <DependentUpon>frmRejectReasonSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmResultReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmResultReport.Designer.cs">
+      <DependentUpon>frmResultReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptAdjustpriceDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptAdjustpriceDetail.Designer.cs">
+      <DependentUpon>frmRptAdjustpriceDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptAdjustpricefullloss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptAdjustpricefullloss.Designer.cs">
+      <DependentUpon>frmRptAdjustpricefullloss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptAdjustpriceRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptAdjustpriceRecord.Designer.cs">
+      <DependentUpon>frmRptAdjustpriceRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptGoWayStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptGoWayStat.Designer.cs">
+      <DependentUpon>frmRptGoWayStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptGoWayStorageStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptGoWayStorageStat.Designer.cs">
+      <DependentUpon>frmRptGoWayStorageStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptInStorageBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptInStorageBill.Designer.cs">
+      <DependentUpon>frmRptInStorageBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptInstorageDetaiBilll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptInstorageDetaiBilll.Designer.cs">
+      <DependentUpon>frmRptInstorageDetaiBilll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptInstorageStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptInstorageStat.Designer.cs">
+      <DependentUpon>frmRptInstorageStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptMedicineDetailReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptMedicineDetailReport.Designer.cs">
+      <DependentUpon>frmRptMedicineDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptOutstorageBillOrDetailBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptOutstorageBillOrDetailBill.Designer.cs">
+      <DependentUpon>frmRptOutstorageBillOrDetailBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptOutstorageStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptOutstorageStat.Designer.cs">
+      <DependentUpon>frmRptOutstorageStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptOutstroageSumMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptOutstroageSumMoney.Designer.cs">
+      <DependentUpon>frmRptOutstroageSumMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRptRecipeOutSumStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptRecipeOutSumStat.Designer.cs">
+      <DependentUpon>frmRptRecipeOutSumStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmStorageQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmStorageQuery.Designer.cs">
+      <DependentUpon>frmStorageQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmStorageQueryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmStorageQueryReport.Designer.cs">
+      <DependentUpon>frmStorageQueryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmStorageRackset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmStorageRackset.Designer.cs">
+      <DependentUpon>frmStorageRackset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmStorageShelf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmStorageShelf.Designer.cs">
+      <DependentUpon>frmStorageShelf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmTotalAccoutReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmTotalAccoutReport.Designer.cs">
+      <DependentUpon>frmTotalAccoutReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmVendorSupplyDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmVendorSupplyDetail.Designer.cs">
+      <DependentUpon>frmVendorSupplyDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRejectStorageReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRejectStorageReport.Designer.cs">
+      <DependentUpon>frmRejectStorageReport.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBalanceReport.resx">
+      <DependentUpon>frmBalanceReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCheckMedicineOrder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCheckMedicineOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmExportdeptSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmExportdeptSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmGetStorageCheckMedicine.resx">
+      <DependentUpon>frmGetStorageCheckMedicine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInOutReport.resx">
+      <DependentUpon>frmInOutReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInstorageDetailReport.resx">
+      <DependentUpon>frmInstorageDetailReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInStorageStatisticsReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInStorageStatisticsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMedicineAcceptance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMedicineAcceptance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMedIcineCheckReport.resx">
+      <DependentUpon>frmMedIcineCheckReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMedicineDetailReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMedicineDetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMedicineDetailReport_rq.resx">
+      <DependentUpon>frmMedicineDetailReport_rq.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMedicineGrossProfitRateSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMedicineGrossProfitRateSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMedicineLimit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMedicineLimit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMedicineStoreroomSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMedicineStoreroomSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMedicineTypeVisionmSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMedicineTypeVisionmSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMedicintTypeSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMedicintTypeSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMidicineLimitInfo.resx">
+      <DependentUpon>frmMidicineLimitInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmNewPurchaseMedicine.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNewPurchaseMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmNewPurchaseMedicineReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNewPurchaseMedicineReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOutOrInStorageDeptSet.resx">
+      <DependentUpon>frmOutOrInStorageDeptSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOutStorageDetailReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOutStorageDetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOutStorageDetailReport2.resx">
+      <DependentUpon>frmOutStorageDetailReport2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOutStorageStat_WestemMedicineStorage.resx">
+      <DependentUpon>frmOutStorageStat_WestemMedicineStorage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmQueryMedicineDetail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQueryMedicineDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmQueryMedicinePrice.resx">
+      <DependentUpon>frmQueryMedicinePrice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmQueryNavigator.resx">
+      <DependentUpon>frmQueryNavigator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRecipeByDeptReport.resx">
+      <DependentUpon>frmRecipeByDeptReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRecipeByEachDeptReport.resx">
+      <DependentUpon>frmRecipeByEachDeptReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRecipeByIdentityReport.resx">
+      <DependentUpon>frmRecipeByIdentityReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRecipeByMedicineDeptReport.resx">
+      <DependentUpon>frmRecipeByMedicineDeptReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRecipeBySpecialMedicineReport.resx">
+      <DependentUpon>frmRecipeBySpecialMedicineReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRecipeMedicineDetailReport.resx">
+      <DependentUpon>frmRecipeMedicineDetailReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRejectReasonSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRejectReasonSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmResultReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmResultReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptAdjustpriceDetail.resx">
+      <DependentUpon>frmRptAdjustpriceDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptAdjustpricefullloss.resx">
+      <DependentUpon>frmRptAdjustpricefullloss.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptAdjustpriceRecord.resx">
+      <DependentUpon>frmRptAdjustpriceRecord.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptGoWayStat.resx">
+      <DependentUpon>frmRptGoWayStat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptGoWayStorageStat.resx">
+      <DependentUpon>frmRptGoWayStorageStat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptInStorageBill.resx">
+      <DependentUpon>frmRptInStorageBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptInstorageDetaiBilll.resx">
+      <DependentUpon>frmRptInstorageDetaiBilll.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptInstorageStat.resx">
+      <DependentUpon>frmRptInstorageStat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptMedicineDetailReport.resx">
+      <DependentUpon>frmRptMedicineDetailReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptOutstorageBillOrDetailBill.resx">
+      <DependentUpon>frmRptOutstorageBillOrDetailBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptOutstorageStat.resx">
+      <DependentUpon>frmRptOutstorageStat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptOutstroageSumMoney.resx">
+      <DependentUpon>frmRptOutstroageSumMoney.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptRecipeOutSumStat.resx">
+      <DependentUpon>frmRptRecipeOutSumStat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmStorageQuery.resx">
+      <DependentUpon>frmStorageQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmStorageQueryReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmStorageQueryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmStorageRackset.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmStorageRackset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmStorageShelf.resx">
+      <DependentUpon>frmStorageShelf.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmTotalAccoutReport.resx">
+      <DependentUpon>frmTotalAccoutReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmVendorSupplyDetail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmVendorSupplyDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRejectStorageReport.resx">
+      <DependentUpon>frmRejectStorageReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\down.bmp" />
+    <Content Include="Resources\Shell32 055.ico" />
+    <Content Include="Resources\up.bmp" />
+    <Content Include="Resources\向上.png" />
+    <Content Include="Resources\向下.png" />
+    <Content Include="Resources\最上.png" />
+    <Content Include="Resources\最下.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

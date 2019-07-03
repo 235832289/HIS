@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <DBMS text="数据库连接参数">
+    <onlineDB text="在线数据库" dbms="2" connStr="Data Source=icare;User id=cssb;Password=cssb;Max Pool Size=512;Enlist=true;" /> 
+  </DBMS> 
+</configuration>

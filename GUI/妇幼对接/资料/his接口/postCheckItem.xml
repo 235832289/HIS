@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="GBK"?>
+<Document type="Request Save" versionNumber="" value="1.0">
+	<realmCode code="4419.CN"/>
+	<code code="4419.A01.02.211" codeSystem="4419.CN.01" codeSystemName="东莞市妇幼卫生信息交互共享文档分类编码系统"/>
+	<title>请求推送某产妇的辅助检查信息</title>
+	<author>
+		<authorID code="133215060" authorname="东莞市妇幼保健院"/>
+		<InformationsystemID code="9mb43b35-f717-40f9-810d-f2ag914h6bc3" InformationsystemName="东莞市妇幼保健院HIS管理系统"/>
+		<GenerationTime type="TS" value="201301030832"/>
+	</author>
+	<component>
+		<OperationType value="New"/>
+		<recordNumber value="1" type="INT"/>
+		<record>
+			<HISID>门诊病历号</HISID>
+			<NAME>孕妇姓名</NAME>
+      <BARCODE>孕产妇保健手册号</BARCODE>
+      <IDCARD>孕妇身份证号</IDCARD>
+      <ASSISTANT code="辅助检查项目ID" codesystem="STD_ASSISTANT">
+				<APPID>申请单</APPID>
+				<ASSISTANTNAME>辅助检查项目名</ASSISTANTNAME>
+				<CHKORG code="" codesystem="STD_ORGAN">检查机构</CHKORG>
+				<CHKDEP code="" codesystem="STD_KESHI">检查科室</CHKDEP>
+				<CHKDATE>检查日期</CHKDATE>
+				<CHKDOCTOR>检查医生</CHKDOCTOR>
+				<RESULT code="检查项目代码" codesystem="STD_RESULT">
+					<RESULTNAME>检查项目名称</RESULTNAME>
+					<RESULTVALUE>检查结果</RESULTVALUE>
+				</RESULT>
+			</ASSISTANT>
+		</record>
+	</component>
+</Document>

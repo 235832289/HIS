@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HISReportMZ", "HISReportMZ.csproj", "{3CA6ECCC-9729-47B8-B3A9-F4AD470257CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HISReportMZ_SVC", "..\..\DLL\HISReportMZ_SVC\HISReportMZ_SVC.csproj", "{5642D65B-C400-4844-AA09-A6A9978E45A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CA6ECCC-9729-47B8-B3A9-F4AD470257CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CA6ECCC-9729-47B8-B3A9-F4AD470257CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CA6ECCC-9729-47B8-B3A9-F4AD470257CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CA6ECCC-9729-47B8-B3A9-F4AD470257CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5642D65B-C400-4844-AA09-A6A9978E45A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5642D65B-C400-4844-AA09-A6A9978E45A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5642D65B-C400-4844-AA09-A6A9978E45A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5642D65B-C400-4844-AA09-A6A9978E45A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

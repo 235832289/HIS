@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HISYBCSAutoUpData", "HISYBCSAutoUpData.csproj", "{A37391D3-15F3-4A0B-BAA8-BC4FA801D1A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HISYBCSAutoUpDataMain", "..\HISYBCSAutoUpDataMain\HISYBCSAutoUpDataMain.csproj", "{8190C820-E691-4127-834C-74D9ACA304FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HISYB_CS", "..\HISYB_CS\HISYB_CS.csproj", "{984CAE78-9C31-4580-ADD7-2BFE2919D672}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A37391D3-15F3-4A0B-BAA8-BC4FA801D1A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A37391D3-15F3-4A0B-BAA8-BC4FA801D1A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A37391D3-15F3-4A0B-BAA8-BC4FA801D1A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A37391D3-15F3-4A0B-BAA8-BC4FA801D1A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8190C820-E691-4127-834C-74D9ACA304FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8190C820-E691-4127-834C-74D9ACA304FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8190C820-E691-4127-834C-74D9ACA304FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8190C820-E691-4127-834C-74D9ACA304FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{984CAE78-9C31-4580-ADD7-2BFE2919D672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984CAE78-9C31-4580-ADD7-2BFE2919D672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984CAE78-9C31-4580-ADD7-2BFE2919D672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984CAE78-9C31-4580-ADD7-2BFE2919D672}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

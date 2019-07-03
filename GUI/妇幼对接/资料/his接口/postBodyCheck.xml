@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="GBK"?>
+<Document type="Request Save" versionNumber="" value="1.0">
+	<realmCode code="4419.CN"/>
+	<code code="4419.A01.02.202" codeSystem="4419.CN.01" codeSystemName="东莞市妇幼卫生信息交互共享文档分类编码系统"/>
+	<title>请求推送孕产妇一般体检信息</title>
+	<author>
+		<authorID code="133215060" authorname="东莞市妇幼保健院" />
+		<InformationsystemID code="9mb43b35-f717-40f9-810d-f2ag914h6bc3" InformationsystemName="东莞市妇幼保健院HIS管理系统" />
+		<GenerationTime type="TS" value="201603041611" />
+	</author>
+	<component>
+		<OperationType value="New"/>
+		<recordNumber value="5" type="INT"/>
+		<record>
+			<HISID>0</HISID>
+			<RECORDID></RECORDID>
+			<HDSB0101001></HDSB0101001>
+			<BARCODE></BARCODE>
+			<IDCARD></IDCARD>
+			<HDSB0101036></HDSB0101036>
+			<HDSB0101037></HDSB0101037>
+			<HDSB0101040></HDSB0101040>
+			<HDSB0101041></HDSB0101041>
+			<HDSB0101042></HDSB0101042>
+			<HDSB0101043></HDSB0101043>
+			<HDSB0101044></HDSB0101044>
+			<UTERUSHEIGH></UTERUSHEIGH>
+			<ABDOMENGIRTH></ABDOMENGIRTH>
+			<FETUSHEART></FETUSHEART>
+			<HDSB0101045></HDSB0101045>
+			<HDSB0101046 code="" codesystem="STD_ORGAN"></HDSB0101046>
+			<HDSB0101047></HDSB0101047>
+		</record>
+	</component>
+</Document>

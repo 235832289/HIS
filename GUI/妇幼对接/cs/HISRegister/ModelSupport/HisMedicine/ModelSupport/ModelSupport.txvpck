@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<nodeSet>
+  <view uin="7051zi9hug">
+    <property name="$name" value="ModelSupport" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="source:HisMedicineInfo:HisMedicine.ModelSupport.frmMedAndStorage">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="source:HisMedicineInfo:HisMedicine.ModelSupport.frmMedAndStorage.components" />
+      <reference referencedUin="source:HisMedicineInfo:HisMedicine.ModelSupport.frmMedAndStorage.frmMedAndStorage()" />
+      <reference referencedUin="source:HisMedicineInfo:HisMedicine.ModelSupport.frmMedAndStorage.Dispose(System.Boolean)" />
+      <reference referencedUin="source:HisMedicineInfo:HisMedicine.ModelSupport.frmMedAndStorage.InitializeComponent()" />
+      <reference referencedUin="source:HisMedicineInfo:HisMedicine.ModelSupport.frmMedAndStorage:System.Windows.Forms.Form" />
+    </reference>
+  </view>
+</nodeSet>

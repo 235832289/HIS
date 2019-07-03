@@ -1,0 +1,1058 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{64325071-7D7F-47C5-8305-05A748C6330B}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BeInHospital</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BeInHospital</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="baseInfo_Svc">
+      <Name>baseInfo_Svc</Name>
+      <HintPath>..\..\..\bin\Debug\baseInfo_Svc.dll</HintPath>
+    </Reference>
+    <Reference Include="BIHOrder">
+      <Name>BIHOrder</Name>
+      <HintPath>..\..\..\bin\DEBUG\BIHOrder.dll</HintPath>
+    </Reference>
+    <Reference Include="BIHOrderService">
+      <Name>BIHOrderService</Name>
+      <HintPath>..\..\..\BIN\Debug\BIHOrderService.dll</HintPath>
+    </Reference>
+    <Reference Include="CalcPatientCharge">
+      <Name>CalcPatientCharge</Name>
+      <HintPath>..\..\..\bin\Debug\CalcPatientCharge.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonInfo">
+      <Name>CommonInfo</Name>
+      <HintPath>..\..\..\BIN\Debug\CommonInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlLibrary, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DataWindow, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Sybase\DataWindow .NET 2.0\DataWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="DataWindowInterop, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da" />
+    <Reference Include="DataWindowUtility, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="DigitalWave.BaseForm">
+      <Name>DigitalWave.BaseForm</Name>
+      <HintPath>..\..\..\BIN\Debug\DigitalWave.BaseForm.dll</HintPath>
+    </Reference>
+    <Reference Include="DigitalWaveControls">
+      <Name>DigitalWaveControls</Name>
+      <HintPath>..\..\..\bin\Debug\DigitalWaveControls.dll</HintPath>
+    </Reference>
+    <Reference Include="digitalwaveHisAutoCharge">
+      <Name>digitalwaveHisAutoCharge</Name>
+      <HintPath>..\..\..\bin\debug\digitalwaveHisAutoCharge.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_HospitalInfoService">
+      <Name>EMR_HospitalInfoService</Name>
+      <HintPath>..\..\..\bin\DEBUG\EMR_HospitalInfoService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_iCareControl">
+      <Name>EMR_iCareControl</Name>
+      <HintPath>..\..\..\BIN\Debug\EMR_iCareControl.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_iCareData">
+      <Name>EMR_iCareData</Name>
+      <HintPath>..\..\..\bin\DEBUG\EMR_iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_iCareHospitalInfoBase">
+      <Name>EMR_iCareHospitalInfoBase</Name>
+      <HintPath>..\..\..\bin\DEBUG\EMR_iCareHospitalInfoBase.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_PrintTool">
+      <Name>EMR_PrintTool</Name>
+      <HintPath>..\..\..\BIN\Debug\EMR_PrintTool.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_Utility">
+      <Name>EMR_Utility</Name>
+      <HintPath>..\..\..\bin\DEBUG\EMR_Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="exDataGrid">
+      <Name>exDataGrid</Name>
+      <HintPath>..\..\..\bin\Debug\exDataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtendPrintTool">
+      <Name>ExtendPrintTool</Name>
+      <HintPath>..\..\..\BIN\Debug\ExtendPrintTool.dll</HintPath>
+    </Reference>
+    <Reference Include="FindText">
+      <Name>FindText</Name>
+      <HintPath>..\..\..\bin\DEBUG\FindText.dll</HintPath>
+    </Reference>
+    <Reference Include="frmPatient">
+      <Name>frmPatient</Name>
+      <HintPath>..\..\..\BIN\Debug\frmPatient.dll</HintPath>
+    </Reference>
+    <Reference Include="GLS_WS_CommonApply, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GUI_Base">
+      <Name>GUI_Base</Name>
+      <HintPath>..\..\..\bin\Debug\GUI_Base.dll</HintPath>
+    </Reference>
+    <Reference Include="HISBase_SVC">
+      <Name>HISBase_SVC</Name>
+      <HintPath>..\..\..\bin\Debug\HISBase_SVC.dll</HintPath>
+    </Reference>
+    <Reference Include="HISControl">
+      <Name>hiscontrol</Name>
+      <HintPath>..\..\..\bin\debug\hiscontrol.dll</HintPath>
+    </Reference>
+    <Reference Include="HISDoctorAdvice">
+      <Name>HISDoctorAdvice</Name>
+      <HintPath>..\..\..\bin\DEBUG\HISDoctorAdvice.dll</HintPath>
+    </Reference>
+    <Reference Include="HISDoctorAdvice_SVC">
+      <Name>HISDoctorAdvice_SVC</Name>
+      <HintPath>..\..\..\bin\DEBUG\HISDoctorAdvice_SVC.dll</HintPath>
+    </Reference>
+    <Reference Include="HISInHospital_Svc">
+      <Name>HISInHospital_Svc</Name>
+      <HintPath>..\..\..\BIN\Debug\HISInHospital_Svc.dll</HintPath>
+    </Reference>
+    <Reference Include="Hisitf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HISMedicineStdManage_SVC">
+      <Name>HISMedicineStdManage_SVC</Name>
+      <HintPath>..\..\..\bin\Debug\HISMedicineStdManage_SVC.dll</HintPath>
+    </Reference>
+    <Reference Include="HISRegister, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HISReg_SVC">
+      <Name>HISReg_SVC</Name>
+      <HintPath>..\..\..\bin\Debug\HISReg_SVC.dll</HintPath>
+    </Reference>
+    <Reference Include="HISYB_CS, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HISZY, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HISZY_SVC, Version=2.0.0.1, Culture=neutral, PublicKeyToken=a9c4a6ddbaded2ec, processorArchitecture=MSIL" />
+    <Reference Include="HRPService">
+      <Name>HRPService</Name>
+      <HintPath>..\..\..\bin\Debug\HRPService.dll</HintPath>
+    </Reference>
+    <Reference Include="iCareData">
+      <Name>iCareData</Name>
+      <HintPath>..\..\..\bin\Debug\iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MiddleTierBase">
+      <Name>MiddleTierBase</Name>
+      <HintPath>..\..\..\bin\Debug\MiddleTierBase.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectGenerator">
+      <Name>ObjectGenerator</Name>
+      <HintPath>..\..\..\bin\Debug\ObjectGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="PatientChain">
+      <Name>PatientChain</Name>
+      <HintPath>..\..\..\BIN\Debug\PatientChain.dll</HintPath>
+    </Reference>
+    <Reference Include="PatientQuerySVC">
+      <Name>PatientQuerySVC</Name>
+      <HintPath>..\..\..\bin\DEBUG\PatientQuerySVC.dll</HintPath>
+    </Reference>
+    <Reference Include="PatientSvc">
+      <Name>PatientSvc</Name>
+      <HintPath>..\..\..\bin\DEBUG\PatientSvc.dll</HintPath>
+    </Reference>
+    <Reference Include="PinkieControls">
+      <Name>PinkieControls</Name>
+      <HintPath>..\..\..\bin\Debug\PinkieControls.dll</HintPath>
+    </Reference>
+    <Reference Include="PowerMonitor">
+      <Name>PowerMonitor</Name>
+      <HintPath>..\..\..\BIN\Debug\PowerMonitor.dll</HintPath>
+    </Reference>
+    <Reference Include="PrivilegeSystemService">
+      <Name>PrivilegeSystemService</Name>
+      <HintPath>..\..\..\bin\Debug\PrivilegeSystemService.dll</HintPath>
+    </Reference>
+    <Reference Include="RecordMark">
+      <Name>RecordMark</Name>
+      <HintPath>..\..\..\BIN\Debug\RecordMark.dll</HintPath>
+    </Reference>
+    <Reference Include="RIS_GUI">
+      <Name>RIS_GUI</Name>
+      <HintPath>..\..\..\bin\Debug\RIS_GUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Security_GUI">
+      <Name>Security_GUI</Name>
+      <HintPath>..\..\..\bin\Debug\Security_GUI.dll</HintPath>
+    </Reference>
+    <Reference Include="SoundControl">
+      <Name>SoundControl</Name>
+      <HintPath>..\..\..\bin\Debug\SoundControl.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceLibrary">
+      <Name>SourceLibrary</Name>
+      <HintPath>..\..\..\bin\Debug\SourceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Sybase.PowerBuilder.Db, Version=10.5.0.4600, Culture=neutral, PublicKeyToken=9131e8bacdad8fb5" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINNT\assembly\GAC_32\System.Data.OracleClient\2.0.0.0__b77a5c561934e089\System.Data.OracleClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Name>System.EnterpriseServices</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="SystemPower_base">
+      <Name>SystemPower_base</Name>
+      <HintPath>..\..\..\bin\DEBUG\SystemPower_base.dll</HintPath>
+    </Reference>
+    <Reference Include="TemplateLib">
+      <Name>TemplateLib</Name>
+      <HintPath>..\..\..\bin\DEBUG\TemplateLib.dll</HintPath>
+    </Reference>
+    <Reference Include="txtListView, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="UserControls">
+      <Name>UserControls</Name>
+      <HintPath>..\..\..\bin\Debug\UserControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Utility">
+      <Name>Utility</Name>
+      <HintPath>..\..\..\bin\Debug\Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="ReportForm\Dataset1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dataset1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsControlSpecialRemarkDic.cs" />
+    <Compile Include="Controller\clsCtlCheckDeptRole.cs" />
+    <Compile Include="Controller\clsCtlDemandPayment.cs" />
+    <Compile Include="Controller\clsCtlFindPatient.cs" />
+    <Compile Include="Controller\clsCtlLeftCallBack.cs" />
+    <Compile Include="Controller\clsCtlOerderBookingRe.cs" />
+    <Compile Include="Controller\clsCtlOutDiagnoses.cs" />
+    <Compile Include="Controller\clsCtlPatientInfLog.cs" />
+    <Compile Include="Controller\clsCtlPrepayCheckout.cs" />
+    <Compile Include="Controller\clsCtlPrepayQuery.cs" />
+    <Compile Include="Controller\clsCtlPrepayBalanceReport.cs" />
+    <Compile Include="Controller\clsCtl_AddBed..cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_BabyRegister.cs" />
+    <Compile Include="Controller\clsCtl_BedAdmin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_BIHLeave.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_BIHRecall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_BIHRegisterStatistics.cs" />
+    <Compile Include="Controller\clsCtl_BIHTransfer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_DailyDebtReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_EditBed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_EditRegister.cs" />
+    <Compile Include="Controller\clsCtl_InhospitalReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_inpatientNoManager.cs" />
+    <Compile Include="Controller\clsCtl_InPatientQuery.cs" />
+    <Compile Include="Controller\clsCtl_MessageChange.cs" />
+    <Compile Include="Controller\clsCtl_PatientDailyChargeDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_PatientDebtReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_PatientRecipeNoPay.cs" />
+    <Compile Include="Controller\clsCtl_PATSPECREMARK.cs" />
+    <Compile Include="Controller\clsCtl_Register.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_StatHospitalPatientFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_StatPatientFlowDaily.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_TurnIn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_TurnOut.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_UndoTransferOut.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_UpdateHospitalInfo.cs" />
+    <Compile Include="Controller\clsCtl_YBGD05.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsOrderBooking.cs" />
+    <Compile Include="Controller\clsOrderBookingInf.cs" />
+    <Compile Include="Controller\clsCtlModifyOutDate.cs" />
+    <Compile Include="DomainController\clsDclBihLeaHos.cs" />
+    <Compile Include="DomainController\clsDclCheckDeptRole.cs" />
+    <Compile Include="DomainController\clsDclDemandPayment.cs" />
+    <Compile Include="DomainController\clsDclOrderBooking.cs" />
+    <Compile Include="DomainController\clsDclPrepayCheckout.cs" />
+    <Compile Include="DomainController\clsDclPrepayBalanceReport.cs" />
+    <Compile Include="DomainController\clsDcl_InPatientQuery.cs" />
+    <Compile Include="DomainController\clsDcl_PATSPECREMARK.cs" />
+    <Compile Include="DomainController\clsDcl_Report.cs" />
+    <Compile Include="DomainController\clsDomainSpecialRemarkDic.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\LeaveNotice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeaveNotice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmPatientInHospitalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmPatientInHospitalReport.Designer.cs">
+      <DependentUpon>frmPatientInHospitalReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmPrintAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmPrintAlert.Designer.cs">
+      <DependentUpon>frmPrintAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\PrepayReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrepayReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmBabyRegisterlReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmBabyRegisterlReport.Designer.cs">
+      <DependentUpon>frmBabyRegisterlReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\barcode128.cs" />
+    <Compile Include="Viewer\frmBabyRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBabyRegister.Designer.cs">
+      <DependentUpon>frmBabyRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCheckDeptRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCheckDeptRole.Designer.cs">
+      <DependentUpon>frmCheckDeptRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmDiagnoses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmDiagnoses.Designer.cs">
+      <DependentUpon>frmDiagnoses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOrderBookingAdvSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOrderBookingAdvSearch.Designer.cs">
+      <DependentUpon>frmOrderBookingAdvSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOrderBookingInf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOrderBookingInf.Designer.cs">
+      <DependentUpon>frmOrderBookingInf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmDemandPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmDemandPayment.Designer.cs">
+      <DependentUpon>frmDemandPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmEditRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmFindPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmFindPatient.Designer.cs">
+      <DependentUpon>frmFindPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmHolday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmHolday.Designer.cs">
+      <DependentUpon>frmHolday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmInPatientQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInPatientQuery.Designer.cs">
+      <DependentUpon>frmInPatientQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmLeftCallBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmLeftCallBack.Designer.cs">
+      <DependentUpon>frmLeftCallBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOrderBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOrderBooking.Designer.cs">
+      <DependentUpon>frmOrderBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOrderBookingRe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOrderBookingRe.Designer.cs">
+      <DependentUpon>frmOrderBookingRe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOutDiagnoses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOutDiagnoses.Designer.cs">
+      <DependentUpon>frmOutDiagnoses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPatientInfLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPatientInfLog.Designer.cs">
+      <DependentUpon>frmPatientInfLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPatientRecipeNoPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPatientRecipeNoPay.Designer.cs">
+      <DependentUpon>frmPatientRecipeNoPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPATSPECREMARK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPATSPECREMARK.Designer.cs">
+      <DependentUpon>frmPATSPECREMARK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPrepayCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPrepayCheckout.Designer.cs">
+      <DependentUpon>frmPrepayCheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DomainController\clsDclPrepayQuery.cs" />
+    <Compile Include="DomainController\clsDcl_BedAdmin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDcl_BIHTransfer.cs" />
+    <Compile Include="DomainController\clsDcl_Register.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDcl_StatQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomailControlRecordMark.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportForm\DataSetPrepayQuery.cs">
+      <DependentUpon>DataSetPrepayQuery.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportForm\DataSetPrepayQuery.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPrepayQuery.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\rptPrepay.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPrepay.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\CreateInpatientNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\CreateInpatientNo.Designer.cs">
+      <DependentUpon>CreateInpatientNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmBIHRegisterStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBIHRegisterStatistics.Designer.cs">
+      <DependentUpon>frmBIHRegisterStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\Dataset1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dataset1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\rptPatientFlowDaily.cs">
+      <DependentUpon>rptPatientFlowDaily.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Viewer\frmAddBed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBedAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBIHLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBIHRecall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBIHTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmDailyDebtReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmEditBed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmFindICD10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInHospitalPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInHospitalPatient.Designer.cs">
+      <DependentUpon>frmInHospitalPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmInhospitalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInPatientIDAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInPatientIDAlert.Designer.cs">
+      <DependentUpon>frmInPatientIDAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmListYBGD05.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMessageChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMessageChange.Designer.cs">
+      <DependentUpon>frmMessageChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPatientChargedetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPatientDebtReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPrepayAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPrepayAlert.Designer.cs">
+      <DependentUpon>frmPrepayAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPrepayQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPrepayQuery.Designer.cs">
+      <DependentUpon>frmPrepayQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPrepayBalanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPrepayBalanceReport.Designer.cs">
+      <DependentUpon>frmPrepayBalanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPrintLeaveNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPrintLeaveNotice.Designer.cs">
+      <DependentUpon>frmPrintLeaveNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmRecordMarkShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmSpireLamella.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmSpireLamella.designer.cs">
+      <DependentUpon>frmSpireLamella.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmStatHospitalPatientFlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmStatPatientFlowDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmTranBed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmTranBed.Designer.cs">
+      <DependentUpon>frmTranBed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmTurnIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmTurnOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmUndoTransferOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmUpdateHospitalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmUpdateHospitalInfo.Designer.cs">
+      <DependentUpon>frmUpdateHospitalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\PerpayBalanceRemark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\PerpayBalanceRemark.Designer.cs">
+      <DependentUpon>PerpayBalanceRemark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\SpecialRemarkDictionary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\SpecialRemarkDictionary.Designer.cs">
+      <DependentUpon>SpecialRemarkDictionary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\TextBoxListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmModifyOutDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmModifyOutDate.Designer.cs">
+      <DependentUpon>frmModifyOutDate.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controller\clsCtl_StatHospitalPatientFlow.resx">
+      <DependentUpon>clsCtl_StatHospitalPatientFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\clsCtl_StatPatientFlowDaily.resx">
+      <DependentUpon>clsCtl_StatPatientFlowDaily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\LeaveNotice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LeaveNotice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmPatientInHospitalReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPatientInHospitalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmPrintAlert.resx">
+      <DependentUpon>frmPrintAlert.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\PrepayReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrepayReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmBabyRegisterlReport.resx">
+      <DependentUpon>frmBabyRegisterlReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBabyRegister.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBabyRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCheckDeptRole.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCheckDeptRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmDiagnoses.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDiagnoses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOrderBookingAdvSearch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOrderBookingAdvSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOrderBookingInf.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOrderBookingInf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmDemandPayment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDemandPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmEditRegister.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEditRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmFindPatient.resx">
+      <DependentUpon>frmFindPatient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmHolday.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHolday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInPatientQuery.resx">
+      <DependentUpon>frmInPatientQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmLeftCallBack.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLeftCallBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOrderBooking.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOrderBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOrderBookingRe.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOrderBookingRe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOutDiagnoses.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOutDiagnoses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPatientInfLog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPatientInfLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPatientRecipeNoPay.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPatientRecipeNoPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPATSPECREMARK.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPATSPECREMARK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPrepayCheckout.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrepayCheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\rptPrepay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPrepay.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\rptPatientFlowDaily.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPatientFlowDaily.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\CreateInpatientNo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CreateInpatientNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAddBed.resx">
+      <DependentUpon>frmAddBed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBedAdmin.resx">
+      <DependentUpon>frmBedAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBIHLeave.resx">
+      <DependentUpon>frmBIHLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBIHRecall.resx">
+      <DependentUpon>frmBIHRecall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBIHRegisterStatistics.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBIHRegisterStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBIHTransfer.resx">
+      <DependentUpon>frmBIHTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmDailyDebtReport.resx">
+      <DependentUpon>frmDailyDebtReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmEditBed.resx">
+      <DependentUpon>frmEditBed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmFindICD10.resx">
+      <DependentUpon>frmFindICD10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInHospitalPatient.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInHospitalPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInhospitalReport.resx">
+      <DependentUpon>frmInhospitalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInPatientIDAlert.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInPatientIDAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmListYBGD05.resx">
+      <DependentUpon>frmListYBGD05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMessageChange.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMessageChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPatientChargedetail.resx">
+      <DependentUpon>frmPatientChargedetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPatientDebtReport.resx">
+      <DependentUpon>frmPatientDebtReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPrepayAlert.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrepayAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPrepayQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrepayQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPrepayBalanceReport.resx">
+      <DependentUpon>frmPrepayBalanceReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPrintLeaveNotice.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrintLeaveNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRecordMarkShow.resx">
+      <DependentUpon>frmRecordMarkShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmSpireLamella.resx">
+      <DependentUpon>frmSpireLamella.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmStatHospitalPatientFlow.resx">
+      <DependentUpon>frmStatHospitalPatientFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmStatPatientFlowDaily.resx">
+      <DependentUpon>frmStatPatientFlowDaily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmTranBed.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTranBed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmTurnIn.resx">
+      <DependentUpon>frmTurnIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmTurnOut.resx">
+      <DependentUpon>frmTurnOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmUndoTransferOut.resx">
+      <DependentUpon>frmUndoTransferOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmUpdateHospitalInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUpdateHospitalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\PerpayBalanceRemark.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PerpayBalanceRemark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\SpecialRemarkDictionary.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SpecialRemarkDictionary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\TextBoxListView.resx">
+      <DependentUpon>TextBoxListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmModifyOutDate.resx">
+      <DependentUpon>frmModifyOutDate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportForm\Dataset1.xsc">
+      <DependentUpon>Dataset1.xsd</DependentUpon>
+    </None>
+    <None Include="ReportForm\Dataset1.xss">
+      <DependentUpon>Dataset1.xsd</DependentUpon>
+    </None>
+    <None Include="ReportForm\Dataset1.xsx">
+      <DependentUpon>Dataset1.xsd</DependentUpon>
+    </None>
+    <None Include="ReportForm\DataSetPrepayQuery.xsc">
+      <DependentUpon>DataSetPrepayQuery.xsd</DependentUpon>
+    </None>
+    <None Include="ReportForm\DataSetPrepayQuery.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPrepayQuery.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportForm\DataSetPrepayQuery.xss">
+      <DependentUpon>DataSetPrepayQuery.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DLL\HISBeInHospital_Svc\HISBeInHospital_Svc.csproj">
+      <Project>{49DE7257-3185-4353-A360-336A09A823DC}</Project>
+      <Name>HISBeInHospital_Svc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

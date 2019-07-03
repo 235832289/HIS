@@ -1,0 +1,5 @@
+D:\icare\iCare_cs\code\Bin\Debug\MK3_Svc.dll
+D:\icare\iCare_cs\code\Bin\Debug\MK3_Svc.pdb
+D:\icare\iCare_cs\code\LIS\LIS_Interface\MK3\MK3_Svc\obj\Debug\ResolveAssemblyReference.cache
+D:\icare\iCare_cs\code\LIS\LIS_Interface\MK3\MK3_Svc\obj\Debug\MK3_Svc.dll
+D:\icare\iCare_cs\code\LIS\LIS_Interface\MK3\MK3_Svc\obj\Debug\MK3_Svc.pdb

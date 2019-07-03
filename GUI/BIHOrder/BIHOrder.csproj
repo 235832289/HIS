@@ -1,0 +1,1010 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B2FBD124-EC8D-4CAB-96B9-7E246F0819AF}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BIHOrder</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Order</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>Order.Form1</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>false</SignAssembly>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ANA_BaseInfo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ANA_BaseInfoService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9caad6b7e29fcda4, processorArchitecture=MSIL" />
+    <Reference Include="ANA_CommonLogicUnit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ANA_CommonUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ANA_Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ANA_GUIBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ANA_MiddleTierBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6f66707b8e9d0c49, processorArchitecture=MSIL" />
+    <Reference Include="ANA_RequisitionService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f8800e9668f4ed1f, processorArchitecture=MSIL" />
+    <Reference Include="ANA_Scheduling, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ANA_ServiceFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e7bfe3ba37499e84, processorArchitecture=MSIL" />
+    <Reference Include="ANA_SignService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c72949d3112dca88, processorArchitecture=MSIL" />
+    <Reference Include="ANA_UIComponent, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ANA_UtilityANA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=685d278fe724518f, processorArchitecture=MSIL" />
+    <Reference Include="APPl_Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="baseInfo_Svc, Version=2.0.0.1, Culture=neutral, PublicKeyToken=356d01254ca6c808, processorArchitecture=MSIL" />
+    <Reference Include="BeInHospital, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CalcPatientCharge, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CommonInfo">
+      <Name>CommonInfo</Name>
+      <HintPath>..\..\..\BIN\Debug\CommonInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlLibrary, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DataSetHelper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e9887948b78f03e8, processorArchitecture=MSIL" />
+    <Reference Include="DataWindow, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Sybase\DataWindow .NET 2.0\DataWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="DataWindowInterop, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da" />
+    <Reference Include="DataWindowUtility, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="DigitalWave.BaseForm">
+      <Name>DigitalWave.BaseForm</Name>
+      <HintPath>..\..\..\BIN\Debug\DigitalWave.BaseForm.dll</HintPath>
+    </Reference>
+    <Reference Include="Digitalwave.ControlsLib, Version=3.0.0.0, Culture=neutral, PublicKeyToken=bbdca74e493306ff, processorArchitecture=MSIL" />
+    <Reference Include="DigitalWaveControls">
+      <Name>DigitalWaveControls</Name>
+      <HintPath>D:\ICARE_VER2\CODE\bin\Debug\DigitalWaveControls.dll</HintPath>
+    </Reference>
+    <Reference Include="digitalwaveHisAutoCharge">
+      <Name>digitalwaveHisAutoCharge</Name>
+      <HintPath>..\..\..\BIN\Debug\digitalwaveHisAutoCharge.dll</HintPath>
+    </Reference>
+    <Reference Include="Emr.AssistModule, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Emr.StaticObject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=345ab2ad0324e11c, processorArchitecture=MSIL" />
+    <Reference Include="EMR_AssistantToolService">
+      <Name>EMR_AssistantToolService</Name>
+      <HintPath>..\..\..\BIN\Debug\EMR_AssistantToolService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_BASE_VO, Version=1.1.0.0, Culture=neutral, PublicKeyToken=175139adf39f2142, processorArchitecture=MSIL" />
+    <Reference Include="EMR_CheckOrderService">
+      <Name>EMR_CheckOrderService</Name>
+      <HintPath>..\..\..\BIN\Debug\EMR_CheckOrderService.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_iCareComponent">
+      <Name>EMR_iCareComponent</Name>
+      <HintPath>..\..\..\bin\Debug\EMR_iCareComponent.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_iCareControl, Version=1.1.0.0, Culture=neutral, PublicKeyToken=4a436691b35b372d, processorArchitecture=MSIL" />
+    <Reference Include="EMR_iCareData">
+      <Name>EMR_iCareData</Name>
+      <HintPath>..\..\..\BIN\Debug\EMR_iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_iCareFormBase">
+      <Name>EMR_iCareFormBase</Name>
+      <HintPath>..\..\..\BIN\Debug\EMR_iCareFormBase.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_iCareFunctionBase">
+      <Name>EMR_iCareFunctionBase</Name>
+      <HintPath>..\..\..\bin\Debug\EMR_iCareFunctionBase.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_PrintTool">
+      <Name>EMR_PrintTool</Name>
+      <HintPath>..\..\..\BIN\Debug\EMR_PrintTool.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EMR_Signature_gui, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ExtendPrintTool">
+      <Name>ExtendPrintTool</Name>
+      <HintPath>..\..\..\bin\Debug\ExtendPrintTool.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GlobalData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GLS_WS_CommonApply, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <ExecutableExtension>.exe</ExecutableExtension>
+      <HintPath>..\..\..\bin\Debug\GLS_WS_CommonApply.dll</HintPath>
+    </Reference>
+    <Reference Include="GUI_Base">
+      <Name>GUI_Base</Name>
+      <HintPath>..\..\..\bin\Debug\GUI_Base.dll</HintPath>
+    </Reference>
+    <Reference Include="HISBeInHospital_Svc">
+      <Name>HISBeInHospital_Svc</Name>
+      <HintPath>..\..\..\bin\Debug\HISBeInHospital_Svc.dll</HintPath>
+    </Reference>
+    <Reference Include="HISControl">
+      <Name>HISControl</Name>
+      <HintPath>..\..\..\BIN\Debug\HISControl.dll</HintPath>
+    </Reference>
+    <Reference Include="HISDoctorAdvice, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HISDoctorAdvice_SVC">
+      <Name>HISDoctorAdvice_SVC</Name>
+      <HintPath>..\..\..\bin\Debug\HISDoctorAdvice_SVC.dll</HintPath>
+    </Reference>
+    <Reference Include="HISInHospital_Svc">
+      <Name>HISInHospital_Svc</Name>
+      <HintPath>..\..\..\BIN\Debug\HISInHospital_Svc.dll</HintPath>
+    </Reference>
+    <Reference Include="Hisitf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HISRegister">
+      <Name>HISRegister</Name>
+      <HintPath>..\..\..\BIN\Debug\HISRegister.dll</HintPath>
+    </Reference>
+    <Reference Include="HISReg_SVC">
+      <Name>HISReg_SVC</Name>
+      <HintPath>..\..\..\BIN\Debug\HISReg_SVC.dll</HintPath>
+    </Reference>
+    <Reference Include="HISZY, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HRPService">
+      <Name>HRPService</Name>
+      <HintPath>..\..\..\bin\Debug\HRPService.dll</HintPath>
+    </Reference>
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\Debug\iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="iCareData_Ana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e752bed85656d10b, processorArchitecture=MSIL" />
+    <Reference Include="iCareData_Lis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=713bd7878dfce751, processorArchitecture=MSIL" />
+    <Reference Include="iCareMain, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="LIS_GUI">
+      <Name>LIS_GUI</Name>
+      <HintPath>..\..\..\bin\Debug\LIS_GUI.dll</HintPath>
+    </Reference>
+    <Reference Include="LIS_NewAppInterface_Agent, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="LIS_Svc, Version=2.0.0.1, Culture=neutral, PublicKeyToken=0a888300cc6a076f, processorArchitecture=MSIL" />
+    <Reference Include="MiddleTierBase">
+      <Name>MiddleTierBase</Name>
+      <HintPath>..\..\..\bin\Debug\MiddleTierBase.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectGenerator">
+      <Name>ObjectGenerator</Name>
+      <HintPath>..\..\..\bin\Debug\ObjectGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="PatientChain">
+      <Name>PatientChain</Name>
+      <HintPath>..\..\..\BIN\Debug\PatientChain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PinkieControls">
+      <Name>PinkieControls</Name>
+      <HintPath>D:\ICARE_VER2\CODE\bin\Debug\PinkieControls.dll</HintPath>
+    </Reference>
+    <Reference Include="PowerMonitor">
+      <Name>PowerMonitor</Name>
+      <HintPath>..\..\..\BIN\Debug\PowerMonitor.dll</HintPath>
+    </Reference>
+    <Reference Include="PrivilegeSystemService">
+      <Name>PrivilegeSystemService</Name>
+      <HintPath>..\..\..\bin\Debug\PrivilegeSystemService.dll</HintPath>
+    </Reference>
+    <Reference Include="PutMedicine, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="PutMedicineService">
+      <Name>PutMedicineService</Name>
+      <HintPath>..\..\..\BIN\Debug\PutMedicineService.dll</HintPath>
+    </Reference>
+    <Reference Include="Sybase.PowerBuilder.Db, Version=10.5.0.4600, Culture=neutral, PublicKeyToken=9131e8bacdad8fb5" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Name>System.EnterpriseServices</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINNT\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="TemplateLib">
+      <Name>TemplateLib</Name>
+      <HintPath>..\..\..\bin\Debug\TemplateLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Utility">
+      <Name>Utility</Name>
+      <HintPath>..\..\..\bin\Debug\Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="YBMapping_SVC">
+      <Name>YBMapping_SVC</Name>
+      <HintPath>..\..\..\BIN\Debug\YBMapping_SVC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <None Include="Resources\copy.gif" />
+    <None Include="Resources\copy1.gif" />
+    <None Include="Resources\operate.gif" />
+    <None Include="Resources\editone.gif" />
+    <None Include="Resources\copyorder.gif" />
+    <None Include="Resources\parse.gif" />
+    <None Include="Resources\group.gif" />
+    <None Include="Resources\newprice.gif" />
+    <None Include="Resources\normal.gif" />
+    <None Include="Resources\items.gif" />
+    <None Include="Resources\remark.gif" />
+    <None Include="Resources\info.gif" />
+    <Content Include="Resources\resort.gif" />
+    <None Include="Resources\resort1.gif" />
+    <Content Include="Resources\stopall.gif" />
+    <None Include="Resources\stoporder.gif" />
+    <None Include="Resources\stoptime.gif" />
+    <None Include="Resources\restore.gif" />
+    <None Include="Resources\starttime.gif" />
+    <None Include="Resources\sign.gif" />
+    <None Include="Resources\databaseLarge.gif" />
+    <None Include="Resources\warning.gif" />
+    <None Include="Resources\yes.gif" />
+    <None Include="Resources\delete.gif" />
+    <None Include="Resources\pink.gif" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_AOOutHospital.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_AOTransfer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_AreaPutMedList.cs" />
+    <Compile Include="Controller\clsCtl_BedPatientList.cs" />
+    <Compile Include="Controller\clsCtl_BIHConfirmCharge.cs" />
+    <Compile Include="Controller\clsCtl_BIHOrderExecute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_BIHOrderInputMain.cs" />
+    <Compile Include="Controller\clsCtl_BihReport.cs" />
+    <Compile Include="Controller\clsCtl_ChargeItem.cs" />
+    <Compile Include="Controller\clsCtl_ChargeList.cs" />
+    <Compile Include="Controller\clsCtl_ConfirmOrderBack.cs" />
+    <Compile Include="Controller\clsCtl_ConfirmOrderOperate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_HandworkContinuousOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_NeedFeel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_OrderAttachEdit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_OrderExecedPatientList.cs" />
+    <Compile Include="Controller\clsCtl_OrderExecute.cs" />
+    <Compile Include="Controller\clsCtl_OrderGroupInput.cs" />
+    <Compile Include="Controller\clsCtl_OrderNurseConfirm.cs" />
+    <Compile Include="Controller\clsCtl_OrderSaveCheck.cs" />
+    <Compile Include="Controller\clsCtl_OrderTemplate_Group_Add.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_ReformingOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsCtl_SearchOrderInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\ctlCtl_HighLightFocus.cs" />
+    <Compile Include="Controller\clsCtl_FeelCardList.cs" />
+    <Compile Include="Controller\clsCtl_StopOrderConfirm.cs" />
+    <Compile Include="Controller\proxy240medicine.cs" />
+    <Compile Include="DomainController\clsDcl_GetSvcObject.cs" />
+    <Compile Include="DomainController\clsDcll_FeelCardList.cs" />
+    <Compile Include="DomainController\clsDcl_BIHOrderInputMain.cs" />
+    <Compile Include="DomainController\clsDCl_BihReport.cs" />
+    <Compile Include="DomainController\clsDcl_CommitOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDcl_ConfirmOrderBack.cs" />
+    <Compile Include="DomainController\clsDcl_ExecuteOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDcl_InputOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDcl_OrderDesc.cs" />
+    <Compile Include="DomainController\clsDcl_OrderSaveCheck.cs" />
+    <Compile Include="DomainController\clsDcl_OrderTemplate_Group_Add.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDcl_SearchOrderInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\clsDomain.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportForm\ctlBIHOrderDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportForm\ctlBIHPatientInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportForm\ctlFindTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\DotorComfirmBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\DotorComfirmBox.Designer.cs">
+      <DependentUpon>DotorComfirmBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAddBillsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAntiApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAntiApply.Designer.cs">
+      <DependentUpon>frmAntiApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAntiConsultation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAntiConsultation.Designer.cs">
+      <DependentUpon>frmAntiConsultation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAOOutHospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAOTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAreaPutMedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAreaPutMedList.Designer.cs">
+      <DependentUpon>frmAreaPutMedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmBedPatientList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBedPatientList.Designer.cs">
+      <DependentUpon>frmBedPatientList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmBIHChargeItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBIHConfirmCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBIHConfirmCharge.Designer.cs">
+      <DependentUpon>frmBIHConfirmCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmBIHOrderCommit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBIHOrderExecute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBIHOrderGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBIHOrderGroupInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBIHOrderGroupInput.Designer.cs">
+      <DependentUpon>frmBIHOrderGroupInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmBIHOrderInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBIHOrderInputMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBIHOrderInputMain.Designer.cs">
+      <DependentUpon>frmBIHOrderInputMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmChargeItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmChargeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmChargeList.Designer.cs">
+      <DependentUpon>frmChargeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmChooseRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmChooseRecipe.Designer.cs">
+      <DependentUpon>frmChooseRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCodexRemark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCodexRemark.Designer.cs">
+      <DependentUpon>frmCodexRemark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmConfirmCureDays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmConfirmCureDays.Designer.cs">
+      <DependentUpon>frmConfirmCureDays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmConfirmCureDaysPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmConfirmCureDaysPopup.Designer.cs">
+      <DependentUpon>frmConfirmCureDaysPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmConfirmOrderBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmConfirmOrderBack.Designer.cs">
+      <DependentUpon>frmConfirmOrderBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmConfirmOrderOperate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmContagionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmContagionReport.Designer.cs">
+      <DependentUpon>frmContagionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCpIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCpIn.Designer.cs">
+      <DependentUpon>frmCpIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCpOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCpOut.Designer.cs">
+      <DependentUpon>frmCpOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCpStat1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCpStat1.Designer.cs">
+      <DependentUpon>frmCpStat1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCpStat2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCpStat2.Designer.cs">
+      <DependentUpon>frmCpStat2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCpStat3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCpStat3.Designer.cs">
+      <DependentUpon>frmCpStat3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCpVar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCpVar.Designer.cs">
+      <DependentUpon>frmCpVar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmEditOnceAgain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmEditOnceAgain.Designer.cs">
+      <DependentUpon>frmEditOnceAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmExecuteOrdersProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmExecuteOrdersProgress.designer.cs">
+      <DependentUpon>frmExecuteOrdersProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmFeelCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmFeelCard.Designer.cs">
+      <DependentUpon>frmFeelCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmFeelCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmFeelCharge.Designer.cs">
+      <DependentUpon>frmFeelCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmHandworkContinuousOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmListDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmNeedFeel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOpsApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOpsApply.Designer.cs">
+      <DependentUpon>frmOpsApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOrderAttachEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmORDERDESC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmORDERDESC.Designer.cs">
+      <DependentUpon>frmORDERDESC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOrderExecedPatientList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOrderExecedPatientList.Designer.cs">
+      <DependentUpon>frmOrderExecedPatientList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOrderExecute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOrderExecute.Designer.cs">
+      <DependentUpon>frmOrderExecute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOrderNurseConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOrderNurseConfirm.Designer.cs">
+      <DependentUpon>frmOrderNurseConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOrderSaveCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOrderSaveCheck.Designer.cs">
+      <DependentUpon>frmOrderSaveCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOrderTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOrderTemplate_Group_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPatientView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPatientView.Designer.cs">
+      <DependentUpon>frmPatientView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPretestMed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPretestMed.Designer.cs">
+      <DependentUpon>frmPretestMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPretestMedRec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPretestMedRec.Designer.cs">
+      <DependentUpon>frmPretestMedRec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPrintOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmReformingOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmReport_Treat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmReport_Treat.Designer.cs">
+      <DependentUpon>frmReport_Treat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmSearchForSendBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmSearchOrderInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmSelectBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmSelectBox.Designer.cs">
+      <DependentUpon>frmSelectBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmSendBackReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmShowMedicineInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMessageRemark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMessageRemark.Designer.cs">
+      <DependentUpon>frmMessageRemark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmFeelCardList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmFeelCardList.Designer.cs">
+      <DependentUpon>frmFeelCardList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmStopOrderConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmStopOrderConfirm.Designer.cs">
+      <DependentUpon>frmStopOrderConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmTumourReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmTumourReport.Designer.cs">
+      <DependentUpon>frmTumourReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\clsDomain.resx">
+      <DependentUpon>clsDomain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\ctlBIHOrderDetail.resx">
+      <DependentUpon>ctlBIHOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\ctlBIHPatientInfo.resx">
+      <DependentUpon>ctlBIHPatientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\ctlFindTextBox.resx">
+      <DependentUpon>ctlFindTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\DotorComfirmBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DotorComfirmBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAddBillsViewer.resx">
+      <DependentUpon>frmAddBillsViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAntiApply.resx">
+      <DependentUpon>frmAntiApply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAntiConsultation.resx">
+      <DependentUpon>frmAntiConsultation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAOOutHospital.resx">
+      <DependentUpon>frmAOOutHospital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAOTransfer.resx">
+      <DependentUpon>frmAOTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAreaPutMedList.resx">
+      <DependentUpon>frmAreaPutMedList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBedPatientList.resx">
+      <DependentUpon>frmBedPatientList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBIHChargeItemList.resx">
+      <DependentUpon>frmBIHChargeItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBIHConfirmCharge.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBIHConfirmCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBIHOrderCommit.resx">
+      <DependentUpon>frmBIHOrderCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBIHOrderExecute.resx">
+      <DependentUpon>frmBIHOrderExecute.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBIHOrderGrid.resx">
+      <DependentUpon>frmBIHOrderGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBIHOrderGroupInput.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBIHOrderGroupInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBIHOrderInput.resx">
+      <DependentUpon>frmBIHOrderInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBIHOrderInputMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBIHOrderInputMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmChargeItem.resx">
+      <DependentUpon>frmChargeItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmChargeList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmChargeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmChooseRecipe.resx">
+      <DependentUpon>frmChooseRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCodexRemark.resx">
+      <DependentUpon>frmCodexRemark.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmConfirmCureDays.resx">
+      <DependentUpon>frmConfirmCureDays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmConfirmCureDaysPopup.resx">
+      <DependentUpon>frmConfirmCureDaysPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmConfirmOrderBack.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmConfirmOrderBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmConfirmOrderOperate.resx">
+      <DependentUpon>frmConfirmOrderOperate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmContagionReport.resx">
+      <DependentUpon>frmContagionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCpIn.resx">
+      <DependentUpon>frmCpIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCpOut.resx">
+      <DependentUpon>frmCpOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCpStat1.resx">
+      <DependentUpon>frmCpStat1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCpStat2.resx">
+      <DependentUpon>frmCpStat2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCpVar.resx">
+      <DependentUpon>frmCpVar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmEditOnceAgain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEditOnceAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmExecuteOrdersProgress.resx">
+      <DependentUpon>frmExecuteOrdersProgress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmFeelCard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFeelCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmFeelCharge.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFeelCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmHandworkContinuousOrder.resx">
+      <DependentUpon>frmHandworkContinuousOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmListDoctor.resx">
+      <DependentUpon>frmListDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmListView.resx">
+      <DependentUpon>frmListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmNeedFeel.resx">
+      <DependentUpon>frmNeedFeel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOpsApply.resx">
+      <DependentUpon>frmOpsApply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOrderAttachEdit.resx">
+      <DependentUpon>frmOrderAttachEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmORDERDESC.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmORDERDESC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOrderExecedPatientList.resx">
+      <DependentUpon>frmOrderExecedPatientList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOrderExecute.resx">
+      <DependentUpon>frmOrderExecute.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOrderNurseConfirm.resx">
+      <DependentUpon>frmOrderNurseConfirm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOrderSaveCheck.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOrderSaveCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOrderTemplate.resx">
+      <DependentUpon>frmOrderTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOrderTemplate_Group_Add.resx">
+      <DependentUpon>frmOrderTemplate_Group_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPatientView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPatientView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPretestMed.resx">
+      <DependentUpon>frmPretestMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPretestMedRec.resx">
+      <DependentUpon>frmPretestMedRec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmPrintOrder.resx">
+      <DependentUpon>frmPrintOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmReformingOrder.resx">
+      <DependentUpon>frmReformingOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmReport_Treat.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmReport_Treat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmSearchForSendBack.resx">
+      <DependentUpon>frmSearchForSendBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmSearchOrderInfo.resx">
+      <DependentUpon>frmSearchOrderInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmSelectBox.resx">
+      <DependentUpon>frmSelectBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmSendBackReason.resx">
+      <DependentUpon>frmSendBackReason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmShowMedicineInfo.resx">
+      <DependentUpon>frmShowMedicineInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMessageRemark.resx">
+      <DependentUpon>frmMessageRemark.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmFeelCardList.resx">
+      <DependentUpon>frmFeelCardList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmStopOrderConfirm.resx">
+      <DependentUpon>frmStopOrderConfirm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmTumourReport.resx">
+      <DependentUpon>frmTumourReport.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DLL\BIHOrderService\BIHOrderService.csproj">
+      <Project>{35463A6D-645E-41DB-A5CD-E166FB1456B3}</Project>
+      <Name>BIHOrderService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

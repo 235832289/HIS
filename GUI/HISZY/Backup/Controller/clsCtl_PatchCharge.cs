@@ -1,0 +1,2303 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
+using System.Data;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Text.RegularExpressions;
+using com.digitalwave.iCare.ValueObject;
+using Microsoft.VisualBasic;
+using ControlLibrary;
+using com.digitalwave.iCare.BIHOrder;
+using Sybase.DataWindow;
+
+namespace com.digitalwave.iCare.gui.HIS
+{
+    /// <summary>
+    /// 费用直收控制类
+    /// </summary>
+    public class clsCtl_PatchCharge : com.digitalwave.GUI_Base.clsController_Base
+    {
+        #region 变量
+        /// <summary>
+        /// Domain类
+        /// </summary>
+        private clsDcl_Charge objSvc;
+        /// <summary>
+        /// GUI对象
+        /// </summary>
+        com.digitalwave.iCare.gui.HIS.frmPatchCharge m_objViewer;
+        /// <summary>
+        /// 费用源
+        /// </summary>
+        private DataTable dtSource;
+        /// <summary>
+        /// 收费项目发票分类
+        /// </summary>
+        private DataTable dtChargeItemCat;
+        /// <summary>
+        /// 当前费用单ID
+        /// </summary>
+        internal string CurrOrderID = "";
+        /// <summary>
+        /// 当前状态 0 - 待确认 1 - 待结(提交)
+        /// </summary>
+        internal int CurrOrderStatus = 0;
+        /// <summary>
+        /// 当前操作员是否是中心药房标志 false 不是 true 是
+        /// </summary>
+        internal bool DrugFlag = false;
+        /// <summary>
+        /// 是否允许非中心药房的人员在补记帐时录负数冲帐 flag 禁止 true 允许
+        /// </summary>
+        internal bool PatchFlag = false;
+        /// <summary>
+        /// 科室列表
+        /// </summary>
+        private DataTable dtDeptArea;
+        /// <summary>
+        /// 录入模式 0 收费项目 1 诊疗项目
+        /// </summary>
+        internal int ItemInputMode = 0;
+        /// <summary>
+        /// 列后缀
+        /// </summary>
+        private string colSuffix = "";
+        /// <summary>
+        /// 是否允许打折
+        /// </summary>
+        private bool IsAllowDiscount = false;
+        /// <summary>
+        /// 打折起点项目个数
+        /// </summary>
+        private int DiscountItemNus = 8;
+        /// <summary>
+        /// 打折比例
+        /// </summary>
+        private decimal DiscountScale = 80;
+        /// <summary>
+        /// 打折所对应发票分类(数组)
+        /// </summary>
+        private ArrayList DiscountInvoCatArr = new ArrayList();
+        /// <summary>
+        /// 是否修改标志
+        /// </summary>
+        internal bool IsModify = false;
+        /// <summary>
+        /// 欠费是否允许补记帐
+        /// </summary>
+        private bool IsAllowPatch = false;
+        /// <summary>
+        /// 操作员默认科室(病区)列表
+        /// </summary>
+        private ArrayList objEmpDefaultDeptArr = new ArrayList();
+        /// <summary>
+        /// 控制诊疗项目对应关联收费项目（一对多）是否摆药 false 不摆药 true 摆药
+        /// </summary>
+        private bool IsControlPutMed = false;
+        /// <summary>
+        /// 摆药标志
+        /// </summary>
+        private bool IsPutMedicineFlag = false;
+        /// <summary>
+        ///  是否允许在补记帐窗口退费
+        /// </summary>
+        private bool IsAllowPatchNegative = false;
+        /// <summary>
+        /// 是否允许冲负数(药品类)
+        /// </summary>
+        private bool IsAllowPatchNegativeMed = false;
+        /// <summary>
+        /// 是否允许冲负数(非药品类)
+        /// </summary>
+        private bool IsAllowPatchNegativeNoMed = false;
+        /// <summary>
+        /// 是否允许显示缺药项目
+        /// </summary>
+        private bool IsAllowNoQty = false;
+        /// <summary>
+        /// 是否开启让利
+        /// </summary>
+        private static int intDiffCostOn = clsPublic.m_intGetSysParm("9002");
+        /// <summary>
+        /// 是否开启让利
+        /// </summary>
+        private static string strDiffCostOn = clsPublic.m_strGetSysparm("9003");
+        #endregion
+
+        #region 构造
+        /// <summary>
+        /// 构造
+        /// </summary>
+        public clsCtl_PatchCharge()
+        {
+            objSvc = new clsDcl_Charge();
+        }
+        #endregion
+
+        #region 设置窗体对象
+        /// <summary>
+        /// 设置窗体对象
+        /// </summary>
+        /// <param name="frmMDI_Child_Base_in"></param>
+        public override void Set_GUI_Apperance(com.digitalwave.GUI_Base.frmMDI_Child_Base frmMDI_Child_Base_in)
+        {
+            base.Set_GUI_Apperance(frmMDI_Child_Base_in);
+            m_objViewer = (frmPatchCharge)frmMDI_Child_Base_in;
+        }
+        #endregion
+
+        #region 初始化
+        /// <summary>
+        /// 初始化
+        /// </summary>
+        public void m_mthInit()
+        {
+            this.m_objViewer.ucPatientInfo.Status = 9;
+
+            this.m_mthGetCat();
+
+            this.m_mthGetDeptList();
+
+            this.m_mthLoadHistory();
+
+            this.m_objViewer.panelItem.Height = 0;
+
+            //初始化主管医生
+            //医生列表
+            clsColumns_VO[] columArr = new clsColumns_VO[]{ new clsColumns_VO("工号","empno_chr",HorizontalAlignment.Left,50),
+                                                            new clsColumns_VO("拼音码","pycode_chr",HorizontalAlignment.Left,60),
+                                                            new clsColumns_VO("姓名","doctorname",HorizontalAlignment.Left,80),
+                                                            new clsColumns_VO("","empid_chr",HorizontalAlignment.Left,0)
+                                                          };
+
+            string SqlSource = @"select empid_chr, empno_chr, pycode_chr, lastname_vchr as doctorname
+                                   from t_bse_employee 
+                                  where status_int = 1                                     
+                               order by empno_chr";
+            //and hasprescriptionright_chr = '1' 具有处方权限
+
+            this.m_objViewer.txtChargeDoctor.m_strSQL = SqlSource;
+            this.m_objViewer.txtChargeDoctor.m_mthInitListView(columArr);
+            this.m_objViewer.txtChargeDoctor.m_listView.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+
+            //初始化执行地点
+            //地点列表
+            columArr = new clsColumns_VO[]{ new clsColumns_VO("编号","code_vchr",HorizontalAlignment.Left,50),
+                                            new clsColumns_VO("拼音码","pycode_chr",HorizontalAlignment.Left,60),
+                                            new clsColumns_VO("地点名称","deptname_vchr",HorizontalAlignment.Left,130),
+                                            new clsColumns_VO("","deptid_chr",HorizontalAlignment.Left,0)
+                                          };
+
+            SqlSource = @"select deptid_chr, deptname_vchr, pycode_chr, code_vchr
+                            from t_bse_deptdesc
+                           where status_int = 1
+                        order by code_vchr";
+
+            this.m_objViewer.txtApplyArea.m_strSQL = SqlSource;
+            this.m_objViewer.txtApplyArea.m_mthInitListView(columArr);
+            this.m_objViewer.txtApplyArea.m_listView.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+
+            #region 判断当前操作员是否是中心药房
+
+            //中心药房(参数)ID
+            string DrugStoreID = clsPublic.m_strGetSysparm("0009");
+
+            //操作员所属科室ID数组           
+            clsDepartmentVO[] objArr;
+            this.m_objComInfo.m_mthGetDepartmentByUserID(this.m_objViewer.LoginInfo.m_strEmpID, out objArr);
+            if (objArr != null)
+            {
+                for (int i = 0; i < objArr.Length; i++)
+                {
+                    if (DrugStoreID == objArr[i].strDeptID)
+                    {
+                        DrugFlag = true;
+                        break;
+                    }
+                }
+            }
+            #endregion
+
+            //补记帐是否显示缺药项目  flag 禁止 true 允许
+            if (clsPublic.m_intGetSysParm("1052") == 1)
+            {
+                IsAllowNoQty = true;
+            }
+
+            //是否允许非中心药房的人员在补记帐时录负数冲帐 flag 禁止 true 允许
+            if (clsPublic.m_intGetSysParm("1042") == 1)
+            {
+                PatchFlag = true;
+            }
+
+            //住院欠费病人是否允许补记帐 0 禁止 1 允许
+            if (clsPublic.m_intGetSysParm("1048") == 1)
+            {
+                IsAllowPatch = true;
+            }
+
+            //控制诊疗项目对应关联收费项目（一对多）是否摆药 false 不摆药 1 摆药
+            if (clsPublic.m_intGetSysParm("1049") == 1)
+            {
+                IsControlPutMed = true;
+            }
+
+            //录入模式 0 收费项目 1 诊疗项目
+            ItemInputMode = clsPublic.m_intGetSysParm("9001");
+            if (ItemInputMode == 0)
+            {
+                this.m_objViewer.plOrder.Width = 0;
+                this.m_objViewer.dtgOrderItem.Visible = false;
+                this.m_objViewer.dtgItem.BringToFront();
+            }
+            else if (ItemInputMode == 1)
+            {
+                this.m_objViewer.plOrder.Width = 197;
+                this.m_objViewer.txtExecArea.Enabled = false;
+                this.m_objViewer.plExecArea.Visible = false;
+                this.m_objViewer.dtgItem.Visible = false;
+                this.m_objViewer.dtgOrderItem.BringToFront();
+
+                //打折稍后完成，暂时注释。
+                //DiscountItemNus = clsPublic.m_intGetSysParm("4006");
+                //DiscountScale = clsPublic.m_intGetSysParm("4007");
+                //if (clsPublic.m_intGetSysParm("4008") == 1)
+                //{
+                //    IsAllowDiscount = true;
+                //}
+                //DiscountInvoCatArr = clsPublic.m_ArrGettoken(clsPublic.m_strGetSysparm("0013"), ";");
+            }
+
+            //获取操作员默认科室列表
+            clsDepartmentVO[] objEmpDeptArr;
+            this.m_objComInfo.m_mthGetDepartmentByUserID(this.m_objViewer.LoginInfo.m_strEmpID, out objEmpDeptArr);
+            if (objEmpDeptArr != null)
+            {
+                for (int i = 0; i < objEmpDeptArr.Length; i++)
+                {
+                    objEmpDefaultDeptArr.Add(objEmpDeptArr[i].strDeptID);
+                }
+
+                this.m_objViewer.ucPatientInfo.DeptArr = objEmpDeptArr;
+
+                this.m_objViewer.ucPatientInfo.Parm_AreaID = this.m_objViewer.LoginInfo.m_strInpatientAreaID;
+                this.m_objViewer.ucPatientInfo.Parm_AreaName = this.m_objViewer.LoginInfo.m_strInpatientAreaName;
+            }
+
+            //获取冲负数权限
+            this.m_mthGetNegativePurview();
+
+            //设置快捷信息
+            clsPublic.SetShortCutInfo(this.m_objViewer.MdiParent, 4, " F8键 … 直接查询病区");
+
+            this.m_objViewer.btnNew_Click(null, null);
+        }
+        #endregion
+
+        #region 获取冲负数权限
+        /// <summary>
+        /// 获取冲负数权限
+        /// </summary>
+        public void m_mthGetNegativePurview()
+        {
+            //是否允许在补记帐窗口退费  
+            if (clsPublic.m_intGetSysParm("1055") == 1)
+            {
+                IsAllowPatchNegative = true;
+            }
+
+            string EmpID = this.m_objViewer.LoginInfo.m_strEmpID;
+
+            //冲药品角色
+            ArrayList RoleMedArr = clsPublic.m_ArrGettoken(clsPublic.m_strGetSysparm("0017"), ";");
+            //冲非药品角色
+            ArrayList RoleNoMedArr = clsPublic.m_ArrGettoken(clsPublic.m_strGetSysparm("0018"), ";");
+
+            DataTable dt;
+            long l = this.objSvc.m_lngGetEmpRole(EmpID, out dt);
+            if (l > 0)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    string RoleID = dt.Rows[i]["roleid_chr"].ToString();
+
+                    if (RoleMedArr.IndexOf(RoleID) >= 0)
+                    {
+                        IsAllowPatchNegativeMed = true;
+                    }
+
+                    if (RoleNoMedArr.IndexOf(RoleID) >= 0)
+                    {
+                        IsAllowPatchNegativeNoMed = true;
+                    }
+                }
+            }
+        }
+        #endregion
+
+        #region 冲负检查
+        /// <summary>
+        /// 冲负检查
+        /// </summary>
+        /// <param name="Dr"></param>
+        /// <param name="Amount"></param> 
+        /// <param name="ItemType">0 收费项目 1 诊疗项目</param> 
+        /// <returns></returns>
+        public bool m_blnCheckPatchNegative(DataRow Dr, decimal Amount, int ItemType)
+        {
+            bool ret = false;
+            decimal AmountSource = 0;
+            decimal Price = 0;
+            string ItemID = "";
+
+            DataTable dtOrg;
+            long l = this.objSvc.m_lngGetFeeItemByActiveType(this.m_objViewer.ucPatientInfo.RegisterID, 999, null, "00", this.m_objViewer.ucPatientInfo.BihPatient_VO.InHospitalDate.Substring(0, 10), DateTime.Now.ToString("yyyy-MM-dd"), out dtOrg);
+            if (l > 0)
+            {
+                DataView dv = new DataView(dtOrg);
+                dv.RowFilter = "pstatus_int = 1 or pstatus_int = 2";
+
+                if (ItemType == 0)
+                {
+                    ItemID = Dr["itemid_chr"].ToString();
+
+                    if (Dr["ipchargeflg_int"].ToString().Trim() == "1")
+                    {
+                        Price = clsPublic.ConvertObjToDecimal(Dr["submoney"]);
+                    }
+                    else
+                    {
+                        Price = clsPublic.ConvertObjToDecimal(Dr["itemprice_mny"]);
+                    }
+
+                    for (int i = 0; i < dv.Count; i++)
+                    {
+                        DataRow dr = dv[i].Row;
+
+                        if (dr["chargeitemid_chr"].ToString() == ItemID && clsPublic.ConvertObjToDecimal(dr["unitprice_dec"]) == Price)
+                        {
+                            AmountSource += clsPublic.ConvertObjToDecimal(dr["amount_dec"]);
+                        }
+                    }
+
+                    if (AmountSource >= Math.Abs(Amount))
+                    {
+                        ret = true;
+                    }
+                }
+                else if (ItemType == 1)
+                {
+                    string OrderID = Dr["orderdicid_chr"].ToString();
+
+                    DataTable dt;
+                    l = this.objSvc.m_lngGetChargeItemByOrderID(OrderID, this.m_objViewer.ucPatientInfo.BihPatient_VO.PayTypeID, out dt);
+                    if (l > 0)
+                    {
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            DataRow dr2 = dt.Rows[i];
+
+                            ItemID = dr2["itemid_chr"].ToString();
+
+                            if (dr2["ipchargeflg_int"].ToString().Trim() == "1")
+                            {
+                                Price = clsPublic.ConvertObjToDecimal(dr2["submoney"]);
+                            }
+                            else
+                            {
+                                Price = clsPublic.ConvertObjToDecimal(dr2["itemprice_mny"]);
+                            }
+                            decimal AmountOrder = Amount * clsPublic.ConvertObjToDecimal(dr2["totalqty_dec"]);
+
+                            AmountSource = 0;
+                            for (int j = 0; j < dv.Count; j++)
+                            {
+                                DataRow dr3 = dv[j].Row;
+
+                                if (dr3["chargeitemid_chr"].ToString() == ItemID && clsPublic.ConvertObjToDecimal(dr3["unitprice_dec"]) == Price)
+                                {
+                                    AmountSource += clsPublic.ConvertObjToDecimal(dr3["amount_dec"]);
+                                }
+                            }
+
+                            if (AmountSource < Math.Abs(AmountOrder))
+                            {
+                                return false;
+                            }
+
+                            if (i == (dt.Rows.Count - 1))
+                            {
+                                ret = true;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return ret;
+        }
+        #endregion
+
+        #region 根据科室病区ID获取名称
+        /// <summary>
+        /// 根据科室病区ID获取名称
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        private string m_strGetDeptName(string ID)
+        {
+            string DeptName = "";
+
+            for (int i = 0; i < dtDeptArea.Rows.Count; i++)
+            {
+                if (dtDeptArea.Rows[i]["deptid_chr"].ToString().Trim() == ID.Trim())
+                {
+                    DeptName = dtDeptArea.Rows[i]["deptname_vchr"].ToString();
+                    break;
+                }
+            }
+
+            return DeptName;
+        }
+        #endregion
+
+        #region 动态加载执行地点
+        /// <summary>
+        /// 动态加载执行地点
+        /// </summary>
+        /// <param name="Flag">1 全部科室 2 项目执行分类所对应的科室列表</param>
+        /// <param name="ItemID"></param>
+        public void m_mthLoadExecArea(int Flag, string ItemID)
+        {
+            string SqlSource = "";
+
+            clsColumns_VO[] columArr = new clsColumns_VO[]{ new clsColumns_VO("编号","code_vchr",HorizontalAlignment.Left,50),
+                                                             new clsColumns_VO("拼音码","pycode_chr",HorizontalAlignment.Left,60),
+                                                             new clsColumns_VO("地点名称","deptname_vchr",HorizontalAlignment.Left,130),
+                                                             new clsColumns_VO("","deptid_chr",HorizontalAlignment.Left,0)
+                                                           };
+
+            if (Flag == 1)
+            {
+                SqlSource = @"select deptid_chr, deptname_vchr, pycode_chr, code_vchr
+                                from t_bse_deptdesc
+                               where status_int = 1
+                            order by code_vchr";
+            }
+            else if (Flag == 2)
+            {
+                SqlSource = @"select a.deptid_chr, a.deptname_vchr, a.pycode_chr, a.code_vchr
+                                from t_bse_deptdesc a,
+                                     t_aid_bih_ocdeptlist b,
+                                     t_bse_chargeitem c
+                               where a.status_int = 1 
+                                 and a.deptid_chr = b.clacarea_chr 
+                                 and b.ordercateid_chr = c.ordercateid_chr
+                                 and c.itemid_chr = '" + ItemID + @"' 
+                            order by a.code_vchr";
+            }
+
+            this.m_objViewer.txtExecArea.m_strSQL = SqlSource;
+            this.m_objViewer.txtExecArea.m_mthInitListView(columArr);
+            this.m_objViewer.txtExecArea.m_listView.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+        }
+        #endregion
+
+        #region 清空编辑栏
+        /// <summary>
+        /// 清空编辑栏
+        /// </summary>
+        public void m_mthClear()
+        {
+            this.m_objViewer.txtItemName.Tag = null;
+            this.m_objViewer.txtItemName.Text = "";
+            this.m_objViewer.lblStandard.Text = "";
+            this.m_objViewer.lblUnit.Text = "";
+            this.m_objViewer.lblPrice.Text = "";
+            this.m_objViewer.txtAmount.Text = "";
+            this.m_objViewer.lblTotal.Text = "";
+            this.m_objViewer.txtExecArea.Value = null;
+            this.m_objViewer.txtExecArea.Text = "";
+
+            this.m_objViewer.txtItemName.Focus();
+        }
+        #endregion
+
+        #region 建树
+        /// <summary>
+        /// 建树
+        /// </summary>
+        public void m_mthLoadHistory()
+        {
+            string RegId = this.m_objViewer.ucPatientInfo.RegisterID;
+
+            this.m_objViewer.tvHistory.Nodes.Clear();
+
+            //根节点id
+            string rootId = "root";
+            //根节点Text
+            string rootName = "历史记录";
+
+            //建根节点
+            TreeNode tnRoot = new TreeNode(rootName);
+            tnRoot.Tag = rootId;
+            tnRoot.ImageIndex = 0;
+            tnRoot.SelectedImageIndex = 0;
+            this.m_objViewer.tvHistory.Nodes.Add(tnRoot);
+
+            if (RegId == "")
+            {
+                return;
+            }
+
+            long l = this.objSvc.m_lngGetFeeItemByActiveType(RegId, 2, null, null, null, null, out dtSource);
+            if (l > 0 && dtSource.Rows.Count > 0)
+            {
+                Hashtable has = new Hashtable();
+                for (int i = 0; i < dtSource.Rows.Count; i++)
+                {
+                    string OrderID = dtSource.Rows[i]["orderid_chr"].ToString();
+                    string Status = dtSource.Rows[i]["pstatus_int"].ToString();
+
+                    //开单病区只能看到各自所开记录
+                    if (this.m_objViewer.Scope == "1" && objEmpDefaultDeptArr.IndexOf(dtSource.Rows[i]["createarea_chr"].ToString().Trim()) == -1)
+                    {
+                        continue;
+                    }
+                    else if (OrderID.Trim() == "")
+                    {
+                        continue;
+                    }
+
+                    if (!has.ContainsKey(OrderID))
+                    {
+                        has.Add(OrderID, OrderID + ";" + Status);
+                    }
+                }
+
+                //节点id
+                string tnId = "";
+                //节点Text
+                string tnName = "";
+
+                ArrayList OrderArr = new ArrayList();
+                OrderArr.AddRange(has.Values);
+                OrderArr.Sort();
+
+                for (int i = 0; i < OrderArr.Count; i++)
+                {
+                    string s = OrderArr[i].ToString();
+                    string OrderId = clsPublic.m_strGettoken(ref s, ";");
+                    string Status = clsPublic.m_strGettoken(ref s, ";");
+                    Color clr = Color.Black;
+
+                    tnId = OrderId;
+                    string tmpName = "[" + Convert.ToString(i + 1) + "-" + OrderId.Substring(0, 8) + "." + OrderId.Substring(8, 2) + "]  ";
+                    if (Status == "0")
+                    {
+                        tnName = tmpName + "保存";
+                    }
+                    else if (Status == "1")
+                    {
+                        tnName = tmpName + "提交";
+                        clr = Color.Blue;
+                    }
+                    else if (Status == "2")
+                    {
+                        tnName = tmpName + "待清";
+                        clr = Color.Blue;
+                    }
+                    else if (Status == "3")
+                    {
+                        tnName = tmpName + "已清";
+                        clr = Color.Red;
+                    }
+
+                    TreeNode tn = new TreeNode(tnName);
+                    tn.Tag = OrderId + ";" + Status;
+                    tn.ImageIndex = 1;
+                    tn.SelectedImageIndex = 1;
+                    tn.ForeColor = clr;
+
+                    tnRoot.Nodes.Add(tn);
+                }
+
+                this.m_objViewer.tvHistory.ExpandAll();
+
+            }
+        }
+        #endregion
+
+        #region 查找
+        /// <summary>
+        /// 查找
+        /// </summary>
+        public void m_mthFind()
+        {
+            frmCommonFind f = new frmCommonFind("查找在院病人资料", this.m_objViewer.ucPatientInfo.Status);
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                this.m_objViewer.ucPatientInfo.m_mthFind(f.RegisterID, 3);
+                if (this.m_objViewer.ucPatientInfo.IsChanged)
+                {
+                    this.m_mthLoad();
+                }
+            }
+        }
+        #endregion
+
+        #region 装载
+        /// <summary>
+        /// 装载
+        /// </summary>
+        public void m_mthLoad()
+        {
+            bool bl = true;
+
+            //住院-是否允许未安排床位的病人补记帐 0 禁止 1 允许
+            if (clsPublic.m_intGetSysParm("1041") == 0 && !(this.m_objViewer.ucPatientInfo.BihPatient_VO.Status == 1 || this.m_objViewer.ucPatientInfo.BihPatient_VO.Status == 2 || this.m_objViewer.ucPatientInfo.BihPatient_VO.Status == 4))
+            {
+                bl = false;
+                MessageBox.Show("当前系统设置为：禁止未安排床位(或预出院)的病人补记帐。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                //住院欠费病人是否允许补记帐 0 禁止 1 允许
+                if (!IsAllowPatch && this.m_objViewer.ucPatientInfo.BihPatient_VO.BalanceMoney < 0 && this.m_objViewer.ucPatientInfo.BihPatient_VO.SpecChargeCtrl == 0)
+                {
+                    bl = false;
+                    MessageBox.Show("当前系统设置为：禁止欠费的病人补记帐(特注允许除外)。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+            if (bl)
+            {
+                this.m_mthLoadHistory();
+                this.m_objViewer.dtgItem.Rows.Clear();
+                this.m_objViewer.dtgOrder.Rows.Clear();
+                this.m_objViewer.dtgOrderItem.Rows.Clear();
+                this.m_objViewer.lblAllTotal.Text = "";
+
+                if (this.m_objViewer.Scope == "1")
+                {
+                    this.m_objViewer.txtApplyArea.m_mthFindAndSelect(this.m_objViewer.LoginInfo.m_strInpatientAreaID);
+                    this.m_objViewer.txtChargeDoctor.m_mthFindAndSelect(this.m_objViewer.LoginInfo.m_strEmpID);
+                }
+                else if (this.m_objViewer.Scope == "2")
+                {
+                    this.m_objViewer.txtApplyArea.m_mthFindAndSelect(this.m_objViewer.ucPatientInfo.BihPatient_VO.AreaID);
+                    this.m_objViewer.txtChargeDoctor.m_mthFindAndSelect(this.m_objViewer.ucPatientInfo.BihPatient_VO.DoctorID);
+                }
+            }
+
+            this.m_objViewer.btnNew.Enabled = bl;
+            this.m_objViewer.btnAdd.Enabled = bl;
+            this.m_objViewer.btnDel.Enabled = bl;
+            this.m_objViewer.btnClear.Enabled = bl;
+            this.m_objViewer.btnSave.Enabled = bl;
+            this.m_objViewer.btnCommit.Enabled = bl;
+            this.m_objViewer.tableLayoutPanel1.Enabled = bl;
+
+            this.CurrOrderID = "";
+            this.m_mthClear();
+        }
+        #endregion
+
+        #region 查找收费项目
+        /// <summary>
+        /// 查找收费项目
+        /// </summary>
+        /// <param name="FindStr"></param>
+        public void m_mthFindChargeItem(string FindStr)
+        {
+            if (FindStr.Trim() == "")
+            {
+                return;
+            }
+
+            string PatType = this.m_objViewer.ucPatientInfo.BihPatient_VO.PayTypeID;
+            if (PatType == "")
+            {
+                MessageBox.Show("请明确费别！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (FindStr.Trim().Substring(0, 1) == @"\" && ItemInputMode == 1)
+            {
+                frmBIHOrderGroupInput fGroup = new frmBIHOrderGroupInput(FindStr.Substring(1), this.m_objViewer.LoginInfo.m_strEmpID, this.m_objViewer.LoginInfo.m_strInpatientAreaID, 4, 1);
+                if (fGroup.ShowDialog() == DialogResult.OK)
+                {
+                    this.m_mthAddOrderItem(fGroup.m_arrOrderDic, fGroup.m_decMount);
+                    fGroup = null;
+                }
+
+                //if (FindStr.Trim().Length == 1 && (FindStr.Trim() == "?" || FindStr.Trim() == @"\"))
+                //{
+                //    if (this.m_objViewer.txtApplyArea.Value == null || this.m_objViewer.txtApplyArea.Text.Trim() == "")
+                //    {
+                //        MessageBox.Show("请选择开单地点。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //        this.m_objViewer.txtApplyArea.Focus();
+                //        return;
+                //    }
+
+                //    if (this.m_objViewer.txtChargeDoctor.Value == null || this.m_objViewer.txtChargeDoctor.Text.Trim() == "")
+                //    {
+                //        MessageBox.Show("请选择开单医生。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //        this.m_objViewer.txtChargeDoctor.Focus();
+                //        return;
+                //    }
+
+                //    if (FindStr.Trim() == "?")
+                //    {
+                //        frmUsageAddItem fItem = new frmUsageAddItem(this.m_objViewer.ucPatientInfo.BihPatient_VO.PayTypeID, this.m_objViewer.txtApplyArea.Value.ToString());
+                //        if (fItem.ShowDialog() == DialogResult.OK)
+                //        {
+                //            this.m_mthAddItem(fItem.DrArr, fItem.Nums);
+                //        }
+                //    }
+                //    else if (FindStr.Trim() == @"\")
+                //    {
+                //        frmItemGroup fItem = new frmItemGroup(this.m_objViewer.ucPatientInfo.BihPatient_VO.PayTypeID, this.m_objViewer.txtApplyArea.Value.ToString());
+                //        if (fItem.ShowDialog() == DialogResult.OK)
+                //        {
+                //            this.m_mthAddItem(fItem.DrArr, fItem.Nums);
+                //        }
+                //    }
+            }
+            else
+            {
+                this.m_objViewer.lsvItem.BeginUpdate();
+                this.m_objViewer.lsvItem.Items.Clear();
+
+                DataTable dt;
+
+                #region 收费项目
+                if (ItemInputMode == 0)
+                {
+                    long l = this.objSvc.m_lngFindChargeItem(FindStr, PatType, out dt);
+                    if (l > 0 && dt.Rows.Count > 0)
+                    {
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            string invocat = m_strConvertToChType(dt.Rows[i]["itemipinvtype_chr"].ToString().Trim());   //发票分类 flag_int = 4
+                            ListViewItem lv = new ListViewItem(FindStr);
+                            lv.SubItems.Add(dt.Rows[i]["itemcode_vchr"].ToString().Trim());
+                            lv.SubItems.Add(dt.Rows[i]["itemname_vchr"].ToString().Trim());
+                            lv.SubItems.Add(dt.Rows[i]["itemcommname_vchr"].ToString().Trim());
+                            lv.SubItems.Add(invocat);
+                            lv.SubItems.Add(dt.Rows[i]["itemspec_vchr"].ToString().Trim());
+                            //如果已用的是最小单位,就用小单价和最小单位                      
+                            if (dt.Rows[i]["ipchargeflg_int"].ToString().Trim() == "1")
+                            {
+                                lv.SubItems.Add(dt.Rows[i]["itemipunit_chr"].ToString().Trim());
+                                lv.SubItems.Add(dt.Rows[i]["submoney"].ToString().Trim());
+                            }
+                            else
+                            {
+                                lv.SubItems.Add(dt.Rows[i]["itemunit_chr"].ToString().Trim());
+                                lv.SubItems.Add(dt.Rows[i]["itemprice_mny"].ToString().Trim());
+                            }
+
+                            string PRECENT_DEC = "100";
+                            if (dt.Rows[i]["precent_dec"].ToString().Trim() != "")
+                            {
+                                PRECENT_DEC = dt.Rows[i]["precent_dec"].ToString().Trim();
+                            }
+                            lv.SubItems.Add(PRECENT_DEC + "%"); //收费比例  
+                            lv.SubItems.Add(dt.Rows[i]["ybtypename"].ToString().Trim());
+
+                            if (invocat.IndexOf("中") >= 0 || invocat.IndexOf("西") >= 0)
+                            {
+                                if (dt.Rows[i]["ipnoqtyflag_int"].ToString().Trim() != "0")
+                                {
+                                    if (!IsAllowNoQty)
+                                    {
+                                        continue;
+                                    }
+                                    lv.SubItems.Add("缺药");
+                                    lv.ForeColor = Color.Red;
+                                }
+                                else
+                                {
+                                    lv.SubItems.Add("");
+                                }
+                            }
+                            else
+                            {
+                                lv.SubItems.Add("");
+                            }
+
+                            lv.Tag = dt.Rows[i];
+                            this.m_objViewer.lsvItem.Items.Add(lv);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("没找到满足条件的收费项目。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                #endregion
+
+                #region 诊疗项目
+                if (ItemInputMode == 1)
+                {
+                    long l = this.objSvc.m_lngFindOrderByID(FindStr, out dt);
+                    string strFilter=clsPublic.m_strGetSysparm("1009");
+                    strFilter = clsPublic.m_strGettoken(ref strFilter, "*");
+                    strFilter = "Isnull(DRUGSTOREID_CHR,'Null Column') = 'Null Column' or DRUGSTOREID_CHR in ('"+strFilter+"')";
+                    dt.DefaultView.RowFilter = strFilter;
+                    dt = dt.DefaultView.ToTable();
+                    if (l > 0 && dt.Rows.Count > 0)
+                    {
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            string invocat = m_strConvertToChType(dt.Rows[i]["itemipinvtype_chr"].ToString().Trim());   //发票分类 flag_int = 4
+                            ListViewItem lv = new ListViewItem(FindStr);
+                            lv.SubItems.Add(dt.Rows[i]["usercode_chr"].ToString().Trim());
+                            lv.SubItems.Add(dt.Rows[i]["name_chr"].ToString().Trim());
+                            lv.SubItems.Add(dt.Rows[i]["commname_vchr"].ToString().Trim());
+                            lv.SubItems.Add(invocat);
+                            lv.SubItems.Add(dt.Rows[i]["itemspec_vchr"].ToString().Trim());
+                            lv.SubItems.Add(dt.Rows[i]["itemunit"].ToString().Trim());
+                            lv.SubItems.Add(dt.Rows[i]["totalmny"].ToString().Trim());
+                            lv.SubItems.Add(""); //收费比例  
+                            lv.SubItems.Add(dt.Rows[i]["ybtypename"].ToString().Trim());
+
+                            if (invocat.IndexOf("中") >= 0 || invocat.IndexOf("西") >= 0)
+                            {
+                                if (dt.Rows[i]["noqtyflag_int"].ToString().Trim() == "1")
+                                {
+                                    if (!IsAllowNoQty)
+                                    {
+                                        continue;
+                                    }
+                                    lv.SubItems.Add("缺药");
+                                    lv.ForeColor = Color.Red;
+                                }
+                                else
+                                {
+                                    lv.SubItems.Add("");
+                                }
+                            }
+                            else
+                            {
+                                lv.SubItems.Add("");
+                            }
+
+                            lv.Tag = dt.Rows[i];
+                            this.m_objViewer.lsvItem.Items.Add(lv);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("没找到满足条件的收费项目。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                #endregion
+
+                if (this.m_objViewer.lsvItem.Items.Count > 0)
+                {
+                    this.m_objViewer.panelItem.Height = 200;
+                    this.m_objViewer.lsvItem.Items[0].Selected = true;
+                    this.m_objViewer.lsvItem.Focus();
+                }
+
+                this.m_objViewer.lsvItem.EndUpdate();
+            }
+        }
+        #endregion
+
+        #region 获取收费项目发票分类
+        /// <summary>
+        /// 获取收费项目发票分类
+        /// </summary>
+        private void m_mthGetCat()
+        {
+            long l = this.objSvc.m_lngGetChargeItemCat(4, out dtChargeItemCat);
+        }
+        #endregion
+
+        #region 获取科室列表
+        /// <summary>
+        /// 获取科室列表
+        /// </summary>
+        private void m_mthGetDeptList()
+        {
+            long l = this.objSvc.m_lngGetDeptArea(out dtDeptArea, 1);
+        }
+        #endregion
+
+        #region 根据ID转换成中文类别
+        /// <summary>
+        /// 根据ID转换成中文类别
+        /// </summary>
+        /// <param name="TypeNo"></param>
+        /// <returns></returns>
+        private string m_strConvertToChType(string TypeNo)
+        {
+            string Ret = "";
+
+            for (int i = 0; i < dtChargeItemCat.Rows.Count; i++)
+            {
+                if (TypeNo == dtChargeItemCat.Rows[i]["typeid_chr"].ToString())
+                {
+                    Ret = dtChargeItemCat.Rows[i]["typename_vchr"].ToString();
+                    break;
+                }
+            }
+
+            return Ret;
+        }
+        #endregion
+
+        #region 选择收费项目
+        /// <summary>
+        /// 选择收费项目
+        /// </summary>        
+        public void m_mthSelectItem()
+        {
+            if (this.m_objViewer.lsvItem.Items.Count == 0 || this.m_objViewer.lsvItem.SelectedItems.Count == 0)
+            {
+                return;
+            }
+
+            DataRow dr = this.m_objViewer.lsvItem.SelectedItems[0].Tag as DataRow;
+
+            #region 收费项目
+            if (ItemInputMode == 0)
+            {
+                string ItemName = dr["itemname_vchr"].ToString().Trim();
+                string ItemSpe = dr["itemspec_vchr"].ToString().Trim();
+                string ItemUnit, ItemPrice;
+                if (dr["ipchargeflg_int"].ToString().Trim() == "1")
+                {
+                    ItemUnit = dr["itemipunit_chr"].ToString().Trim();
+                    ItemPrice = dr["submoney"].ToString().Trim();
+                }
+                else
+                {
+                    ItemUnit = dr["itemunit_chr"].ToString().Trim();
+                    ItemPrice = dr["itemprice_mny"].ToString().Trim();
+                }
+
+                string Precent = "100";
+                if (dr["precent_dec"].ToString().Trim() != "")
+                {
+                    Precent = dr["precent_dec"].ToString().Trim();
+                }
+
+                //填充主项目
+                this.m_objViewer.txtItemName.Text = ItemName;
+                this.m_objViewer.lblStandard.Text = ItemSpe;
+                this.m_objViewer.lblUnit.Text = ItemUnit;
+                this.m_objViewer.lblPrice.Text = ItemPrice;
+
+                //填充默认执行地点
+                string ApplyAreaID = "";
+                if (this.m_objViewer.txtApplyArea.Value != null)
+                {
+                    ApplyAreaID = this.m_objViewer.txtApplyArea.Value.ToString().Trim();
+                }
+
+                string ItemId = dr["itemid_chr"].ToString();
+                string ExecAreaName = "";
+                string ExecAreaID = this.objSvc.m_strGetChargeItemDefaultExecAreaID(ItemId, ApplyAreaID, out ExecAreaName);
+                if (ExecAreaID == "")
+                {
+                    this.m_mthLoadExecArea(1, null);
+                }
+                else
+                {
+                    this.m_mthLoadExecArea(2, ItemId);
+                }
+
+                this.m_objViewer.txtExecArea.m_mthFindAndSelect(ExecAreaID);
+            }
+            #endregion
+
+            #region 诊疗项目
+            if (ItemInputMode == 1)
+            {
+                //填充主项目
+                this.m_objViewer.txtItemName.Text = dr["name_chr"].ToString().Trim();
+                this.m_objViewer.lblStandard.Text = dr["itemspec_vchr"].ToString().Trim();
+                this.m_objViewer.lblUnit.Text = dr["itemunit"].ToString().Trim();
+                this.m_objViewer.lblPrice.Text = dr["totalmny"].ToString().Trim();
+            }
+            #endregion
+
+            this.m_objViewer.txtItemName.Tag = dr;
+
+            this.m_objViewer.txtAmount.Focus();
+        }
+        #endregion
+
+        #region 添加项目
+        /// <summary>
+        /// 添加项目
+        /// </summary>
+        public void m_mthAddItem()
+        {
+            if (this.m_objViewer.txtItemName.Tag == null)
+            {
+                return;
+            }
+
+            if (this.m_objViewer.txtAmount.Text.Trim() == "-")
+            {
+                this.m_objViewer.txtAmount.Text = "";
+            }
+
+            if (this.m_objViewer.txtAmount.Text.Trim() == "" || this.m_objViewer.txtAmount.Text.Trim() == "0")
+            {
+                MessageBox.Show("请输入数量。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.m_objViewer.txtAmount.Focus();
+                return;
+            }
+
+            if (!Microsoft.VisualBasic.Information.IsNumeric(this.m_objViewer.txtAmount.Text.Trim()))
+            {
+                MessageBox.Show("数量输入错误，请重新输入！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.m_objViewer.txtAmount.SelectAll();
+                this.m_objViewer.txtAmount.Focus();
+                return;
+            }
+
+            if (this.m_objViewer.lblTotal.Text.Trim() == "")
+            {
+                MessageBox.Show("金额不能为空。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (this.m_objViewer.txtApplyArea.Value == null || this.m_objViewer.txtApplyArea.Text.Trim() == "")
+            {
+                MessageBox.Show("请选择开单地点。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.m_objViewer.txtApplyArea.Focus();
+                return;
+            }
+
+            if (this.m_objViewer.txtChargeDoctor.Value == null || this.m_objViewer.txtChargeDoctor.Text.Trim() == "")
+            {
+                MessageBox.Show("请选择开单医生。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.m_objViewer.txtChargeDoctor.Focus();
+                return;
+            }
+
+            if (ItemInputMode == 0)
+            {
+                if (this.m_objViewer.txtExecArea.Value == null || this.m_objViewer.txtExecArea.Text.Trim() == "")
+                {
+                    MessageBox.Show("请选择执行地点。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.m_objViewer.txtExecArea.Focus();
+                    return;
+                }
+            }
+
+            DataRow dr = this.m_objViewer.txtItemName.Tag as DataRow;
+
+            string invocat = this.m_strConvertToChType(dr["itemipinvtype_chr"].ToString().Trim());
+            decimal Amount = clsPublic.ConvertObjToDecimal(this.m_objViewer.txtAmount.Text);
+
+            //if (!DrugFlag && !PatchFlag && invocat.IndexOf("药费") >= 0)
+            //{
+            //    if (clsPublic.ConvertObjToDecimal(this.m_objViewer.txtAmount.Text) < 0)
+            //    {
+            //        MessageBox.Show("当前系统设置为：禁止非中心药房的人员在补记帐时录负数冲帐。\r\n\r\n请重新输入数量。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        this.m_objViewer.txtAmount.SelectAll();
+            //        this.m_objViewer.txtAmount.Focus();
+            //        return;
+            //    }
+            //}
+
+            if (Amount < 0)
+            {
+                if (IsAllowPatchNegative)
+                {
+                    if (invocat.IndexOf("药") >= 0)
+                    {
+
+                        if (IsAllowPatchNegativeMed)
+                        {
+                            if (!this.m_blnCheckPatchNegative(dr, Amount, ItemInputMode))
+                            {
+                                MessageBox.Show("对不起，项目输入错误或冲减数量大于已有数量。\r\n\r\n请重新输入数量。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.m_objViewer.txtAmount.SelectAll();
+                                this.m_objViewer.txtAmount.Focus();
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("对不起，您没有权限对药品进行负数冲帐。\r\n\r\n请重新输入数量。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.m_objViewer.txtAmount.SelectAll();
+                            this.m_objViewer.txtAmount.Focus();
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        if (IsAllowPatchNegativeNoMed)
+                        {
+                            if (!this.m_blnCheckPatchNegative(dr, Amount, ItemInputMode))
+                            {
+                                MessageBox.Show("对不起，项目输入错误或冲减数量大于已有数量。\r\n\r\n请重新输入数量。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.m_objViewer.txtAmount.SelectAll();
+                                this.m_objViewer.txtAmount.Focus();
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("对不起，您没有权限对收费项目进行负数冲帐。\r\n\r\n请重新输入数量。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.m_objViewer.txtAmount.SelectAll();
+                            this.m_objViewer.txtAmount.Focus();
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("对不起，当前系统设置为不允许在补记帐处退费\r\n\r\n请在【帐务查询】窗口中退费，谢谢。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.m_objViewer.txtAmount.SelectAll();
+                    this.m_objViewer.txtAmount.Focus();
+                    return;
+                }
+            }
+
+            string ApplyAreaID = this.m_objViewer.txtApplyArea.Value.ToString().Trim();
+
+            if (ItemInputMode == 0)
+            {
+                string[] sItem = new string[20];
+
+                sItem[0] = Convert.ToString(this.m_objViewer.dtgItem.Rows.Count + 1);
+                sItem[1] = this.m_objViewer.txtExecArea.Text.Trim();
+                sItem[2] = dr["itemcode_vchr"].ToString().Trim();
+                sItem[3] = dr["itemname_vchr"].ToString().Trim();
+                sItem[4] = dr["itemspec_vchr"].ToString().Trim();
+
+                string ItemUnit, ItemPrice;
+                if (dr["ipchargeflg_int"].ToString().Trim() == "1")
+                {
+                    ItemUnit = dr["itemipunit_chr"].ToString().Trim();
+                    ItemPrice = dr["submoney"].ToString().Trim();
+                }
+                else
+                {
+                    ItemUnit = dr["itemunit_chr"].ToString().Trim();
+                    ItemPrice = dr["itemprice_mny"].ToString().Trim();
+                }
+                sItem[5] = ItemUnit;
+                sItem[6] = Amount.ToString();
+                sItem[7] = ItemPrice;
+                sItem[8] = Convert.ToDecimal(this.m_objViewer.lblTotal.Text).ToString("0.00");
+
+                string Precent = "100";
+                if (dr["precent_dec"].ToString().Trim() != "")
+                {
+                    Precent = dr["precent_dec"].ToString().Trim();
+                }
+                sItem[9] = Precent;
+
+                decimal d = clsPublic.Round(clsPublic.ConvertObjToDecimal(sItem[8]) * clsPublic.ConvertObjToDecimal(sItem[9]) / 100, 2);
+                sItem[10] = d.ToString("0.00");
+                sItem[11] = ApplyAreaID;
+                sItem[12] = this.m_objViewer.txtChargeDoctor.Value;
+                sItem[13] = this.m_objViewer.txtExecArea.Value;
+                sItem[14] = "0";  //0 新建 1 历史记录
+                sItem[15] = invocat;
+                sItem[16] = "";
+                sItem[17] = "0";
+                sItem[18] = "0";
+                //摆药判断
+                if (dr["putmedtype_int"].ToString().Trim() == "1")
+                {
+                    sItem[18] = "1";
+                }
+                sItem[19] = this.m_objViewer.txtChargeDoctor.Text;
+
+                int row = this.m_objViewer.dtgItem.Rows.Add(sItem);
+                this.m_objViewer.dtgItem.Rows[row].Tag = dr;
+                this.m_objViewer.dtgItem.Rows[row].Selected = true;
+                this.m_objViewer.CurrRowNo = row;
+
+                d += clsPublic.ConvertObjToDecimal(this.m_objViewer.lblAllTotal.Text);
+                this.m_objViewer.lblAllTotal.Text = d.ToString("0.00");
+            }
+            else if (ItemInputMode == 1)
+            {
+                if (!this.m_blnAddItemByOrderID(dr, Amount))
+                {
+                    return;
+                }
+            }
+            this.m_mthClear();
+            IsModify = true;
+        }
+        #endregion
+
+        #region 批量添加诊疗项目+收费项目
+        /// <summary>
+        /// 批量添加诊疗项目+收费项目
+        /// </summary>
+        /// <param name="objArr">诊疗项目数组</param>
+        /// <param name="Nums">基数值</param>
+        public void m_mthAddOrderItem(ArrayList objArr, decimal Nums)
+        {
+            if (objArr.Count == 0)
+            {
+                return;
+            }
+
+            for (int i = 0; i < objArr.Count; i++)
+            {
+                string OrderID = objArr[i].ToString();
+                DataTable dt;
+
+                long l = this.objSvc.m_lngFindOrderByID(OrderID, out dt);
+                if (l > 0)
+                {
+                    for (int j = 0; j < dt.Rows.Count; j++)
+                    {
+                        DataRow dr = dt.Rows[j];
+
+                        string invocat = this.m_strConvertToChType(dr["itemipinvtype_chr"].ToString().Trim());
+
+                        if (!DrugFlag && !PatchFlag && invocat.IndexOf("药费") >= 0)
+                        {
+                            if (clsPublic.ConvertObjToDecimal(this.m_objViewer.txtAmount.Text) < 0)
+                            {
+                                MessageBox.Show("当前系统设置为：禁止非中心药房的人员在补记帐时录负数冲帐。\r\n\r\n请重新输入数量。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.m_objViewer.txtAmount.SelectAll();
+                                this.m_objViewer.txtAmount.Focus();
+                                return;
+                            }
+                        }
+
+                        if (!this.m_blnAddItemByOrderID(dr, Nums))
+                        {
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("读取诊疗项目数据失败.", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
+            }
+
+            this.m_objViewer.txtItemName.Text = "";
+            this.m_objViewer.txtItemName.Focus();
+            IsModify = true;
+        }
+
+        #region 根据诊疗项目添加收费项目
+        /// <summary>
+        /// 根据诊疗项目添加收费项目
+        /// </summary>
+        /// <param name="dr"></param>  
+        /// <param name="BaseNums"></param>  
+        /// <returns></returns>
+        private bool m_blnAddItemByOrderID(DataRow dr, decimal BaseNums)
+        {
+            string ApplyAreaID = this.m_objViewer.txtApplyArea.Value.ToString().Trim();
+            string OrderID = dr["orderdicid_chr"].ToString();
+
+            DataTable dt;
+            long l = this.objSvc.m_lngGetChargeItemByOrderID(OrderID, this.m_objViewer.ucPatientInfo.BihPatient_VO.PayTypeID, out dt);
+            if (l > 0)
+            {
+                #region 添加主项目
+                int num = this.m_objViewer.dtgOrder.Rows.Count + 1;
+                string[] sarr = new string[4];
+                sarr[0] = num.ToString();
+                sarr[1] = dr["name_chr"].ToString().Trim();
+                sarr[2] = num.ToString() + "->" + OrderID;
+                sarr[3] = "0";  //0 新建 1 历史记录
+
+                int row = this.m_objViewer.dtgOrder.Rows.Add(sarr);
+                this.m_objViewer.dtgOrder.Rows[row].Tag = dr;
+                this.m_objViewer.dtgOrder.Rows[row].Selected = false;
+                #endregion
+
+                #region 添加关联明细项目
+
+                //诊疗项目所对收费明细数目
+                int orderentrycount = dt.Rows.Count;
+                decimal ordertotal = 0;
+                this.m_objViewer.dtgOrderItem.Rows.Clear();
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    DataRow dr2 = dt.Rows[i];
+
+                    string invocat = this.m_strConvertToChType(dr2["itemipinvtype_chr"].ToString().Trim());
+                    string ItemId = dr2["itemid_chr"].ToString();
+                    string ExecAreaName = "";
+                    string ExecAreaID = this.objSvc.m_strGetChargeItemDefaultExecAreaID(ItemId, ApplyAreaID, out ExecAreaName);
+                    if (ExecAreaID.Trim() == "")
+                    {
+                        ExecAreaID = this.m_objViewer.ucPatientInfo.BihPatient_VO.AreaID;
+                        ExecAreaName = this.m_objViewer.ucPatientInfo.BihPatient_VO.AreaName;
+                    }
+
+                    string[] sItem = new string[21];
+
+                    #region Item控件
+                    sItem[0] = Convert.ToString(this.m_objViewer.dtgItem.Rows.Count + 1);
+                    sItem[1] = ExecAreaName;
+                    sItem[2] = dr2["itemcode_vchr"].ToString().Trim();
+                    sItem[3] = dr2["itemname_vchr"].ToString().Trim();
+                    sItem[4] = dr2["itemspec_vchr"].ToString().Trim();
+
+                    string ItemUnit, ItemPrice;
+                    if (dr2["ipchargeflg_int"].ToString().Trim() == "1")
+                    {
+                        ItemUnit = dr2["itemipunit_chr"].ToString().Trim();
+                        ItemPrice = dr2["submoney"].ToString().Trim();
+                    }
+                    else
+                    {
+                        ItemUnit = dr2["itemunit_chr"].ToString().Trim();
+                        ItemPrice = dr2["itemprice_mny"].ToString().Trim();
+                    }
+                    decimal d = BaseNums * clsPublic.ConvertObjToDecimal(dr2["totalqty_dec"]);
+                    sItem[5] = ItemUnit;
+                    sItem[6] = d.ToString("0.00");
+                    sItem[7] = ItemPrice;
+
+                    d = clsPublic.ConvertObjToDecimal(sItem[6]) * clsPublic.ConvertObjToDecimal(sItem[7]);
+                    sItem[8] = d.ToString("0.00");
+
+                    string Precent = "100";
+                    if (dr2["precent_dec"].ToString().Trim() != "")
+                    {
+                        Precent = dr2["precent_dec"].ToString().Trim();
+                    }
+                    sItem[9] = Precent;
+
+                    d = clsPublic.Round(clsPublic.ConvertObjToDecimal(sItem[8]) * clsPublic.ConvertObjToDecimal(sItem[9]) / 100, 2);
+                    sItem[10] = d.ToString("0.00");
+                    sItem[11] = ApplyAreaID;
+                    sItem[12] = this.m_objViewer.txtChargeDoctor.Value;
+                    sItem[13] = ExecAreaID;
+                    sItem[14] = "0";  //0 新建 1 历史记录
+                    sItem[15] = invocat;
+                    sItem[16] = num.ToString() + "->" + OrderID;
+                    sItem[17] = "0";
+                    sItem[18] = "0";
+
+                    //摆药判断
+                    if (dr2["putmedtype_int"].ToString().Trim() == "1")
+                    {
+                        if (orderentrycount == 1)
+                        {
+                            sItem[18] = "1";
+                        }
+                        else
+                        {
+                            if (IsControlPutMed)
+                            {
+                                sItem[18] = "1";
+                            }
+                        }
+                    }
+                    sItem[19] = this.m_objViewer.txtChargeDoctor.Text;
+
+                    if (intDiffCostOn == 1 && strDiffCostOn.IndexOf(dr2["medicinetypeid_chr"].ToString()) > -1)
+                    {
+                        sItem[20] = clsPublic.Round(clsPublic.ConvertObjToDecimal(dr2["diffprice_mny"]) * clsPublic.ConvertObjToDecimal(sItem[6])*(-1), 2).ToString();
+                    }
+                    else
+                    {
+                        sItem[20] = "0.00";
+                    }
+
+                    row = this.m_objViewer.dtgItem.Rows.Add(sItem);
+                    this.m_objViewer.dtgItem.Rows[row].Tag = dr2;
+                    ordertotal += d;
+                    #endregion
+
+                    #region OrderItem控件
+                    sItem[0] = Convert.ToString(i + 1);
+                    row = this.m_objViewer.dtgOrderItem.Rows.Add(sItem);
+                    this.m_objViewer.dtgOrderItem.Rows[row].Tag = dr2;
+                    #endregion
+                }
+                this.m_objViewer.dtgOrderItem.Rows[0].Selected = false;
+
+                ordertotal += clsPublic.ConvertObjToDecimal(this.m_objViewer.lblAllTotal.Text);
+                this.m_objViewer.lblAllTotal.Text = ordertotal.ToString("0.00");
+
+                this.m_objViewer.dtgOrderItem.Rows[0].Selected = true;
+                this.m_objViewer.CurrRowNo = 0;
+                #endregion
+            }
+            else
+            {
+                return false;
+            }
+
+            return true;
+        }
+        #endregion
+
+        #endregion
+
+        #region 批量添加项目
+        /// <summary>
+        /// 批量添加项目
+        /// </summary>
+        /// <param name="objArr"></param>
+        /// <param name="Nums"></param>       
+        public void m_mthAddItem(ArrayList objArr, int Nums)
+        {
+            for (int i = 0; i < objArr.Count; i++)
+            {
+                DataRow dr = objArr[i] as DataRow;
+
+                string ExecAreaID = "";
+
+                if (dr["areaid1"].ToString().Trim() == "")
+                {
+                    ExecAreaID = dr["areaid2"].ToString().Trim();
+                }
+                else
+                {
+                    ExecAreaID = dr["areaid1"].ToString().Trim();
+                }
+
+                string[] sItem = new string[16];
+
+                sItem[0] = Convert.ToString(this.m_objViewer.dtgItem.Rows.Count + 1);
+                sItem[1] = this.m_strGetDeptName(ExecAreaID);
+                sItem[2] = dr["itemcode_vchr"].ToString().Trim();
+                sItem[3] = dr["itemname_vchr"].ToString().Trim();
+                sItem[4] = dr["itemspec_vchr"].ToString().Trim();
+
+                string ItemUnit, ItemPrice;
+                if (dr["ipchargeflg_int"].ToString().Trim() == "1")
+                {
+                    ItemUnit = dr["itemipunit_chr"].ToString().Trim();
+                    ItemPrice = dr["submoney"].ToString().Trim();
+                }
+                else
+                {
+                    ItemUnit = dr["itemunit_chr"].ToString().Trim();
+                    ItemPrice = dr["itemprice_mny"].ToString().Trim();
+                }
+                sItem[5] = ItemUnit;
+                sItem[6] = Convert.ToString(clsPublic.ConvertObjToDecimal(dr["amount"]) * Nums);
+                sItem[7] = ItemPrice;
+
+                decimal d = clsPublic.ConvertObjToDecimal(sItem[6]) * clsPublic.ConvertObjToDecimal(sItem[7]);
+
+                sItem[8] = d.ToString("0.00");
+
+                string Precent = "100";
+                if (dr["precent_dec"].ToString().Trim() != "")
+                {
+                    Precent = dr["precent_dec"].ToString().Trim();
+                }
+                sItem[9] = Precent;
+                sItem[10] = Convert.ToDecimal(d * clsPublic.ConvertObjToDecimal(sItem[9]) / 100).ToString("0.00");
+                sItem[11] = this.m_objViewer.txtApplyArea.Value;
+                sItem[12] = this.m_objViewer.txtChargeDoctor.Value;
+                sItem[13] = ExecAreaID;
+                sItem[14] = "0";  //0 新建 1 历史记录
+                sItem[15] = this.m_strConvertToChType(dr["itemipinvtype_chr"].ToString().Trim());
+
+                int row = this.m_objViewer.dtgItem.Rows.Add(sItem);
+                this.m_objViewer.dtgItem.Rows[row].Tag = dr;
+                this.m_objViewer.dtgItem.Rows[row].Selected = true;
+                this.m_objViewer.CurrRowNo = row;
+
+                d += clsPublic.ConvertObjToDecimal(this.m_objViewer.lblAllTotal.Text);
+                this.m_objViewer.lblAllTotal.Text = d.ToString("0.00");
+            }
+
+            this.m_mthClear();
+        }
+        #endregion
+
+        #region 删除项目
+        /// <summary>
+        /// 删除项目
+        /// </summary>
+        /// <param name="Type">1 删除主项 2 删除明细</param>
+        public void m_mthDelItem(int Type)
+        {
+            if (Type == 1)
+            {
+                bool b = false;
+                for (int i = 0; i < this.m_objViewer.dtgOrder.Rows.Count; i++)
+                {
+                    if (this.m_objViewer.dtgOrder.Rows[i].Selected)
+                    {
+                        string attachorderid = "";
+                        string ordername = "";
+                        DataRow dr = this.m_objViewer.dtgOrder.Rows[i].Tag as DataRow;
+
+                        if (this.m_objViewer.dtgOrder.Rows[i].Cells["orderflag"].Value.ToString() == "0")
+                        {
+                            ordername = dr["name_chr"].ToString();
+                            attachorderid = this.m_objViewer.dtgOrder.Rows[i].Cells["attachorderid"].Value.ToString();
+                        }
+                        else
+                        {
+                            ordername = dr["orderdicname_vchr"].ToString();
+                            attachorderid = dr["attachorderid_vchr"].ToString();
+                        }
+
+                        if (MessageBox.Show("是否删除主收费项目(诊疗项目)：【" + ordername + "】,明细项目将一并删除? \r\n\r\n删除项目后请按[保存]键保存", "系统提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            for (int j = this.m_objViewer.dtgItem.Rows.Count - 1; j >= 0; j--)
+                            {
+                                if (this.m_objViewer.dtgItem.Rows[j].Cells["orderid"].Value.ToString().Trim() == attachorderid)
+                                {
+                                    this.m_objViewer.dtgItem.Rows.RemoveAt(j);
+                                }
+                            }
+
+                            this.m_objViewer.dtgOrder.Rows.RemoveAt(i);
+                            this.m_objViewer.dtgOrderItem.Rows.Clear();
+
+                            this.m_objViewer.CurrRowNo = -1;
+                        }
+
+                        b = true;
+                        break;
+                    }
+                }
+
+                if (!b)
+                {
+                    MessageBox.Show("请选择主收费项目。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+            else if (Type == 2)
+            {
+                int RowNo = this.m_objViewer.CurrRowNo;
+
+                if (RowNo < 0)
+                {
+                    return;
+                }
+
+                DataGridView dgrid = null;
+
+                if (ItemInputMode == 0)
+                {
+                    dgrid = this.m_objViewer.dtgItem;
+                    colSuffix = "";
+                }
+                else if (ItemInputMode == 1)
+                {
+                    dgrid = this.m_objViewer.dtgOrderItem;
+                    colSuffix = "1";
+                    if (RowNo > dgrid.Rows.Count - 1)
+                    {
+                        RowNo = 0;
+                    }
+                }
+
+                if (dgrid == null || dgrid.Rows.Count == 0)
+                {
+                    return;
+                }
+
+                DataRow dr = dgrid.Rows[RowNo].Tag as DataRow;
+                string ItemName = "";
+                if (dgrid.Rows[RowNo].Cells["flag" + colSuffix].Value.ToString() == "0")
+                {
+                    ItemName = dr["itemname_vchr"].ToString().Trim();
+                }
+                else
+                {
+                    ItemName = dr["chargeitemname_chr"].ToString().Trim();
+                }
+
+                if (MessageBox.Show("是否删除收费项目：【" + ItemName + "】? \r\n\r\n删除项目后请按<保存>键保存当前记录", "系统提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (ItemInputMode == 1)
+                    {
+                        for (int i = 0; i < this.m_objViewer.dtgItem.Rows.Count; i++)
+                        {
+                            if (this.m_objViewer.dtgItem.Rows[i].Cells["itemcode"].Value.ToString().Trim() == dgrid.Rows[RowNo].Cells["itemcode" + colSuffix].Value.ToString().Trim() &&
+                                this.m_objViewer.dtgItem.Rows[i].Cells["orderid"].Value.ToString().Trim() == dgrid.Rows[RowNo].Cells["orderid" + colSuffix].Value.ToString().Trim())
+                            {
+                                this.m_objViewer.dtgItem.Rows.RemoveAt(i);
+                                break;
+                            }
+                        }
+                    }
+
+                    string attachorderid = dgrid.Rows[RowNo].Cells["orderid" + colSuffix].Value.ToString().Trim();
+                    dgrid.Rows.RemoveAt(RowNo);
+
+                    if (ItemInputMode == 1 && dgrid.Rows.Count == 0)
+                    {
+                        for (int i = 0; i < this.m_objViewer.dtgOrder.Rows.Count; i++)
+                        {
+                            if (this.m_objViewer.dtgOrder.Rows[i].Cells["attachorderid"].Value.ToString().Trim() == attachorderid)
+                            {
+                                this.m_objViewer.dtgOrder.Rows.RemoveAt(i);
+                                break;
+                            }
+                        }
+                    }
+
+                    if (RowNo >= dgrid.Rows.Count)
+                    {
+                        this.m_objViewer.CurrRowNo = dgrid.Rows.Count - 1;
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            decimal total = 0;
+            for (int j = 0; j < this.m_objViewer.dtgItem.Rows.Count; j++)
+            {
+                total += clsPublic.ConvertObjToDecimal(this.m_objViewer.dtgItem.Rows[j].Cells["total"].Value);
+            }
+            if (total > 0)
+            {
+                this.m_objViewer.lblAllTotal.Text = total.ToString("0.00");
+            }
+            else
+            {
+                this.m_objViewer.lblAllTotal.Text = "";
+            }
+        }
+        #endregion
+
+        #region 保存
+        /// <summary>
+        /// 保存
+        /// </summary>
+        /// <returns></returns>
+        public bool m_blnSave()
+        {
+            if (this.m_objViewer.dtgItem.Rows.Count == 0 && CurrOrderID == "")
+            {
+                this.IsModify = false;
+                return false;
+            }
+
+            if (CurrOrderID != "" && CurrOrderStatus == 1)
+            {
+                return false;
+            }
+
+            if (!IsAllowPatch && this.m_objViewer.ucPatientInfo.BihPatient_VO.SpecChargeCtrl == 0)
+            {
+                if (this.m_objViewer.ucPatientInfo.BihPatient_VO.BalanceMoney < clsPublic.ConvertObjToDecimal(this.m_objViewer.lblAllTotal.Text))
+                {
+                    MessageBox.Show("对不起，你补记帐金额大于当前病人的结余金额，请删除部分收费项目或重新录入。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+            }
+
+            ArrayList OrderDicArr = new ArrayList();
+
+            for (int i = 0; i < this.m_objViewer.dtgOrder.Rows.Count; i++)
+            {
+                clsBihOrderDic_VO OrderDic_VO = new clsBihOrderDic_VO();
+
+                DataRow dr = this.m_objViewer.dtgOrder.Rows[i].Tag as DataRow;
+
+                //0 新建 1 历史记录
+                if (this.m_objViewer.dtgOrder.Rows[i].Cells["orderflag"].Value.ToString() == "0")
+                {
+                    OrderDic_VO.Type = 1;
+                    OrderDic_VO.OrderQue = i + 1;
+                    OrderDic_VO.OrderDicID = dr["orderdicid_chr"].ToString();
+                    OrderDic_VO.OrderDicName = dr["name_chr"].ToString();
+                    OrderDic_VO.Spec = dr["des_vchr"].ToString();
+                    OrderDic_VO.Qty = 0;
+                    OrderDic_VO.PriceMny = 0;
+                    OrderDic_VO.TotalMny = 0;
+                    OrderDic_VO.AttachOrderID = this.m_objViewer.dtgOrder.Rows[i].Cells["attachorderid"].Value.ToString();
+                    OrderDic_VO.SbBaseMny = 0;
+                }
+                else
+                {
+                    OrderDic_VO.Type = 1;
+                    OrderDic_VO.OrderQue = i + 1;
+                    OrderDic_VO.OrderDicID = dr["orderdicid_chr"].ToString();
+                    OrderDic_VO.OrderDicName = dr["orderdicname_vchr"].ToString();
+                    OrderDic_VO.Spec = dr["spec_vchr"].ToString();
+                    OrderDic_VO.Qty = 0;
+                    OrderDic_VO.PriceMny = 0;
+                    OrderDic_VO.TotalMny = 0;
+                    OrderDic_VO.AttachOrderID = dr["attachorderid_vchr"].ToString();
+                    OrderDic_VO.SbBaseMny = 0;
+                }
+                OrderDicArr.Add(OrderDic_VO);
+            }
+
+            ArrayList PatientChargeArr = new ArrayList();
+
+            for (int i = 0; i < this.m_objViewer.dtgItem.Rows.Count; i++)
+            {
+                clsBihPatientCharge_VO PatientCharge_VO = new clsBihPatientCharge_VO();
+
+                DataRow dr = this.m_objViewer.dtgItem.Rows[i].Tag as DataRow;
+
+                //0 新建 1 历史记录
+                if (this.m_objViewer.dtgItem.Rows[i].Cells["flag"].Value.ToString() == "0")
+                {
+                    PatientCharge_VO.PatientID = this.m_objViewer.ucPatientInfo.BihPatient_VO.PatientID;
+                    PatientCharge_VO.RegisterID = this.m_objViewer.ucPatientInfo.RegisterID;
+                    PatientCharge_VO.ClacArea = this.m_objViewer.dtgItem.Rows[i].Cells["execareaid"].Value.ToString();
+                    PatientCharge_VO.CreateArea = this.m_objViewer.dtgItem.Rows[i].Cells["applyareaid"].Value.ToString();
+                    PatientCharge_VO.CalcCateID = dr["itemipcalctype_chr"].ToString();
+                    PatientCharge_VO.InvCateID = dr["itemipinvtype_chr"].ToString();
+                    PatientCharge_VO.ChargeItemID = dr["itemid_chr"].ToString();
+                    PatientCharge_VO.ChargeItemName = dr["itemname_vchr"].ToString();
+
+                    if (dr["ipchargeflg_int"].ToString().Trim() == "1")
+                    {
+                        PatientCharge_VO.Unit = dr["itemipunit_chr"].ToString().Trim();
+                        PatientCharge_VO.UnitPrice = clsPublic.ConvertObjToDecimal(dr["submoney"]);
+                    }
+                    else
+                    {
+                        PatientCharge_VO.Unit = dr["itemunit_chr"].ToString().Trim();
+                        PatientCharge_VO.UnitPrice = clsPublic.ConvertObjToDecimal(dr["itemprice_mny"]);
+                    }
+
+                    PatientCharge_VO.Amount = clsPublic.ConvertObjToDecimal(this.m_objViewer.dtgItem.Rows[i].Cells["amount"].Value);
+                    PatientCharge_VO.Discount = clsPublic.ConvertObjToDecimal(this.m_objViewer.dtgItem.Rows[i].Cells["scale"].Value);
+                    PatientCharge_VO.Ismepay = 0;
+                    PatientCharge_VO.Des = "";
+                    PatientCharge_VO.CreateType = 4;
+                    PatientCharge_VO.Creator = this.m_objViewer.LoginInfo.m_strEmpID;
+                    PatientCharge_VO.Operator = this.m_objViewer.LoginInfo.m_strEmpID;
+                    PatientCharge_VO.PStatus = 0;
+                    PatientCharge_VO.Activator = this.m_objViewer.dtgItem.Rows[i].Cells["applydoctorid"].Value.ToString();
+                    PatientCharge_VO.ActivateType = 2;
+                    PatientCharge_VO.IsRich = int.Parse(dr["isrich_int"].ToString());
+                    PatientCharge_VO.CurAreaID = this.m_objViewer.ucPatientInfo.BihPatient_VO.AreaID;
+                    PatientCharge_VO.CurBedID = this.m_objViewer.ucPatientInfo.BihPatient_VO.BedID;
+                    PatientCharge_VO.DoctorID = this.m_objViewer.ucPatientInfo.BihPatient_VO.DoctorID;
+                    PatientCharge_VO.Doctor = this.m_objViewer.ucPatientInfo.BihPatient_VO.DoctorName;
+                    PatientCharge_VO.DoctorGroupID = this.m_objViewer.ucPatientInfo.BihPatient_VO.DoctorGroupID;
+                    PatientCharge_VO.NeedConfirm = 0;
+                    PatientCharge_VO.ActiveDat = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    PatientCharge_VO.TotalMoney_dec = clsPublic.Round(PatientCharge_VO.UnitPrice * PatientCharge_VO.Amount, 2);
+                    PatientCharge_VO.AcctMoney_dec = PatientCharge_VO.TotalMoney_dec - clsPublic.Round(PatientCharge_VO.UnitPrice * PatientCharge_VO.Amount * PatientCharge_VO.Discount / 100, 2);
+                    PatientCharge_VO.AttachOrderID = this.m_objViewer.dtgItem.Rows[i].Cells["orderid"].Value.ToString();
+                    PatientCharge_VO.AttachOrderBaseNum = 0;
+                    PatientCharge_VO.SPEC_VCHR = dr["itemspec_vchr"].ToString();
+                    PatientCharge_VO.PutMedicineFlag = int.Parse(clsPublic.ConvertObjToDecimal(this.m_objViewer.dtgItem.Rows[i].Cells["putmedicineflag"].Value).ToString());
+                    PatientCharge_VO.CHARGEDOCTORID_CHR = this.m_objViewer.dtgItem.Rows[i].Cells["applydoctorid"].Value.ToString();
+                    PatientCharge_VO.CHARGEDOCTOR_VCHR = this.m_objViewer.dtgItem.Rows[i].Cells["colChargeDoctorName"].Value.ToString();
+                    PatientCharge_VO.CHARGEDOCTORGROUPID_CHR = this.m_objViewer.LoginInfo.m_strGroupID;
+                    PatientCharge_VO.TotalDiffCostMoney_dec = clsPublic.ConvertObjToDecimal(this.m_objViewer.dtgItem.Rows[i].Cells["rljels"].Value);
+                }
+                else
+                {
+                    PatientCharge_VO.PatientID = dr["patientid_chr"].ToString();
+                    PatientCharge_VO.RegisterID = dr["registerid_chr"].ToString();
+                    PatientCharge_VO.ClacArea = this.m_objViewer.dtgItem.Rows[i].Cells["execareaid"].Value.ToString();
+                    PatientCharge_VO.CreateArea = dr["createarea_chr"].ToString();
+                    PatientCharge_VO.CreateDat = Convert.ToDateTime(dr["create_dat"].ToString()).ToString("yyyy-MM-dd HH:mm:ss");
+                    PatientCharge_VO.CalcCateID = dr["calccateid_chr"].ToString();
+                    PatientCharge_VO.InvCateID = dr["invcateid_chr"].ToString();
+                    PatientCharge_VO.ChargeItemID = dr["chargeitemid_chr"].ToString();
+                    PatientCharge_VO.ChargeItemName = dr["chargeitemname_chr"].ToString();
+                    PatientCharge_VO.Unit = dr["unit_vchr"].ToString();
+                    PatientCharge_VO.UnitPrice = clsPublic.ConvertObjToDecimal(dr["unitprice_dec"]);
+                    PatientCharge_VO.Amount = clsPublic.ConvertObjToDecimal(this.m_objViewer.dtgItem.Rows[i].Cells["amount"].Value);
+                    PatientCharge_VO.Discount = clsPublic.ConvertObjToDecimal(dr["discount_dec"]);
+                    PatientCharge_VO.Ismepay = 0;
+                    PatientCharge_VO.Des = "";
+                    PatientCharge_VO.CreateType = 4;
+                    PatientCharge_VO.Creator = dr["creator_chr"].ToString();
+                    PatientCharge_VO.Operator = dr["operator_chr"].ToString();
+                    PatientCharge_VO.PStatus = 0;
+                    PatientCharge_VO.Activator = dr["activator_chr"].ToString();
+                    PatientCharge_VO.ActivateType = 2;
+                    PatientCharge_VO.IsRich = int.Parse(dr["isrich_int"].ToString());
+                    PatientCharge_VO.CurAreaID = dr["curareaid_chr"].ToString();
+                    PatientCharge_VO.CurBedID = dr["curbedid_chr"].ToString();
+                    PatientCharge_VO.DoctorID = dr["doctorid_chr"].ToString();
+                    PatientCharge_VO.Doctor = dr["doctor_vchr"].ToString();
+                    PatientCharge_VO.DoctorGroupID = dr["doctorgroupid_chr"].ToString();
+                    PatientCharge_VO.NeedConfirm = 0;
+                    PatientCharge_VO.ActiveDat = Convert.ToDateTime(dr["chargeactive_dat"].ToString()).ToString("yyyy-MM-dd HH:mm:ss");
+                    PatientCharge_VO.TotalMoney_dec = clsPublic.Round(PatientCharge_VO.UnitPrice * PatientCharge_VO.Amount, 2);
+                    PatientCharge_VO.AcctMoney_dec = PatientCharge_VO.TotalMoney_dec - clsPublic.Round(PatientCharge_VO.UnitPrice * PatientCharge_VO.Amount * PatientCharge_VO.Discount / 100, 2);
+                    PatientCharge_VO.AttachOrderID = dr["attachorderid_vchr"].ToString();
+                    PatientCharge_VO.AttachOrderBaseNum = clsPublic.ConvertObjToDecimal(dr["attachorderbasenum_dec"]);
+                    PatientCharge_VO.SPEC_VCHR = dr["spec_vchr"].ToString();
+                    PatientCharge_VO.PutMedicineFlag = int.Parse(dr["putmedicineflag_int"].ToString());
+                    PatientCharge_VO.CHARGEDOCTORID_CHR = dr["chargedoctorid_chr"].ToString();
+                    PatientCharge_VO.CHARGEDOCTOR_VCHR = dr["chargedoctor_vchr"].ToString();
+                    PatientCharge_VO.CHARGEDOCTORGROUPID_CHR = dr["chargedoctorgroupid_chr"].ToString();
+                    PatientCharge_VO.TotalDiffCostMoney_dec = clsPublic.ConvertObjToDecimal(this.m_objViewer.dtgItem.Rows[i].Cells["rljels"].Value);
+                }
+                PatientChargeArr.Add(PatientCharge_VO);
+            }
+
+            long l = this.objSvc.m_lngGenPatientChargeByDir(OrderDicArr, PatientChargeArr, 9, ref CurrOrderID);
+            if (l > 0)
+            {
+                this.m_mthLoadHistory();
+                this.CurrOrderStatus = 0;
+                this.m_objViewer.btnCommit.Enabled = true;
+                IsModify = false;
+            }
+            else
+            {
+                MessageBox.Show("保存数据失败。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return false;
+            }
+
+            return true;
+        }
+        #endregion
+
+
+        #region 提交
+        /// <summary>
+        /// 提交
+        /// </summary>
+        public void m_mthCommit()
+        {
+            if (!this.m_objViewer.btnCommit.Enabled)
+            {
+                return;
+            }
+
+            if (!this.m_blnSave())
+            {
+                return;
+            }
+
+            if (CurrOrderID == "" || CurrOrderStatus == 1)
+            {
+                return;
+            }
+
+            if (MessageBox.Show("【提交】后将不能再更改所录项目，是否继续提交操作？", "系统提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+
+            long l = this.objSvc.m_lngCommitPatchCharge(CurrOrderID, this.m_objViewer.ucPatientInfo.RegisterID, this.m_objViewer.LoginInfo.m_strEmpID, int.Parse(this.m_objViewer.Scope));
+            if (l > 0)
+            {
+                this.m_objViewer.ucPatientInfo.m_mthShortCurFind();
+                this.m_mthLoadHistory();
+                this.m_objViewer.btnNew_Click(null, null);
+
+                /***摆药接口***/
+                //ArrayList arrReg = new ArrayList();
+                //arrReg.Add(this.m_objViewer.ucPatientInfo.RegisterID);
+                //IPutMadicine iPut = PutMadicineFactory.GetInstanceForRecipeMed();
+                //iPut.CreatePutMedDetailByDptType(arrReg, this.m_objViewer.LoginInfo.m_strEmpID, int.Parse(this.m_objViewer.Scope));
+                /******/
+            }
+            else
+            {
+                MessageBox.Show("提交数据失败。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+        #endregion
+
+        #region 显示历史记录
+        /// <summary>
+        /// 显示历史记录
+        /// </summary>
+        /// <param name="OrderID"></param>
+        public void m_mthShowHistory(string OrderID)
+        {
+            if (dtSource == null || dtSource.Rows.Count == 0)
+            {
+                return;
+            }
+
+            this.m_objViewer.dtgItem.Rows.Clear();
+            this.m_objViewer.dtgOrder.Rows.Clear();
+            this.m_objViewer.dtgOrderItem.Rows.Clear();
+            decimal total = 0;
+
+            if (ItemInputMode == 1)
+            {
+                this.m_objViewer.dtgItem.Visible = false;
+
+                DataTable dt;
+                long l = this.objSvc.m_lngGetOrderDic(OrderID, out dt);
+                if (l > 0)
+                {
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        #region 添加主项目
+                        DataRow dr = dt.Rows[i];
+                        string[] sarr = new string[4];
+                        sarr[0] = Convert.ToString(i + 1);
+                        sarr[1] = dr["orderdicname_vchr"].ToString().Trim();
+                        sarr[2] = dr["attachorderid_vchr"].ToString();
+                        sarr[3] = "1";  //0 新建 1 历史记录
+
+                        int row = this.m_objViewer.dtgOrder.Rows.Add(sarr);
+                        this.m_objViewer.dtgOrder.Rows[row].Tag = dr;
+                        #endregion
+                    }
+
+                    if (this.m_objViewer.dtgOrder.Rows.Count > 0)
+                    {
+                        this.m_objViewer.dtgOrder.Rows[0].Selected = false;
+                    }
+                    else
+                    {
+                        this.m_objViewer.dtgItem.Visible = true;
+                        this.m_objViewer.dtgItem.BringToFront();
+                    }
+                }
+            }
+
+            DataRow[] drSelect;
+            drSelect = dtSource.Select("orderid_chr = '" + OrderID + "'");
+            for (int i = 0; i < drSelect.Length; i++)
+            {
+                DataRow dr = drSelect[i];
+
+                string[] sItem = new string[21];
+
+                sItem[0] = Convert.ToString(i + 1);
+                sItem[1] = dr["execarea"].ToString().Trim();
+                sItem[2] = dr["itemcode_vchr"].ToString().Trim();
+                sItem[3] = dr["chargeitemname_chr"].ToString().Trim();
+                sItem[4] = dr["itemspec_vchr"].ToString().Trim();
+                sItem[5] = dr["unit_vchr"].ToString().Trim();
+                sItem[6] = dr["amount_dec"].ToString().Trim();
+                sItem[7] = dr["unitprice_dec"].ToString().Trim();
+                sItem[8] = Convert.ToDecimal(dr["totalmoney_dec"]).ToString("0.00");
+                sItem[9] = dr["precent_dec"].ToString();
+                sItem[10] = Convert.ToDecimal(clsPublic.ConvertObjToDecimal(dr["totalmoney_dec"]) - clsPublic.ConvertObjToDecimal(dr["acctmoney_dec"])).ToString("0.00");
+                sItem[11] = dr["createarea_chr"].ToString();
+                sItem[12] = dr["activator_chr"].ToString();
+                sItem[13] = dr["clacarea_chr"].ToString();
+                sItem[14] = "1";  //0 新建 1 历史记录
+                sItem[15] = this.m_strConvertToChType(dr["invcateid_chr"].ToString().Trim());
+                sItem[16] = dr["attachorderid_vchr"].ToString();
+
+                sItem[17] = "0";
+                sItem[18] = dr["putmedicineflag_int"].ToString();
+                sItem[19] = dr["chargedoctor_vchr"].ToString();
+                if (intDiffCostOn == 1)
+                {
+                    if (dr["totaldiffcostmoney_dec"] != null && dr["totaldiffcostmoney_dec"].ToString() != string.Empty)
+                    {
+                        sItem[20] = dr["totaldiffcostmoney_dec"].ToString();
+                    }
+                    else
+                    {
+                        sItem[20] = "0.00";
+                    }
+                }
+                else
+                {
+                    sItem[20] = "0.00";
+                }
+                int row = this.m_objViewer.dtgItem.Rows.Add(sItem);
+                this.m_objViewer.dtgItem.Rows[row].Tag = dr;
+                this.m_objViewer.dtgItem.Rows[row].Selected = true;
+                this.m_objViewer.CurrRowNo = row;
+                total += clsPublic.ConvertObjToDecimal(dr["totalmoney_dec"]);
+
+                if (Math.IEEERemainder(Convert.ToDouble(i + 1), 2) == 0)
+                {
+                    this.m_objViewer.dtgItem.Rows[row].DefaultCellStyle.BackColor = clsPublic.CustomBackColor;
+                }
+            }
+            if (total != 0)
+            {
+                this.m_objViewer.lblAllTotal.Text = total.ToString("0.00");
+            }
+
+            if (this.m_objViewer.dtgOrder.Rows.Count > 0)
+            {
+                this.m_mthShowOrderEntry(this.m_objViewer.dtgOrder.Rows[0].Cells["attachorderid"].Value.ToString());
+            }
+        }
+        #endregion
+
+        #region 修改
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <param name="row">当前行号</param>  
+        public void m_mthModify(int row)
+        {
+            clsParmItem_VO Item_VO = new clsParmItem_VO();
+
+            DataGridView dgrid = null;
+
+            if (ItemInputMode == 0)
+            {
+                dgrid = this.m_objViewer.dtgItem;
+                colSuffix = "";
+            }
+            else if (ItemInputMode == 1)
+            {
+                dgrid = this.m_objViewer.dtgOrderItem;
+                colSuffix = "1";
+            }
+
+            Item_VO.ItemCode = dgrid.Rows[row].Cells["itemcode" + colSuffix].Value.ToString();
+            Item_VO.ItemName = dgrid.Rows[row].Cells["itemname" + colSuffix].Value.ToString();
+            Item_VO.ItemAmout = clsPublic.ConvertObjToDecimal(dgrid.Rows[row].Cells["amount" + colSuffix].Value);
+            Item_VO.DeptID = dgrid.Rows[row].Cells["execareaid" + colSuffix].Value.ToString();
+            Item_VO.DeptName = dgrid.Rows[row].Cells["execarea" + colSuffix].Value.ToString();
+
+            string invocat = dgrid.Rows[row].Cells["invocat" + colSuffix].Value.ToString();
+            //if (!this.DrugFlag && !this.PatchFlag && dgrid.Rows[row].Cells["invocat" + colSuffix].Value.ToString().IndexOf("药费") >= 0)
+            //{
+            //    Item_VO.AllowNegative = false;
+            //}
+            //else
+            //{
+            //    Item_VO.AllowNegative = true;
+            //}
+
+            frmAidEditItem fEdit = new frmAidEditItem(ref Item_VO);
+            if (fEdit.ShowDialog() == DialogResult.OK)
+            {
+                if (Item_VO.ItemAmout < 0)
+                {
+                    DataRow dr = dgrid.Rows[row].Tag as DataRow;
+
+                    if (invocat.IndexOf("药") >= 0)
+                    {
+                        if (IsAllowPatchNegativeMed)
+                        {
+                            if (!this.m_blnCheckPatchNegative(dr, Item_VO.ItemAmout, 0))
+                            {
+                                MessageBox.Show("对不起，冲减数量大于已有数量。\r\n\r\n请重新输入数量。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("对不起，您没有权限对药品进行负数冲帐。\r\n\r\n请重新输入数量。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        if (IsAllowPatchNegativeNoMed)
+                        {
+                            if (!this.m_blnCheckPatchNegative(dr, Item_VO.ItemAmout, 0))
+                            {
+                                MessageBox.Show("对不起，冲减数量大于已有数量。\r\n\r\n请重新输入数量。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("对不起，您没有权限对收费项目进行负数冲帐。\r\n\r\n请重新输入数量。", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+                    }
+                }
+
+                dgrid.Rows[row].Cells["amount" + colSuffix].Value = Item_VO.ItemAmout;
+                dgrid.Rows[row].Cells["execareaid" + colSuffix].Value = Item_VO.DeptID;
+                dgrid.Rows[row].Cells["execarea" + colSuffix].Value = Item_VO.DeptName;
+
+                decimal d = clsPublic.ConvertObjToDecimal(dgrid.Rows[row].Cells["price" + colSuffix].Value)
+                            * clsPublic.ConvertObjToDecimal(dgrid.Rows[row].Cells["amount" + colSuffix].Value);
+
+                dgrid.Rows[row].Cells["total" + colSuffix].Value = d.ToString("0.00");
+                dgrid.Rows[row].Cells["sbtotal" + colSuffix].Value = Convert.ToDecimal(d * clsPublic.ConvertObjToDecimal(dgrid.Rows[row].Cells["scale" + colSuffix].Value) / 100).ToString("0.00");
+
+                if (ItemInputMode == 1)
+                {
+                    for (int j = 0; j < this.m_objViewer.dtgItem.Rows.Count; j++)
+                    {
+                        if (this.m_objViewer.dtgItem.Rows[j].Cells["itemcode"].Value.ToString().Trim() == dgrid.Rows[row].Cells["itemcode" + colSuffix].Value.ToString().Trim() &&
+                            this.m_objViewer.dtgItem.Rows[j].Cells["orderid"].Value.ToString().Trim() == dgrid.Rows[row].Cells["orderid" + colSuffix].Value.ToString().Trim())
+                        {
+                            this.m_objViewer.dtgItem.Rows[j].Cells["amount"].Value = dgrid.Rows[row].Cells["amount" + colSuffix].Value;
+                            this.m_objViewer.dtgItem.Rows[j].Cells["execareaid"].Value = dgrid.Rows[row].Cells["execareaid" + colSuffix].Value;
+                            this.m_objViewer.dtgItem.Rows[j].Cells["execarea"].Value = dgrid.Rows[row].Cells["execarea" + colSuffix].Value;
+                            this.m_objViewer.dtgItem.Rows[j].Cells["total"].Value = dgrid.Rows[row].Cells["total" + colSuffix].Value;
+                            this.m_objViewer.dtgItem.Rows[j].Cells["sbtotal"].Value = dgrid.Rows[row].Cells["sbtotal" + colSuffix].Value;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            decimal total = 0;
+            for (int i = 0; i < this.m_objViewer.dtgItem.Rows.Count; i++)
+            {
+                total += clsPublic.ConvertObjToDecimal(this.m_objViewer.dtgItem.Rows[i].Cells["total"].Value);
+            }
+            this.m_objViewer.lblAllTotal.Text = total.ToString("0.00");
+        }
+        #endregion
+
+        #region 显示诊疗项目明细
+        /// <summary>
+        /// 显示诊疗项目明细
+        /// </summary>
+        /// <param name="AttatchOrderID"></param>
+        public void m_mthShowOrderEntry(string AttatchOrderID)
+        {
+            int rowno = 1;
+            this.m_objViewer.dtgOrderItem.Rows.Clear();
+            for (int i = 0; i < this.m_objViewer.dtgItem.Rows.Count; i++)
+            {
+                if (this.m_objViewer.dtgItem.Rows[i].Cells["orderid"].Value.ToString() == AttatchOrderID)
+                {
+                    string[] sItem = new string[21];
+
+                    sItem[0] = Convert.ToString(rowno.ToString());
+                    sItem[1] = this.m_objViewer.dtgItem.Rows[i].Cells["execarea"].Value.ToString();
+                    sItem[2] = this.m_objViewer.dtgItem.Rows[i].Cells["itemcode"].Value.ToString();
+                    sItem[3] = this.m_objViewer.dtgItem.Rows[i].Cells["itemname"].Value.ToString();
+                    sItem[4] = this.m_objViewer.dtgItem.Rows[i].Cells["standard"].Value.ToString();
+                    sItem[5] = this.m_objViewer.dtgItem.Rows[i].Cells["unit"].Value.ToString();
+                    sItem[6] = this.m_objViewer.dtgItem.Rows[i].Cells["amount"].Value.ToString();
+                    sItem[7] = this.m_objViewer.dtgItem.Rows[i].Cells["price"].Value.ToString();
+                    sItem[8] = this.m_objViewer.dtgItem.Rows[i].Cells["total"].Value.ToString();
+                    sItem[9] = this.m_objViewer.dtgItem.Rows[i].Cells["scale"].Value.ToString();
+                    sItem[10] = this.m_objViewer.dtgItem.Rows[i].Cells["sbtotal"].Value.ToString();
+                    sItem[11] = this.m_objViewer.dtgItem.Rows[i].Cells["applyareaid"].Value.ToString();
+                    sItem[12] = this.m_objViewer.dtgItem.Rows[i].Cells["applydoctorid"].Value.ToString();
+                    sItem[13] = this.m_objViewer.dtgItem.Rows[i].Cells["execareaid"].Value.ToString();
+                    sItem[14] = this.m_objViewer.dtgItem.Rows[i].Cells["flag"].Value.ToString();  //0 新建 1 历史记录
+                    sItem[15] = this.m_objViewer.dtgItem.Rows[i].Cells["invocat"].Value.ToString();
+                    sItem[16] = this.m_objViewer.dtgItem.Rows[i].Cells["orderid"].Value.ToString();
+                    sItem[17] = "0";
+                    sItem[18] = "0";
+                    sItem[19] = "0";
+                    sItem[20] = this.m_objViewer.dtgItem.Rows[i].Cells["rljels"].Value.ToString(); ;
+                    int row = this.m_objViewer.dtgOrderItem.Rows.Add(sItem);
+                    this.m_objViewer.dtgOrderItem.Rows[row].Tag = this.m_objViewer.dtgItem.Rows[i].Tag;
+
+                    //if (Math.IEEERemainder(Convert.ToDouble(rowno), 2) == 0)
+                    if (Math.IEEERemainder(rowno, 2) == 0)
+                    {
+                        this.m_objViewer.dtgOrderItem.Rows[row].DefaultCellStyle.BackColor = clsPublic.CustomBackColor;
+                    }
+
+                    rowno++;
+                }
+            }
+        }
+        #endregion
+
+        #region 打印手术或麻醉补充记账清单
+        /// <summary>
+        /// 打印手术或麻醉补充记账清单
+        /// </summary>
+        public void m_mthPrintExtraCharge()
+        {
+            string strName = this.m_objViewer.ucPatientInfo.lblName.Text;
+            string strSex = this.m_objViewer.ucPatientInfo.lblSex.Text;
+            string strAge = this.m_objViewer.ucPatientInfo.lblAge.Text;
+            string strDept = this.m_objViewer.ucPatientInfo.txtArea.Text;
+            string strBedNo = this.m_objViewer.ucPatientInfo.txtBedno.Text;
+            string strInPatientNo = this.m_objViewer.ucPatientInfo.txtZyh.Text;
+            string strRgno = this.m_objViewer.ucPatientInfo.RegisterID;
+
+            DataStore dsPrint = new DataStore();
+            dsPrint.LibraryList = clsPublic.PBLPath;
+            dsPrint.DataWindowObject = "d_bih_op_extracharge";
+
+            DataTable dtResult = new DataTable();
+            clsDcl_Charge objDcl = new clsDcl_Charge();
+            objDcl.m_lngQueryOpExtraChargeByRgno(strRgno, out dtResult);
+            DataView dvTemp = dtResult.DefaultView;
+            dvTemp.Sort = "invcateid_chr";
+            dtResult = dvTemp.ToTable();
+            dtResult.Columns.Add("index");
+            for (int i = 0; i < dtResult.Rows.Count; i++)
+            {
+                dtResult.Rows[i]["index"] = i;
+            }
+
+            #region 获取清单开头信息，并根据确认窗口结果判断是否更新变更记录表
+            //并剔除没有选中的收费记录
+            DataTable dtANA = new DataTable();
+            objDcl.m_lngQuerySMDetailByRgno(strRgno, out dtANA);
+            string strOpreationName = "";
+            string strANAName = "";
+            string strANADate = "";
+            if (dtANA != null && dtANA.Rows.Count > 0)
+            {
+                strOpreationName = dtANA.Rows[0]["operationname_chr"].ToString();
+                strANAName = dtANA.Rows[0]["anamode_chr"].ToString();
+                strANADate = dtANA.Rows[0]["anatime"].ToString();
+            }
+
+            frmPrintSMListConfirm frmDialog = new frmPrintSMListConfirm(strOpreationName, strANAName, strANADate, ref dtResult);
+            frmDialog.ShowDialog();
+            if (frmDialog.DialogResult == DialogResult.Cancel)
+            {
+                return;
+            }
+            if (frmDialog.DialogResult == DialogResult.OK)
+            {
+                strOpreationName = frmDialog.strOpreationName;
+                strANAName = frmDialog.strANAName;
+                strANADate = frmDialog.strANADate;
+                string strEmployID = this.m_objViewer.LoginInfo.m_strEmpID;
+                string strEmployName = this.m_objViewer.LoginInfo.m_strEmpName;
+                objDcl.m_lngUpdateRequisitionMR(strRgno, strOpreationName, strANAName, strANADate, strEmployID, strEmployName);
+            }
+
+            #endregion
+
+            dsPrint.Modify("t_name.text = '" + strName + "'");
+            dsPrint.Modify("t_sex.text = '" + strSex +"'");
+            dsPrint.Modify("t_age.text = '" + strAge +"'");
+            dsPrint.Modify("t_area.text = '" + strDept +"'");
+            dsPrint.Modify("t_bedno.text = '" + strBedNo +"'");
+            dsPrint.Modify("t_ipno.text = '" + strInPatientNo +"'");
+            if (strOpreationName.Length < 45)
+            {
+                dsPrint.Modify("t_ssmc.text = '" + strOpreationName + "'");
+            }
+            else
+            {
+                dsPrint.Modify("t_ssmc.text = '" + strOpreationName.Substring(0, 45) + "'");
+                dsPrint.Modify("t_ssmc1.text = '" + strOpreationName.Substring(strOpreationName.Length - 45) + "'");
+            }
+            dsPrint.Modify("t_mzff.text = '" + strANAName + "'");
+            dsPrint.Modify("t_mzsj.text = '" + strANADate + "'");
+
+            dtResult = frmDialog.dtChargeItems;
+            if (dtResult != null && dtResult.Rows.Count > 0)
+            {
+                for (int i = 0; i < dtResult.Rows.Count; i++)
+                {
+                    int row = dsPrint.InsertRow(0);
+                    dsPrint.SetItemString(row, "fylb", m_strConvertToChType(dtResult.Rows[i]["invcateid_chr"].ToString()));
+                    dsPrint.SetItemString(row, "xm", dtResult.Rows[i]["chargeitemname_chr"].ToString());
+                    dsPrint.SetItemString(row, "gg", dtResult.Rows[i]["itemspec_vchr"].ToString());
+                    dsPrint.SetItemDecimal(row, "je", Convert.ToDecimal(dtResult.Rows[i]["totalmoney_dec"]));
+                    dsPrint.SetItemString(row, "dw", dtResult.Rows[i]["unit_vchr"].ToString());
+                    dsPrint.SetItemDecimal(row, "sl", Convert.ToDecimal(dtResult.Rows[i]["amount_dec"]));
+                    dsPrint.SetItemString(row, "yf", dtResult.Rows[i]["usagename_vchr"].ToString());
+                }
+            }
+
+            clsPublic.PrintDialog(dsPrint);
+        }
+        #endregion
+    }
+}

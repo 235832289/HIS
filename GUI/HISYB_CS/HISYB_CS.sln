@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HISYB_CS", "HISYB_CS.csproj", "{984CAE78-9C31-4580-ADD7-2BFE2919D672}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HISYBCS_SVC", "..\..\DLL\HISYBCS_SVC\HISYBCS_SVC.csproj", "{A910CF23-8E50-42AB-9BBB-3281F7978B93}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HISYB_CS.csproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ..\\..\\DLL\\HISYBCS_SVC\\HISYBCS_SVC.csproj
+		SccProjectName2 = \u0022$/icare/code/HIS/DLL/HISYBCS_SVC\u0022,\u0020BNUAAAAA
+		SccLocalPath2 = ..\\..\\DLL\\HISYBCS_SVC
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{984CAE78-9C31-4580-ADD7-2BFE2919D672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984CAE78-9C31-4580-ADD7-2BFE2919D672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984CAE78-9C31-4580-ADD7-2BFE2919D672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984CAE78-9C31-4580-ADD7-2BFE2919D672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A910CF23-8E50-42AB-9BBB-3281F7978B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A910CF23-8E50-42AB-9BBB-3281F7978B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A910CF23-8E50-42AB-9BBB-3281F7978B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A910CF23-8E50-42AB-9BBB-3281F7978B93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

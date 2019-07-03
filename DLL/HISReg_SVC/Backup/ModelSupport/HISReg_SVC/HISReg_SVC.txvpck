@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<nodeSet>
+  <view uin="ugeym5s3cuf3gbj">
+    <property name="$name" value="HISReg_SVC" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="source:HISReg_SVC:HISReg_SVC.clsRegisterSvc">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="source:HISReg_SVC:HISReg_SVC.clsRegisterSvc.clsRegisterSvc()" />
+    </reference>
+  </view>
+</nodeSet>

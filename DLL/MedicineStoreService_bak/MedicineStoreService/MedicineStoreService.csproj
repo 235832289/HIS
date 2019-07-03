@@ -1,0 +1,181 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7911FC2B-1880-49C6-98A5-A782F08F8371}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.digitalwave.iCare.middletier.MedicineStoreService</RootNamespace>
+    <AssemblyName>MedicineStore_Serv</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>MedicineStoreService.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Bin\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GetCurrentTimeSvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47dd4e9a428e92dc, processorArchitecture=MSIL" />
+    <Reference Include="HisDrugStore_SVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3ad1b94e996b7482, processorArchitecture=MSIL" />
+    <Reference Include="HRPService, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ce5f7258b42847c9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BIN\Debug\HRPService.dll</HintPath>
+    </Reference>
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL" />
+    <Reference Include="MiddleTierBase, Version=2.0.0.1, Culture=neutral, PublicKeyToken=bcb959104966b6d1, processorArchitecture=MSIL" />
+    <Reference Include="PrivilegeSystemService, Version=2.0.0.1, Culture=neutral, PublicKeyToken=e7d6b07a23b0a67f, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utility, Version=2.0.0.1, Culture=neutral, PublicKeyToken=a48271451c5bd35f, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsAccountPeriodSVC.cs" />
+    <Compile Include="clsAdjustmentSVC.cs" />
+    <Compile Include="clsAdjustment_Supported_SVC.cs" />
+    <Compile Include="clsAskSVC.cs" />
+    <Compile Include="clsBalanceReportSVC.cs" />
+    <Compile Include="clsCheckMedicineOrderSVC.cs" />
+    <Compile Include="clsConnectToSecondDB_SVC.cs" />
+    <Compile Include="clsExportdeptSetSVC.cs" />
+    <Compile Include="clsForeignRetreatOutStorageSVC.cs" />
+    <Compile Include="clsGetOrderCheckMedicineSVC.cs" />
+    <Compile Include="clsGetStorageCheckMedicineSVC.cs" />
+    <Compile Include="clsInStorageMedicineWithdrawSVC.cs" />
+    <Compile Include="clsInStorageMedicineWithdraw_Supported_SVC.cs" />
+    <Compile Include="clsInStorageStatisticsReportSVC.cs" />
+    <Compile Include="clsInStorageStatisticsReport_Supported_SVC.cs" />
+    <Compile Include="clsInStorageSVC.cs" />
+    <Compile Include="clsInStorage_Supported_MS_SVC.cs" />
+    <Compile Include="clsInventoryRecordSVC.cs" />
+    <Compile Include="clsInventoryRecord_Supported_SVC.cs" />
+    <Compile Include="clsMedicineAcceptanceSVC.cs" />
+    <Compile Include="clsMedIcineCheckSVC.cs" />
+    <Compile Include="clsMedicineGrossProfitRateSetSVC.cs" />
+    <Compile Include="clsMedicineLimitInfoSVC.cs" />
+    <Compile Include="clsMedicineLimitSVC.cs" />
+    <Compile Include="clsMedicineLimit_Supported_SVC.cs" />
+    <Compile Include="clsMedicineStoreroomSetSVC.cs" />
+    <Compile Include="clsMedicineStoreroomSet_Supported_SVC.cs" />
+    <Compile Include="clsMedicineTypeSetSVC.cs" />
+    <Compile Include="clsMedicineTypeVisionmSetSVC.cs" />
+    <Compile Include="clsMedStoreBseInfoSvc.cs" />
+    <Compile Include="clsMiddleTier_StorageDetailQuerySVC.cs" />
+    <Compile Include="clsMS_AccountSVC.cs" />
+    <Compile Include="clsMS_PublicSVC.cs" />
+    <Compile Include="clsMS_Public_Supported_SVC.cs" />
+    <Compile Include="clsNewPurchaseMedicine.cs" />
+    <Compile Include="clsOutStorageStatSvc.cs" />
+    <Compile Include="clsOutStorageStat_Supported_Svc.cs" />
+    <Compile Include="clsOutStorageSVC.cs" />
+    <Compile Include="clsOutStorage_Supported_SVC.cs" />
+    <Compile Include="clsQueryMedicineDetailSVC.cs" />
+    <Compile Include="clsQueryMedicinePriceSVC.cs" />
+    <Compile Include="clsQueryMedicinePrice_Supported_SVC.cs" />
+    <Compile Include="clsRecipeReportSVC.cs" />
+    <Compile Include="clsRejectOutStorageSVC.cs" />
+    <Compile Include="clsReportInStorageBillSVC.cs" />
+    <Compile Include="clsReportInStorageBill_Supported_SVC.cs" />
+    <Compile Include="clsReportOutStorageBillSVC.cs" />
+    <Compile Include="clsReportOutStorageBill_Supported_SVC.cs" />
+    <Compile Include="clsRptAdjustpriceDetailSVC.cs" />
+    <Compile Include="clsRptAdjustpriceDetail_Supported_SVC.cs" />
+    <Compile Include="clsRptAdjustpricefulllossSVC.cs" />
+    <Compile Include="clsRptAdjustpricefullloss_Supported_SVC.cs" />
+    <Compile Include="clsRptAdjustpriceRecordSVC.cs" />
+    <Compile Include="clsRptAdjustpriceRecord_Supported_SVC.cs" />
+    <Compile Include="clsRptSelectAllMedicine_SVC.cs" />
+    <Compile Include="clsStockPlanSVC.cs" />
+    <Compile Include="clsStorageCheckSVC.cs" />
+    <Compile Include="clsStorageRacksetSVC.cs" />
+    <Compile Include="clsStorageRackset_Supported_SVC.cs" />
+    <Compile Include="clsStorageSVC.cs" />
+    <Compile Include="clsVendorSupplyDetaiSVC.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="clsRejectStorageReportSVC.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MedicineStoreService.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,5 @@
+obj\Debug\ResolveAssemblyReference.cache
+..\..\..\Bin\Debug\HISReg_SVC.dll
+..\..\..\Bin\Debug\HISReg_SVC.pdb
+obj\Debug\HISReg_SVC.dll
+obj\Debug\HISReg_SVC.pdb

@@ -1,0 +1,137 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5642D65B-C400-4844-AA09-A6A9978E45A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HISReportMZ_SVC</RootNamespace>
+    <AssemblyName>HISReportMZ_SVC</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>HISReportMZ_SVC.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\Bin\Debug\HISReportMZ_SVC.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="baseInfo_Svc, Version=2.0.0.1, Culture=neutral, PublicKeyToken=356d01254ca6c808, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\Debug\baseInfo_Svc.dll</HintPath>
+    </Reference>
+    <Reference Include="CStorageManager, Version=1.0.0.1, Culture=neutral, PublicKeyToken=78842bf4b0327bbf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\Debug\CStorageManager.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_PublicMiddleTier, Version=1.1.0.0, Culture=neutral, PublicKeyToken=2153b58f1bd67852, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\Debug\EMR_PublicMiddleTier.dll</HintPath>
+    </Reference>
+    <Reference Include="HISBase_SVC, Version=2.0.0.1, Culture=neutral, PublicKeyToken=5d6add604397f439, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\Debug\HISBase_SVC.dll</HintPath>
+    </Reference>
+    <Reference Include="HRPService, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ce5f7258b42847c9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\Debug\HRPService.dll</HintPath>
+    </Reference>
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\Debug\iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="MiddleTierBase, Version=2.0.0.1, Culture=neutral, PublicKeyToken=bcb959104966b6d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\Debug\MiddleTierBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=9.2.0.401, Culture=neutral, PublicKeyToken=89b483f429c47342">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\Debug\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PrivilegeSystemService, Version=2.0.0.1, Culture=neutral, PublicKeyToken=e7d6b07a23b0a67f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\Debug\PrivilegeSystemService.dll</HintPath>
+    </Reference>
+    <Reference Include="RecordMark, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad0b4ebb5aa3281e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\Debug\RecordMark.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utility, Version=2.0.0.1, Culture=neutral, PublicKeyToken=a48271451c5bd35f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\Debug\Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsOPInvoiceRptSvc.cs" />
+    <Compile Include="clsReceiptBillSvc.cs" />
+    <Compile Include="clsChargeMaintenanceSvc.cs" />
+    <Compile Include="clsDiscountStatistic.cs" />
+    <Compile Include="clsDoctorWorkStationSvc.cs" />
+    <Compile Include="clsGetServerDate.cs" />
+    <Compile Include="clsHISMedTypexgReportSvc.cs" />
+    <Compile Include="clsInvoiceManageSvc.cs" />
+    <Compile Include="clsItemBefell.cs" />
+    <Compile Include="clsOPChargeSvc.cs" />
+    <Compile Include="clsOPDoctorPlanSvc.cs" />
+    <Compile Include="clsOPMedStoreSvc.cs" />
+    <Compile Include="clsOutpatientChargeIdetityPrintSvc.cs" />
+    <Compile Include="clsOutPatientSvc.cs" />
+    <Compile Include="clsPatRegFeeSvc.cs" />
+    <Compile Include="clsReckoningReport.cs" />
+    <Compile Include="clsRegisterSvc.cs" />
+    <Compile Include="clsReportEarningSvc.cs" />
+    <Compile Include="clsReportQuerySupportSvc.cs" />
+    <Compile Include="clsReportSendMedicineSvc.cs" />
+    <Compile Include="clsReportTreatRecipeSvc.cs" />
+    <Compile Include="clsShowReportsSvc.cs" />
+    <Compile Include="clsTreatRecipeInfoSvc.cs" />
+    <Compile Include="clsWindowsCortrol.cs" />
+    <Compile Include="clsYBDefPayTypeSvc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="clsRegisterSvcAuto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HISReportMZ_SVC.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

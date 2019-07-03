@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="LIS_Svc">
+</Property><Property Name="解决方案文件" Value="D:\iCare_cs\code\HIS\DLL\LIS_Svc\LIS_Svc.sln">
+</Property><Property Name="Date" Value="2018年8月15日">
+</Property><Property Name="Time" Value="10:34">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="LIS_Svc.sln" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\LIS_Svc.sln">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="LIS_Svc.csproj" Description="项目文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\LIS_Svc.csproj">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="LIS_Svc.csproj.user" Description="项目用户文件成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\LIS_Svc.csproj.user">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="AssemblyInfo.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="bizCriticalValue.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\bizCriticalValue.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsAdvis2120Svc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsAdvis2120Svc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsAppGroupSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsAppGroupSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsApplicationSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsApplicationSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsApplyPropertySvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsApplyPropertySvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsApplyUnitSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsApplyUnitSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsAssistantSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsAssistantSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsBaseCheckGroupSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsBaseCheckGroupSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsBatchSaveReportSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsBatchSaveReportSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsCheckGroupSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsCheckGroupSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsCheckItemSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsCheckItemSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsCheckResultSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsCheckResultSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsDeviceSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsDeviceSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsDictSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsDictSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsInputGroupSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsInputGroupSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsLisBarcodeSortSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsLisBarcodeSortSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsLisDeviceSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsLisDeviceSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsLisInerfaceSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsLisInerfaceSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsLisMainSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsLisMainSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsLIS_Svc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsLIS_Svc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsMBY2010Svc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsMBY2010Svc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsMicReportSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsMicReportSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsPublicSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsPublicSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQueryAdvis2120Svc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQueryAdvis2120Svc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQueryAppGroupSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQueryAppGroupSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQueryApplicationSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQueryApplicationSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQueryApplyPropertySvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQueryApplyPropertySvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQueryApplyUnitSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQueryApplyUnitSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQueryCheckGroupSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQueryCheckGroupSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQueryCheckItemSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQueryCheckItemSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQueryCheckResultSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQueryCheckResultSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQueryInputGroupSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQueryInputGroupSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQueryLIS_Svc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQueryLIS_Svc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQueryReportGroupSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQueryReportGroupSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQueryReportSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQueryReportSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQuerySampleBackSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQuerySampleBackSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQuerySampleGroupSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQuerySampleGroupSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQuerySampleSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQuerySampleSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsQueryStatSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsQueryStatSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsReportGroupSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsReportGroupSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsReportSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsReportSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsSampleGroupSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsSampleGroupSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsSampleSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsSampleSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsST360Svc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsST360Svc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsStatSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsStatSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="clsWorkStatsticSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\clsWorkStatsticSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="Properties\Settings.Designer.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\BusinessService\clsBnsQCBatchSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\BusinessService\clsBnsQCBatchSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\SearcherService\clsSchBaseInfoSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\SearcherService\clsSchBaseInfoSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\SearcherService\clsSchQCBatchSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\SearcherService\clsSchQCBatchSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\TableModule\BaseInfoTable\clsTmdCheckMethodSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\TableModule\BaseInfoTable\clsTmdCheckMethodSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\TableModule\BaseInfoTable\clsTmdConcentrationSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\TableModule\BaseInfoTable\clsTmdConcentrationSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\TableModule\BaseInfoTable\clsTmdQCRulesSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\TableModule\BaseInfoTable\clsTmdQCRulesSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\TableModule\BaseInfoTable\clsTmdVendorSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\TableModule\BaseInfoTable\clsTmdVendorSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\TableModule\BaseInfoTable\clsTmdWorkGroupSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\TableModule\BaseInfoTable\clsTmdWorkGroupSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\TableModule\BusinessTable\clsTmdQCBatchConcentrationSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\TableModule\BusinessTable\clsTmdQCBatchConcentrationSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\TableModule\BusinessTable\clsTmdQCBatchSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\TableModule\BusinessTable\clsTmdQCBatchSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\TableModule\BusinessTable\clsTmdQCDataSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\TableModule\BusinessTable\clsTmdQCDataSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\TableModule\BusinessTable\clsTmdQCLisServ.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\TableModule\BusinessTable\clsTmdQCLisServ.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\TableModule\BusinessTable\clsTmdQCReportSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\TableModule\BusinessTable\clsTmdQCReportSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\TableModule\BusinessTable\clsTmdQCSampleLotParaSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\TableModule\BusinessTable\clsTmdQCSampleLotParaSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="QC\TableModule\BusinessTable\clsTmdQCSampleLotSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\QC\TableModule\BusinessTable\clsTmdQCSampleLotSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="TableModule\BaseInfoTable\clsApplicationMainSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\TableModule\BaseInfoTable\clsApplicationMainSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="TableModule\BaseInfoTable\clsChargeInfoStatusSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\TableModule\BaseInfoTable\clsChargeInfoStatusSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="TableModule\BusinessTable\clsApplicationBizSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\TableModule\BusinessTable\clsApplicationBizSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="TableModule\BusinessTable\clsLisInterfaceSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\TableModule\BusinessTable\clsLisInterfaceSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="TableModule\BusinessTable\clsLisSearchSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\TableModule\BusinessTable\clsLisSearchSvc.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="VOConstruct.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\VOConstruct.cs">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="LIS_Svc.snk" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\LIS_Svc.snk">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="Properties\Settings.settings" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\LIS_Svc\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="LIS_Svc" Source="LIS_Svc.csproj" Description="项目文件不需要转换。">
+</Event><Event ErrorLevel="3" Project="LIS_Svc" Source="LIS_Svc.csproj" Description="无需转换">
+</Event><Event ErrorLevel="0" Project="" Source="LIS_Svc.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="LIS_Svc.sln" Description="Converted">
+</Event></UpgradeLog>

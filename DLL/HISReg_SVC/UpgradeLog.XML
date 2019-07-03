@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="HISReg_SVC">
+</Property><Property Name="解决方案文件" Value="D:\iCare_cs\code\HIS\DLL\HISReg_SVC\HISReg_SVC.sln">
+</Property><Property Name="Date" Value="2018年9月6日">
+</Property><Property Name="Time" Value="16:51">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="HISReg_SVC.sln" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\HISReg_SVC.sln">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="HISReg_SVC.csproj" Description="项目文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\HISReg_SVC.csproj">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="AssemblyInfo.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsAccordRecipeSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsAccordRecipeSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsAccountCharge_Svc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsAccountCharge_Svc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsCalPatientChargeSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsCalPatientChargeSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsChargeItemSourceSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsChargeItemSourceSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsChargeItemSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsChargeItemSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsChargeMaintenanceSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsChargeMaintenanceSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsCmCookingMethodItemGroupSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsCmCookingMethodItemGroupSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsDigitalWaveHisService.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsDigitalWaveHisService.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsDoctorWorkStationSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsDoctorWorkStationSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsDoctorWorkStation_SupportedSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsDoctorWorkStation_SupportedSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsFeeAndMedSortRelSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsFeeAndMedSortRelSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsGetBase.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsGetBase.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsGetServerDate.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsGetServerDate.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsHISInfoDefineSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsHISInfoDefineSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsHisMedInOrderStatisticSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsHisMedInOrderStatisticSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsHISMedTypeManageSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsHISMedTypeManageSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsIDataParameterCreator.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsIDataParameterCreator.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsinjectInfoSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsinjectInfoSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsInvoiceManageSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsInvoiceManageSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsBillSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsBillSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsKillLockSVC.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsKillLockSVC.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsMedCommonUseSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsMedCommonUseSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsMedicineSourceSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsMedicineSourceSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsMultiunit_drug_Svc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsMultiunit_drug_Svc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsOPChargeInsSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsOPChargeInsSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsOPChargeSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsOPChargeSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsOPDoctorPlanSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsOPDoctorPlanSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsOPDoctorSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsOPDoctorSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsOPLogSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsOPLogSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsOPMedStoreSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsOPMedStoreSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsOPMedStore_Supported_Svc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsOPMedStore_Supported_Svc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsOPSelectChargeItemSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsOPSelectChargeItemSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsOutpatientChargeIdetityPrintSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsOutpatientChargeIdetityPrintSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsOutPatientSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsOutPatientSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsPatRegFeeSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsPatRegFeeSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsRecipeConfirmSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsRecipeConfirmSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsReckoningReport.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsReckoningReport.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsRegChargeTypeSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsRegChargeTypeSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsRegisterSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsRegisterSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsRegTypeSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsRegTypeSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsReportEarningSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsReportEarningSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsReportMaintenanceSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsReportMaintenanceSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsShowReportsSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsShowReportsSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsStstemSetingSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsStstemSetingSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsSysParamSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsSysParamSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsWindowsCortrol.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsWindowsCortrol.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsYB.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsYB.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsYbdeaDefChargeitemSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsYbdeaDefChargeitemSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsYbdeadeficdSvc.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsYbdeadeficdSvc.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="clsYBSpecialTypeDisease_SVC.cs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\clsYBSpecialTypeDisease_SVC.cs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="HISReg_SVC.snk" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\HISReg_SVC.snk">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="HISReg_SVC_Model.tgs" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\HISReg_SVC_Model.tgs">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="ModelSupport\com\com.txvpck" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\ModelSupport\com\com.txvpck">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="ModelSupport\com\digitalwave\digitalwave.txvpck" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\ModelSupport\com\digitalwave\digitalwave.txvpck">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="ModelSupport\com\digitalwave\iCare\iCare.txvpck" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\ModelSupport\com\digitalwave\iCare\iCare.txvpck">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="ModelSupport\com\digitalwave\iCare\middletier\HIS\HIS.txvpck" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\ModelSupport\com\digitalwave\iCare\middletier\HIS\HIS.txvpck">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="ModelSupport\com\digitalwave\iCare\middletier\middletier.txvpck" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\ModelSupport\com\digitalwave\iCare\middletier\middletier.txvpck">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="ModelSupport\default.txvpck" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\ModelSupport\default.txvpck">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="ModelSupport\HISReg_SVC\HISReg_SVC.txvpck" Description="文件已成功备份为 D:\iCare_cs\code\HIS\DLL\HISReg_SVC\Backup\ModelSupport\HISReg_SVC\HISReg_SVC.txvpck">
+</Event><Event ErrorLevel="0" Project="HISReg_SVC" Source="HISReg_SVC.csproj" Description="项目文件不需要转换。">
+</Event><Event ErrorLevel="3" Project="HISReg_SVC" Source="HISReg_SVC.csproj" Description="无需转换">
+</Event><Event ErrorLevel="0" Project="" Source="HISReg_SVC.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="HISReg_SVC.sln" Description="Converted">
+</Event></UpgradeLog>

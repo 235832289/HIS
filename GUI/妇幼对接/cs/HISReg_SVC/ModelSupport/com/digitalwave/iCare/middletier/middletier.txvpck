@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<nodeSet>
+  <view uin="l6e7jn8tqhufxzn">
+    <property name="$name" value="middletier" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="source:HISReg_SVC:com.digitalwave.iCare.middletier.HIS">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="source:HISReg_SVC:com.digitalwave.iCare.middletier.HIS.clsGetServerDate">
+        <reference referencedUin="source:HISReg_SVC:com.digitalwave.iCare.middletier.HIS.clsGetServerDate.s_GetServerDate()" />
+      </reference>
+      <reference referencedUin="source:HISReg_SVC:com.digitalwave.iCare.middletier.HIS.clsIDataParameterCreator">
+        <reference referencedUin="source:HISReg_SVC:com.digitalwave.iCare.middletier.HIS.clsIDataParameterCreator.s_objConstructIDataParameterArr(System.Object[])" />
+      </reference>
+      <reference referencedUin="source:HISReg_SVC:com.digitalwave.iCare.middletier.HIS.clsOPDoctorPlanSvc">
+        <reference referencedUin="source:HISReg_SVC:com.digitalwave.iCare.middletier.HIS.clsOPDoctorPlanSvc.clsOPDoctorPlanSvc()" />
+        <reference referencedUin="source:HISReg_SVC:com.digitalwave.iCare.middletier.HIS.clsOPDoctorPlanSvc.m_lngDoAddNewOPDoctorPlan(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsOPDoctorPlan_VO)" />
+        <reference referencedUin="source:HISReg_SVC:com.digitalwave.iCare.middletier.HIS.clsOPDoctorPlanSvc.m_lngDoUpdOPDoctorPlanByID(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsOPDoctorPlan_VO)" />
+        <reference referencedUin="source:HISReg_SVC:com.digitalwave.iCare.middletier.HIS.clsOPDoctorPlanSvc.m_lngDeleteOPDcotorPlanByID(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsOPDoctorPlan_VO)" />
+        <reference referencedUin="source:HISReg_SVC:com.digitalwave.iCare.middletier.HIS.clsOPDoctorPlanSvc.m_lngGetOPDoctorListByDate(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsOPDoctorPlan_VO[])" />
+        <reference referencedUin="source:HISReg_SVC:com.digitalwave.iCare.middletier.HIS.clsOPDoctorPlanSvc.m_lngGetOPDeptListByDate(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsOPDoctorPlan_VO[])" />
+        <reference referencedUin="source:HISReg_SVC:com.digitalwave.iCare.middletier.HIS.clsOPDoctorPlanSvc.m_getResult(System.String,com.digitalwave.iCare.ValueObject.clsOPDoctorPlan_VO[])" />
+      </reference>
+    </reference>
+  </view>
+</nodeSet>

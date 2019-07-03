@@ -1,0 +1,178 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C099113-5082-482C-B5BC-F6B69BCA9709}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.digitalwave.iCare.gui.LIS</RootNamespace>
+    <AssemblyName>MK3</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="clsLISDataAnalysisBase, Version=2.0.0.1, Culture=neutral, PublicKeyToken=286e4b4465bcc72f">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\debug\clsLISDataAnalysisBase.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonInfo, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="DataWindow, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=MSIL" />
+    <Reference Include="DataWindowInterop, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86" />
+    <Reference Include="Digitalwave.ControlsLib, Version=3.0.0.0, Culture=neutral, PublicKeyToken=bbdca74e493306ff, processorArchitecture=MSIL" />
+    <Reference Include="Emr.StaticObject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=345ab2ad0324e11c, processorArchitecture=MSIL" />
+    <Reference Include="GUI_Base, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\debug\iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="ILISDataAnalysis, Version=2.0.0.1, Culture=neutral, PublicKeyToken=e9910d2d0695c98e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\debug\ILISDataAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="LisControl, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="LIS_Svc, Version=2.0.0.1, Culture=neutral, PublicKeyToken=0a888300cc6a076f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\debug\LIS_Svc.dll</HintPath>
+    </Reference>
+    <Reference Include="MiddleTierBase, Version=2.0.0.1, Culture=neutral, PublicKeyToken=bcb959104966b6d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\debug\MiddleTierBase.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectGenerator, Version=2.0.0.1, Culture=neutral, PublicKeyToken=f32520148b720498, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\debug\ObjectGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="PinkieControls, Version=1.0.1362.15156, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\debug\PinkieControls.dll</HintPath>
+    </Reference>
+    <Reference Include="SerialPort, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\debug\SerialPort.dll</HintPath>
+    </Reference>
+    <Reference Include="Sybase.PowerBuilder.Db, Version=10.5.0.4600, Culture=neutral, PublicKeyToken=9131e8bacdad8fb5, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utility, Version=2.0.0.1, Culture=neutral, PublicKeyToken=a48271451c5bd35f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\debug\Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsDataTreatment.cs" />
+    <Compile Include="clsDPEMessage.cs" />
+    <Compile Include="clsMk3Controller.cs" />
+    <Compile Include="Controller\clsCtl_MK3Operation.cs" />
+    <Compile Include="Controller\clsCtl_MK3DeviceCommunications.cs" />
+    <Compile Include="Controller\clsCtl_MK3ItemSet.cs" />
+    <Compile Include="DomainController\clsDomainController_MK3DeviceCommunications.cs" />
+    <Compile Include="DomainController\clsDomainController_MK3ItemSetManage.cs" />
+    <Compile Include="frmMK3DeviceCommunications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMK3DeviceCommunications.Designer.cs">
+      <DependentUpon>frmMK3DeviceCommunications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMK3ItemSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMK3ItemSet.Designer.cs">
+      <DependentUpon>frmMK3ItemSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMK3Operation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMK3Operation.Designer.cs">
+      <DependentUpon>frmMK3Operation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMK3DeviceCommunications.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMK3DeviceCommunications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMK3ItemSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMK3ItemSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMK3Operation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMK3Operation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Mk3.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MK3_Svc\MK3_Svc.csproj">
+      <Project>{3DE05782-F390-4CC7-A2C8-618334BDD0BA}</Project>
+      <Name>MK3_Svc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

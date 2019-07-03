@@ -1,0 +1,1482 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ACC21BD8-6092-4257-88ED-04EC8A3DBED5}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LIS_GUI</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>com.digitalwave.iCare.gui.LIS</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\Bin\debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.SMS_control">
+      <Name>AxInterop.SMS_control</Name>
+      <HintPath>..\..\..\bin\Debug\AxInterop.SMS_control.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Barcode, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="BarcodePrintTool, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="BIHOrderService, Version=2.0.0.1, Culture=neutral, PublicKeyToken=a28c1b8bab8f03da, processorArchitecture=MSIL" />
+    <Reference Include="CommonInfo">
+      <Name>CommonInfo</Name>
+      <HintPath>..\..\..\bin\Debug\CommonInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DataWindow, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=MSIL" />
+    <Reference Include="DepartmentSvc">
+      <Name>DepartmentSvc</Name>
+      <HintPath>..\..\..\bin\Debug\DepartmentSvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DigitalWaveControls">
+      <Name>DigitalWaveControls</Name>
+      <HintPath>..\..\..\bin\Debug\DigitalWaveControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EmployeeSvc">
+      <Name>EmployeeSvc</Name>
+      <HintPath>..\..\..\bin\Debug\EmployeeSvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Emr.StaticObject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=345ab2ad0324e11c, processorArchitecture=MSIL" />
+    <Reference Include="EMR_iCareData">
+      <Name>EMR_iCareData</Name>
+      <HintPath>..\..\..\bin\Debug\EMR_iCareData.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ExpressionEval, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GUI_Base">
+      <Name>GUI_Base</Name>
+      <HintPath>..\..\..\bin\Debug\GUI_Base.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HISBeInHospital_Svc">
+      <Name>HISBeInHospital_Svc</Name>
+      <HintPath>..\..\..\bin\Debug\HISBeInHospital_Svc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HISControl, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HISZY, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin\Debug\iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.SMS_control">
+      <Name>Interop.SMS_control</Name>
+      <HintPath>..\..\..\bin\Debug\Interop.SMS_control.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="MiddleTierBase">
+      <Name>MiddleTierBase</Name>
+      <HintPath>..\..\..\bin\Debug\MiddleTierBase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ObjectGenerator">
+      <Name>ObjectGenerator</Name>
+      <HintPath>..\..\..\bin\Debug\ObjectGenerator.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ottoman, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="PatientSvc">
+      <Name>PatientSvc</Name>
+      <HintPath>..\..\..\bin\Debug\PatientSvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PinkieControls">
+      <Name>PinkieControls</Name>
+      <HintPath>..\..\..\bin\Debug\PinkieControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SourceLibrary">
+      <Name>SourceLibrary</Name>
+      <HintPath>..\..\..\bin\Debug\SourceLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Name>System.EnterpriseServices</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="TemplateLib">
+      <Name>TemplateLib</Name>
+      <HintPath>..\..\..\bin\Debug\TemplateLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Utility">
+      <Name>Utility</Name>
+      <HintPath>..\..\..\bin\Debug\Utility.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZedGraph, Version=4.3.5.28245, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\dotnet\Source\SF\ZedGraph\zedgraph_source_4.3.5\bin\Debug\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Report\dsSamplesCheckTotal.xsc">
+      <DependentUpon>dsSamplesCheckTotal.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsSamplesCheckTotal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSamplesCheckTotal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsSamplesCheckTotal.xss">
+      <DependentUpon>dsSamplesCheckTotal.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsStatReport.xsc">
+      <DependentUpon>dsStatReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsStatReport.xss">
+      <DependentUpon>dsStatReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsStatReport.xsx">
+      <DependentUpon>dsStatReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsWorkloadReport.xsc">
+      <DependentUpon>dsWorkloadReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsWorkloadReport.xss">
+      <DependentUpon>dsWorkloadReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsWorkloadReport.xsx">
+      <DependentUpon>dsWorkloadReport.xsd</DependentUpon>
+    </None>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsLisSetting.cs" />
+    <Compile Include="Controller\barcode128.cs" />
+    <Compile Include="Controller\clsController_MBY2010.cs" />
+    <Compile Include="Controller\clsController_MicReport.cs" />
+    <Compile Include="Controller\clsController_WorkStatstic.cs" />
+    <Compile Include="Controller\clsCtl_BatchSaveReport.cs" />
+    <Compile Include="Controller\clsCtl_LisBarcodeSort.cs" />
+    <Compile Include="Controller\clsCtl_SampleBack.cs" />
+    <Compile Include="Controller\ctlAreaPrint.cs" />
+    <Compile Include="Controller\ctlSamplePack.cs" />
+    <Compile Include="Controller\ctlSampleCheck.cs" />
+    <Compile Include="DomainController\clsBIHLis.cs" />
+    <Compile Include="DomainController\clsDcl_BatchSaveReport.cs" />
+    <Compile Include="DomainController\clsDcl_LisBarcodeSort.cs" />
+    <Compile Include="DomainController\clsDcl_MBY2010.cs" />
+    <Compile Include="DomainController\clsDcl_SampleBack.cs" />
+    <Compile Include="DomainController\clsDomainController_Advia2120.cs" />
+    <Compile Include="DomainController\clsDomainController_MicReport.cs" />
+    <Compile Include="DomainController\clsDomainController_WorkStatstic.cs" />
+    <Compile Include="LISDevice\clsAdvia2120.cs" />
+    <Compile Include="LISDevice\frmADVIA2120.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LISDevice\frmADVIA2120.Designer.cs">
+      <DependentUpon>frmADVIA2120.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISDevice\frmAdvia2120Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LISDevice\frmAdvia2120Config.Designer.cs">
+      <DependentUpon>frmAdvia2120Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LisInterface\Bussiness\clsAppManager.cs" />
+    <Compile Include="LisInterface\Bussiness\clsRecordReportManager.cs">
+    </Compile>
+    <Compile Include="clsPublic.cs" />
+    <Compile Include="clsTemp.cs">
+    </Compile>
+    <Compile Include="Controller\clsController_addCheckCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_addCheckItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_AppCheckContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_Appl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_ApplyUnitProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_AppUserGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_CheckGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_ConfirmLogin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_SamplesCheckTotal.cs" />
+    <Compile Include="Controller\clsController_HandInputReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_LisBatchReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_LisDeviceManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_ReportQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_SampleReceive.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_SampleTypeInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_SampleUnite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_ScienceStat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_StatBaseInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_StatReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_VerifySampleRelation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsController_workloadStatisticalReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\clsSampleCollectionController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LisInterface\clsLisInterface.cs" />
+    <Compile Include="DomainController\clsDomainController_AppGroupManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomainController_ApplicationManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomainController_ApplyUnitManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomainController_ApplyUnitProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomainController_BaseCheckGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomainController_CheckItemManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomainController_CheckResultManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomainController_DictManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomainController_LIS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomainController_LisDeviceManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomainController_ReportManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomainController_SampleGroupManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomainController_SampleManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomainController_StatManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainController\clsDomain_InputGroup.cs" />
+    <Compile Include="LISControl\ctlDataGridTextBoxColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlDataGridTextBoxColumn.Designer.cs">
+      <DependentUpon>ctlDataGridTextBoxColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISControl\ctlFindTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlFindTextBox.Designer.cs">
+      <DependentUpon>ctlFindTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISControl\ctlLISApplyUnitProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlLISDeviceComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlLISDeviceModelComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlLISPatientTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlLISPatientTypeComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlLISReportsComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlLISSampleGroupComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlLISSampleStateComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlLISSampleTypeComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlQC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlSTProjectComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlSTProjectComboBox.Designer.cs">
+      <DependentUpon>ctlSTProjectComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISControl\ctlSTSampleComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlSTSampleComboBox.Designer.cs">
+      <DependentUpon>ctlSTSampleComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISControl\ctlSTTemplateCombox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlSTTemplateCombox.Designer.cs">
+      <DependentUpon>ctlSTTemplateCombox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISControl\ctlSTTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LISControl\ctlSTTextBox.Designer.cs">
+      <DependentUpon>ctlSTTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISDevice\clsBoardTemplate.cs" />
+    <Compile Include="LISDevice\clsConfigAssist.cs" />
+    <Compile Include="LISDevice\clsST360Config.cs" />
+    <Compile Include="LISDevice\clsST360Manager.cs" />
+    <Compile Include="LISDevice\clsSTBoardItem.cs" />
+    <Compile Include="LISDevice\clsSTBoardStyle.cs" />
+    <Compile Include="LISDevice\clsSTCheckProject.cs" />
+    <Compile Include="LISDevice\clsSTCheckSample.cs" />
+    <Compile Include="LISDevice\clsSTConstract.cs" />
+    <Compile Include="LISDevice\clsSTConstractRule.cs" />
+    <Compile Include="LISDevice\frmAddTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LISDevice\frmAddTemplate.Designer.cs">
+      <DependentUpon>frmAddTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISDevice\frmHistorySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LISDevice\frmHistorySearch.Designer.cs">
+      <DependentUpon>frmHistorySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISDevice\frmPNConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LISDevice\frmPNConfig.Designer.cs">
+      <DependentUpon>frmPNConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISDevice\frmST360.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LISDevice\frmST360.Designer.cs">
+      <DependentUpon>frmST360.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISDevice\frmST360Configs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LISDevice\frmST360Configs.Designer.cs">
+      <DependentUpon>frmST360Configs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISDevice\frmSTMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LISDevice\frmSTMain.Designer.cs">
+      <DependentUpon>frmSTMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LisInterface\clsLisService.cs" />
+    <Compile Include="LisInterface\SvcMapping\BusinessMapping\clsLisInterfaceSmp.cs" />
+    <Compile Include="LisInterface\SvcMapping\BusinessMapping\clsLisSearchSmp.cs" />
+    <Compile Include="LisInterface\SvcMapping\BusinessMapping\clsLisServiceSmp.cs" />
+    <Compile Include="LisInterface\SvcMapping\TableMapping\clsApplicationBizSmp.cs" />
+    <Compile Include="LisInterface\SvcMapping\TableMapping\clsApplicationMainSmp.cs" />
+    <Compile Include="LisInterface\SvcMapping\TableMapping\clsApplicationSmp.cs" />
+    <Compile Include="LisInterface\SvcMapping\TableMapping\clsChargeInfoStatusSmp.cs" />
+    <Compile Include="LisInterface\SvcMapping\TableMapping\clsCheckItemSmp.cs" />
+    <Compile Include="LisInterface\SvcMapping\TableMapping\clsReportGroupSmp.cs" />
+    <Compile Include="LisInterface\SvcMapping\TableMapping\clsSampleGroupSmp.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QC\ControlRules\QualityControlData.cs" />
+    <Compile Include="QC\ControlRules\QcParserXmlRules.cs" />
+    <Compile Include="QC\ControlRules\QualityControlParser.cs" />
+    <Compile Include="QC\ControlRules\QualityControlRule.cs" />
+    <Compile Include="QC\Control\ctlCheckItemTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QC\Control\ctlCheckItemTree.Designer.cs">
+      <DependentUpon>ctlCheckItemTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\Control\ctlCheckMethodCombox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QC\Control\ctlCheckMethodCombox.Designer.cs">
+      <DependentUpon>ctlCheckMethodCombox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\Control\ctlConcentrationCombox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QC\Control\ctlConcentrationCombox.Designer.cs">
+      <DependentUpon>ctlConcentrationCombox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\Control\ctlDateSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QC\Control\ctlDateSelector.Designer.cs">
+      <DependentUpon>ctlDateSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\Control\ctlQCBatchQuery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QC\Control\ctlQCBatchQuery.Designer.cs">
+      <DependentUpon>ctlQCBatchQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\Control\ctlQCBatchReportEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QC\Control\ctlQCBatchReportEditor.Designer.cs">
+      <DependentUpon>ctlQCBatchReportEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\Control\ctlQCBatchReportEditorNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QC\Control\ctlQCBatchReportEditorNew.designer.cs">
+      <DependentUpon>ctlQCBatchReportEditorNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\Control\ctlQCChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QC\Control\ctlQCChart.Designer.cs">
+      <DependentUpon>ctlQCChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\Control\ctlQCChartNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QC\Control\ctlQCChartNew.designer.cs">
+      <DependentUpon>ctlQCChartNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\Control\ctlQCDataEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QC\Control\ctlQCDataEditor.Designer.cs">
+      <DependentUpon>ctlQCDataEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\Control\ctlQCDataEditorNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QC\Control\ctlQCDataEditorNew.Designer.cs">
+      <DependentUpon>ctlQCDataEditorNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\Control\ctlVendorCombox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QC\Control\ctlVendorCombox.Designer.cs">
+      <DependentUpon>ctlVendorCombox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\Control\ctlWorkGroupCombox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QC\Control\ctlWorkGroupCombox.Designer.cs">
+      <DependentUpon>ctlWorkGroupCombox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\Control\DataGridViewDateTimeColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QC\ObjectPool\BusinessObject\clsQCBatch.cs" />
+    <Compile Include="QC\ObjectPool\BusinessObject\clsQCBatchNew.cs" />
+    <Compile Include="QC\ObjectPool\BusinessObject\clsQCDataPair.cs" />
+    <Compile Include="QC\ObjectPool\FrameObject\clsCommonDialog.cs" />
+    <Compile Include="QC\ObjectPool\FrameObject\clsGetPrincipal.cs" />
+    <Compile Include="QC\ReportTool\DailyReportTool\clsQCChartTool.cs" />
+    <Compile Include="QC\ReportTool\DailyReportTool\clsQCDailyReportTool.cs" />
+    <Compile Include="QC\ReportTool\DailyReportTool\Strategy\clsQCChartToolStrategy.cs" />
+    <Compile Include="QC\ReportTool\DailyReportTool\Strategy\clsQCDailyReportToolStrategy.cs" />
+    <Compile Include="QC\ServiceMapping\BusinessMapping\clsBnsQCBatchSmp.cs" />
+    <Compile Include="QC\ServiceMapping\SearcherMapping\clsSchBaseInfoSmp.cs" />
+    <Compile Include="QC\ServiceMapping\SearcherMapping\clsSchQCBatchSmp.cs" />
+    <Compile Include="QC\ServiceMapping\TableMapping\BaseInfoMapping\clsTmdCheckMethodSmp.cs" />
+    <Compile Include="QC\ServiceMapping\TableMapping\BaseInfoMapping\clsTmdConcentrationSmp.cs" />
+    <Compile Include="QC\ServiceMapping\TableMapping\BaseInfoMapping\clsTmdVendorSmp.cs" />
+    <Compile Include="QC\ServiceMapping\TableMapping\BaseInfoMapping\clsTmdWorkGroupSmp.cs" />
+    <Compile Include="QC\ServiceMapping\TableMapping\BusinessMapping\clsTmdQCBatchConcentrationSmp.cs" />
+    <Compile Include="QC\ServiceMapping\TableMapping\BusinessMapping\clsTmdQCBatchSmp.cs" />
+    <Compile Include="QC\ServiceMapping\TableMapping\BaseInfoMapping\clsTmdQCRulesSmp.cs" />
+    <Compile Include="QC\ServiceMapping\TableMapping\BusinessMapping\clsTmdQCDataSmp.cs" />
+    <Compile Include="QC\ServiceMapping\TableMapping\BusinessMapping\clsTmdQCLisSmp.cs" />
+    <Compile Include="QC\ServiceMapping\TableMapping\BusinessMapping\clsTmdQCReportSmp.cs" />
+    <Compile Include="QC\ServiceMapping\TableMapping\BusinessMapping\clsTmdQCSampleLotParaSmp.cs" />
+    <Compile Include="QC\ServiceMapping\TableMapping\BusinessMapping\clsTmdQCSampleLotSmp.cs" />
+    <Compile Include="QC\View\frmBaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\View\frmBaseInfo.Designer.cs">
+      <DependentUpon>frmBaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\View\frmCheckItemSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\View\frmCheckItemSelector.Designer.cs">
+      <DependentUpon>frmCheckItemSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\View\frmQCBatchConcentrationSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\View\frmQCBatchConcentrationSet.Designer.cs">
+      <DependentUpon>frmQCBatchConcentrationSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\View\frmQCBatchManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\View\frmQCBatchManager.Designer.cs">
+      <DependentUpon>frmQCBatchManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\View\frmQCBatchManagerNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\View\frmQCBatchManagerNew.designer.cs">
+      <DependentUpon>frmQCBatchManagerNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\View\frmQCBatchSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\View\frmQCBatchSet.Designer.cs">
+      <DependentUpon>frmQCBatchSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\View\frmQCBatchSetNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\View\frmQCBatchSetNew.Designer.cs">
+      <DependentUpon>frmQCBatchSetNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\View\frmQCConcentrationSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\View\frmQCConcentrationSelector.Designer.cs">
+      <DependentUpon>frmQCConcentrationSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\View\frmQCReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\View\frmQCReport.Designer.cs">
+      <DependentUpon>frmQCReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\View\frmQCRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\View\frmQCRules.Designer.cs">
+      <DependentUpon>frmQCRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\View\frmQCSampleLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\View\frmQCSampleLot.Designer.cs">
+      <DependentUpon>frmQCSampleLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\View\frmQCSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\View\frmQCSetup.Designer.cs">
+      <DependentUpon>frmQCSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportTools\ApplicationTools\CheckReportStrategy\clsSealedLisApplyReportPrint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportTools\ApplicationTools\CheckReportStrategy\clsSealedBIHLisApplyReportPrint.cs" />
+    <Compile Include="ReportTools\ApplicationTools\CheckReportStrategy\clsSealedBIHLisApplyListPrint.cs" />
+    <Compile Include="ReportTools\ApplicationTools\clsApplyReportPrint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportTools\ApplicationTools\clsBIHApplySinglePrintTool.cs" />
+    <Compile Include="ReportTools\ApplicationTools\clsBIHApplyListPrint.cs" />
+    <Compile Include="ReportTools\CheckReportTools\CheckReportStrategy\clsPirntReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportTools\CheckReportTools\clsCheckReportWithAnnotation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportTools\CheckReportTools\clsGermReportPrinTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportTools\CheckReportTools\clsLISMarrowReportPrintTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportTools\CheckReportTools\clsMutiSampleReportPrint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportTools\CheckReportTools\clsUnifyReportPrint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportTools\clsPrintLineBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportTools\infPrintRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportTools\ReportCommon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Report\cryAnimalculeCheckTotal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryAnimalculeCheckTotal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\cryCheckPriceDetailReport.cs">
+      <DependentUpon>cryCheckPriceDetailReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Report\cryCheckPriceTotalReport.cs">
+      <DependentUpon>cryCheckPriceTotalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Report\CryDeptSamplesCheckTotal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryDeptSamplesCheckTotal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\cryGermDistributeTrend.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryGermDistributeTrend.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\cryGermOccurRate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryGermOccurRate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\cryScienceStat.cs">
+      <DependentUpon>cryScienceStat.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Report\cryStatDetailReport.cs">
+      <DependentUpon>cryStatDetailReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Report\cryStatTotalReport.cs">
+      <DependentUpon>cryStatTotalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Report\dsSamplesCheckTotal.cs">
+      <DependentUpon>dsSamplesCheckTotal.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\dsSamplesCheckTotal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSamplesCheckTotal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsStatReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsStatReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsWorkloadReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsWorkloadReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmAnimalculeCheckTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmAnimalculeCheckTotal.Designer.cs">
+      <DependentUpon>frmAnimalculeCheckTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmDeptSamplesCheckTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmDeptSamplesCheckTotal.Designer.cs">
+      <DependentUpon>frmDeptSamplesCheckTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmDeviceCheckStatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmDeviceCheckStatis.Designer.cs">
+      <DependentUpon>frmDeviceCheckStatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmGermDistributeTrend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmGermDistributeTrend.Designer.cs">
+      <DependentUpon>frmGermDistributeTrend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmGermOccurRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmGermOccurRate.Designer.cs">
+      <DependentUpon>frmGermOccurRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmMicReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmMicReport.designer.cs">
+      <DependentUpon>frmMicReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmStatReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmWorkloadStatisticalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmWorkStatstic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmWorkStatstic.Designer.cs">
+      <DependentUpon>frmWorkStatstic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\workloadStatisticalReport.cs">
+      <DependentUpon>workloadStatisticalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="LisInterface\SvcMapping\clsLisInerfaceSmp.cs" />
+    <Compile Include="LisInterface\SvcMapping\clsLisMainSmp.cs" />
+    <Compile Include="LISDevice\clsST360Smp.cs" />
+    <Compile Include="LisInterface\SvcMapping\TableMapping\clsApplyUnitSmp.cs" />
+    <Compile Include="Viewer\frmAddCheckItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAppCheckContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmApplUserGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmApplyUnitProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAreaPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAreaPrint.Designer.cs">
+      <DependentUpon>frmAreaPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmBatchSaveReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBatchSaveReport.Designer.cs">
+      <DependentUpon>frmBatchSaveReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmBIHCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBIHCollection.Designer.cs">
+      <DependentUpon>frmBIHCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmBlankOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmBlankOut.Designer.cs">
+      <DependentUpon>frmBlankOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCheckCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCheckGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmConfirmCriticalVal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmConfirmCriticalVal.Designer.cs">
+      <DependentUpon>frmConfirmCriticalVal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmConfirmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCancelCriticalVal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCancelCriticalVal.Designer.cs">
+      <DependentUpon>frmCancelCriticalVal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmFormula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmHandInputReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmHandInputReportPreferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInputGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInputGroup.Designer.cs">
+      <DependentUpon>frmInputGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmInputGroupBaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInputGroupBaseInfo.Designer.cs">
+      <DependentUpon>frmInputGroupBaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmLisAppl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmLisBarcodeSort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmLisBarcodeSort.Designer.cs">
+      <DependentUpon>frmLisBarcodeSort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmLisBatchReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmLisDeviceManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmListView.Designer.cs">
+      <DependentUpon>frmListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMBY2010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMBY2010.Designer.cs">
+      <DependentUpon>frmMBY2010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmSampleCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmSampleCheck.Designer.cs">
+      <DependentUpon>frmSampleCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmSamplePack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmSamplePack.Designer.cs">
+      <DependentUpon>frmSamplePack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmReportQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptCriticalVal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmRptCriticalVal.Designer.cs">
+      <DependentUpon>frmRptCriticalVal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmSampleBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmSampleBack.Designer.cs">
+      <DependentUpon>frmSampleBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmSampleCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmSampleQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmSampleQuery.Designer.cs">
+      <DependentUpon>frmSampleQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmSampleReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmSampleTypeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmSampleUnite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmScienceStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmSendMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmStatBaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmValueTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmVerifySampleRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYgCriValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYgCriValue.Designer.cs">
+      <DependentUpon>frmYgCriValue.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LISControl\ctlLISApplyUnitProperty.resx">
+      <DependentUpon>ctlLISApplyUnitProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISControl\ctlLISDeviceComboBox.resx">
+      <DependentUpon>ctlLISDeviceComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISControl\ctlLISDeviceModelComboBox.resx">
+      <DependentUpon>ctlLISDeviceModelComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISControl\ctlLISPatientTypeComboBox.resx">
+      <DependentUpon>ctlLISPatientTypeComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISControl\ctlLISReportsComboBox.resx">
+      <DependentUpon>ctlLISReportsComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISControl\ctlLISSampleGroupComboBox.resx">
+      <DependentUpon>ctlLISSampleGroupComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISControl\ctlLISSampleStateComboBox.resx">
+      <DependentUpon>ctlLISSampleStateComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISControl\ctlLISSampleTypeComboBox.resx">
+      <DependentUpon>ctlLISSampleTypeComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISControl\ctlQC.resx">
+      <DependentUpon>ctlQC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISDevice\frmAddTemplate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISDevice\frmADVIA2120.resx">
+      <DependentUpon>frmADVIA2120.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISDevice\frmAdvia2120Config.resx">
+      <DependentUpon>frmAdvia2120Config.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISDevice\frmHistorySearch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHistorySearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISDevice\frmPNConfig.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPNConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISDevice\frmST360.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmST360.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISDevice\frmST360Configs.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmST360Configs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISDevice\frmSTMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSTMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\Control\ctlCheckItemTree.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ctlCheckItemTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\Control\ctlDateSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ctlDateSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\Control\ctlQCBatchQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ctlQCBatchQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\Control\ctlQCBatchReportEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ctlQCBatchReportEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\Control\ctlQCBatchReportEditorNew.resx">
+      <DependentUpon>ctlQCBatchReportEditorNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\Control\ctlQCChart.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ctlQCChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\Control\ctlQCChartNew.resx">
+      <DependentUpon>ctlQCChartNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\Control\ctlQCDataEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ctlQCDataEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\Control\ctlQCDataEditorNew.resx">
+      <DependentUpon>ctlQCDataEditorNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\View\frmBaseInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\View\frmCheckItemSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCheckItemSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\View\frmQCBatchConcentrationSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQCBatchConcentrationSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\View\frmQCBatchManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQCBatchManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\View\frmQCBatchManagerNew.resx">
+      <DependentUpon>frmQCBatchManagerNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\View\frmQCBatchSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQCBatchSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\View\frmQCBatchSetNew.resx">
+      <DependentUpon>frmQCBatchSetNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\View\frmQCConcentrationSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQCConcentrationSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\View\frmQCReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQCReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\View\frmQCRules.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQCRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\View\frmQCSampleLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQCSampleLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\View\frmQCSetup.resx">
+      <DependentUpon>frmQCSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryAnimalculeCheckTotal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryAnimalculeCheckTotal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryCheckPriceDetailReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryCheckPriceDetailReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryCheckPriceTotalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryCheckPriceTotalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CryDeptSamplesCheckTotal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryDeptSamplesCheckTotal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryGermDistributeTrend.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryGermDistributeTrend.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryGermOccurRate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryGermOccurRate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryScienceStat.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryScienceStat.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryStatDetailReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryStatDetailReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryStatTotalReport.resx">
+      <DependentUpon>cryStatTotalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryStatTotalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryStatTotalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmAnimalculeCheckTotal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAnimalculeCheckTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmDeptSamplesCheckTotal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDeptSamplesCheckTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmDeviceCheckStatis.resx">
+      <DependentUpon>frmDeviceCheckStatis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmGermDistributeTrend.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGermDistributeTrend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmGermOccurRate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGermOccurRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmMicReport.resx">
+      <DependentUpon>frmMicReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmStatReport.resx">
+      <DependentUpon>frmStatReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmWorkloadStatisticalReport.resx">
+      <DependentUpon>frmWorkloadStatisticalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmWorkStatstic.resx">
+      <DependentUpon>frmWorkStatstic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\workloadStatisticalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>workloadStatisticalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAddCheckItem.resx">
+      <DependentUpon>frmAddCheckItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAppCheckContent.resx">
+      <DependentUpon>frmAppCheckContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmApplUserGroup.resx">
+      <DependentUpon>frmApplUserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmApplyUnitProperty.resx">
+      <DependentUpon>frmApplyUnitProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAreaPrint.resx">
+      <DependentUpon>frmAreaPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBatchSaveReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBatchSaveReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBIHCollection.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBIHCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmBlankOut.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBlankOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCancelCriticalVal.resx">
+      <DependentUpon>frmCancelCriticalVal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCheckCategory.resx">
+      <DependentUpon>frmCheckCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCheckGroup.resx">
+      <DependentUpon>frmCheckGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmConfirmCriticalVal.resx">
+      <DependentUpon>frmConfirmCriticalVal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmConfirmLogin.resx">
+      <DependentUpon>frmConfirmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmFormula.resx">
+      <DependentUpon>frmFormula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmHandInputReport.resx">
+      <DependentUpon>frmHandInputReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmHandInputReportPreferences.resx">
+      <DependentUpon>frmHandInputReportPreferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInputGroup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInputGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInputGroupBaseInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInputGroupBaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmLisAppl.resx">
+      <DependentUpon>frmLisAppl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmLisBarcodeSort.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLisBarcodeSort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmLisBatchReport.resx">
+      <DependentUpon>frmLisBatchReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmLisDeviceManage.resx">
+      <DependentUpon>frmLisDeviceManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmListView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMBY2010.resx">
+      <DependentUpon>frmMBY2010.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmSampleCheck.resx">
+      <DependentUpon>frmSampleCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmSamplePack.resx">
+      <DependentUpon>frmSamplePack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmReportQuery.resx">
+      <DependentUpon>frmReportQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmRptCriticalVal.resx">
+      <DependentUpon>frmRptCriticalVal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmSampleBack.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSampleBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmSampleCollection.resx">
+      <DependentUpon>frmSampleCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmSampleQuery.resx">
+      <DependentUpon>frmSampleQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmSampleReceive.resx">
+      <DependentUpon>frmSampleReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmSampleTypeInfo.resx">
+      <DependentUpon>frmSampleTypeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmSampleUnite.resx">
+      <DependentUpon>frmSampleUnite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmScienceStat.resx">
+      <DependentUpon>frmScienceStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmSendMessage.resx">
+      <DependentUpon>frmSendMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmStatBaseInfo.resx">
+      <DependentUpon>frmStatBaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmValueTemplate.resx">
+      <DependentUpon>frmValueTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmVerifySampleRelation.resx">
+      <DependentUpon>frmVerifySampleRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYgCriValue.resx">
+      <DependentUpon>frmYgCriValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Report\dsStatReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsStatReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Report\dsWorkloadReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsWorkloadReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DLL\LIS_Svc\LIS_Svc.csproj">
+      <Project>{2EAC9DFA-749A-464A-BE0C-C8451AE31891}</Project>
+      <Name>LIS_Svc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LisInterface\SvcMapping\InterfaceMapping\" />
+    <Folder Include="LisInterface\SvcMapping\SearcherMapping\" />
+    <Folder Include="QC\Reports\" />
+    <Folder Include="QC\ServiceMapping\StatisticMapping\" />
+    <Folder Include="QC\ServiceMapping\SysInterfaceMapping\" />
+    <Folder Include="QC\ServiceMapping\TableMapping\AIDMapping\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

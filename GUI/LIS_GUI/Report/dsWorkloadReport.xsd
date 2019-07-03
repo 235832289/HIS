@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsWorkloadReport" targetNamespace="http://tempuri.org/dsWorkloadReport.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsWorkloadReport.xsd"
+	xmlns:mstns="http://tempuri.org/dsWorkloadReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsWorkloadReport" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="workload">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PATIENT_TYPE_CHR" type="xs:string" minOccurs="0" />
+							<xs:element name="PATIENT_TYPE_DEC_VCHR" type="xs:string" minOccurs="0" />
+							<xs:element name="APPL_EMPID_CHR" type="xs:string" minOccurs="0" />
+							<xs:element name="APPL_EMPID_DEC_CHR" type="xs:string" minOccurs="0" />
+							<xs:element name="REPORTOR_ID_CHR" type="xs:string" minOccurs="0" />
+							<xs:element name="REPORTOR_ID_DEC_CHR" type="xs:string" minOccurs="0" />
+							<xs:element name="SAMPLETYPE_VCHR" type="xs:string" minOccurs="0" />
+							<xs:element name="SAMPLE_TYPE_ID_CHR" type="xs:string" minOccurs="0" />
+							<xs:element name="APPL_DEPTID_CHR" type="xs:string" minOccurs="0" />
+							<xs:element name="APPL_DEPTID_DEC_CHR" type="xs:string" minOccurs="0" />
+							<xs:element name="CHECK_ITEM_ID_CHR" type="xs:string" minOccurs="0" />
+							<xs:element name="CHECK_ITEM_NAME_VCHR" type="xs:string" minOccurs="0" />
+							<xs:element name="ITEM_COUNT" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

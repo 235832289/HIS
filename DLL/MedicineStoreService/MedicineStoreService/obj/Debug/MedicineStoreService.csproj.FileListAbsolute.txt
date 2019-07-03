@@ -1,0 +1,13 @@
+D:\iCare_cs\code\Bin\Debug\MedicineStore_Serv.dll
+D:\iCare_cs\code\Bin\Debug\MedicineStore_Serv.pdb
+D:\iCare_cs\code\MedicineStore\MedicineStoreService\MedicineStoreService\obj\Debug\ResolveAssemblyReference.cache
+D:\iCare_cs\code\MedicineStore\MedicineStoreService\MedicineStoreService\obj\Debug\MedicineStore_Serv.dll
+D:\iCare_cs\code\MedicineStore\MedicineStoreService\MedicineStoreService\obj\Debug\MedicineStore_Serv.pdb
+D:\icare\iCare_cs\code\Bin\Debug\MedicineStore_Serv.dll
+D:\icare\iCare_cs\code\Bin\Debug\MedicineStore_Serv.pdb
+D:\icare\iCare_cs\code\MedicineStore\MedicineStoreService\MedicineStoreService\obj\Debug\ResolveAssemblyReference.cache
+D:\icare\iCare_cs\code\MedicineStore\MedicineStoreService\MedicineStoreService\obj\Debug\MedicineStore_Serv.dll
+D:\icare\iCare_cs\code\MedicineStore\MedicineStoreService\MedicineStoreService\obj\Debug\MedicineStore_Serv.pdb
+D:\iCare_cs\code\HIS\DLL\MedicineStoreService\MedicineStoreService\obj\Debug\ResolveAssemblyReference.cache
+D:\iCare_cs\code\HIS\DLL\MedicineStoreService\MedicineStoreService\obj\Debug\MedicineStore_Serv.dll
+D:\iCare_cs\code\HIS\DLL\MedicineStoreService\MedicineStoreService\obj\Debug\MedicineStore_Serv.pdb

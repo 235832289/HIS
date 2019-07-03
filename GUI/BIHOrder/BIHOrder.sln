@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIHOrder", "BIHOrder.csproj", "{B2FBD124-EC8D-4CAB-96B9-7E246F0819AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIHOrderService", "..\..\DLL\BIHOrderService\BIHOrderService.csproj", "{35463A6D-645E-41DB-A5CD-E166FB1456B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2FBD124-EC8D-4CAB-96B9-7E246F0819AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2FBD124-EC8D-4CAB-96B9-7E246F0819AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2FBD124-EC8D-4CAB-96B9-7E246F0819AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2FBD124-EC8D-4CAB-96B9-7E246F0819AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35463A6D-645E-41DB-A5CD-E166FB1456B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35463A6D-645E-41DB-A5CD-E166FB1456B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35463A6D-645E-41DB-A5CD-E166FB1456B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35463A6D-645E-41DB-A5CD-E166FB1456B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

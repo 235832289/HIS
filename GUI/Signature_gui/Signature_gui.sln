@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Signature_gui", "Signature_gui\Signature_gui.csproj", "{951FA830-DC89-4F4A-90D6-F137CA6DEE1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{951FA830-DC89-4F4A-90D6-F137CA6DEE1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{951FA830-DC89-4F4A-90D6-F137CA6DEE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{951FA830-DC89-4F4A-90D6-F137CA6DEE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{951FA830-DC89-4F4A-90D6-F137CA6DEE1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

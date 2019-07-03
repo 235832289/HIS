@@ -1,0 +1,13 @@
+D:\icare\iCare_cs\code\HIS\CriticalValueService\ChargeDetailUpload\obj\Debug\ResolveAssemblyReference.cache
+D:\icare\iCare_cs\code\HIS\CriticalValueService\ChargeDetailUpload\obj\Debug\CriticalValueBiz.dll
+D:\icare\iCare_cs\code\HIS\CriticalValueService\ChargeDetailUpload\obj\Debug\CriticalValueBiz.pdb
+D:\icare\iCare_cs\code\HIS\CriticalValueService\bin\CriticalValueBiz.dll
+D:\icare\iCare_cs\code\HIS\CriticalValueService\bin\CriticalValueBiz.pdb
+D:\icare\iCare_cs\code\Bin\Debug\CriticalValueBiz.dll
+D:\icare\iCare_cs\code\Bin\Debug\CriticalValueBiz.pdb
+D:\icare\iCare_cs\code\HIS\CriticalValueService\CriticalValueBiz\obj\Debug\CriticalValueBiz.dll
+D:\icare\iCare_cs\code\HIS\CriticalValueService\CriticalValueBiz\obj\Debug\CriticalValueBiz.pdb
+D:\icare\iCare_cs\code\HIS\CriticalValueWS\CriticalValueBiz\bin\Debug\CriticalValueBiz.dll
+D:\icare\iCare_cs\code\HIS\CriticalValueWS\CriticalValueBiz\bin\Debug\CriticalValueBiz.pdb
+D:\icare\iCare_cs\code\HIS\CriticalValueWS\CriticalValueBiz\obj\Debug\CriticalValueBiz.dll
+D:\icare\iCare_cs\code\HIS\CriticalValueWS\CriticalValueBiz\obj\Debug\CriticalValueBiz.pdb

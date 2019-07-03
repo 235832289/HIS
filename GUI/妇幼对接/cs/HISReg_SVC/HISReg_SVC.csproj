@@ -1,0 +1,280 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23FACC54-28C9-4C2E-9BA4-91B1906AAC93}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>HISReg_SVC</AssemblyName>
+    <AssemblyOriginatorKeyFile>HISReg_SVC.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>com.digitalwave.iCare.middletier.HIS</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>..\..\..\Bin\Debug\HISReg_SVC.XML</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="baseInfo_Svc">
+      <Name>baseInfo_Svc</Name>
+      <HintPath>..\..\..\bin\DEBUG\baseInfo_Svc.dll</HintPath>
+    </Reference>
+    <Reference Include="clsCommonInfoSvc, Version=2.0.0.1, Culture=neutral, PublicKeyToken=e53d7501af14791b, processorArchitecture=MSIL" />
+    <Reference Include="CStorageManager">
+      <Name>CStorageManager</Name>
+      <HintPath>..\..\..\bin\Debug\CStorageManager.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_PublicMiddleTier, Version=1.1.0.0, Culture=neutral, PublicKeyToken=2153b58f1bd67852, processorArchitecture=MSIL" />
+    <Reference Include="GetCurrentTimeSvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47dd4e9a428e92dc, processorArchitecture=MSIL" />
+    <Reference Include="HISBase_SVC">
+      <Name>HISBase_SVC</Name>
+      <HintPath>..\..\..\bin\Debug\HISBase_SVC.dll</HintPath>
+    </Reference>
+    <Reference Include="HISYB_SVC, Version=2.0.0.1, Culture=neutral, PublicKeyToken=878b18567032aba3, processorArchitecture=MSIL" />
+    <Reference Include="HRPService">
+      <Name>HRPService</Name>
+      <HintPath>..\..\..\bin\Debug\HRPService.dll</HintPath>
+    </Reference>
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL" />
+    <Reference Include="MiddleTierBase">
+      <Name>MiddleTierBase</Name>
+      <HintPath>..\..\..\bin\Debug\MiddleTierBase.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectGenerator, Version=2.0.0.1, Culture=neutral, PublicKeyToken=f32520148b720498, processorArchitecture=MSIL" />
+    <Reference Include="PatientSvc">
+      <Name>PatientSvc</Name>
+      <HintPath>..\..\..\bin\Debug\PatientSvc.dll</HintPath>
+    </Reference>
+    <Reference Include="PrivilegeSystemService">
+      <Name>PrivilegeSystemService</Name>
+      <HintPath>..\..\..\bin\Debug\PrivilegeSystemService.dll</HintPath>
+    </Reference>
+    <Reference Include="RecordMark">
+      <Name>RecordMark</Name>
+      <HintPath>..\..\..\bin\Debug\RecordMark.dll</HintPath>
+    </Reference>
+    <Reference Include="RIS_Svc, Version=2.0.0.1, Culture=neutral, PublicKeyToken=d2451c6e2a760c6b, processorArchitecture=MSIL" />
+    <Reference Include="SynchroTransmitterMessage_Svc, Version=2.0.0.1, Culture=neutral, PublicKeyToken=a652837cf0624f61, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Name>System.EnterpriseServices</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="Utility">
+      <Name>Utility</Name>
+      <HintPath>..\..\..\bin\Debug\Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsAccordRecipeSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsAccountCharge_Svc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsCalPatientChargeSvc.cs" />
+    <Compile Include="clsChargeItemSourceSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsChargeItemSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsChargeMaintenanceSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsCmCookingMethodItemGroupSvc.cs" />
+    <Compile Include="clsDigitalWaveHisService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsDoctorWorkStationSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsDoctorWorkStation_SupportedSvc.cs" />
+    <Compile Include="clsFeeAndMedSortRelSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsGetBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsGetServerDate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsHISInfoDefineSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsHisMedInOrderStatisticSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsHISMedTypeManageSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsIDataParameterCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsinjectInfoSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsInvoiceManageSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBillSvc.cs" />
+    <Compile Include="clsKillLockSVC.cs" />
+    <Compile Include="clsMedCommonUseSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsMedicineSourceSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsMultiunit_drug_Svc.cs" />
+    <Compile Include="clsOPChargeInsSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsOPChargeSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsOPDoctorPlanSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsOPDoctorSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsOPLogSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsOPMedStoreSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsOPMedStore_Supported_Svc.cs" />
+    <Compile Include="clsOPSelectChargeItemSvc.cs" />
+    <Compile Include="clsOutpatientChargeIdetityPrintSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsOutPatientSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsPatRegFeeSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsRecipeConfirmSvc.cs" />
+    <Compile Include="clsReckoningReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsRegChargeTypeSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsRegisterSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsRegTypeSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsReportEarningSvc.cs" />
+    <Compile Include="clsReportMaintenanceSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsShowReportsSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsStstemSetingSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsSysParamSvc.cs" />
+    <Compile Include="clsWindowsCortrol.cs" />
+    <Compile Include="clsYB.cs" />
+    <Compile Include="clsYbdeaDefChargeitemSvc.cs" />
+    <Compile Include="clsYbdeadeficdSvc.cs" />
+    <Compile Include="clsYBSpecialTypeDisease_SVC.cs" />
+    <None Include="HISReg_SVC.snk" />
+    <None Include="HISReg_SVC_Model.tgs" />
+    <None Include="ModelSupport\com\com.txvpck" />
+    <None Include="ModelSupport\com\digitalwave\digitalwave.txvpck" />
+    <None Include="ModelSupport\com\digitalwave\iCare\iCare.txvpck" />
+    <None Include="ModelSupport\com\digitalwave\iCare\middletier\HIS\HIS.txvpck" />
+    <None Include="ModelSupport\com\digitalwave\iCare\middletier\middletier.txvpck" />
+    <None Include="ModelSupport\default.txvpck" />
+    <None Include="ModelSupport\HISReg_SVC\HISReg_SVC.txvpck" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

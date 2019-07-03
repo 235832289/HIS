@@ -1,0 +1,236 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7E83A11-F02E-417B-8F5C-1A82FDC83F0D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LIS_Data_Acquisition_Controller</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>com.digitalwave.iCare.gui.LIS_Data_Acquisition_Controller</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\Bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AU640_Duplex, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin\Debug\LIS_DataAnalyse\AU640_Duplex.dll</HintPath>
+    </Reference>
+    <Reference Include="AU680, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="AxInterop.DIGITALSERIALLib">
+      <Name>AxInterop.DIGITALSERIALLib</Name>
+      <HintPath>..\..\..\bin\Debug\AxInterop.DIGITALSERIALLib.dll</HintPath>
+    </Reference>
+    <Reference Include="BiochipInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="clsLISDataAnalysisBase">
+      <Name>clsLISDataAnalysisBase</Name>
+      <HintPath>..\..\..\bin\Debug\clsLISDataAnalysisBase.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonInfo">
+      <Name>CommonInfo</Name>
+      <HintPath>..\..\..\bin\Debug\CommonInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="DataWindow, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Sybase\DataWindow .NET 2.0\DataWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="DataWindowInterop, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da" />
+    <Reference Include="DigitalWaveControls">
+      <Name>digitalwavecontrols</Name>
+      <HintPath>..\..\..\bin\debug\digitalwavecontrols.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GUI_Base">
+      <Name>GUI_Base</Name>
+      <HintPath>..\..\..\bin\Debug\GUI_Base.dll</HintPath>
+    </Reference>
+    <Reference Include="HLC723GX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL" />
+    <Reference Include="ILISDataAnalysis">
+      <Name>ILISDataAnalysis</Name>
+      <HintPath>..\..\..\bin\Debug\ILISDataAnalysis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.DIGITALSERIALLib">
+      <Name>Interop.DIGITALSERIALLib</Name>
+      <HintPath>..\..\..\bin\Debug\Interop.DIGITALSERIALLib.dll</HintPath>
+    </Reference>
+    <Reference Include="LIS_DataAcquisition, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="LIS_Data_Acquisition_SendCommend, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="LIS_Svc, Version=2.0.0.1, Culture=neutral, PublicKeyToken=0a888300cc6a076f, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="MiddleTierBase">
+      <Name>MiddleTierBase</Name>
+      <HintPath>..\..\..\bin\Debug\MiddleTierBase.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ObjectGenerator">
+      <Name>ObjectGenerator</Name>
+      <HintPath>..\..\..\bin\Debug\ObjectGenerator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PinkieControls">
+      <Name>PinkieControls</Name>
+      <HintPath>..\..\..\bin\Debug\PinkieControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Security_GUI">
+      <Name>Security_GUI</Name>
+      <HintPath>..\..\..\bin\Debug\Security_GUI.dll</HintPath>
+    </Reference>
+    <Reference Include="SerialPort, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="SourceLibrary">
+      <Name>SourceLibrary</Name>
+      <HintPath>..\..\..\bin\Debug\SourceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Sybase.PowerBuilder.Db, Version=10.5.0.4600, Culture=neutral, PublicKeyToken=9131e8bacdad8fb5" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Name>System.EnterpriseServices</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="Utility">
+      <Name>Utility</Name>
+      <HintPath>..\..\..\bin\Debug\Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsController_LIS_Data_Acquisition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmFileProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLIS_Data_Acquisition_Controller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageNotify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRealtimeMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSDS7300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSymBIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="frmFileProcess.resx">
+      <DependentUpon>frmFileProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLIS_Data_Acquisition_Controller.resx">
+      <DependentUpon>frmLIS_Data_Acquisition_Controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageNotify.resx">
+      <DependentUpon>frmMessageNotify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRealtimeMessage.resx">
+      <DependentUpon>frmRealtimeMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSDS7300.resx">
+      <DependentUpon>frmSDS7300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSymBIO.resx">
+      <DependentUpon>frmSymBIO.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

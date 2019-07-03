@@ -1,0 +1,269 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2EAC9DFA-749A-464A-BE0C-C8451AE31891}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LIS_Svc</AssemblyName>
+    <AssemblyOriginatorKeyFile>LIS_Svc.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>com.digitalwave.iCare.middletier.LIS</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\Bin\debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emr.StaticObject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=345ab2ad0324e11c, processorArchitecture=MSIL" />
+    <Reference Include="GetCurrentTimeSvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47dd4e9a428e92dc, processorArchitecture=MSIL" />
+    <Reference Include="HRPService">
+      <Name>HRPService</Name>
+      <HintPath>..\..\..\bin\Release\HRPService.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL">
+      <HintPath>..\..\Bin\Debug\iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Odbc, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="MiddleTierBase">
+      <Name>MiddleTierBase</Name>
+      <HintPath>..\..\..\bin\Release\MiddleTierBase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ObjectGenerator">
+      <Name>ObjectGenerator</Name>
+      <HintPath>..\..\..\bin\Release\ObjectGenerator.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Oracle.DataAccess">
+      <Name>Oracle.DataAccess</Name>
+      <HintPath>E:\oracle\ora92\bin\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PrivilegeSystemService">
+      <Name>PrivilegeSystemService</Name>
+      <HintPath>..\..\..\bin\Debug\PrivilegeSystemService.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Name>System.EnterpriseServices</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="Utility">
+      <Name>Utility</Name>
+      <HintPath>..\..\..\bin\Release\Utility.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="bizCriticalValue.cs" />
+    <Compile Include="clsAdvis2120Svc.cs" />
+    <Compile Include="clsAppGroupSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsApplicationSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsApplyPropertySvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsApplyUnitSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsAssistantSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBaseCheckGroupSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsBatchSaveReportSvc.cs" />
+    <Compile Include="clsCheckGroupSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsCheckItemSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsCheckResultSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsDeviceSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsDictSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsInputGroupSvc.cs" />
+    <Compile Include="clsLisBarcodeSortSvc.cs" />
+    <Compile Include="clsLisDeviceSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsLisInerfaceSvc.cs" />
+    <Compile Include="clsLisMainSvc.cs" />
+    <Compile Include="clsLIS_Svc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsMBY2010Svc.cs" />
+    <Compile Include="clsMicReportSvc.cs" />
+    <Compile Include="clsPublicSvc.cs" />
+    <Compile Include="clsQueryAdvis2120Svc.cs" />
+    <Compile Include="clsQueryAppGroupSvc.cs" />
+    <Compile Include="clsQueryApplicationSvc.cs" />
+    <Compile Include="clsQueryApplyPropertySvc.cs" />
+    <Compile Include="clsQueryApplyUnitSvc.cs" />
+    <Compile Include="clsQueryCheckGroupSvc.cs" />
+    <Compile Include="clsQueryCheckItemSvc.cs" />
+    <Compile Include="clsQueryCheckResultSvc.cs" />
+    <Compile Include="clsQueryInputGroupSvc.cs" />
+    <Compile Include="clsQueryLIS_Svc.cs" />
+    <Compile Include="clsQueryReportGroupSvc.cs" />
+    <Compile Include="clsQueryReportSvc.cs" />
+    <Compile Include="clsQuerySampleBackSvc.cs" />
+    <Compile Include="clsQuerySampleGroupSvc.cs" />
+    <Compile Include="clsQuerySampleSvc.cs" />
+    <Compile Include="clsQueryStatSvc.cs" />
+    <Compile Include="clsReportGroupSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsReportSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsSampleGroupSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsSampleSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsST360Svc.cs" />
+    <Compile Include="clsStatSvc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsWorkStatsticSvc.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="QC\BusinessService\clsBnsQCBatchSvc.cs" />
+    <Compile Include="QC\SearcherService\clsSchBaseInfoSvc.cs" />
+    <Compile Include="QC\SearcherService\clsSchQCBatchSvc.cs" />
+    <Compile Include="QC\TableModule\BaseInfoTable\clsTmdCheckMethodSvc.cs" />
+    <Compile Include="QC\TableModule\BaseInfoTable\clsTmdConcentrationSvc.cs" />
+    <Compile Include="QC\TableModule\BaseInfoTable\clsTmdQCRulesSvc.cs" />
+    <Compile Include="QC\TableModule\BaseInfoTable\clsTmdVendorSvc.cs" />
+    <Compile Include="QC\TableModule\BaseInfoTable\clsTmdWorkGroupSvc.cs" />
+    <Compile Include="QC\TableModule\BusinessTable\clsTmdQCBatchConcentrationSvc.cs" />
+    <Compile Include="QC\TableModule\BusinessTable\clsTmdQCBatchSvc.cs" />
+    <Compile Include="QC\TableModule\BusinessTable\clsTmdQCDataSvc.cs" />
+    <Compile Include="QC\TableModule\BusinessTable\clsTmdQCLisServ.cs" />
+    <Compile Include="QC\TableModule\BusinessTable\clsTmdQCReportSvc.cs" />
+    <Compile Include="QC\TableModule\BusinessTable\clsTmdQCSampleLotParaSvc.cs" />
+    <Compile Include="QC\TableModule\BusinessTable\clsTmdQCSampleLotSvc.cs" />
+    <Compile Include="TableModule\BaseInfoTable\clsApplicationMainSvc.cs" />
+    <Compile Include="TableModule\BaseInfoTable\clsChargeInfoStatusSvc.cs" />
+    <Compile Include="TableModule\BusinessTable\clsApplicationBizSvc.cs" />
+    <Compile Include="TableModule\BusinessTable\clsLisInterfaceSvc.cs" />
+    <Compile Include="TableModule\BusinessTable\clsLisSearchSvc.cs" />
+    <Compile Include="VOConstruct.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="LIS_Svc.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="QC\StatisticService\" />
+    <Folder Include="QC\SysInterfaceService\" />
+    <Folder Include="QC\TableModule\AIDTable\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

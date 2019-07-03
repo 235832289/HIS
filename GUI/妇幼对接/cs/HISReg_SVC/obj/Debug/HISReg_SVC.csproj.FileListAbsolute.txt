@@ -1,0 +1,11 @@
+D:\iCare_cs\code\Bin\Debug\HISReg_SVC.dll
+D:\iCare_cs\code\Bin\Debug\HISReg_SVC.pdb
+D:\iCare_cs\code\HIS\DLL\HISReg_SVC\obj\Debug\ResolveAssemblyReference.cache
+D:\iCare_cs\code\HIS\DLL\HISReg_SVC\obj\Debug\HISReg_SVC.dll
+D:\iCare_cs\code\HIS\DLL\HISReg_SVC\obj\Debug\HISReg_SVC.pdb
+D:\iCare_cs\code\Bin\Debug\HISReg_SVC.XML
+D:\icare\iCare_cs\code\Bin\Debug\HISReg_SVC.dll
+D:\icare\iCare_cs\code\Bin\Debug\HISReg_SVC.pdb
+D:\icare\iCare_cs\code\HIS\DLL\HISReg_SVC\obj\Debug\ResolveAssemblyReference.cache
+D:\icare\iCare_cs\code\HIS\DLL\HISReg_SVC\obj\Debug\HISReg_SVC.dll
+D:\icare\iCare_cs\code\HIS\DLL\HISReg_SVC\obj\Debug\HISReg_SVC.pdb

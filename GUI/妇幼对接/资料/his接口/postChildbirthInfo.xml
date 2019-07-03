@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="GBK"?>
+<Document type="Request Save" versionNumber="" value="1.0">
+	<realmCode code="4419.CN"/>
+	<code code="4419.A01.02.208" codeSystem="4419.CN.01" codeSystemName="东莞市妇幼卫生信息交互共享文档分类编码系统"/>
+	<title>请求推送某孕产妇分娩信息</title>
+	<author>
+		<authorID code="133215060" authorname="东莞市妇幼保健院"/>
+		<InformationsystemID code="9mb43b35-f717-40f9-810d-f2ag914h6bc3" InformationsystemName="东莞市妇幼保健院HIS管理系统"/>
+		<GenerationTime type="TS" value="201301030832"/>
+	</author>
+	<component>
+		<OperationType value="New"/>
+		<recordNumber value="1" type="INT"/>
+		<record>
+			<HISID>HIS系统唯一ID</HISID>
+      <BARCODE>孕产妇保健手册号</BARCODE>
+      <IDCARD>女方身份证号</IDCARD>
+
+      <NAME>母亲姓名</NAME>
+			<HDSB0101021>母亲出生日期</HDSB0101021>
+			<HDSB0101022 code="母亲国籍代码" codeSystem="GB/T 2659-2000">母亲国籍</HDSB0101022>
+			<HDSB0101023 code="母亲民族代码" codeSystem="GB 3304-1991">母亲民族</HDSB0101023>
+			<HDSB0101024 code="母亲身份证件类别代码" codeSystem="CV02.01.101">母亲身份证件类别名</HDSB0101024>
+			<HDSB0101025>母亲身份证件号码</HDSB0101025>
+			<HDSB0101040 code="母亲户籍地址区划代码" codeSystem="GBT 2260—2012">母亲户籍地址</HDSB0101040>
+			<HDSB0101045>母亲详细户籍地址(包括门牌号)</HDSB0101045>
+			<PRESENTADDRESS code="母亲现住地址行政区划代码" codeSystem="GBT 2260—2012">母亲现住地址</PRESENTADDRESS>
+			<FULLPRESENTADDRESS>母亲详细现住地址(包括门牌号)</FULLPRESENTADDRESS>
+			
+			<HDSB0101026>父亲姓名</HDSB0101026>
+			<HDSB0101027>父亲出生日期</HDSB0101027>
+			<HDSB0101028 code="父亲国籍代码" codeSystem="GB/T 2659-2000">父亲国籍</HDSB0101028>
+			<HDSB0101029 code="父亲民族代码" codeSystem="GB 3304-1991">父亲民族</HDSB0101029>
+			<HDSB0101030 code="父亲身份证件类别代码" codeSystem="CV02.01.101">父亲身份证件类别名</HDSB0101030>
+			<HDSB0101031>父亲身份证件号码</HDSB0101031>
+			<HDSB0101046 code="父亲户籍地址区划代码" codeSystem="GBT 2260—2012">父亲户籍地址</HDSB0101046>
+			<HDSB0101051>父亲详细户籍地址(包括门牌号)</HDSB0101051>
+			<HPRESENTADDRESS code="父亲现住地址行政区划代码" codeSystem="GBT 2260—2012">父亲现住地址</HPRESENTADDRESS>
+			<HFULLPRESENTADDRESS>父亲详细现住地址(包括门牌号)</HFULLPRESENTADDRESS>
+			
+			<MATTER code="签发原因代码" codesystem="STD_ISSUEREASON">签发原因（00：信息齐全(双亲)，02：信息不全(单亲)）</MATTER >
+			<BEDNO>床号</BEDNO>
+			<ZYH>住院号</ZYH>
+			<INTIRE>当前第几胎</INTIRE>
+			<INHOSPITALIZATIONIN>当前第几次住院</INHOSPITALIZATIONIN>
+			<PLACETYPE code="分娩地点类型代码" codesystem="STD_PLACETYPE ">分娩地点类型名称</PLACETYPE>
+			<CYESISWEEK>分娩孕周(日)</CYESISWEEK>
+			<FETUSNUMBER code="胎数代码" codesystem="STD_FETUSNUM ">胎数</FETUSNUMBER>
+			<TAIMOPOLIEFANGSHI code="胎膜破裂方式代码" codesystem="STD_TAIMOPOLIE">胎膜破裂方式名称</TAIMOPOLIEFANGSHI>
+			<TAIMOPOLIE>胎膜破裂时间</TAIMOPOLIE>
+			<CHILDBIRTHTIME>分娩时间</CHILDBIRTHTIME>
+			<CHIBIRTYPE code="分娩方式代码" codesystem="STD_CHIBIRTYPE">分娩方式</CHIBIRTYPE>
+			<FETUSPOSITION code="胎方位代码" codesystem="STD_FETUSPOSITION">胎方位</FETUSPOSITION>
+			<ONELAYHOUR>第一产程（小时）</ONELAYHOUR>
+			<ONELAY>第一产程（分钟）</ONELAY>
+			<TWOLAYHOUR>第二产程（小时）</TWOLAYHOUR>
+			<TWOLAY>第二产程（分钟）</TWOLAY>
+			<THREELAYHOUR>第三产程（小时）</THREELAYHOUR>
+			<THREELAY>第三产程（分钟）</THREELAY>
+			<ALLLAYHOUR>总产程（小时）</ALLLAYHOUR>
+			<ALLLAY>总产程（分钟）</ALLLAY>
+			<PLACENTALTIME>胎盘娩出时间</PLACENTALTIME>
+			<PLACENTALFANGSHI code="胎盘娩出方式代码"  codesystem="STD_PLACENTALFANGSHI">胎盘娩出方式</PLACENTALFANGSHI>
+			<DELIVERYMEASURES>分娩措施</DELIVERYMEASURES>
+			<TAIPAN code="胎膜胎盘完整性代码" codesystem="STD_TAIPAN">胎盘完整性</TAIPAN>
+			<PLACENTA code="胎膜完整性代码" codesystem="STD_PLACENTA">胎膜完整性</PLACENTA>
+			<JIDAI>脐带长度(单位：cm)</JIDAI>
+			<LUCIDITY code="羊水清否代码" codesystem="STD_LUCIDITY">羊水清否</LUCIDITY>
+			<DEGREE code="羊水分度代码" codesystem="STD_DEGREE">羊水分度</DEGREE>
+			<AMNIOTIC>羊水量(单位：ml)</AMNIOTIC>
+			<PLACENTALLONG>胎盘长（单位cm）</PLACENTALLONG>
+			<PLACENTAWIDTH>胎盘宽（单位cm）</PLACENTAWIDTH>
+			<PLACENTALTHICKNESS>胎盘厚（单位cm）</PLACENTALTHICKNESS>
+			<ISPERINEUMCUT code="会阴情况代码" codesystem="STD_ISPERINEUMCUT">会阴情况</ISPERINEUMCUT>
+			<SUTURESITUATION code="缝合情况代码" codesystem="STD_SUTURESITUATION">缝合情况</SUTURESITUATION>
+			<SEW>缝合针数(单位：针)</SEW>
+			<OPERATIONREASON>手术原因</OPERATIONREASON>
+			<CHUXUE>阴道分娩产后2h出血量（单位：ml）</CHUXUE>
+			<SSZXM>手术人</SSZXM>
+			<ACCUSR>接生人</ACCUSR>
+			<OPERATEDATE>录入时间</OPERATEDATE>
+			<ORG code="录入单位机构代码" codesystem="STD_ORGAN">录入单位</ORG>
+			
+			<BABY>
+				<BABYNAME>婴儿姓名</BABYNAME>
+				<SEX code="婴儿性别代码" codesystem="GB/T 2261.1">婴儿性别</SEX>
+				<SEQUENCE>胎次</SEQUENCE>
+				<DATEOFBIRTH>出生时间</DATEOFBIRTH>
+				<AVOIRDUPOIS>体重</AVOIRDUPOIS>
+				<STATURE>身长</STATURE>
+				<TOUWEI>头围</TOUWEI>
+				<ISBUG code="是否畸形代码" codesystem="STD_ISBUG">是否畸形</ISBUG>
+				<APGAR1>1min Apgar总分</APGAR1>
+				<APGAR5>5min Apgar总分</APGAR5>
+				<APGAR10>10min Apgar总分</APGAR10>
+				<HBIGTIME code="是否注射乙肝免疫球蛋白代码" codesystem="STD_HBIGTIME">是否注射乙肝免疫球蛋白</HBIGTIME>
+				<INJECTIONDATE>注射日期</INJECTIONDATE>
+				<JILIANG>注射剂量（单位：IU）</JILIANG>
+				<SKINCONTACT code="产后30分钟内皮肤接触情况代码" codesystem="STD_SKINCONTACT">产后30分钟内皮肤接触情况</SKINCONTACT>
+			</BABY>
+			
+			<BABY>
+				<BABYNAME>婴儿姓名</BABYNAME>
+				<SEX code="婴儿性别代码" codesystem=" GB/T 2261.1">婴儿性别</SEX>
+				<SEQUENCE>胎次</SEQUENCE>
+				<DATEOFBIRTH>出生时间</DATEOFBIRTH>
+				<AVOIRDUPOIS>体重</AVOIRDUPOIS>
+				<STATURE>身长</STATURE>
+				<TOUWEI>头围</TOUWEI>
+				<ISBUG code="是否畸形代码" codesystem="STD_ISBUG">是否畸形</ISBUG>
+				<APGAR1>1min Apgar总分</APGAR1>
+				<APGAR5>5min Apgar总分</APGAR5>
+				<APGAR10>10min Apgar总分</APGAR10>
+				<HBIGTIME code="是否注射乙肝免疫球蛋白代码" codesystem="STD_HBIGTIME">是否注射乙肝免疫球蛋白</HBIGTIME>
+				<INJECTIONDATE>注射日期</INJECTIONDATE>
+				<JILIANG>注射剂量（单位：IU）</JILIANG>
+				<SKINCONTACT code="产后30分钟内皮肤接触情况代码" codesystem="STD_SKINCONTACT">产后30分钟内皮肤接触情况</SKINCONTACT>
+			</BABY>
+			
+		</record>
+	</component>
+</Document>

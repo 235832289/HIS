@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicineStore_Maintain", "MedicineStore_Maintain\MedicineStore_Maintain.csproj", "{B87E12A8-B86F-4D7E-9E71-195739793C34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicineStoreService", "..\MedicineStoreService\MedicineStoreService\MedicineStoreService.csproj", "{7911FC2B-1880-49C6-98A5-A782F08F8371}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MedicineStore_Maintain\\MedicineStore_Maintain.csproj
+		SccProjectName1 = \u0022$/icare/code/MedicineStore/MedicineStore_Maintain/MedicineStore_Maintain\u0022,\u0020NFEBAAAA
+		SccLocalPath1 = MedicineStore_Maintain
+		SccProjectUniqueName2 = ..\\MedicineStoreService\\MedicineStoreService\\MedicineStoreService.csproj
+		SccProjectName2 = \u0022$/icare/code/MedicineStore/MedicineStoreService/MedicineStoreService\u0022,\u0020DBEBAAAA
+		SccLocalPath2 = ..\\MedicineStoreService\\MedicineStoreService
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B87E12A8-B86F-4D7E-9E71-195739793C34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87E12A8-B86F-4D7E-9E71-195739793C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87E12A8-B86F-4D7E-9E71-195739793C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87E12A8-B86F-4D7E-9E71-195739793C34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7911FC2B-1880-49C6-98A5-A782F08F8371}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7911FC2B-1880-49C6-98A5-A782F08F8371}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7911FC2B-1880-49C6-98A5-A782F08F8371}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7911FC2B-1880-49C6-98A5-A782F08F8371}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

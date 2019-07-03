@@ -1,0 +1,301 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{984CAE78-9C31-4580-ADD7-2BFE2919D672}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.digitalwave.iCare.gui.HIS</RootNamespace>
+    <AssemblyName>HISYB_CS</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlLibrary, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\Debug\ControlLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="DataWindow, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\Debug\DataWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="GUI_Base, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\Debug\GUI_Base.dll</HintPath>
+    </Reference>
+    <Reference Include="HISYBCS_SVC, Version=2.0.0.1, Culture=neutral, PublicKeyToken=4e72220695d84f51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Debug\HISYBCS_SVC.dll</HintPath>
+    </Reference>
+    <Reference Include="HRPService, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ce5f7258b42847c9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\Debug\HRPService.dll</HintPath>
+    </Reference>
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\Debug\iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\Debug\Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MiddleTierBase, Version=2.0.0.1, Culture=neutral, PublicKeyToken=bcb959104966b6d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\Debug\MiddleTierBase.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectGenerator, Version=2.0.0.1, Culture=neutral, PublicKeyToken=f32520148b720498, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\Debug\ObjectGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="PinkieControls, Version=1.0.1362.15156, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\Debug\PinkieControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utility, Version=2.0.0.1, Culture=neutral, PublicKeyToken=a48271451c5bd35f, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsYBPublic_cs.cs" />
+    <Compile Include="Controller\clsCtl_YBBillInfoMZ.cs" />
+    <Compile Include="Controller\clsCtl_YBChargeAutoUpData.cs" />
+    <Compile Include="Controller\clsCtl_YBChargeInfoZY.cs" />
+    <Compile Include="Controller\clsCtl_YBChargeItems.cs" />
+    <Compile Include="Controller\clsCtl_YBChargeMZ.cs" />
+    <Compile Include="Controller\clsCtl_YBChargeZY.cs" />
+    <Compile Include="Controller\clsCtl_YBDscx.cs" />
+    <Compile Include="Controller\clsCtl_YBItemsCorr.cs" />
+    <Compile Include="Controller\clsCtl_YBPatientInfo.cs" />
+    <Compile Include="Controller\clsCtl_YBRegisterZY.cs" />
+    <Compile Include="Controller\clsCtl_YBChargeMZCancel.cs" />
+    <Compile Include="Controller\clsCtl_YBUserRegister.cs" />
+    <Compile Include="DomainController\clsDcl_YB.cs" />
+    <Compile Include="exceptionLog.cs" />
+    <Compile Include="Viewer\frmAdministrative.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAdministrative.Designer.cs">
+      <DependentUpon>frmAdministrative.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCheckPswUrl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCheckPswUrl.Designer.cs">
+      <DependentUpon>frmCheckPswUrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmItemsCorr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmItemsCorr.Designer.cs">
+      <DependentUpon>frmItemsCorr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmPrintDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmPrintDialog.Designer.cs">
+      <DependentUpon>frmPrintDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmUri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmUri.Designer.cs">
+      <DependentUpon>frmUri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmUserPwsRevise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmUserPwsRevise.Designer.cs">
+      <DependentUpon>frmUserPwsRevise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmUserRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmUserRegister.Designer.cs">
+      <DependentUpon>frmUserRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYBBillInfoMZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYBBillInfoMZ.Designer.cs">
+      <DependentUpon>frmYBBillInfoMZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYBChargeInfoZY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYBChargeInfoZY.Designer.cs">
+      <DependentUpon>frmYBChargeInfoZY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYBChargeItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYBChargeItems.Designer.cs">
+      <DependentUpon>frmYBChargeItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYBChargeMZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYBChargeMZ.Designer.cs">
+      <DependentUpon>frmYBChargeMZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYBChargeMZCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYBChargeMZCancel.Designer.cs">
+      <DependentUpon>frmYBChargeMZCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYBChargeZY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYBChargeZY.Designer.cs">
+      <DependentUpon>frmYBChargeZY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYBDscx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYBDscx.Designer.cs">
+      <DependentUpon>frmYBDscx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYBPatientInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYBPatientInfo.Designer.cs">
+      <DependentUpon>frmYBPatientInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmYBRegisterZY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmYBRegisterZY.Designer.cs">
+      <DependentUpon>frmYBRegisterZY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Viewer\frmAdministrative.resx">
+      <DependentUpon>frmAdministrative.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCheckPswUrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCheckPswUrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmItemsCorr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmItemsCorr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmUri.resx">
+      <DependentUpon>frmUri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmUser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmUserPwsRevise.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUserPwsRevise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmUserRegister.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUserRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYBBillInfoMZ.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmYBBillInfoMZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYBChargeInfoZY.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmYBChargeInfoZY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYBChargeItems.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmYBChargeItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYBChargeMZ.resx">
+      <DependentUpon>frmYBChargeMZ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYBChargeZY.resx">
+      <DependentUpon>frmYBChargeZY.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYBDscx.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmYBDscx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYBPatientInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmYBPatientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmYBRegisterZY.resx">
+      <DependentUpon>frmYBRegisterZY.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

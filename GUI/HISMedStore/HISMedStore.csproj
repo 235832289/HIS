@@ -1,0 +1,627 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF968D1D-D96E-49A2-AE47-BF6658DE6244}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>HISMedStore</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>com.digitalwave.iCare.gui.HIS</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>HISMedStore.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Barcode, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CalcPatientCharge, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CommonInfo">
+      <Name>CommonInfo</Name>
+      <HintPath>..\..\..\bin\Debug\CommonInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CustomForm">
+      <Name>CustomForm</Name>
+      <HintPath>..\..\..\bin\Debug\CustomForm.dll</HintPath>
+    </Reference>
+    <Reference Include="DataWindow, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=MSIL" />
+    <Reference Include="DepartmentSvc">
+      <Name>DepartmentSvc</Name>
+      <HintPath>..\..\..\bin\Debug\DepartmentSvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Digitalwave.ControlsLib, Version=3.0.0.0, Culture=neutral, PublicKeyToken=bbdca74e493306ff, processorArchitecture=MSIL" />
+    <Reference Include="DigitalWaveControls">
+      <Name>DigitalWaveControls</Name>
+      <HintPath>..\..\..\bin\Debug\DigitalWaveControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Emr.DomainControls, Version=3.0.0.0, Culture=neutral, PublicKeyToken=3706371e4bc59968, processorArchitecture=MSIL" />
+    <Reference Include="Emr.StaticObject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=345ab2ad0324e11c, processorArchitecture=MSIL" />
+    <Reference Include="exDataGrid">
+      <Name>exDataGrid</Name>
+      <HintPath>..\..\..\bin\Debug\exDataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="GUI_Base">
+      <Name>GUI_Base</Name>
+      <HintPath>..\..\..\bin\Debug\GUI_Base.dll</HintPath>
+    </Reference>
+    <Reference Include="HISBase_SVC">
+      <Name>HISBase_SVC</Name>
+      <HintPath>..\..\..\bin\Debug\HISBase_SVC.dll</HintPath>
+    </Reference>
+    <Reference Include="HISControl">
+      <Name>hiscontrol</Name>
+      <HintPath>..\..\..\bin\debug\hiscontrol.dll</HintPath>
+    </Reference>
+    <Reference Include="HisDrugStore_GUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HisDrugStore_SVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3ad1b94e996b7482, processorArchitecture=MSIL" />
+    <Reference Include="Hisitf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HISMedicineStdManage_SVC">
+      <Name>HISMedicineStdManage_SVC</Name>
+      <HintPath>..\..\..\bin\Debug\HISMedicineStdManage_SVC.dll</HintPath>
+    </Reference>
+    <Reference Include="HISMed_SVC, Version=2.0.0.1, Culture=neutral, PublicKeyToken=48dc4b38c75e632b, processorArchitecture=MSIL" />
+    <Reference Include="HISReg_SVC, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad0b4ebb5aa3281e, processorArchitecture=MSIL" />
+    <Reference Include="HISZY, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HRPService">
+      <Name>HRPService</Name>
+      <HintPath>..\..\..\bin\Debug\HRPService.dll</HintPath>
+    </Reference>
+    <Reference Include="iCareData">
+      <Name>iCareData</Name>
+      <HintPath>..\..\..\bin\Debug\iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="LEDManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="LED_LianCheng, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MedicineManage">
+      <Name>MedicineManage</Name>
+      <HintPath>..\..\..\bin\Debug\MedicineManage.dll</HintPath>
+    </Reference>
+    <Reference Include="MiddleTierBase">
+      <Name>MiddleTierBase</Name>
+      <HintPath>..\..\..\bin\Debug\MiddleTierBase.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectGenerator">
+      <Name>ObjectGenerator</Name>
+      <HintPath>..\..\..\bin\Debug\ObjectGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="PinkieControls">
+      <Name>PinkieControls</Name>
+      <HintPath>..\..\..\bin\Debug\PinkieControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Security_GUI">
+      <Name>Security_GUI</Name>
+      <HintPath>..\..\..\bin\Debug\Security_GUI.dll</HintPath>
+    </Reference>
+    <Reference Include="SoundControl, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="SourceLibrary">
+      <Name>SourceLibrary</Name>
+      <HintPath>..\..\..\bin\Debug\SourceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="StorageManage">
+      <Name>StorageManage</Name>
+      <HintPath>..\..\..\bin\Debug\StorageManage.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Name>System.EnterpriseServices</Name>
+    </Reference>
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="TemplateLib">
+      <Name>TemplateLib</Name>
+      <HintPath>..\..\..\bin\Debug\TemplateLib.dll</HintPath>
+    </Reference>
+    <Reference Include="TemplateMaintenance">
+      <Name>TemplateMaintenance</Name>
+      <HintPath>..\..\..\bin\Debug\TemplateMaintenance.dll</HintPath>
+    </Reference>
+    <Reference Include="TemplateUtility">
+      <Name>TemplateUtility</Name>
+      <HintPath>..\..\..\bin\Debug\TemplateUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="TTSClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Utility">
+      <Name>Utility</Name>
+      <HintPath>..\..\..\bin\Debug\Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="VendorManage">
+      <Name>VendorManage</Name>
+      <HintPath>..\..\..\bin\Debug\VendorManage.dll</HintPath>
+    </Reference>
+    <Reference Include="WaitDiagListManage">
+      <Name>WaitDiagListManage</Name>
+      <HintPath>..\..\..\bin\Debug\WaitDiagListManage.dll</HintPath>
+    </Reference>
+    <Reference Include="YfLed, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <None Include="Resources\Down.bmp" />
+    <None Include="Resources\UP.bmp" />
+    <None Include="Resources\退.gif" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsMedStorePublic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsContorlInput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsContorlMedWinQueue.cs" />
+    <Compile Include="Control\clsContorlReportPrint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsContorlStoreInOrdMed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsControlDoctorUseMed.cs" />
+    <Compile Include="Control\clsControllBigScreen.cs" />
+    <Compile Include="Control\clsControllMedStoreAreaRelation.cs" />
+    <Compile Include="Control\clscontrollMedStoreLED.cs" />
+    <Compile Include="Control\clsControlMedStore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsControlMedStoreAcct.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsControlMedStoreAppl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsControlMedStoreLimit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsControlMedStoreMedAppl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsControlMedStoreOrdType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsControlMedStoreOut.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsControlMedStoreOutOrd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsControlMedStoreWin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsControlOPMedStore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsControlQueryUnDosageRecipe.cs" />
+    <Compile Include="Control\clsControlReturnMedicine.cs" />
+    <Compile Include="Control\clsControlSendMedicineConfirm.cs" />
+    <Compile Include="Control\clsCtlMedSendConfigRelation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\clsCtlOPUsedMedSingle.cs" />
+    <Compile Include="Control\proxy240medicine.cs" />
+    <Compile Include="ctlControl\ctlMedStoreDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DomainControl\clsDomainControlMedStore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainControl\clsDomainControlMedStoreBseInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainControl\clsDomainControlOPMedStore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainControl\clsDomainCtlMedSendConfigRelation.cs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainControl\clsDomainMedWinQueue.cs" />
+    <Compile Include="FrmView\frmAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmAuto.Designer.cs">
+      <DependentUpon>frmAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmBigScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmBigScreen.Designer.cs">
+      <DependentUpon>frmBigScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmBreakInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedprivatewinset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedprivatewinset.Designer.cs">
+      <DependentUpon>frmMedprivatewinset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmMedSendConfigRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedStoreAcct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedStoreAppl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedStoreAreaRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedStoreAreaRelation.Designer.cs">
+      <DependentUpon>frmMedStoreAreaRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmMedStoreLED.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedStoreLED.Designer.cs">
+      <DependentUpon>frmMedStoreLED.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmMedStoreLimit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedStoreMedAppl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedStoreOrdType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedStoreOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedStoreOutOrd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedStoreWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedWinQueue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmMedWinQueue.Designer.cs">
+      <DependentUpon>frmMedWinQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmOPComUseMedStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmOPComUseMedStat.Designer.cs">
+      <DependentUpon>frmOPComUseMedStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmOPMedStoreWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmOPUsedMedSingle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmOPUsedMedSingle.Designer.cs">
+      <DependentUpon>frmOPUsedMedSingle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmPeriodTotailReportOfMedStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmPeriodTotailReportOfMedStorage.Designer.cs">
+      <DependentUpon>frmPeriodTotailReportOfMedStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmPrintPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmProxyBoilMed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmProxyBoilMed.Designer.cs">
+      <DependentUpon>frmProxyBoilMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmQueryUnDosageRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmQueryUnDosageRecipe.Designer.cs">
+      <DependentUpon>frmQueryUnDosageRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmRecipeTypeWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmRecipeTypeWarning.Designer.cs">
+      <DependentUpon>frmRecipeTypeWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmReturnMedConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmReturnMedConfirm.Designer.cs">
+      <DependentUpon>frmReturnMedConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmReturnMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmReturnMedicine.Designer.cs">
+      <DependentUpon>frmReturnMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmSendMedicineConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmSendMedicineConfirm.Designer.cs">
+      <DependentUpon>frmSendMedicineConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmShowWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmSmallScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView\frmSmallScreen.Designer.cs">
+      <DependentUpon>frmSmallScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView\frmStoreInOrdMed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmView\frmAuto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmBigScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBigScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmBreakInput.resx">
+      <DependentUpon>frmBreakInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmInput.resx">
+      <DependentUpon>frmInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmMedprivatewinset.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMedprivatewinset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmMedSendConfigRelation.resx">
+      <DependentUpon>frmMedSendConfigRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmMedStore.resx">
+      <DependentUpon>frmMedStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmMedStoreAcct.resx">
+      <DependentUpon>frmMedStoreAcct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmMedStoreAppl.resx">
+      <DependentUpon>frmMedStoreAppl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmMedStoreAreaRelation.resx">
+      <DependentUpon>frmMedStoreAreaRelation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmMedStoreLED.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMedStoreLED.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmMedStoreLimit.resx">
+      <DependentUpon>frmMedStoreLimit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmMedStoreMedAppl.resx">
+      <DependentUpon>frmMedStoreMedAppl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmMedStoreOrdType.resx">
+      <DependentUpon>frmMedStoreOrdType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmMedStoreOut.resx">
+      <DependentUpon>frmMedStoreOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmMedStoreOutOrd.resx">
+      <DependentUpon>frmMedStoreOutOrd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmMedStoreWin.resx">
+      <DependentUpon>frmMedStoreWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmMedWinQueue.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMedWinQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmOPComUseMedStat.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOPComUseMedStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmOPMedStoreWin.resx">
+      <DependentUpon>frmOPMedStoreWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmOPUsedMedSingle.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOPUsedMedSingle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmPeriodTotailReportOfMedStorage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPeriodTotailReportOfMedStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmPrintPage.resx">
+      <DependentUpon>frmPrintPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmProxyBoilMed.resx">
+      <DependentUpon>frmProxyBoilMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmQueryUnDosageRecipe.resx">
+      <DependentUpon>frmQueryUnDosageRecipe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmRecipeTypeWarning.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRecipeTypeWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmReturnMedConfirm.resx">
+      <DependentUpon>frmReturnMedConfirm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmReturnMedicine.resx">
+      <DependentUpon>frmReturnMedicine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmSendMedicineConfirm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSendMedicineConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmShowWarning.resx">
+      <DependentUpon>frmShowWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmSmallScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSmallScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView\frmStoreInOrdMed.resx">
+      <DependentUpon>frmStoreInOrdMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DLL\HISMedStore_SVC\HISMedStore_SVC.csproj">
+      <Project>{AEA9B9BA-B2A4-4700-ABFF-3C0461CD60BE}</Project>
+      <Name>HISMedStore_SVC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

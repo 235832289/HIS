@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<nodeSet>
+  <view uin="9051nawa6j">
+    <property name="$name" value="HisMedicineInfo" />
+    <property name="$metaclass" value="Package Diagram" />
+  </view>
+</nodeSet>

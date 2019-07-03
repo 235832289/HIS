@@ -1,0 +1,117 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ECABF306-B862-436E-926D-2537B0216622}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.digitalwave.iCare.middletier.HIS</RootNamespace>
+    <AssemblyName>HisDrugStore_SVC</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>HisDrugStore_SVC.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GetCurrentTimeSvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47dd4e9a428e92dc, processorArchitecture=MSIL" />
+    <Reference Include="HRPService, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ce5f7258b42847c9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Debug\HRPService.dll</HintPath>
+    </Reference>
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL" />
+    <Reference Include="MiddleTierBase, Version=2.0.0.1, Culture=neutral, PublicKeyToken=bcb959104966b6d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Debug\MiddleTierBase.dll</HintPath>
+    </Reference>
+    <Reference Include="PrivilegeSystemService, Version=2.0.0.1, Culture=neutral, PublicKeyToken=e7d6b07a23b0a67f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Debug\PrivilegeSystemService.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utility, Version=2.0.0.1, Culture=neutral, PublicKeyToken=a48271451c5bd35f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Debug\Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsAccountPeriod_Supported_SVC.cs" />
+    <Compile Include="clsAccountPeriod_SVC.cs" />
+    <Compile Include="clsAccount_Supported_SVC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsAccount_SVC.cs" />
+    <Compile Include="clsAdjustmentSVC.cs" />
+    <Compile Include="clsAdjustment_Supported_SVC.cs" />
+    <Compile Include="clsAskForMedicineSVC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsAskForMedicine_Supported_SVC.cs" />
+    <Compile Include="clsDrugStorageQuery_Supported_SVC.cs" />
+    <Compile Include="clsDrugStorageQuery_SVC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsDrugStoreCheck_Supported_SVC.cs" />
+    <Compile Include="clsDrugStoreCheck_SVC.cs" />
+    <Compile Include="clsDS_Public_Supported_SVC.cs" />
+    <Compile Include="clsGetStoreCheckMedicine_Supported_SVC.cs" />
+    <Compile Include="clsInitialDS_Supported_SVC.cs" />
+    <Compile Include="clsInitialDS_SVC.cs" />
+    <Compile Include="clsInstorage_Supported_SVC.cs" />
+    <Compile Include="clsInstorage_SVC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsMedicineLimitSVC.cs" />
+    <Compile Include="clsMedicineLimit_Supported_SVC.cs" />
+    <Compile Include="clsOutstorage_Supported_SVC.cs" />
+    <Compile Include="clsOutstorage_SVC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HisDrugStore_SVC.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

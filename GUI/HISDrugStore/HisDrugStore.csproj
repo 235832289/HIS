@@ -1,0 +1,549 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{25121DBF-EFE2-4370-86CD-0D48BFBD6941}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.digitalwave.iCare.gui.HIS</RootNamespace>
+    <AssemblyName>HisDrugStore_GUI</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <StartupObject>
+    </StartupObject>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="clsCommonInfoSvc, Version=2.0.0.1, Culture=neutral, PublicKeyToken=e53d7501af14791b, processorArchitecture=MSIL" />
+    <Reference Include="CommonInfo, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ControlLibrary, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BIN\Debug\ControlLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="DataWindow, Version=2.0.4600.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Digitalwave.Controls, Version=3.0.0.0, Culture=neutral, PublicKeyToken=bbdca74e493306ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Debug\Digitalwave.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Digitalwave.ControlsLib, Version=3.0.0.0, Culture=neutral, PublicKeyToken=bbdca74e493306ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Debug\Digitalwave.ControlsLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DigitalWaveControls, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Emr.DomainControls, Version=3.0.0.0, Culture=neutral, PublicKeyToken=3706371e4bc59968, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Debug\Emr.DomainControls.dll</HintPath>
+    </Reference>
+    <Reference Include="EMR_HospitalInfoService, Version=1.1.0.0, Culture=neutral, PublicKeyToken=0e472ba126e57f82, processorArchitecture=MSIL" />
+    <Reference Include="GUI_Base, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HISControl, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Debug\HISControl.dll</HintPath>
+    </Reference>
+    <Reference Include="HISRegister, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HISZY, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\debug\iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MedicineStore_Control, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MedicineStore_GUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MedicineStore_Maintain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MiddleTierBase, Version=2.0.0.1, Culture=neutral, PublicKeyToken=bcb959104966b6d1, processorArchitecture=MSIL" />
+    <Reference Include="ObjectGenerator, Version=2.0.0.1, Culture=neutral, PublicKeyToken=f32520148b720498, processorArchitecture=MSIL" />
+    <Reference Include="PinkieControls, Version=1.0.1362.15156, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Debug\PinkieControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsPub.cs" />
+    <Compile Include="Controller\clsCtl_Account.cs" />
+    <Compile Include="Controller\clsCtl_AccountPeriod.cs" />
+    <Compile Include="Controller\clsCtl_AskForMedicine.cs" />
+    <Compile Include="Controller\clsCtl_AskForMedicineDetail.cs" />
+    <Compile Include="Controller\clsCtl_AskForMedManage.cs" />
+    <Compile Include="Controller\clsCtl_AskQuery.cs" />
+    <Compile Include="Controller\clsCtl_DrugStorageQuery.cs" />
+    <Compile Include="Controller\clsCtl_DrugStoreCheck.cs" />
+    <Compile Include="Controller\clsCtl_DrugStoreCheck_Detail.cs" />
+    <Compile Include="Controller\clsCtl_GenerateAsk.cs" />
+    <Compile Include="Controller\clsCtl_GetMissStoreCheckMedicine.cs" />
+    <Compile Include="Controller\clsCtl_GetStoreCheckMedicine.cs" />
+    <Compile Include="Controller\clsCtl_InitialDS.cs" />
+    <Compile Include="Controller\clsCtl_InStorage.cs" />
+    <Compile Include="Controller\clsCtl_InStorageMakerOrder.cs" />
+    <Compile Include="Controller\clsCtl_MakeOutStorageOrder.cs" />
+    <Compile Include="Controller\clsCtl_MedicineLimit.cs" />
+    <Compile Include="Controller\clsCtl_MultiUnitSet.cs" />
+    <Compile Include="Controller\clsCtl_OutStorage.cs" />
+    <Compile Include="Controller\clsCtl_OutStorageMakerOrder.cs" />
+    <Compile Include="Controller\clsCtl_QueryMedicine.cs" />
+    <Compile Include="Controller\clsCtl_StorageSet.cs" />
+    <Compile Include="DomainController\clsDcl_Account.cs" />
+    <Compile Include="DomainController\clsDcl_AccountPeriod.cs" />
+    <Compile Include="DomainController\clsDcl_AskForMedDetail.cs" />
+    <Compile Include="DomainController\clsDcl_AskForMedicine.cs" />
+    <Compile Include="DomainController\clsDcl_DrugStorageQuery.cs" />
+    <Compile Include="DomainController\clsDcl_DrugStoreCheck.cs" />
+    <Compile Include="DomainController\clsDcl_DrugStoreCheckDetail.cs" />
+    <Compile Include="DomainController\clsDcl_GenerateAsk.cs" />
+    <Compile Include="DomainController\clsDcl_GetStoreCheckMedicine.cs" />
+    <Compile Include="DomainController\clsDcl_InitialDS.cs" />
+    <Compile Include="DomainController\clsDcl_Instorage.cs" />
+    <Compile Include="DomainController\clsDcl_InStorageMakerOrder.cs" />
+    <Compile Include="DomainController\clsDcl_MakeOutStorageOrder.cs" />
+    <Compile Include="DomainController\clsDcl_MedicineLimit.cs" />
+    <Compile Include="DomainController\clsDcl_MultiUnitSet.cs" />
+    <Compile Include="DomainController\clsDcl_OutStorage.cs" />
+    <Compile Include="DomainController\clsDcl_OutStorageMakerOrder.cs" />
+    <Compile Include="DomainController\clsDcl_StorageSet.cs" />
+    <Compile Include="Viewer\frmAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAccount.Designer.cs">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAccountPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAccountPeriod.Designer.cs">
+      <DependentUpon>frmAccountPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAskForMedDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAskForMedDetail.Designer.cs">
+      <DependentUpon>frmAskForMedDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAskForMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAskForMedicine.Designer.cs">
+      <DependentUpon>frmAskForMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAskForMedManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAskForMedManage.Designer.cs">
+      <DependentUpon>frmAskForMedManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmAskQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAskQuery.Designer.cs">
+      <DependentUpon>frmAskQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmDrugStorageQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmDrugStorageQuery.Designer.cs">
+      <DependentUpon>frmDrugStorageQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmDrugStoreCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmDrugStoreCheck.Designer.cs">
+      <DependentUpon>frmDrugStoreCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmDrugStoreCheck_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmDrugStoreCheck_Detail.Designer.cs">
+      <DependentUpon>frmDrugStoreCheck_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmDSAccountPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmDSAccountPeriod.Designer.cs">
+      <DependentUpon>frmDSAccountPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmDsAskInStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmDsAskInStorage.Designer.cs">
+      <DependentUpon>frmDsAskInStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmEditAvailableStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmEditAvailableStorage.Designer.cs">
+      <DependentUpon>frmEditAvailableStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmGenerateAsk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmGenerateAsk.Designer.cs">
+      <DependentUpon>frmGenerateAsk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmGetMissStoreCheckMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmGetMissStoreCheckMedicine.Designer.cs">
+      <DependentUpon>frmGetMissStoreCheckMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmGetStoreCheckMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmGetStoreCheckMedicine.Designer.cs">
+      <DependentUpon>frmGetStoreCheckMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmInitialDS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInitialDS.Designer.cs">
+      <DependentUpon>frmInitialDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmInStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInStorage.Designer.cs">
+      <DependentUpon>frmInStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmInStorageMakeOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmInStorageMakeOrder.Designer.cs">
+      <DependentUpon>frmInStorageMakeOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMakeOutStorageOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMakeOutStorageOrder.Designer.cs">
+      <DependentUpon>frmMakeOutStorageOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMedicineLimit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMedicineLimit.Designer.cs">
+      <DependentUpon>frmMedicineLimit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmMultiUnitSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmMultiUnitSet.designer.cs">
+      <DependentUpon>frmMultiUnitSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmNoteAndExpExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmNoteAndExpExcel.Designer.cs">
+      <DependentUpon>frmNoteAndExpExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOutStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOutStorage.Designer.cs">
+      <DependentUpon>frmOutStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmOutStorageMakerOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmOutStorageMakerOrder.Designer.cs">
+      <DependentUpon>frmOutStorageMakerOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmQueryMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmQueryMedicine.Designer.cs">
+      <DependentUpon>frmQueryMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmQueryNavigator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmQueryNavigator.Designer.cs">
+      <DependentUpon>frmQueryNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmStatMedSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmStatMedSend.Designer.cs">
+      <DependentUpon>frmStatMedSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmStorageSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmStorageSet.Designer.cs">
+      <DependentUpon>FrmStorageSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\GradientPanel.Designer.cs">
+      <DependentUpon>GradientPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Viewer\frmAccount.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAccountPeriod.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAccountPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAskForMedDetail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAskForMedDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAskForMedicine.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAskForMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAskForMedManage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAskForMedManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAskQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAskQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmDrugStorageQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDrugStorageQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmDrugStoreCheck.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDrugStoreCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmDrugStoreCheck_Detail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDrugStoreCheck_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmDSAccountPeriod.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDSAccountPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmDsAskInStorage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDsAskInStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmEditAvailableStorage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEditAvailableStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmGenerateAsk.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGenerateAsk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmGetMissStoreCheckMedicine.resx">
+      <DependentUpon>frmGetMissStoreCheckMedicine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmGetStoreCheckMedicine.resx">
+      <DependentUpon>frmGetStoreCheckMedicine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInitialDS.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInitialDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInStorage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmInStorageMakeOrder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInStorageMakeOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMakeOutStorageOrder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMakeOutStorageOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMedicineLimit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMedicineLimit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmMultiUnitSet.resx">
+      <DependentUpon>frmMultiUnitSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmNoteAndExpExcel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNoteAndExpExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOutStorage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOutStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmOutStorageMakerOrder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOutStorageMakerOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmQueryMedicine.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQueryMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmQueryNavigator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQueryNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmStatMedSend.resx">
+      <DependentUpon>frmStatMedSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmStorageSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmStorageSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocumentHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddTableHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintPreviewHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToParentFolderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MoveLastHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToNextHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_reportHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoubleRightArrowHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocumentHS1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditTableHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageUpHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ActualSizeHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_UndoHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RefreshDocViewHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckBoxHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <Private>False</Private>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DLL\HISDrugStore_SVC\HisDrugStore_SVC.csproj">
+      <Project>{ECABF306-B862-436E-926D-2537B0216622}</Project>
+      <Name>HisDrugStore_SVC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DLL\MedicineStoreService\MedicineStoreService\MedicineStoreService.csproj">
+      <Project>{7911FC2B-1880-49C6-98A5-A782F08F8371}</Project>
+      <Name>MedicineStoreService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

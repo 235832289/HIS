@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HISZY", "HISZY.csproj", "{B4301F30-19C2-49D1-92B3-6056C8FF2DBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HISZY_SVC", "..\..\DLL\HISZY_SVC\HISZY_SVC.csproj", "{30CE27B2-BFF9-471F-8966-87744304049E}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = HISZY.csproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName2 = ..\\..\\DLL\\HISZY_SVC\\HISZY_SVC.csproj
+		SccProjectName2 = \u0022$/icare_ver2/code/HIS/DLL/HISZY_SVC\u0022,\u0020FKEAAAAA
+		SccLocalPath2 = ..\\..\\DLL\\HISZY_SVC
+		CanCheckoutShared = false
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4301F30-19C2-49D1-92B3-6056C8FF2DBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4301F30-19C2-49D1-92B3-6056C8FF2DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4301F30-19C2-49D1-92B3-6056C8FF2DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4301F30-19C2-49D1-92B3-6056C8FF2DBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30CE27B2-BFF9-471F-8966-87744304049E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30CE27B2-BFF9-471F-8966-87744304049E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30CE27B2-BFF9-471F-8966-87744304049E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30CE27B2-BFF9-471F-8966-87744304049E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

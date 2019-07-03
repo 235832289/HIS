@@ -1,0 +1,12 @@
+D:\iCare_cs\code\HIS\CSWeb\ChargeDetailUpload\bin\Debug\ChargeDetailUpload.dll
+D:\iCare_cs\code\HIS\CSWeb\ChargeDetailUpload\bin\Debug\ChargeDetailUpload.pdb
+D:\iCare_cs\code\HIS\CSWeb\ChargeDetailUpload\obj\Debug\ResolveAssemblyReference.cache
+D:\iCare_cs\code\HIS\CSWeb\ChargeDetailUpload\obj\Debug\ChargeDetailUpload.dll
+D:\iCare_cs\code\HIS\CSWeb\ChargeDetailUpload\obj\Debug\ChargeDetailUpload.pdb
+D:\icare\iCare_cs\code\HIS\CSWeb\ChargeDetailUpload\bin\Debug\ChargeDetailUpload.dll
+D:\icare\iCare_cs\code\HIS\CSWeb\ChargeDetailUpload\bin\Debug\ChargeDetailUpload.pdb
+D:\icare\iCare_cs\code\HIS\CSWeb\ChargeDetailUpload\obj\Debug\ResolveAssemblyReference.cache
+D:\icare\iCare_cs\code\HIS\CSWeb\ChargeDetailUpload\obj\Debug\ChargeDetailUpload.frmTest.resources
+D:\icare\iCare_cs\code\HIS\CSWeb\ChargeDetailUpload\obj\Debug\ChargeDetailUpload.csproj.GenerateResource.Cache
+D:\icare\iCare_cs\code\HIS\CSWeb\ChargeDetailUpload\obj\Debug\ChargeDetailUpload.dll
+D:\icare\iCare_cs\code\HIS\CSWeb\ChargeDetailUpload\obj\Debug\ChargeDetailUpload.pdb
