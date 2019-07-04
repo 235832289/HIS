@@ -1,0 +1,17 @@
+D:\icare\iCare_cs\code\Bin\Debug\DataCollection_Svc.dll
+D:\icare\iCare_cs\code\Bin\Debug\DataCollection_Svc.pdb
+D:\icare\iCare_cs\code\DataCollection\DataCollection_Svc\obj\Debug\ResolveAssemblyReference.cache
+D:\icare\iCare_cs\code\DataCollection\DataCollection_Svc\obj\Debug\DataCollection_Svc.dll
+D:\icare\iCare_cs\code\DataCollection\DataCollection_Svc\obj\Debug\DataCollection_Svc.pdb
+D:\icare\Debug\DataCollection_Svc.dll
+D:\icare\Debug\DataCollection_Svc.pdb
+D:\icare\code\DataCollection\DataCollection\DataCollection_Svc\obj\Debug\ResolveAssemblyReference.cache
+D:\icare\code\DataCollection\DataCollection\DataCollection_Svc\obj\Debug\DataCollection_Svc.dll
+D:\icare\code\DataCollection\DataCollection\DataCollection_Svc\obj\Debug\DataCollection_Svc.pdb
+D:\icare\code\release_new\DataCollection_Svc.dll
+D:\icare\code\release_new\DataCollection_Svc.pdb
+D:\iCare_cs\code\HIS\GUI\DataCollection\DataCollection\DataCollection_Svc\obj\Debug\ResolveAssemblyReference.cache
+D:\iCare_cs\code\HIS\GUI\DataCollection\DataCollection\DataCollection_Svc\obj\Debug\DataCollection_Svc.dll
+D:\iCare_cs\code\HIS\GUI\DataCollection\DataCollection\DataCollection_Svc\obj\Debug\DataCollection_Svc.pdb
+D:\iCare_cs\code\Bin\release_new\DataCollection_Svc.dll
+D:\iCare_cs\code\Bin\release_new\DataCollection_Svc.pdb

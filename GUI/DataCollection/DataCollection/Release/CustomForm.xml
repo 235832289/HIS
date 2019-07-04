@@ -1,0 +1,3367 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CustomForm</name>
+    </assembly>
+    <members>
+        <member name="T:iCare.CustomForm.infPublicFuntion">
+            <summary>
+            自定义控件的公有函数
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.infPublicFuntion.Draw(System.Drawing.Graphics)">
+            <summary>
+            画自己
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:iCare.CustomForm.infPublicFuntion.MakeSpecialControlXml(System.Xml.XmlTextWriter)">
+            <summary>
+            获取特殊的XML信息
+            </summary>
+            <param name="p_objWriter"></param>
+        </member>
+        <member name="M:iCare.CustomForm.infPublicFuntion.ConfigMe(System.Xml.XmlTextReader)">
+            <summary>
+            设置控件的基本属性或者指定属性
+            </summary>
+            <param name="p_objReader"></param>
+        </member>
+        <member name="M:iCare.CustomForm.infPublicFuntion.GetName">
+            <summary>
+            获取控件名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:iCare.CustomForm.infPublicFuntion.DataValue">
+            <summary>
+            获取或者设置控件的值
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.infPublicFuntion.有效">
+            <summary>
+            获取或者设置控件是否参与生成文本，true 为参与 false为不参与
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.IControlOpr">
+            <summary>
+            操作控件的接口
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.IControlOpr.Read(System.Windows.Forms.Control)">
+            <summary>
+            读
+            </summary>
+            <param name="p_ctl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.IControlOpr.Clear(System.Windows.Forms.Control)">
+            <summary>
+            清除
+            </summary>
+            <param name="p_ctl"></param>
+        </member>
+        <member name="M:iCare.CustomForm.IControlOpr.Write(System.Windows.Forms.Control,System.String)">
+            <summary>
+            写
+            </summary>
+            <param name="p_ctl"></param>
+            <param name="p_strValue"></param>
+        </member>
+        <member name="T:iCare.CustomForm.ctlVGroupBox">
+            <summary>
+            Summary description for ctlHGroupBox.
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlVGroupBox.boolIsValid">
+            <summary>
+            获取或者设置该控件是否有效；true 为有效，将参与文本的生成；否则为 false
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlVGroupBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.ctlVGroupBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.ctlVGroupBox.有效">
+            <summary>
+            获取或者设置该控件是否有效，true 为有效将参与文本的生成，否则为 false
+            </summary>
+        </member>
+        <member name="E:iCare.CustomForm.ctlVGroupBox.m_evtOnPropertyChange">
+            <summary>
+            当属性要改变时
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlNewLine.boolIsValid">
+            <summary>
+            获取或者设置该控件是否有效；true 为有效，将参与文本的生成；否则为 false
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.ctlNewLine.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.ctlNewLine.MyIni">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.ctlNewLine.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:iCare.CustomForm.ctlNewLine.Draw(System.Drawing.Graphics)">
+            <summary>
+            
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:iCare.CustomForm.ctlNewLine.MakeSpecialControlXml(System.Xml.XmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="p_objWriter"></param>
+        </member>
+        <member name="M:iCare.CustomForm.ctlNewLine.ConfigMe(System.Xml.XmlTextReader)">
+            <summary>
+            
+            </summary>
+            <param name="p_objReader"></param>
+        </member>
+        <member name="M:iCare.CustomForm.ctlNewLine.GetName">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“F:iCare.CustomForm.ctlNewLine.components”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:iCare.CustomForm.ctlNewLine.Dispose(System.Boolean)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:iCare.CustomForm.ctlNewLine.InitializeComponent”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“E:iCare.CustomForm.ctlNewLine.m_evtOnPropertyChange”忽略有格式错误的 XML 注释 -->
+        <member name="P:iCare.CustomForm.ctlNewLine.光标索引">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.ctlNewLine.有效">
+            <summary>
+            获取或者设置该控件是否有效，true 为有效将参与文本的生成，否则为 false
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.ctlNewLine.DataValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsVGroupBoxMemento">
+            <summary>
+            直线备忘录
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsControlMemento">
+            <summary>
+            控件备忘录父类,恢复一些共有的属性
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.infMemento">
+            <summary>
+            备忘录
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.infMemento.i_mthRestore">
+            <summary>
+            恢复状态
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.frmUnSubmitForms">
+            <summary>
+            打开自定义表单
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmUnSubmitForms.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUnSubmitForms.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUnSubmitForms.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.frmMaintenType">
+            <summary>
+            分类维护窗体
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmMaintenType.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmMaintenType.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmMaintenType.m_mthUpdateBrotherNodePos(System.Windows.Forms.TreeNode)">
+            <summary>
+            递归更改表单位置
+            </summary>
+            <param name="p_trnBrother"></param>
+        </member>
+        <member name="T:iCare.CustomForm.frmCustomFormDesign">
+            <summary>
+            自定义界面设计器
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmCustomFormDesign.c_strPromptForSave">
+            <summary>
+            提示保存信息
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmCustomFormDesign.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthInit">
+            <summary>
+            构造函数之后初始化
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthHideMenu">
+            <summary>
+            隐藏菜单
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthShowFile">
+            <summary>
+            显示文件操作
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthShowToolbox">
+            <summary>
+            显示工具箱
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthShowProperty">
+            <summary>
+            显示属性页
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthShowFormat">
+            <summary>
+            显示格式
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthShowEdit">
+            <summary>
+            显示编辑
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthAddControl(System.Windows.Forms.Control)">
+            <summary>
+            增加控件方法
+            </summary>
+            <param name="ctlObj"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthAddControl(System.Windows.Forms.Control,System.Drawing.Point)">
+            <summary>
+            增加控件方法 : 指定位置
+            </summary>
+            <param name="ctlObj"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthAddCtlEvent(System.Windows.Forms.Control)">
+            <summary>
+            增加事件的方法
+            </summary>
+            <param name="ctlObj"></param>
+        </member>
+        <member name="F:iCare.CustomForm.frmCustomFormDesign.m_intClicks">
+            <summary>
+            点击控件的次数,如果大于1，则使控件处于可编辑状态
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthDownControl(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            选择控件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthSelectMulCtls(System.Object)">
+            <summary>
+            选择多个控件
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthDrawCtlBorderl">
+            <summary>
+            重画控件边框
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthMoveChoiceControl(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            移动所选的控件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthReSizeControl(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            调整控件大小
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthUpControl(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标弹起的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthCtlLocation(System.Windows.Forms.Control,System.Int32,System.Int32)">
+            <summary>
+            移动控件到新的位置
+            </summary>
+            <param name="ctlObj"></param>
+            <param name="intHSpace"></param>
+            <param name="intVSpace"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthKeyDownControl(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            键盘事件
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthDelControl">
+            <summary>
+            删除控件
+            </summary>
+            <param name="ctlSender"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_pnlEditor_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            容器重画
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthCtlAlign(System.String)">
+            <summary>
+            控件对齐的方法
+            </summary>
+            <param name="strAlignType"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthClearEditor">
+            <summary>
+            清空编辑区，处于新添状态
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.UserControl_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            增加控件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:iCare.CustomForm.frmCustomFormDesign.m_blnLefter">
+            <summary>
+            在调整大小之前鼠标是否处于所选控件的左端
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmCustomFormDesign.m_blnToper">
+            <summary>
+            在调整大小之前鼠标是否处于所选控件的右端
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthChangeCursorWhenMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标移动到某一控件的右下角时,改变鼠标形状
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthResizeControls(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            改变选中控件大小
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthDrawMouseMoveArea(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            画出鼠标移动时选择的区域
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthSelectControlsInArea(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            选中区域内的控件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:iCare.CustomForm.frmCustomFormDesign.m_intDrawBorderWidth">
+            <summary>
+            选中控件时画边框的宽度
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthDrawSelectedControlsBorder(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            画出选中控件的边框
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthCheckDropCtl(System.Windows.Forms.Control,System.Windows.Forms.Control,System.Drawing.Point)">
+            <summary>
+            检查拉动生成的控件是否在编辑区内
+            </summary>
+            <param name="p_ctlContainer"></param>
+            <param name="p_ctlSender"></param>
+            <param name="?"></param>
+        </member>
+        <member name="F:iCare.CustomForm.frmCustomFormDesign.m_strCurGUIXml">
+            <summary>
+            当前界面的XML配置信息
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_blnIfGUIChanged">
+            <summary>
+            判断界面是否改动过
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthSetCurGUIXml">
+            <summary>
+            设置当前界面XML信息，以便界面改动之后的对比
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthDrawSelectedArea(System.Drawing.Graphics)">
+            <summary>
+            用虚线画鼠标选择的区域
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthInitContext">
+            <summary>
+            初始化控件右键菜单
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.Control_OnPropertyChange(System.Object,System.EventArgs)">
+            <summary>
+            控件属性改变前，先保存其状态
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthRememberControlState(System.Windows.Forms.Control[])">
+            <summary>
+            记住控件当前状态
+            </summary>
+            <param name="p_ctlSender"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthRemberAddOrRemove(System.Windows.Forms.Control[])">
+            <summary>
+            记住增加或删除了哪些控件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthUpdateUndoRedoState">
+            <summary>
+            更新Undo和Redo状态
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthUpdateCutCopyPasteState">
+            <summary>
+            更新Cut、Copy、Paste状态
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.UserControl_Align(System.Object,System.EventArgs)">
+            <summary>
+            控件对齐
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthUpdateSeletedControls">
+            <summary>
+            更新选中的控件，重画边框等
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmCustomFormDesign.m_mthConfigXmlToGUI(System.String)">
+            <summary>
+            将XML信息配置成为界面
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.frmCustomFormDesign.m_BlnIsNew">
+            <summary>
+            是否为新添表单
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.frmCustomFormDesign.m_StrCurFormName">
+            <summary>
+            当前表单名
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.frmCustomFormDesign.m_StrGUIXml">
+            <summary>
+            界面XML信息
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.frmCustomFormDesign.m_ObjTmpCtlDescArr">
+            <summary>
+            控件名称信息
+            </summary>
+        </member>
+        <member name="T:iCare.Custom.ctlTrendViewer.ctlTrendList">
+            <summary>
+            Summary description for ctlTrendList.
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendList.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendList.m_intListWidth">
+            <summary>
+            Trend Chart 的实际宽度
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendList.m_dtmStartDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendList.m_intGridCount">
+            <summary>
+            Trend Chart 的格数,至少为5格
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendList.m_intGridWidth">
+            <summary>
+            Trend Chart 每格的宽度，默认为120像素
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendList.m_enmResolution">
+            <summary>
+            分辨率
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendList.m_intTotalTime">
+            <summary>
+            总的趋势时间
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendList.m_intParameterWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendList.m_clrListBackColor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendList.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendList.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendList.m_mthInitListView">
+            <summary>
+            初始化列表
+            </summary>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendList.m_mthShowParamDesc(iCare.Custom.ctlTrendViewer.clsVitalGroupSet[])">
+            <summary>
+            显示参数的名称、单位和图标
+            </summary>
+            <param name="p_objGroupSetArr"></param>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendList.m_mthShowParamValue(iCare.Custom.ctlTrendViewer.clsTrendValue[])">
+            <summary>
+            显示参数的值
+            </summary>
+            <param name="p_objTrendValueArr">参数的值，时间为 X 轴坐标, 值为 Y 轴坐标</param>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendList.m_intCalPosition(System.DateTime)">
+            <summary>
+            计算数值的对应的时间列
+            </summary>
+            <param name="p_dtmTime"></param>
+            <returns>返回对应的时间列</returns>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendList.m_mthClearParam">
+            <summary>
+            清空参数值
+            </summary>
+        </member>
+        <member name="P:iCare.Custom.ctlTrendViewer.ctlTrendList.m_DtmStartDate">
+            <summary>
+             开始时间
+            </summary>
+        </member>
+        <member name="P:iCare.Custom.ctlTrendViewer.ctlTrendList.m_EnmResolution">
+            <summary>
+            分辨率
+            </summary>
+        </member>
+        <member name="P:iCare.Custom.ctlTrendViewer.ctlTrendList.m_IntTotalTime">
+            <summary>
+            总的趋势时间
+            </summary>
+        </member>
+        <member name="T:iCare.Custom.PrintTool.frmPrintPreviewDialog">
+            <summary>
+            Summary description for frmPrintPreviewDialog.
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.PrintTool.frmPrintPreviewDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:iCare.Custom.PrintTool.frmPrintPreviewDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:iCare.Custom.PrintTool.frmPrintPreviewDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:iCare.Custom.PrintTool.frmPrintPreviewDialog.m_blnHandlePrint(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            处理打印。如果返回true，继续打印；如果返回false，继续调用打印函数。
+            </summary>
+            <param name="p_objArg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iCare.CustomForm.ctlHGroupBox">
+            <summary>
+            Summary description for ctlHGroupBox.
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlHGroupBox.boolIsValid">
+            <summary>
+            获取或者设置该控件是否有效；true 为有效，将参与文本的生成；否则为 false
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlHGroupBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.ctlHGroupBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.ctlHGroupBox.有效">
+            <summary>
+            获取或者设置该控件是否有效，true 为有效将参与文本的生成，否则为 false
+            </summary>
+        </member>
+        <member name="E:iCare.CustomForm.ctlHGroupBox.m_evtOnPropertyChange">
+            <summary>
+            当属性要改变时
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsDateTimePickerMemento">
+            <summary>
+            Summary description for clsDateTimePickerMemento.
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsAddRemoveMemento">
+            <summary>
+            增加或删除控件的备忘录
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.frmInputName">
+            <summary>
+            frmInputName 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmInputName.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmInputName.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmInputName.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.frmTextTemplate">
+            <summary>
+            最小元素集 (frmTextTemplate) 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmTextTemplate.m_strFormID">
+            <summary>
+            窗体ID
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmTextTemplate.m_strControlID">
+            <summary>
+            控件ID
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.#ctor">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            
+            </summary>
+            <param name="p_ctl"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.#ctor(System.Windows.Forms.Control,System.String,System.String,System.Int32,System.DateTime)">
+            <summary>
+            电子病历使用请用此构造
+            </summary>
+            <param name="p_ctlSource"></param>
+            <param name="p_strFormID"></param>
+            <param name="p_strControlID"></param>
+            <param name="p_intSelectionStart"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.m_mthInitilizeTemplateInfo(System.String,System.String)">
+            <summary>
+            初始化模板信息
+            </summary>
+            <param name="p_strFormID"></param>
+            <param name="p_strControlID"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.m_mthFindAllTemplateUsedInCtl(System.String,System.String)">
+            <summary>
+            传入ID信息查找模板的值
+            </summary>
+            <param name="strFormID"></param>
+            <param name="strControlID"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.m_mthInitTemplateTree(iCareData.clsTemplateInfo[])">
+            <summary>
+            加载模板到树
+            </summary>
+            <param name="objTemplateInfo"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.m_mthLoadControl(System.String)">
+            <summary>
+            加载控件信息
+            </summary>
+            <param name="p_strXml"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.m_mthLoadControlValue(System.Windows.Forms.Control,iCareData.clsElementValue[])">
+            <summary>
+            加载控件数据
+            </summary>
+            <param name="objArr"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.m_mthGetControlValues">
+            <summary>
+            从界面取值
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.m_mthGetText(System.Windows.Forms.Control)">
+            <summary>
+            添加字符到合并后的字符串
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.m_mthComboBox_Additem(System.Object,System.EventArgs)">
+            <summary>
+            添加项目
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.m_mthComboBox_Modifyitem(System.Object,System.EventArgs)">
+            <summary>
+            修改项目
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.m_mthComboBox_Deleteitem(System.Object,System.EventArgs)">
+            <summary>
+            删除项目
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.m_mthSetComboBoxListItem(iCare.CustomForm.ctlComboBox)">
+            <summary>
+            设置下拉项目
+            </summary>
+            <param name="p_cboSender"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.m_mthAddCtlEvent(System.Windows.Forms.Control)">
+            <summary>
+            增加事件的方法
+            </summary>
+            <param name="ctlObj"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmTextTemplate.m_cmdCopy_Click(System.Object,System.EventArgs)">
+            <summary>
+            复制选中的一个模版
+            WQF 2007-3-5
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:iCare.CustomForm.frmTextTemplate.m_ArlTextTemplate">
+            <summary>
+            获取信息
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.frmTextTemplate.m_StrTextBoxText">
+            <summary>
+            获取或设置合并后的字符串
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.ctlRichTextBox">
+            <summary>
+            文本框
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlRichTextBox.boolIsValid">
+            <summary>
+            获取或者设置该控件是否有效；true 为有效，将参与文本的生成；否则为 false
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlRichTextBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.ctlRichTextBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.ctlRichTextBox.GetName">
+            <summary>
+            Windows消息处理,画白框
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="P:iCare.CustomForm.ctlRichTextBox.有效">
+            <summary>
+            获取或者设置该控件是否有效，true 为有效将参与文本的生成，否则为 false
+            </summary>
+        </member>
+        <member name="E:iCare.CustomForm.ctlRichTextBox.m_evtOnPropertyChange">
+            <summary>
+            当属性要改变时
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.ctlLabel">
+            <summary>
+            自定义标签
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlLabel.boolIsValid">
+            <summary>
+            获取或者设置该控件是否有效；true 为有效，将参与文本的生成；否则为 false
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlLabel.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.ctlLabel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.ctlLabel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.ctlLabel.有效">
+            <summary>
+            获取或者设置该控件是否有效，true 为有效将参与文本的生成，否则为 false
+            </summary>
+        </member>
+        <member name="E:iCare.CustomForm.ctlLabel.m_evtOnPropertyChange">
+            <summary>
+            当属性要改变时
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.ctlDateTimePicker">
+            <summary>
+            Summary description for ctlDateTimePicker.
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlDateTimePicker.boolIsValid">
+            <summary>
+            获取或者设置该控件是否有效；true 为有效，将参与文本的生成；否则为 false
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlDateTimePicker.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.ctlDateTimePicker.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlDateTimePicker.m_enmVisibleFlag">
+            <summary>
+            当前允许显示到的字段
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.ctlDateTimePicker.有效">
+            <summary>
+            获取或者设置该控件是否有效，true 为有效将参与文本的生成，否则为 false
+            </summary>
+        </member>
+        <member name="E:iCare.CustomForm.ctlDateTimePicker.m_evtOnPropertyChange">
+            <summary>
+            当属性要改变时
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.ctlDateTimePicker.enmDateTimeFlag">
+            <summary>
+            日期时间字段
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsGenerateControlFactory">
+            <summary>
+            自定义控件工厂
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsGenerateControlFactory.m_infGetControl(System.String)">
+            <summary>
+            得到特定控件
+            </summary>
+            <param name="p_strType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsGenerateControlFactory.m_ctlGetControl(System.String)">
+            <summary>
+            得到特定控件
+            </summary>
+            <param name="p_strType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iCare.CustomForm.clsOprFactory">
+            <summary>
+            生产控件操作的工厂
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsTextBoxOpr">
+            <summary>
+            操作TextBox
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsCheckBoxOpr">
+            <summary>
+            操作CheckBox
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsComboBoxOpr">
+            <summary>
+            操作ComboBox
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsDateTimeOpr">
+            <summary>
+            操作时间控件
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsRichTextBoxMemento">
+            <summary>
+            文本框备忘录
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsMementoFactory">
+            <summary>
+            Summary description for clsMementoFactory.
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsCustomPublicFuntion">
+            <summary>
+            clsCustomPublicFuntion 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomPublicFuntion.m_mthLoadType(System.Object)">
+            <summary>
+            初始化分类
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomPublicFuntion.m_mthLoadType(System.Windows.Forms.MenuItem)">
+            <summary>
+            初始化分类
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomPublicFuntion.m_clrSetTextColor(System.String)">
+            <summary>
+            设置文本颜色
+            </summary>
+            <param name="p_strEmployeeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomPublicFuntion.m_trnFoundInTree(System.Int32,System.Windows.Forms.TreeView)">
+            <summary>
+            查找树
+            </summary>
+            <param name="p_strTypeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomPublicFuntion.m_trnFoundInNodee(System.Int32,System.Windows.Forms.TreeNode)">
+            <summary>
+            查找树
+            </summary>
+            <param name="p_strTypeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomPublicFuntion.m_trnFoundNode(System.Windows.Forms.TreeNode,System.Int32)">
+            <summary>
+            查找节点
+            </summary>
+            <param name="p_trnSender"></param>
+            <param name="p_strTypeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomPublicFuntion.m_mthAddCustomFormToMenu(System.Windows.Forms.MenuItem)">
+            <summary>
+            添加自定义表单到菜单
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomPublicFuntion.m_objGetSubmitValue">
+            <summary>
+            取得自定义表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomPublicFuntion.m_mthLoadOwnerForm(System.Windows.Forms.TreeView)">
+            <summary>
+            添加自定义表单到树
+            </summary>
+            <param name="p_trvMain"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomPublicFuntion.m_mthSetFormToNode(System.Windows.Forms.TreeNode)">
+            <summary>
+            添加自定义表单到树
+            </summary>
+            <param name="p_trvMain"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomPublicFuntion.m_mthAddFormToNode(System.Windows.Forms.TreeNode,iCareData.clsCustom_SubmitValue)">
+            <summary>
+            递归添加到节点
+            </summary>
+            <param name="p_trnNode"></param>
+            <param name="p_objSubmitValue"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomPublicFuntion.m_mthClearEmptyTypeNode(System.Windows.Forms.TreeNode)">
+            <summary>
+            清除没有表单的空类别节点
+            </summary>
+            <param name="p_trnNode"></param>
+        </member>
+        <member name="F:iCare.clsHRPMessage.c_strPromptForPrint">
+            <summary>
+            提示打印翻页
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsCheckBoxMemento">
+            <summary>
+            复选框备忘录
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.frmSubmitCtlConfig">
+            <summary>
+            Summary description for frmSubmitCtlConfig.
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmSubmitCtlConfig.c_intPrivate">
+            <summary>
+            自用
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmSubmitCtlConfig.c_intPublic">
+            <summary>
+            公用
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmSubmitCtlConfig.c_intDept">
+            <summary>
+            科室使用
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmSubmitCtlConfig.m_objAllDepartmentArr">
+            <summary>
+            所有的部门
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSubmitCtlConfig.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSubmitCtlConfig.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSubmitCtlConfig.m_mthSetTempSavedFormName(System.String,System.Int32)">
+            <summary>
+            设置临时保存的表单名
+            </summary>
+            <param name="p_strFormName"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmSubmitCtlConfig.m_mthSubmitForm">
+            <summary>
+            提交表单
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSubmitCtlConfig.m_blnHaveExist(System.String)">
+            <summary>
+            判断表单名是否已存在
+            </summary>
+            <param name="p_strFormName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.frmSubmitCtlConfig.m_mthInit">
+            <summary>
+            构造函数之后的初始化
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSubmitCtlConfig.m_mthLoadAllDepts">
+            <summary>
+            查出所有部门
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSubmitCtlConfig.m_intGetVisible_Level">
+            <summary>
+            可见范围
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.frmSubmitCtlConfig.m_mthClearTreeCheck(System.Windows.Forms.TreeNode)">
+            <summary>
+            清除选择
+            </summary>
+            <param name="p_trnParent"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmSubmitCtlConfig.m_mthSetParentCheck(System.Windows.Forms.TreeNode)">
+            <summary>
+            设置选中路径
+            </summary>
+            <param name="p_trnParent"></param>
+        </member>
+        <member name="P:iCare.CustomForm.frmSubmitCtlConfig.m_ObjPages">
+            <summary>
+            界面配置文件
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsAddControls">
+            <summary>
+            Summary description for clsAddControls.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsAddControls.m_mthAddDefineControl(System.Windows.Forms.Control,System.Windows.Forms.Control)">
+            <summary>
+            增加控件
+            </summary>
+            <param name="ctlContainer"></param>
+            <param name="ctlObj"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsAddControls.m_mthAddDefineControl(System.Windows.Forms.Control,System.Windows.Forms.Control,System.Drawing.Point)">
+            <summary>
+            增加控件 : 指定位置
+            </summary>
+            <param name="ctlContainer"></param>
+            <param name="ctlObj"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsAddControls.m_strGetCtlName(System.Windows.Forms.Control,System.Windows.Forms.Control)">
+            <summary>
+            按类型生成控件名称
+            </summary>
+            <param name="ctlContainer"></param>
+            <param name="ctlObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsAddControls.m_strGetCtlName(System.Windows.Forms.Control)">
+            <summary>
+            按类型生成控件名称(用Hastable)
+            </summary>
+            <param name="ctlObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsAddControls.m_mthAddControlInPaste(System.Windows.Forms.Control,System.Windows.Forms.Control)">
+            <summary>
+            增加控件(用于粘贴)
+            </summary>
+            <param name="ctlContainer"></param>
+            <param name="ctlObj"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsAddControls.m_mthCacheCtlName(System.String)">
+            <summary>
+            保存控件名称到Hastable
+            </summary>
+            <param name="p_strCtlName"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsAddControls.m_mthDeleteCtlName(System.String)">
+            <summary>
+            删除控件名称到Hastable
+            </summary>
+            <param name="p_strCtlName"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsAddControls.m_mthCheckRepeatName(System.Windows.Forms.Control)">
+            <summary>
+            检测控件重复名称，存在则重命名
+            </summary>
+            <param name="p_ctlSender"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsAddControls.m_mthCheckRepeatNameAll(System.Windows.Forms.Control)">
+            <summary>
+            递归检测控件重复名称，存在则重命名
+            </summary>
+            <param name="p_ctlSender"></param>
+        </member>
+        <member name="T:iCare.CustomForm.clsMinElementColDomain">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsMinElementColDomain.m_lngSaveTemplateData(iCareData.clsMinElementValues)">
+            <summary>
+            保存值
+            </summary>
+            <param name="p_objTextTemplate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsMinElementColDomain.m_lngGetTemplates(System.String,System.String,System.String,iCareData.clsTemplateInfo[]@)">
+            <summary>
+            获取指定控件得相关模板
+            有权限控制,员工可见
+            SQL经过优化
+            </summary>
+            <param name="strFormID"></param>
+            <param name="strControlID"></param>
+            <param name="p_strDoctor_ID"></param>
+            <param name="arrTemplate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsMinElementColDomain.m_lngGetTemplates(System.String,System.String,System.String,System.String[],iCareData.clsTemplateInfo[]@,System.Boolean)">
+            <summary>
+             获取指定控件得相关模板
+            （保留以适应旧的接口）
+            </summary>
+            <param name="strFormID"></param>
+            <param name="strControlID"></param>
+            <param name="p_strDoctor_ID"></param>
+            <param name="p_strDeptArr"></param>
+            <param name="arrTemplate"></param>
+            <param name="isUseAll"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsMinElementColDomain.m_lngSaveTemplate(iCareData.clsTemplateInfo,System.Int32,System.String[],System.String@)">
+            <summary>
+            保存模板信息
+            </summary>
+            <param name="objTIVO"></param>
+            <param name="p_intVisbleLevel"></param>
+            <param name="p_strDeptArr"></param>
+            <param name="strID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsMinElementColDomain.m_lngSaveApplyInfo(iCareData.clsTextTemplate)">
+            <summary>
+            保存主表信息
+            </summary>
+            <param name="p_objTextTemplate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsMinElementColDomain.m_lngCopyTemplate(iCareData.clsTemplateInfo,System.Int32,System.String[])">
+            <summary>
+            复制模板
+            WQF 2007-3-5
+            </summary>
+            <param name="p_objTemplate">模版对象</param>
+            <param name="intVisbleLevel">级别</param>
+            <param name="strDeptArr">部门</param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsMinElementColDomain.m_lngSaveTemplateDesc(iCareData.clsTextTemplate)">
+            <summary>
+            保存控件描述
+            </summary>
+            <param name="p_objTextTemplate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsMinElementColDomain.m_lngUpdateTemplate(iCareData.clsTemplateInfo,System.Int32,System.String[])">
+            <summary>
+            更新模板
+            </summary>
+            <param name="objTIVO"></param>
+            <param name="p_intVisbleLevel"></param>
+            <param name="p_strDeptArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsMinElementColDomain.m_lngGetValue(iCareData.clsMinElementValues@)">
+            <summary>
+            获取值
+            </summary>
+            <param name="p_objTextTemplate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsMinElementColDomain.m_lngHaltTemplate(System.String)">
+            <summary>
+            停用模板
+            </summary>
+            <param name="p_strTemplate_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsMinElementColDomain.m_lngUpdateTemplateName(System.String,System.String)">
+            <summary>
+            修改模板名称
+            </summary>
+            <param name="p_strTemplate_ID"></param>
+            <param name="p_strTemplateName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iCare.CustomForm.clsCustomFormDomain">
+            <summary>
+            自定义表单Domain层，完成简单的判断和商业逻辑
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngAddUnSubmitForm(iCareData.clsCustom_UnSubmitValue@)">
+            <summary>
+            添加新未提交表单
+            </summary>
+            <param name="p_objContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetUnSubmitForm(System.String,iCareData.clsCustom_UnSubmitValue[]@)">
+            <summary>
+            查询未提交的表单
+            </summary>
+            <param name="p_objContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngDelUnSubmitForm(System.String,System.Int32)">
+            <summary>
+             删除未提交表单
+            </summary>
+            <param name="p_strEmployeeID"></param>
+            <param name="p_strFormI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetUsePublic(System.Boolean@,System.String)">
+            <summary>
+            判定用是否在编辑公用模板的权限
+            </summary>
+            <param name="blIS"></param>
+            <param name="EmpID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngHaltSubmitForm(System.Int32,System.String,System.DateTime)">
+            <summary>
+            停用已提交表单
+            </summary>
+            <param name="p_objContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngUpdateForm(iCareData.clsCustom_UnSubmitValue)">
+            <summary>
+            修改未提交表单
+            </summary>
+            <param name="p_objContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngSubmitNewForm(iCareData.clsCustom_SubmitValue@)">
+            <summary>
+            提交新表单
+            </summary>
+            <param name="p_objContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngModifyFormPosition(System.Int32,System.Int32)">
+            <summary>
+            更新表单位置
+            </summary>
+            <param name="p_intNewPos"></param>
+            <param name="p_intForm_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngUpdateSubmitFormTypeAndPosision(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            更新表单位置及分类
+            </summary>
+            <param name="p_intNewTypeID"></param>
+            <param name="p_intNewPos"></param>
+            <param name="p_intForm_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetSubmitForms(System.String,System.String,iCareData.clsCustom_SubmitValue[]@)">
+            <summary>
+            获取已提交的并且该用户可使用的表单（单个科室）
+            </summary>
+            <param name="p_strEmployeeID"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_objContents"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetSubmitForms(System.String,System.String[],iCareData.clsCustom_SubmitValue[]@)">
+            <summary>
+            获取已提交的并且该用户可以使用的表单（多个科室）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetSubmitForms(System.String,iCareData.clsCustom_SubmitValue[]@)">
+            <summary>
+             获取已提交的并且该用户可修改的表单
+            </summary>
+            <param name="p_strEmployeeID"></param>
+            <param name="p_objContents"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngLoadAllType(iCareData.clsCustom_Type[]@)">
+            <summary>
+            获取所有分类
+            </summary>
+            <param name="p_objTypeArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngAddType(iCareData.clsCustom_Type@)">
+            <summary>
+            添加表单类型
+            </summary>
+            <param name="p_objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngUpdateType(iCareData.clsCustom_Type)">
+            <summary>
+            修改分类
+            </summary>
+            <param name="p_objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngUpdateType(System.Int32,iCareData.clsCustom_Type)">
+            <summary>
+            修改分类
+            </summary>
+            <param name="p_intNewParentID"></param>
+            <param name="p_objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngDeleteTypeAndSetChild(System.Int32)">
+            <summary>
+            删除分类
+            </summary>
+            <param name="p_intType_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngDeleteType(System.Int32)">
+            <summary>
+            删除分类
+            </summary>
+            <param name="p_intType_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngCheckChildType(System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_intType_ID"></param>
+            <param name="p_intAmount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_blnCheckSubmitName(System.Int32,System.String)">
+            <summary>
+            检查表单名称
+            </summary>
+            <param name="p_strParentID"></param>
+            <param name="p_strName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_blnCheckUnSubmitName(System.String)">
+            <summary>
+            检查未提交表单名称
+            </summary>
+            <param name="p_strName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngAddTarSyncField(iCareData.clsCustom_Sync@)">
+            <summary>
+            添加数据流出同步字段信息
+            </summary>
+            <param name="p_objFieldArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngAddSouSyncField(iCareData.clsCustom_Sync@)">
+            <summary>
+            添加数据流入同步字段信息
+            </summary>
+            <param name="p_objFieldArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngUpdateSouSyncField(iCareData.clsCustom_Sync)">
+            <summary>
+            修改数据流入同步字段信息
+            </summary>
+            <param name="p_objField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngUpdateTarSyncField(iCareData.clsCustom_Sync)">
+            <summary>
+            修改数据流出同步字段信息
+            </summary>
+            <param name="p_objField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngDeleteTarSync(System.Int32,System.String)">
+            <summary>
+            删除数据流出同步字段信息
+            </summary>
+            <param name="p_intSync_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngDeleteSouSync(System.Int32,System.String)">
+            <summary>
+            删除数据流入同步字段信息
+            </summary>
+            <param name="p_intSync_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_strGetTarSyncConfig(System.Int32,System.String)">
+            <summary>
+            获取传送的字段
+            </summary>
+            <param name="p_intForm_ID"></param>
+            <param name="p_objSyncField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_strGetSouSyncConfig(System.Int32,System.String)">
+            <summary>
+            获取传送的字段
+            </summary>
+            <param name="p_intForm_ID"></param>
+            <param name="p_objSyncField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngUpdateSubmitForm(iCareData.clsCustom_SubmitValue)">
+            <summary>
+            更新已提交表单
+            </summary>
+            <param name="p_objContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngUpdateSunmitFormName(System.String,System.Int32)">
+            <summary>
+            更新已提交表单名称
+            </summary>
+            <param name="p_strFormName"></param>
+            <param name="p_intFormID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngAddNewRecord(iCareData.clsCustom_Data@)">
+            <summary>
+            添加新记录
+            </summary>		
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetRecByRecord_ID(System.String,iCareData.clsCustom_Data@)">
+            <summary>
+            根据记录ID获取记录
+            </summary>
+            <param name="p_strRecord_ID"></param>
+            <param name="p_objDataArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetRecByInPatientInfo(System.String,System.DateTime,System.String,iCareData.clsCustom_Data[]@)">
+            <summary>
+            根据住院ID贺住院日期获取记录
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_dtmInPatientDate"></param>
+            <param name="p_objDataArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetRecByPatientID(System.String,System.String,iCareData.clsCustom_Data[]@)">
+            <summary>
+            根据病人ID获取记录
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_objDataArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetAllRecords(iCareData.clsCustom_Data[]@)">
+            <summary>
+            获取所有记录内容
+            </summary>
+            <param name="p_objDataArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetAllForSeachRecords(iCareData.clsCustom_Data[]@)">
+            <summary>
+            获取所有为数据检索可用记录内容
+            </summary>
+            <param name="p_objDataArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngModifyRecord(iCareData.clsCustom_Data)">
+            <summary>
+            修改记录
+            </summary>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngDeleteRecord(System.Int32,System.String)">
+            <summary>
+            删除记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetAllDept(com.digitalwave.iCare.ValueObject.clsDepartmentVO[]@)">
+            <summary>
+            获取所有科室
+            </summary>
+            <param name="p_objDeptArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetDeptByEmployee(System.String,com.digitalwave.iCare.ValueObject.clsDepartmentVO[]@)">
+            <summary>
+            获取员工所属科室
+            </summary>
+            <param name="p_objDeptArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetPatientLikeIDByArea(System.String,System.String,iCareData.clsOutpatientInfo[]@)">
+            <summary>
+            根据病区模糊查找病人
+            </summary>
+            <param name="p_strAreaID"></param>
+            <param name="p_strLikeString"></param>
+            <param name="p_objOutPatientInfoArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetAllPatientIDByArea(System.String,System.String[]@)">
+            <summary>
+            获取本病区所有病人ID
+            </summary>
+            <param name="p_strAreaID"></param>
+            <param name="p_strPatientIDArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetPatientInfoByID(System.String,iCareData.clsOutpatientInfo@)">
+            <summary>
+            根据病人ID获取病人资料
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_objOutPatientInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetAllTarget_GUI(iCareData.clsCustom_Target_GUI[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objTargetArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsCustomFormDomain.m_lngGetAllSource_GUI(iCareData.clsCustom_Target_GUI[]@)">
+            <summary>
+            获取工作流目的表单信息
+            </summary>
+            <param name="p_objTargetArr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.Utility.Controls.ctlTemplateEditer">
+            <summary>
+            模板内容编辑控件
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.Controls.ctlTemplateEditer.m_objGroupInfosArr">
+            <summary>
+            全部的选择项目组信息
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.Controls.ctlTemplateEditer.m_mthSetTemplateText(System.String)">
+            <summary>
+            设置模板内容
+            </summary>
+            <param name="p_strTemplateText">模板内容</param>
+        </member>
+        <member name="F:com.digitalwave.Utility.Controls.ctlTemplateEditer.m_clrNeedSelected">
+            <summary>
+            需要选择的文本颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.Controls.ctlTemplateEditer.m_clrSelected">
+            <summary>
+            选择的文本颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.Controls.ctlTemplateEditer.m_clrUnselected">
+            <summary>
+            不选择的文本颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.Controls.ctlTemplateEditer.m_clrNormalText">
+            <summary>
+            普通的文本颜色
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.Controls.ctlTemplateEditer.m_mthSetNeedSelectedColor">
+            <summary>
+            设置需要选择的颜色
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.Controls.ctlTemplateEditer.m_ClrNeedSelected">
+            <summary>
+            需要选择的文本颜色
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.Controls.ctlTemplateEditer.m_ClrSelected">
+            <summary>
+            选择的文本颜色
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.Controls.ctlTemplateEditer.m_ClrUnselected">
+            <summary>
+            不选择的文本颜色
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.Controls.ctlTemplateEditer.m_ClrNormalText">
+            <summary>
+            普通的文本颜色
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.Controls.ctlTemplateEditer.m_BlnIsSelected">
+            <summary>
+            是否已经选择过
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.Controls.ctlTemplateEditer.m_StrEditedText">
+            <summary>
+            编辑内容
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsSelectInfoGroup">
+            <summary>
+            选择项目组
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsSelectInfoGroup.c_intNotSelected">
+            <summary>
+            没有选择过项目
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsSelectInfoGroup.c_intNoSelectedItems">
+            <summary>
+            没有项目被选择
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsSelectInfoGroup.m_strSelectInfoArr">
+            <summary>
+            选择项目
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsSelectInfoGroup.m_intSelected">
+            <summary>
+            已经选择的项目
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsSelectInfoGroup.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsSelectInfoGroup.m_strSetSelectInfoFormat(System.String)">
+            <summary>
+            设置选择项目格式内容，返回界面显示内容。
+            </summary>
+            <param name="p_strSelectInfoFormat">选择项目格式内容。不包含{{}}符号</param>
+            <returns>界面显示内容。</returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsSelectInfoGroup.m_blnHandleSelected(System.Int32,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            处理项目组选择。如果有内容被选择，返回true，否则返回false。
+            </summary>
+            <param name="p_intSelectIndex">选择的下标</param>
+            <param name="p_intStartIndex">被选择项目的开始下标</param>
+            <param name="p_intTextLength">被选择项目的内容长度</param>
+            <param name="p_intUnslectedIndex">不被选择的下标</param>
+            <param name="p_intUnselectedTextLength">不被选择项目的内容长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsSelectInfoGroup.m_mthHandleInfoSelect(System.Int32,System.Int32,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            处理选项被选择
+            </summary>
+            <param name="p_intInfoIndex">选项在选项组里的下标</param>
+            <param name="p_intStartIndex">选项内容的开始下标</param>
+            <param name="p_intUnslectedIndex">不被选择的下标</param>
+            <param name="p_intUnselectedTextLength">不被选择项目的内容长度</param>
+        </member>
+        <member name="M:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsSelectInfoGroup.m_blnIsSameInfo(com.digitalwave.Utility.Controls.ctlTemplateEditer.clsSelectInfoGroup)">
+            <summary>
+            判断是否同一个选择内容
+            </summary>
+            <param name="p_objOther"></param>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsSelectInfoGroup.m_blnIsSelected">
+            <summary>
+            是否已经选择过。如果选择过，返回true
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsSelectInfoGroup.m_strSelectedInfo">
+            <summary>
+            选择的内容
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsGroupInfo">
+            <summary>
+            选择项目组信息
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsGroupInfo.m_intStartIndex">
+            <summary>
+            项目组内容开始下标
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.Controls.ctlTemplateEditer.clsGroupInfo.m_intEndIndex">
+            <summary>
+            项目组内容结束下标
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.ctlCheckBox">
+            <summary>
+            Summary description for ctlCheckBox.
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlCheckBox.boolIsValid">
+            <summary>
+            获取或者设置该控件是否有效；true 为有效，将参与文本的生成；否则为 false
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlCheckBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.ctlCheckBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.ctlCheckBox.有效">
+            <summary>
+            获取或者设置该控件是否有效，true 为有效将参与文本的生成，否则为 false
+            </summary>
+        </member>
+        <member name="E:iCare.CustomForm.ctlCheckBox.m_evtOnPropertyChange">
+            <summary>
+            当属性要改变时
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsHGroupBoxMemento">
+            <summary>
+            横线备忘录
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.frmSelectDeptType">
+            <summary>
+            选择表单适用类型
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmSelectDeptType.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSelectDeptType.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSelectDeptType.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.frmSaveCtlConfig">
+            <summary>
+            Summary description for frmSaveCtlConfig.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSaveCtlConfig.#ctor">
+            <summary>
+            新建状态，需检查名称
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSaveCtlConfig.#ctor(System.String)">
+            <summary>
+            修改状态不需要检查名称
+            </summary>
+            <param name="p_strFormName"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmSaveCtlConfig.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSaveCtlConfig.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSaveCtlConfig.m_blnHaveExist">
+            <summary>
+            表单名是否已存在
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSaveCtlConfig.m_mthGetNewFormName">
+            <summary>
+            得到保存的表单名
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“T:iCare.CustomForm.Properties.Resources”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“P:iCare.CustomForm.Properties.Resources.ResourceManager”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“P:iCare.CustomForm.Properties.Resources.Culture”忽略有格式错误的 XML 注释 -->
+        <member name="T:iCare.CustomForm.clsDefaultValueDomain">
+            <summary>
+            默认值的商业逻辑层
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsComboBoxMemento">
+            <summary>
+            clsComboBoxMemento 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.frmSetSyncField">
+            <summary>
+            设置同步字段
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.m_mthLoadCustomForm">
+            <summary>
+            读取自定义表单
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.m_mthLoadOuterForm">
+            <summary>
+            读取外部表单
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.m_mthLoadTargetFormControl(iCareData.clsCustom_Target_GUI)">
+            <summary>
+            读取目标表单字段
+            </summary>
+            <param name="p_objTarget"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.m_mthLoadSourceFormControl(iCareData.clsCustom_Target_GUI)">
+            <summary>
+            读取目标表单字段
+            </summary>
+            <param name="p_objTarget"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.m_mthLoadOutField(iCareData.clsCustom_SubmitValue)">
+            <summary>
+            读取数据流出设置的同步字段
+            </summary>
+            <param name="p_objSubmitValue"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.m_mthLoadInField(iCareData.clsCustom_SubmitValue)">
+            <summary>
+            读取数据流入设置的同步字段
+            </summary>
+            <param name="p_objSubmitValue"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.m_mthLoadTarSyncField(System.Int32,System.String)">
+            <summary>
+            读取数据流出已设置同步字段
+            </summary>
+            <param name="p_objSync"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.m_mthLoadSouSyncField(System.Int32,System.String)">
+            <summary>
+            读取数据流入已设置同步字段
+            </summary>
+            <param name="p_objSync"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.m_objGetTarField">
+            <summary>
+            获取界面已选中字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.m_objGetSouField">
+            <summary>
+            获取界面已选中字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.m_mthClearFieldControlID">
+            <summary>
+            清除数据流出源表单字段ControlID
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.m_mthClearTargetSubItem">
+            <summary>
+            清除数据流出目标字段对应源
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmSetSyncField.m_mthClearFormInSubItem">
+            <summary>
+            清除数据流入目标字段对应源
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.frmSetSyncField.m_ObjSubmitValue">
+            <summary>
+            设置已提交表单
+            </summary>
+        </member>
+        <member name="T:iCare.clsComboBoxDomain">
+            <summary>
+            Summary description for clsComboBoxDomain.
+            </summary>
+        </member>
+        <member name="M:iCare.clsComboBoxDomain.m_lngAddItemToDB(iCareData.clsComboBoxValue)">
+            <summary>
+            添加一项
+            </summary>
+            <param name="p_objValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.clsComboBoxDomain.m_lngDeleteItem(iCareData.clsComboBoxValue)">
+            <summary>
+            删除一项
+            </summary>
+            <param name="p_objValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.clsComboBoxDomain.m_lngModifyItem(iCareData.clsComboBoxValue,System.String)">
+            <summary>
+            修改一项
+            </summary>
+            <param name="p_objOldValue"></param>
+            <param name="p_strNewItemContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.clsComboBoxDomain.m_lngGetApplyReportAllItem(System.String,System.String,iCareData.clsComboBoxValue[]@)">
+            <summary>
+            获取所有项目(申请单，报告单)
+            </summary>
+            <param name="p_strTypeID">窗体名称</param>
+            <param name="p_strItemID">控件名称</param>
+            <param name="p_objValueArr">返回值</param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.clsComboBoxDomain.m_lngAddApplyReprotItemToDB(iCareData.clsComboBoxValue)">
+            <summary>
+            添加一项(申请单，报告单)
+            </summary>
+            <param name="p_objValue">要添加的信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.clsComboBoxDomain.m_lngDeleteApplyReportItem(iCareData.clsComboBoxValue)">
+            <summary>
+            删除一项(申请单，报告单)
+            </summary>
+            <param name="p_objValue">要删除的信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.clsComboBoxDomain.m_lngModifyApplyReprotItem(iCareData.clsComboBoxValue,System.String)">
+            <summary>
+            修改一项(申请单，报告单)
+            </summary>
+            <param name="p_objOldValue">要修改的原是记录</param>
+            <param name="p_strNewItemContent">新记录</param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.clsComboBoxDomain.m_mthComboBox_Additem(System.Object,System.EventArgs)">
+            <summary>
+            添加项目
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.clsComboBoxDomain.m_mthComboBox_Modifyitem(System.Object,System.EventArgs)">
+            <summary>
+            修改项目
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.clsComboBoxDomain.m_mthComboBox_Deleteitem(System.Object,System.EventArgs)">
+            <summary>
+            删除项目
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.clsComboBoxDomain.m_mthSetComboBoxListItem(com.digitalwave.Utility.Controls.ctlComboBox)">
+            <summary>
+            设置下拉项目
+            </summary>
+            <param name="p_cboSender"></param>
+        </member>
+        <member name="T:iCare.CustomForm.ctlComboBox">
+            <summary>
+            ctlComboBox 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlComboBox.boolIsValid">
+            <summary>
+            获取或者设置该控件是否有效；true 为有效，将参与文本的生成；否则为 false
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.ctlComboBox.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.ctlComboBox.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.ctlComboBox.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要使用代码编辑器 
+            修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.ctlComboBox.有效">
+            <summary>
+            获取或者设置该控件是否有效，true 为有效将参与文本的生成，否则为 false
+            </summary>
+        </member>
+        <member name="E:iCare.CustomForm.ctlComboBox.m_evtOnPropertyChange">
+            <summary>
+            当属性要改变时
+            </summary>
+        </member>
+        <member name="E:iCare.CustomForm.ctlComboBox.evtAddItem">
+            <summary>
+            "添加项目触发的事件"
+            </summary>
+        </member>
+        <member name="E:iCare.CustomForm.ctlComboBox.evtModifyItem">
+            <summary>
+            "修改项目触发的事件"
+            </summary>
+        </member>
+        <member name="E:iCare.CustomForm.ctlComboBox.evtDelItem">
+            <summary>
+            "删除项目触发的事件"
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.clsBlankSpace.boolIsValid">
+            <summary>
+            获取或者设置该控件是否有效；true 为有效，将参与文本的生成；否则为 false
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsBlankSpace.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsBlankSpace.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsBlankSpace.Draw(System.Drawing.Graphics)">
+            <summary>
+            
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsBlankSpace.MakeSpecialControlXml(System.Xml.XmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="p_objWriter"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsBlankSpace.ConfigMe(System.Xml.XmlTextReader)">
+            <summary>
+            
+            </summary>
+            <param name="p_objReader"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsBlankSpace.GetName">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“F:iCare.CustomForm.clsBlankSpace.components”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:iCare.CustomForm.clsBlankSpace.Dispose(System.Boolean)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:iCare.CustomForm.clsBlankSpace.InitializeComponent”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“E:iCare.CustomForm.clsBlankSpace.m_evtOnPropertyChange”忽略有格式错误的 XML 注释 -->
+        <member name="P:iCare.CustomForm.clsBlankSpace.空格数">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.clsBlankSpace.光标索引">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.clsBlankSpace.有效">
+            <summary>
+            获取或者设置该控件是否有效，true 为有效将参与文本的生成，否则为 false
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.clsBlankSpace.DataValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.frmUserDefinedEditor">
+            <summary>
+            Summary description for frmUserDefinedEditor.
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmUserDefinedEditor.c_strPromptForSave">
+            <summary>
+            提示保存信息
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmUserDefinedEditor.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthInit">
+            <summary>
+            构造函数之后初始化
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthHideMenu">
+            <summary>
+            隐藏菜单
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthShowFile">
+            <summary>
+            显示文件操作
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthShowToolbox">
+            <summary>
+            显示工具箱
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthShowProperty">
+            <summary>
+            显示属性页
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthShowFormat">
+            <summary>
+            显示格式
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthShowEdit">
+            <summary>
+            显示编辑
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthAddControl(System.Windows.Forms.Control)">
+            <summary>
+            增加控件方法
+            </summary>
+            <param name="ctlObj"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthAddControl(System.Windows.Forms.Control,System.Drawing.Point)">
+            <summary>
+            增加控件方法 : 指定位置
+            </summary>
+            <param name="ctlObj"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthAddCtlEvent(System.Windows.Forms.Control)">
+            <summary>
+            增加事件的方法
+            </summary>
+            <param name="ctlObj"></param>
+        </member>
+        <member name="F:iCare.CustomForm.frmUserDefinedEditor.m_intClicks">
+            <summary>
+            点击控件的次数,如果大于1，则使控件处于可编辑状态
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthDownControl(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            选择控件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthSelectMulCtls(System.Object)">
+            <summary>
+            选择多个控件
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthDrawCtlBorderl">
+            <summary>
+            重画控件边框
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthMoveChoiceControl(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            移动所选的控件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthReSizeControl(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            调整控件大小
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthUpControl(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标弹起的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthCtlLocation(System.Windows.Forms.Control,System.Int32,System.Int32)">
+            <summary>
+            移动控件到新的位置
+            </summary>
+            <param name="ctlObj"></param>
+            <param name="intHSpace"></param>
+            <param name="intVSpace"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthKeyDownControl(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            键盘事件
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthDelControl">
+            <summary>
+            删除控件
+            </summary>
+            <param name="ctlSender"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthEditor_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            容器重画
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthCtlAlign(System.String)">
+            <summary>
+            控件对齐的方法
+            </summary>
+            <param name="strAlignType"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthSaveUnSubmitForm">
+            <summary>
+            保存未提交的表单
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_objGetPagesValue">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthClearEditor">
+            <summary>
+            清空编辑区，处于新添状态
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.UserControl_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            增加控件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_cmdSubmit_Click(System.Object,System.EventArgs)">
+            <summary>
+            提交
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:iCare.CustomForm.frmUserDefinedEditor.m_blnLefter">
+            <summary>
+            在调整大小之前鼠标是否处于所选控件的左端
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmUserDefinedEditor.m_blnToper">
+            <summary>
+            在调整大小之前鼠标是否处于所选控件的右端
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthChangeCursorWhenMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标移动到某一控件的右下角时,改变鼠标形状
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthResizeControls(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            改变选中控件大小
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthDrawMouseMoveArea(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            画出鼠标移动时选择的区域
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthSelectControlsInArea(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            选中区域内的控件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:iCare.CustomForm.frmUserDefinedEditor.m_intDrawBorderWidth">
+            <summary>
+            选中控件时画边框的宽度
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthDrawSelectedControlsBorder(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            画出选中控件的边框
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthCheckDropCtl(System.Windows.Forms.Control,System.Windows.Forms.Control,System.Drawing.Point)">
+            <summary>
+            检查拉动生成的控件是否在编辑区内
+            </summary>
+            <param name="p_ctlContainer"></param>
+            <param name="p_ctlSender"></param>
+            <param name="?"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_strIfGUIChanged">
+            <summary>
+            判断界面是否改动过
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthSetCurGUIXml">
+            <summary>
+            设置当前界面XML信息，以便界面改动之后的对比
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthDrawSelectedArea(System.Drawing.Graphics)">
+            <summary>
+            用虚线画鼠标选择的区域
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthSelectControls(System.Windows.Forms.Control[])">
+            <summary>
+            选中一个或多个控件
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthInitContext">
+            <summary>
+            初始化控件右键菜单
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.Control_OnPropertyChange(System.Object,System.EventArgs)">
+            <summary>
+            控件属性改变前，先保存其状态
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthRememberControlState(System.Windows.Forms.Control[])">
+            <summary>
+            记住控件当前状态
+            </summary>
+            <param name="p_ctlSender"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthRemberAddOrRemove(System.Windows.Forms.Control[])">
+            <summary>
+            记住增加或删除了哪些控件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthUpdateUndoRedoState">
+            <summary>
+            更新Undo和Redo状态
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthUpdateCutCopyPasteState">
+            <summary>
+            更新Cut、Copy、Paste状态
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.UserControl_Align(System.Object,System.EventArgs)">
+            <summary>
+            控件对齐
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.CustomForm.frmUserDefinedEditor.m_mthUpdateSeletedControls">
+            <summary>
+            更新选中的控件，重画边框等
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.frmUserDefinedEditor.m_BlnIsNew">
+            <summary>
+            是否为新添表单
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.frmUserDefinedEditor.m_StrCurFormName">
+            <summary>
+            当前表单名
+            </summary>
+        </member>
+        <member name="T:iCare.Custom.ctlTrendViewer.ctlTrendChart">
+            <summary>
+            Summary description for UserControl1.
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.c_intToButtom">
+            <summary>
+            Trend Chart 到底边框的距离
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.c_intToTop">
+            <summary>
+            Trend Chart 到顶边框的距离
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.c_intToLeft">
+            <summary>
+            Trend Chart 到左边框的距离
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.c_intToRight">
+            <summary>
+            Trend Chart 到右边框的距离
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_intChartWidth">
+            <summary>
+            Trend Chart 的实际宽度
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_intChartHeight">
+            <summary>
+            Trend Chart 的实际高度, 至少为300
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_intCoordernateWidth">
+            <summary>
+            坐标和参数的宽度
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_intDateTimeHeight">
+            <summary>
+            时间栏的高度
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_intGridWidth">
+            <summary>
+            Trend Chart 每格的宽度，默认为120像素
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_intGridCount">
+            <summary>
+            Trend Chart 的格数,至少为5格
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_clrChartColor">
+            <summary>
+            Trend Chart 格线的颜色
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_clrDateColor">
+            <summary>
+            时间的颜色
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_enmDisplay">
+            <summary>
+            显示方式
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_enmResolution">
+            <summary>
+            分辨率
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_dtmStartDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_intTotalTime">
+            <summary>
+            总的趋势时间
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_intParamWidth">
+            <summary>
+            一个参数的宽度
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_intParamHeight">
+            <summary>
+            一个参数的高度
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_clrCharBackColor">
+            <summary>
+            趋势图的背景色，默认为白色
+            </summary>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendChart.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendChart.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_mthDrawChart(System.Drawing.Graphics)">
+            <summary>
+            画表格
+            </summary>
+            <param name="p_objGraphic"></param>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_mthDrawParams(System.Drawing.Graphics)">
+            <summary>
+            画参数
+            </summary>
+            <param name="p_objGraphic"></param>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_mthDrawParamsValue(System.Drawing.Graphics)">
+            <summary>
+            画坐标值
+            </summary>
+            <param name="p_objGraphic"></param>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendChart.picChart_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标移动到点上时，显示该点的值和采集时间，只对离散和混合的显示方式有效
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_strScaleValueArr">
+            <summary>
+            [0:Max0][1:Min0][2:Max1][3:Min1][4:Max2][5:Min2]
+            </summary>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_mthShowParamDesc(iCare.Custom.ctlTrendViewer.clsVitalGroupSet[])">
+            <summary>
+            显示参数的名称、单位和图标
+            </summary>
+            <param name="p_objGroupSetArr"></param>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_objParamValueArr">
+            <summary>
+            存储每个参数的信息
+            </summary>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_mthShowParamValue(iCare.Custom.ctlTrendViewer.clsTrendValue[])">
+            <summary>
+            显示参数的值
+            </summary>
+            <param name="p_objTrendValueArr">参数的值，时间为 X 轴坐标, 值为 Y 轴坐标</param>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_fltCalX(System.Single)">
+            <summary>
+            计算横坐标的值
+            </summary>
+            <param name="p_fltXValue">实际的值</param>
+            <returns>返回坐标值</returns>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_intChartRectHeight">
+            <summary>
+            趋势图的纵高度
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_intCharRectY">
+            <summary>
+            趋势图的起始位置
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_intCharRectX">
+            <summary>
+            趋势图的起始位置
+            </summary>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_fltCalY(System.Single,System.Single,System.Single)">
+            <summary>
+            计算纵坐标的值
+            </summary>
+            <param name="p_fltYValue">实际的值</param>
+            <param name="p_fltMaxScale">Y轴的上限</param>
+            <param name="p_fltMinScale">Y轴的下限</param>
+            <returns>返回坐标值</returns>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_mthDrawMarker(System.Drawing.Graphics,System.Drawing.PointF,System.Int32,System.Drawing.Color)">
+            <summary>
+            
+            </summary>
+            <param name="p_objGraphic"></param>
+            <param name="p_pnfPos"></param>
+            <param name="p_intMarker"></param>
+            <param name="p_clrParamColor"></param>
+        </member>
+        <member name="M:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_mthClearParam">
+            <summary>
+            清空参数值
+            </summary>
+        </member>
+        <member name="P:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_ClrChartColor">
+            <summary>
+            Trend Chart 的网格线颜色
+            </summary>
+        </member>
+        <member name="P:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_ClrChartBackColor">
+            <summary>
+            趋势图的背静色
+            </summary>
+        </member>
+        <member name="P:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_ClrDateColor">
+            <summary>
+            时间的颜色
+            </summary>
+        </member>
+        <member name="P:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_EnmDisplay">
+            <summary>
+            显示方式
+            </summary>
+        </member>
+        <member name="P:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_EnmResolution">
+            <summary>
+            分辨率
+            </summary>
+        </member>
+        <member name="P:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_DtmStartDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:iCare.Custom.ctlTrendViewer.ctlTrendChart.m_IntTotalTime">
+            <summary>
+            总的趋势时间
+            </summary>
+        </member>
+        <member name="T:iCare.Custom.ctlTrendViewer.enmResolution">
+            <summary>
+            分辨率
+            </summary>
+        </member>
+        <member name="T:iCare.Custom.ctlTrendViewer.enmDisplay">
+            <summary>
+            显示
+            </summary>
+        </member>
+        <member name="T:iCare.Custom.ctlTrendViewer.clsVitalGroupSet">
+            <summary>
+            参数组的信息（包括参数的信息）
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.clsVitalGroupSet.m_intEMFCID">
+            <summary>
+            EMFC_ID 是标示参数的ID
+            </summary>
+        </member>
+        <member name="T:iCare.Custom.ctlTrendViewer.clsTrendValue">
+            <summary>
+            趋势的数据
+            </summary>
+        </member>
+        <member name="T:iCare.Custom.ctlTrendViewer.clsParamValue">
+            <summary>
+            参数的值
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.clsParamValue.m_arlValue">
+            <summary>
+            PointF类型的object,实际的坐标值
+            </summary>
+        </member>
+        <member name="F:iCare.Custom.ctlTrendViewer.clsParamValue.m_arlTrendValue">
+            <summary>
+            clsTrendValue类型的object
+            </summary>
+        </member>
+        <member name="T:iCare.ctlDataGridBaseTool">
+            <summary>
+            Summary description for ctlDataGridBaseTool.
+            </summary>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_mthAddColumnWithListView(System.Int32,iCare.ctlDataGridBaseTool.clsGridListViewExt.d_mthBeforeListViewShowHandler,iCare.ctlDataGridBaseTool.clsGridListViewExt.d_mthListViewDoubleClickHandler)">
+            <summary>
+            添加TextChange中显示的ListView
+            </summary>
+            <param name="p_intColumnIndex">列的索引，从0开始</param>
+            <param name="p_evtBeforeListViewShow">显示ListView之前的事件</param>
+            <param name="p_evtListViewDoubleClick">ListView双击的事件</param>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_mthInitListViewColumnExt(System.Int32,System.Windows.Forms.ListView)">
+            <summary>
+            初始化ListView的列
+            </summary>
+            <param name="p_intColumnIndex">列的索引，从0开始</param>
+            <param name="p_lsvList">ListView</param>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_mthInitListViewItemExt(System.Int32,System.String,System.Windows.Forms.ListView)">
+            <summary>
+            初始化ListView的内容
+            </summary>
+            <param name="p_intColumnIndex">列的索引，从0开始</param>
+            <param name="p_strText">用户输入的内容</param>
+            <param name="p_lsvList">ListView</param>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_objMakeDataExt(System.Int32,System.Windows.Forms.ListViewItem)">
+            <summary>
+            在ListView双击后，获取一行数据
+            </summary>
+            <param name="p_intColumnIndex">列的索引，从0开始</param>
+            <param name="p_lviSelectedItem">用户选择的ListView的内容</param>
+            <returns>放入DataTable的内容</returns>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_mthAddColumnWithListViewExt(System.Int32)">
+            <summary>
+            添加列与ListView绑定。使用此统一操作，必须实现各个Ext结尾的函数。		
+            </summary>
+            <param name="p_intColumnIndex">列的索引，从0开始</param>
+        </member>
+        <member name="F:iCare.ctlDataGridBaseTool.m_intPreColumnIndexExt">
+            <summary>
+            之前ListView所绑定的列
+            </summary>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_mthInitGrid">
+            <summary>
+            初始化，必须在窗体的Load事件中调用
+            </summary>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_mthAddList">
+            <summary>
+            添加列与ListView的关联
+            </summary>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_mthAddRow(System.Object[])">
+            <summary>
+            添加行
+            </summary>
+            <param name="p_objDataArr">行的数据</param>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_intRowCount">
+            <summary>
+            获取数据的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_objGetRow(System.Int32)">
+            <summary>
+            获取行的数据
+            </summary>
+            <param name="p_intRowIndex">行的索引，如果索引不正确，返回null</param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_objGetRowAll">
+            <summary>
+            获取全部数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_mthUpdateRow(System.Int32,System.Object[])">
+            <summary>
+            更新行数据
+            </summary>
+            <param name="p_intRowIndex">行的索引，如果索引不正确，不做更新</param>
+            <param name="p_objDataArr">行的数据</param>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_mthDeleteRow(System.Int32)">
+            <summary>
+            删除行
+            </summary>
+            <param name="p_intRowIndex">行的索引，如果索引不正确，不做删除</param>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_mthInsertRow(System.Int32,System.Object[])">
+            <summary>
+            插入功能
+            </summary>
+            <param name="p_intRowIndex">插入到的索引，新数据将在此索引</param>
+            <param name="p_objDataArr">插入的数据</param>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_mthClearRow">
+            <summary>
+            清空所有Row
+            </summary>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.m_mthSetCellSelected(System.Int32,System.Int32)">
+            <summary>
+            提供使某一个Cell选中的功能
+            </summary>
+            <param name="p_intRowIndex"></param>
+            <param name="p_intColumnIndex"></param>
+        </member>
+        <member name="P:iCare.ctlDataGridBaseTool.m_LsvGridShow">
+            <summary>
+            DataGrid文字内容改变时出现的ListView
+            </summary>
+        </member>
+        <member name="T:iCare.ctlDataGridBaseTool.clsGridListViewExt">
+            <summary>
+            内部实现ListView与Column绑定功能
+            </summary>
+        </member>
+        <member name="F:iCare.ctlDataGridBaseTool.clsGridListViewExt.m_intColumnIndex">
+            <summary>
+            第几列
+            </summary>
+        </member>
+        <member name="F:iCare.ctlDataGridBaseTool.clsGridListViewExt.m_objCurrentCell">
+            <summary>
+            当前的Cell
+            </summary>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.clsGridListViewExt.#ctor(System.Windows.Forms.DataGridTextBoxColumn,System.Int32,System.Windows.Forms.ListView)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="p_dtxtcText">与ListView绑定的列</param>
+            <param name="p_intColumnIndex">列的索引</param>
+            <param name="p_lsvShow">ListView</param>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.clsGridListViewExt.m_blnIsThisListViewCall">
+            <summary>
+            判断是否当前的ListView事件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:iCare.ctlDataGridBaseTool.clsGridListViewExt.m_bolIfResponseSpaceBar">
+            <summary>
+            设置DataGird中的DatagridTextBox是否响应空格键出ListView
+            (默认是True)
+            </summary>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.clsGridListViewExt.m_mthLostFocus(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.clsGridListViewExt.m_mthListViewDoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            ListView双击
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.clsGridListViewExt.m_mthListViewSelected">
+            <summary>
+            用户选择了项目
+            </summary>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.clsGridListViewExt.m_mthBeforeListViewShow">
+            <summary>
+            ListView显示之前
+            </summary>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.clsGridListViewExt.m_mthShowListView">
+            <summary>
+            显示ListView
+            </summary>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.clsGridListViewExt.m_mthHideListView">
+            <summary>
+            隐藏ListView
+            </summary>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.clsGridListViewExt.m_strGetCurrentText">
+            <summary>
+            获取用户输入的内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.clsGridListViewExt.m_objGetCurrentCell">
+            <summary>
+            当前的Cell
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.ctlDataGridBaseTool.clsGridListViewExt.m_intGetColumnIndex">
+            <summary>
+            当前工具绑定的列的索引
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:iCare.ctlDataGridBaseTool.clsGridListViewExt.m_BolIfResponseSpaceBar">
+            <summary>
+            设置DataGird中的DatagridTextBox是否响应空格键出ListView(默认是True)
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsLabelMemento">
+            <summary>
+            标签备忘录
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsCareTaker">
+            <summary>
+            管理备忘录
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsCareTaker.m_mthRememberControlState(System.Windows.Forms.Control[])">
+            <summary>
+            记住控件状态，添加到Undo列表
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsCareTaker.m_mthRememberAddOrRemove(System.Windows.Forms.Control[])">
+            <summary>
+            记住添加或删除了某个控件，添加到Undo列表
+            </summary>
+            <param name="p_ctlContainer"></param>
+            <param name="p_ctlObj"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsCareTaker.m_mthUndo">
+            <summary>
+            撤消
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsCareTaker.m_mthRedo">
+            <summary>
+            反撤消
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsGUIPrintTool">
+            <summary>
+            Summary description for clsGUIPrintTool.
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsConfigXmlTool">
+            <summary>
+            XML配置工具
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_mthConfigXmlToGUI(System.String,System.Windows.Forms.Control)">
+            <summary>
+            配置XML成为界面格式
+            </summary>
+            <param name="p_strXml"></param>
+            <param name="p_ctlContainer"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_strConfigGUIToXml(System.Windows.Forms.Control)">
+            <summary>
+            将界面格式配置成XML
+            </summary>
+            <param name="p_ctlContainer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_mthConfigXmlToGUIContent(System.Windows.Forms.Control,System.String)">
+            <summary>
+            将XML配置成界面内容
+            </summary>
+            <param name="p_ctlContainer"></param>
+            <param name="p_strXml"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_strSaveControInfosToXml(System.Windows.Forms.Control[])">
+            <summary>
+            将控件信息保存为XML格式
+            </summary>
+            <param name="p_ctlContainer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_ctlGetClipBoardControls(System.String,System.Windows.Forms.Control)">
+            <summary>
+            获取剪贴板上的控件信息
+            </summary>
+            <param name="p_strXml"></param>
+            <param name="p_ctlContainer"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_mthChangeControlNameAndPosition(System.Windows.Forms.Control,System.Windows.Forms.Control)">
+            <summary>
+            改变控件名称和位置
+            </summary>
+            <param name="p_ctlContainer"></param>
+            <param name="p_ctlChild"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_intGetCountOfThisType(System.Windows.Forms.Control,System.Windows.Forms.Control)">
+            <summary>
+            获取编辑区中有此类控件的数目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_strGetCtlName(System.Windows.Forms.Control,System.Windows.Forms.Control)">
+            <summary>
+            按类型生成控件名称
+            </summary>
+            <param name="ctlContainer"></param>
+            <param name="ctlObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_strSaveRecoedToXML(System.Windows.Forms.Control)">
+            <summary>
+            配置记录为XML
+            </summary>
+            <param name="p_ctlContainer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_mthRecordToXml(System.Windows.Forms.Control,System.Xml.XmlTextWriter)">
+            <summary>
+            配置记录为XML
+            </summary>
+            <param name="p_ctlSender"></param>
+            <param name="p_objWriter"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_mthReadRecoedFromXML(System.String,System.Windows.Forms.Control)">
+            <summary>
+            配置XML为记录
+            </summary>
+            <param name="p_strXML"></param>
+            <param name="p_ctlContainer"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_blnRecordFromXml(System.Windows.Forms.Control,System.Xml.XmlTextReader)">
+            <summary>
+            配置XML为记录
+            </summary>
+            <param name="p_ctlContainer"></param>
+            <param name="p_objReader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_mthClearRecordContent(System.Windows.Forms.Control)">
+            <summary>
+            清除记录内容
+            </summary>
+            <param name="p_ctlContainer"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_objGetSyncFieldFromSubmitXml(System.String)">
+            <summary>
+            从表单获取所有可用于传送的字段
+            </summary>
+            <param name="p_strXml"></param>
+            <param name="p_strFormID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_strConfigSyncFieldToXML(iCare.CustomForm.clsCustomSyncField[])">
+            <summary>
+            
+            </summary>
+            <param name="p_objSyncFieldArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_objConfigSyncXmlToSyncField(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="p_strSyncXml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_strCtlValue(System.Windows.Forms.Control)">
+            <summary>
+            获取控件值
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_mthClearCtlValue(System.Windows.Forms.Control)">
+            <summary>
+            清空控件值
+            </summary>
+            <param name="p_ctl"></param>
+        </member>
+        <member name="M:iCare.CustomForm.clsConfigXmlTool.m_mthSetCtlValue(System.Windows.Forms.Control,System.String)">
+            <summary>
+            设置控件值
+            </summary>
+            <param name="p_ctl"></param>
+        </member>
+        <member name="T:iCare.CustomForm.clsExteriorFunctionInterface">
+            <summary>
+            clsExteriorFunctionInterface 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.clsExteriorFunctionInterface.ojbCustomFormMenuInit">
+            <summary>
+            绑定自定义表单菜单对象。
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.clsExteriorFunctionInterface.m_objUserInfo">
+            <summary>
+            记录员工信息
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.clsExteriorFunctionInterface.m_objCurDeptOfEmpArr">
+            <summary>
+            记录部门信息 
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.clsExteriorFunctionInterface.m_objCurrentPatient">
+            <summary>
+            记录病人信息
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.clsExteriorFunctionInterface.m_ObjUserInfo">
+            <summary>
+            员工信息
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.clsExteriorFunctionInterface.m_ObjCurDeptOfEmpArr">
+            <summary>
+            登录员工所属科室
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.clsExteriorFunctionInterface.s_ObjCurrentPatient">
+            <summary>
+            病人信息
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.iCustomFormMenuInit">
+            <summary>
+            自定义表单菜单初始化接口
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.iCustomFormMenuInit.m_mthCustomFormMenuClickBind(System.Object)">
+            <summary>
+            自定义表单菜单单击事件绑定方法。
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="P:iCare.CustomForm.iCustomFormMenuInit.P_HasFormMenu">
+            <summary>
+            所有自定义表单菜单集合。
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.clsDefaultValueTool">
+            <summary>
+            默认值工具
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.clsDefaultValueTool.m_mthSetDefaultValue">
+            <summary>
+            获取某窗体的默认值并赋到界面上
+            </summary>
+        </member>
+        <member name="P:iCare.CustomForm.clsDefaultValueTool.m_BlnReplaceDataShare">
+            <summary>
+            是否替换数据复用内容
+            </summary>
+        </member>
+        <member name="T:iCare.CustomForm.frmRename">
+            <summary>
+            重命名
+            </summary>
+        </member>
+        <member name="F:iCare.CustomForm.frmRename.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:iCare.CustomForm.frmRename.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:iCare.CustomForm.frmRename.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+    </members>
+</doc>

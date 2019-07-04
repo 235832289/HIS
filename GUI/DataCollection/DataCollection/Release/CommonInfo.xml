@@ -1,0 +1,989 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CommonInfo</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.Utility.ctlEmpTextBox">
+            <summary>
+            ctlEmpTextBox 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlEmpTextBox.#ctor">
+            <summary>
+            员工的列表控件
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlEmpTextBox.m_mthLoadListData(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="p_strInput"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlEmpTextBox.m_mthSetListAppearance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlEmpTextBox.m_strGetValueObject">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlEmpTextBox.m_strGetItemName">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.Utility.ctlEmpTextBox.m_intShowOtherEmp">
+            <summary>
+            设置是否显示其它科室员工
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ctlEmpTextBox.m_StrDeptID">
+            <summary>
+            查询部门过滤器
+            </summary>		
+        </member>
+        <member name="P:com.digitalwave.Utility.ctlEmpTextBox.m_StrEmployeeID">
+            <summary>
+            员工ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.Utility.ctlEmpTextBox.m_StrEmployeeName">
+            <summary>
+            员工名称
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ctlEmpTextBox.m_ObjEmployee">
+            <summary>
+            员工对象
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.ctlEmpTextBox.enmShowOtherEmp">
+            <summary>
+            显示员工范围
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.ctlEmpTextBox.enmShowOtherEmp.Dept">
+            <summary>
+            本科室
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.ctlEmpTextBox.enmShowOtherEmp.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.frmTableSet">
+            <summary>
+            frmTableSet 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.common.frmTableSet.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmTableSet.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmTableSet.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.frmICDSelection">
+            <summary>
+            frmOpCodeSelection 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.common.frmICDSelection.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmICDSelection.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmICDSelection.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.clsDcl_TypeDict">
+            <summary>
+            clsDcl_TypeDict 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.ctlUseTypeTextBox">
+            <summary>
+            ctlEmpTextBox 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlUseTypeTextBox.m_mthLoadListData(System.String)">
+            <summary>
+            控件加载数据
+            </summary>
+            <param name="p_strInput"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlUseTypeTextBox.m_mthSetListAppearance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlUseTypeTextBox.m_strGetValueObject">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlUseTypeTextBox.m_strGetItemName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ctlUseTypeTextBox.m_StrAIDDICTName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.ctlDeptTextBox">
+            <summary>
+            部门的列表控件
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlDeptTextBox.#ctor">
+            <summary>
+            部门的列表控件
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlDeptTextBox.m_mthLoadListData(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="p_strInput"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlDeptTextBox.m_mthSetListAppearance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlDeptTextBox.m_strGetValueObject">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlDeptTextBox.m_strGetItemName">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.Utility.ctlDeptTextBox.m_StrDeptID">
+            <summary>
+            获得部门名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.Utility.ctlDeptTextBox.m_StrDeptName">
+            <summary>
+            获得部门名称
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ctlDeptTextBox.m_ObjDepartment">
+            <summary>
+            获得部门VO
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.ctlDeptTextBox.eDeptArea">
+            <summary>
+            部门范围
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.ctlDeptTextBox.eDeptArea.All">
+            <summary>
+            全院 0
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.ctlDeptTextBox.eDeptArea.OutPatient">
+            <summary>
+            门诊 1
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.ctlDeptTextBox.eDeptArea.InPatient">
+            <summary>
+            住院 2
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.frmTypeDict">
+            <summary>
+            frmTypeDict 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.common.frmTypeDict.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmTypeDict.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmTypeDict.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.frmSelectPrinter">
+            <summary>
+            frmSelectPrinter 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmSelectPrinter.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmSelectPrinter.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.common.frmSelectPrinter.PrinterName">
+            <summary>
+            获取打印机名称
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.frmOpCodeSelection">
+            <summary>
+            frmICDSelection 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.common.frmOpCodeSelection.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmOpCodeSelection.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmOpCodeSelection.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsCreateChinaCode">
+            <summary>
+            clsCreateChinaCode 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCreateChinaCode.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCreateChinaCode.m_strCreateChinaCode(System.String,com.digitalwave.Utility.ChinaCode)">
+            <summary>
+            获得字符的指定编码
+            </summary>
+            <param name="p_strSource">需获得简码的字符</param>
+            <param name="option">需获得的编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCreateChinaCode.lngGetDataTable(System.String,System.Data.DataTable@)">
+            <summary>
+            获得编码列表
+            </summary>
+            <param name="strSQL"></param>
+            <param name="dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.clsCreateChinaCode.strGetChinaCode(System.String,System.Int32,System.String)">
+            <summary>
+            根据字符获得所需的中文简码
+            </summary>
+            <param name="strSource">字符</param>
+            <param name="intOption">需获得的编码</param>
+            <param name="strFormat">编码格式</param>
+            <returns></returns>
+        </member>
+        <member name="F:com.digitalwave.Utility.ChinaCode.PY">
+            <summary>
+            拼音简码
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.ChinaCode.WB">
+            <summary>
+            五笔简码
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.ChinaCode.JX">
+            <summary>
+            角形码
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.ChinaCode.ZDY">
+            <summary>
+            自定义码
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.clsDcl_RptTools">
+            <summary>
+            clsDcl_RptTools 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsDcl_RptTools.m_lngGetSelfRptVO(System.String,com.digitalwave.iCare.ValueObject.clsSelfDefRpt_VO@)">
+            <summary>
+            查询该基本表信息
+            </summary>
+            <param name="p_strRptID"></param>
+            <param name="p_objRptVO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsDcl_RptTools.m_longGetSelectedResult(System.String,System.Data.DataTable@)">
+            <summary>
+            获得已经选择的结果
+            </summary>
+            <param name="p_strSQL"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsDcl_RptTools.m_lngAddNewList(com.digitalwave.iCare.ValueObject.clsSelfDefRptList_VO)">
+            <summary>
+            添加新的自定义报表
+            </summary>
+            <param name="p_objListVO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsDcl_RptTools.m_lngModifyDefinedRpt(com.digitalwave.iCare.ValueObject.clsSelfDefRptList_VO)">
+            <summary>
+            修改自定义报表
+            </summary>
+            <param name="p_objListVO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsDcl_RptTools.m_lngGetDefineListArr(System.String,com.digitalwave.iCare.ValueObject.clsSelfDefRptList_VO[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_strRptID"></param>
+            <param name="p_objListArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsDcl_RptTools.m_lngGetDefinedList(com.digitalwave.iCare.ValueObject.clsSelfDefRptList_VO,System.Data.DataTable@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objList"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsDcl_RptTools.m_lngDeleteDefinedList(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="p_strListID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsDcl_RptTools.m_lngGetAllTableVO(com.digitalwave.iCare.ValueObject.clsSelfDefRpt_VO[]@)">
+            <summary>
+            查询所有已定义基本表信息
+            </summary>
+            <param name="p_objRptVO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsDcl_RptTools.m_lngAddNewTable(com.digitalwave.iCare.ValueObject.clsSelfDefRpt_VO@)">
+            <summary>
+            添加基本表信息
+            </summary>
+            <param name="objTableVO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsDcl_RptTools.m_lngDeleteTable(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="p_strListID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsDcl_RptTools.m_lngModifyTable(com.digitalwave.iCare.ValueObject.clsSelfDefRpt_VO)">
+            <summary>
+            修改基本表数据
+            </summary>
+            <param name="p_objListVO"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.ctlOpCodeTextBox">
+            <summary>
+            ctlOpCodeTextBox 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.common.ctlOpCodeTextBox.objController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.ctlOpCodeTextBox.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.ctlOpCodeTextBox.m_mthAddOpNameLabel(System.Windows.Forms.Label)">
+            <summary>
+            添加用于显示手术名称的LABEL
+            </summary>
+            <param name="p_lblOpName"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.ctlOpCodeTextBox.this_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.frmRptTools">
+            <summary>
+            frmRptTools 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.common.frmRptTools.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmRptTools.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmRptTools.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.common.frmRptTools.m_strRptID">
+            <summary>
+            需表的ID
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmRptTools.m_mthSetRptTypeID(System.String)">
+            <summary>
+            设定所需表的ID
+            </summary>
+            <param name="p_strRptID"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmRptTools.m_mthReciveQueryCondiction(System.String,System.String)">
+            <summary>
+            接受查询条件
+            </summary>
+            <param name="p_strQuyCon"></param>
+        </member>
+        <member name="T:com.digitalwave.Utility.ctlICDTextBox">
+            <summary>
+            ctlICDTextBox 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlICDTextBox.#ctor">
+            <summary>
+            ICD输入框
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlICDTextBox.InitializeComponent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlICDTextBox.m_mthAddICDNameLabel(System.Windows.Forms.Label)">
+            <summary>
+            添加用于显示ICD名称的LABEL
+            </summary>
+            <param name="p_lblICDName"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlICDTextBox.this_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.clsCtl_TableSet">
+            <summary>
+            clsCtl_TableSet 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCtl_TableSet.Set_GUI_Apperance(com.digitalwave.GUI_Base.frmMDI_Child_Base)">
+            <summary>
+            设置窗体对象
+            </summary>
+            <param name="frmMDI_Child_Base_in"></param>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.frmSelCon">
+            <summary>
+            frmSelCon 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.common.frmSelCon.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmSelCon.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmSelCon.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.common.frmSelCon.m_strColID">
+            <summary>
+            查询列ID
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.common.frmSelCon.m_strColName">
+            <summary>
+            查询列名称
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmSelCon.m_mthSetQueryColumn(System.String,System.String)">
+            <summary>
+            设置查询列
+            </summary>
+            <param name="p_objRptVO"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.frmSelCon.m_mthSetParentForm(com.digitalwave.iCare.common.frmRptTools)">
+            <summary>
+            设置父窗体
+            </summary>
+            <param name="p_objParent"></param>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.clsCommmonInfo">
+            <summary>
+            公共基础信息类
+            Alex Huang 2004-06-04
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.#ctor">
+            <summary>
+            公共基础信息类
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_strGetHospitalTitle">
+            <summary>
+            获得医院名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_lonGetModuleInfo(System.String)">
+            <summary>
+            获取模块配置信息
+            </summary>
+            <param name="ModuleID">设置ID</param>
+            <returns>返回设置状态</returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_strGetHospitalInfo(com.digitalwave.iCare.ValueObject.clsHISInfoDefine_VO@)">
+            <summary>
+            获医院信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_mthGetHospitalNo">
+            <summary>
+            获取医院自编码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_lngGetCollocate(System.Boolean@,System.String)">
+            <summary>
+            获取系统配置信息
+            </summary>
+            <param name="blIS">当配置 0--否 1--是时，false 否，true 是；当配置 1--否 0--是时，false 是，true 否</param>
+            <param name="strsetid">配置ID号</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_lngGetUsePublic(System.Boolean@,System.String)">
+            <summary>
+            判定用是否在编辑公用模板的权限
+            </summary>
+            <param name="blIS"></param>
+            <param name="EmpID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_mthGetDepartmentByUserID(System.String,com.digitalwave.iCare.ValueObject.clsDepartmentVO[]@)">
+            <summary>
+            获取用户科室
+            </summary>
+            <param name="strID">用户ID</param>
+            <param name="p_objDeptArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_mthGetDepInfoByDepID(System.String,com.digitalwave.iCare.ValueObject.clsDepartmentVO[]@)">
+            <summary>
+            获取用户科室ID查病区信息,缺省查出所有科室
+            </summary>
+            <param name="strDepID">部门ID</param>
+            <param name="p_objDeptArr">科室信息VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_mthGetPatientInfo(System.String,com.digitalwave.iCare.ValueObject.clsPatientVO[]@,System.Boolean)">
+            <summary>
+            查出病人信息
+            </summary>
+            <param name="strID">ID</param>
+            <param name="objPatientVOArr"></param>
+            <param name="flag">true为病人ID,false为卡号</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_mthGetAllDeptArr(com.digitalwave.iCare.ValueObject.clsDepartmentVO[]@)">
+            <summary>
+            获得所有科室信息
+            </summary>
+            <param name="p_objDeptArr">所有科室信息</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_mthGetEmpInfoByID(System.String,com.digitalwave.iCare.ValueObject.clsEmployeeVO[]@)">
+            <summary>
+            根据员工ID获得员工信息
+            </summary>
+            <param name="p_strEmpID">员工ID</param>
+            <param name="p_objEmpArr">员工信息</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_mthGetEmpInfoByDeptID(System.String,com.digitalwave.iCare.ValueObject.clsEmployeeVO[]@)">
+            <summary>
+            根据部门ID获得员工信息
+            </summary>
+            <param name="p_strDeptID">部门ID</param>
+            <param name="p_objEmpArr">员工信息</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_mthGetAllEmpInfo(com.digitalwave.iCare.ValueObject.clsEmployeeVO[]@)">
+            <summary>
+            获得所有员工信息
+            </summary>
+            <param name="p_objEmpArr">员工信息</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_lngGetEmpSign(System.String,System.Drawing.Image@)">
+            <summary>
+            
+            </summary>
+            <param name="p_strEmpID"></param>
+            <param name="p_outImage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_mthGetAID_DICT_InfoArr(System.Int32,com.digitalwave.iCare.ValueObject.clsAIDDICT_VO[]@)">
+            <summary>
+            获得辅助字典信息
+            </summary>
+            <param name="p_intCat">辅助字典信息类别</param>
+            <param name="p_objResultArr">获得辅助字典信息</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_mthGetAID_DICT_InfoList(System.Int32,System.Data.DataTable@)">
+            <summary>
+            获得辅助字典信息
+            </summary>
+            <param name="p_intCat">辅助字典信息类别</param>
+            <param name="p_dtbResult">获得辅助字典信息</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_mthGetAID_DICTKindID(System.String,System.String@)">
+            <summary>
+            获得辅助字典类别ID
+            </summary>
+            <param name="p_strName">辅助字典信息类别名称</param>
+            <param name="p_strKindID">辅助字典信息类别ID</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_mthGetAID_OPRT_InfoDtb(System.String,System.Data.DataTable@)">
+            <summary>
+            通过编码获得手术编码表
+            </summary>
+            <param name="p_strICDCode"></param>
+            <param name="dtbOPRT"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCommmonInfo.m_mthGetAID_OPRT_InfoDtbByName(System.String,System.Data.DataTable@)">
+            <summary>
+            通过名称获得手术编码表
+            </summary>
+            <param name="p_strICDName"></param>
+            <param name="dtbOPRT"></param>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.clsCheckChargeInfo">
+            <summary>
+            检查收费信息
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCheckChargeInfo.m_mthCheckIsCharge(System.String,com.digitalwave.iCare.common.ApplyOrigin)">
+            <summary>
+            检查申请单是否收费 true代表已收费
+            </summary>
+            <param name="strApplyID">申请单ID</param>
+            <param name="p_AO">来源</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCheckChargeInfo.m_intGetChrgItemState(System.String,com.digitalwave.iCare.common.ApplyOrigin)">
+            <summary>
+            获取检验、检查、手术、治疗等项目收费状态
+            -1 无记录 0 未收费 1 已收费 2 已退费
+            </summary>
+            <param name="p_AO">(来源)表单类型 {1=CT,2=MR,3=LIS,......}</param>
+            <param name="p_strApplyID">目标申请单id</param>
+            <returns>-1 无记录 0 未收费 1 已收费 2 已退费</returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.ApplyOrigin">
+            <summary>
+            申请单来源
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.common.ApplyOrigin.PACSS">
+            <summary>
+            影像(1)
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.common.ApplyOrigin.OTHER">
+            <summary>
+            其他(2)
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.common.ApplyOrigin.LIS">
+            <summary>
+            检验(3)
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.ExcelExporter">
+             <summary>
+            摘要:把DataSet数据快速导出到Excel
+            原作者:魏孙鼎
+             </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.ExcelExporter.#ctor(System.Data.DataSet)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="ds">要导出的数据源</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.ExcelExporter.m_mthExport(System.String)">
+            <summary>
+            导出Excel文件
+            </summary>
+            <param name="fileName">文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.ExcelExporter.m_mthExport">
+            <summary>
+            导出Excel文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.iCare.common.ExcelExporter.DataSource">
+            <summary>
+            设置数据源
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.clsCtl_TypeDict">
+            <summary>
+            clsCtl_TypeDict 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCtl_TypeDict.Set_GUI_Apperance(com.digitalwave.GUI_Base.frmMDI_Child_Base)">
+            <summary>
+            设置窗体对象
+            </summary>
+            <param name="frmMDI_Child_Base_in"></param>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.Controller.clsController_OpCodeSelection">
+            <summary>
+            clsController_OpCodeSelection 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.Controller.clsController_OpCodeSelection.m_mthGetOPRT_Info_Code">
+            <summary>
+            填充ListView
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.Controller.clsController_OpCodeSelection.m_mthGetOPRT_Info_Code_Name">
+            <summary>
+            填充ListView
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.Controller.clsController_OpCodeSelection.m_mthGetOPRT_Info_listView">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.clsCtl_RptTools">
+            <summary>
+            clsCtl_RptTools 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCtl_RptTools.Set_GUI_Apperance(com.digitalwave.GUI_Base.frmMDI_Child_Base)">
+            <summary>
+            设置窗体对象
+            </summary>
+            <param name="frmMDI_Child_Base_in"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCtl_RptTools.m_mthSetRptNull">
+            <summary>
+            设置空值
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCtl_RptTools.m_mthShowTableInfo(System.String)">
+            <summary>
+            显示基本表结构
+            </summary>
+            <param name="p_strRptID"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCtl_RptTools.m_mthGetSQLCon(System.String[]@)">
+            <summary>
+            获得基本SQL
+            </summary>
+            <param name="p_strColIDArr"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCtl_RptTools.m_strGetWhereCondiction">
+            <summary>
+            获得Where条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCtl_RptTools.m_strGetSQLStatement">
+            <summary>
+            生成SQL语句
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCtl_RptTools.m_mthShowTableDetail">
+            <summary>
+            显示查询结果
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCtl_RptTools.m_mthAddNewResultColumns(System.Int32)">
+            <summary>
+            添加Column
+            </summary>
+            <param name="p_intRows"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCtl_RptTools.m_dcsResult(System.Int32)">
+            <summary>
+            生成DataGridColumnStyle，Column的项数
+            </summary>
+            <param name="p_intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCtl_RptTools.m_mthAddSelectedColumns(com.digitalwave.iCare.ValueObject.clsSelfDefRptList_VO)">
+            <summary>
+            
+            </summary>
+            <param name="objListVO"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsCtl_RptTools.m_mthDeleteDefinedList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.Form1">
+            <summary>
+            Form1 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.common.Form1.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.Form1.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.Form1.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.Form1.Main">
+            <summary>
+            应用程序的主入口点。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.ComputerInfo.clsController_ComputerInfo">
+            <summary>
+            clsController_RISCardiogramReport 的摘要说明。
+            作者： 
+            时间：
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.ComputerInfo.clsDomainController_clsComputerInfoSvc">
+            <summary>
+            clsDomainController_RISCardiogramManage 的摘要说明。
+            作者：
+            时间：
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.common.clsController_ICDCodeSelection">
+            <summary>
+            clsController_ICDSelection 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsController_ICDCodeSelection.m_mthGetOPRT_Info_Code">
+            <summary>
+            填充ListView
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.common.clsController_ICDCodeSelection.m_mthGetOPRT_Info_Name">
+            <summary>
+            填充ListView
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.frmComputerInfo.frmComputerInfo">
+            <summary>
+            Form1 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.frmComputerInfo.frmComputerInfo.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.frmComputerInfo.frmComputerInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.frmComputerInfo.frmComputerInfo.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.frmComputerInfo.frmComputerInfo.CreateController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.frmComputerInfo.frmComputerInfo.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.frmComputerInfo.frmComputerInfo.Main">
+            <summary>
+            应用程序的主入口点。
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>txtListView</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.iCare.gui.HIS.clsDcl_txtListView">
+            <summary>
+            逻辑层模板	glzhang	2005.10.26
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.gui.HIS.clsDcl_txtListView.m_lngGetData(System.String,System.Data.DataTable@)">
+            <summary>
+            TextList控件获取数据 glzhang 2006.4.11
+            </summary>
+            <param name="p_strSQL"></param>
+            <param name="p_dtbRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.gui.HIS.txtListView">
+            <summary>
+            txtListView :
+            数据查找控件txtListView	glzhang	2005.11.7
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.m_listView">
+            <summary>
+            ListView控件
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.m_cmdUpPage">
+            <summary>
+            上一页
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.m_cmdDownPage">
+            <summary>
+            下一页
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.m_labPage">
+            <summary>
+            页码提示
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.m_colBackColor">
+            <summary>
+            背影色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.m_colFormColor">
+            <summary>
+            字体颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.m_dtvDataSouse">
+            <summary>
+            用于分页查找的数据源
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.m_blnFindDate">
+            <summary>
+            用于协助控制即时查找
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.gui.HIS.txtListView.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.gui.HIS.txtListView.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.gui.HIS.txtListView.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.gui.HIS.txtListView.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView._m_strSQL">
+            <summary>
+            SQL查询语句
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView._m_strSQLPage">
+            <summary>
+            用于分页查找 
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView._m_blnEnterShowList">
+            <summary>
+            按回车是否显示ListView
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView._m_blnDefSelect">
+            <summary>
+            是否默认选中一行
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView._m_intNowPage">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView._m_intTotalPage">
+            <summary>
+            总页码
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView._m_intPageRows">
+            <summary>
+            每页行数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.gui.HIS.txtListView.m_mthInitListView(com.digitalwave.iCare.ValueObject.clsListViewColumns_VO[])">
+            <summary>
+            初始化listView
+            </summary>
+            <param name="p_objColumnsArr">ListView列格式</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.gui.HIS.txtListView.m_mthFindDate">
+            <summary>
+            查找数据
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.gui.HIS.txtListView.m_mthGetData">
+            <summary>
+            txtListView从数据库获取数据
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.gui.HIS.txtListView.m_mthFillData">
+            <summary>
+            填充数据
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.gui.HIS.txtListView.m_mthSelectRecord(com.digitalwave.iCare.gui.HIS.txtListView.selectPoint)">
+            <summary>
+            选择记录
+            </summary>
+            <param name="p_selectPoint"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.gui.HIS.txtListView.m_mthSelectOK">
+            <summary>
+            选中记录
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.gui.HIS.txtListView.m_mthPageFind(com.digitalwave.iCare.gui.HIS.txtListView.selectPoint)">
+            <summary>
+            分页查找
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.gui.HIS.txtListView.m_mthFindDataFromTempTable">
+            <summary>
+            从临时表中查找数据
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.findDataMode">
+            <summary>
+            数据查找方式
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_ListViewAlign">
+            <summary>
+            ListView对齐方式
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_objListViewColumnsArr">
+            <summary>
+            列集合
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_dtbDataSourse">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_strSaveField">
+            <summary>
+            保存值字段名,必填,默认为:field1
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_strShowField">
+            <summary>
+            显示值字段名,必填,默认为:field1
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_strSQL">
+            <summary>
+            SQL查询语句
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_strSQLPage">
+            <summary>
+            用于分页查找 
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_listViewSize">
+            <summary>
+            ListView控件大小
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_listViewLocation">
+            <summary>
+            ListView控件位置
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_blnFocuseShow">
+            <summary>
+            是否在控件获取焦点时显示ListView
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_blnFirstFind">
+            <summary>
+            是否即时查找
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_blnEmpty">
+            <summary>
+            是否有空项
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_blnPagination">
+            <summary>
+            是否分页查找
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_blnSelectItem">
+            <summary>
+            是否允许选取项目数据
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_blnEnterShowList">
+            <summary>
+            按回车是否显示ListView
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_blnDefSelect">
+            <summary>
+            是否默认选中一行
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_intNowPage">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_intTotalPage">
+            <summary>
+            总页码
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.iCare.gui.HIS.txtListView.m_intPageRows">
+            <summary>
+            每页行数
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.gui.HIS.txtListView.findMode">
+            <summary>
+            数据查找方式
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.findMode.fromListView">
+            <summary>
+            从ListView中查找
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.findMode.fromDataSouse">
+            <summary>
+            从数据库中查找
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.gui.HIS.txtListView.selectPoint">
+            <summary>
+            选择方向
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.selectPoint.UP">
+            <summary>
+            向上
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.selectPoint.Down">
+            <summary>
+            向下
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.gui.HIS.txtListView.ListViewAlign">
+            <summary>
+            对齐方式
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.ListViewAlign.LeftBottom">
+            <summary>
+            左下方对齐
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.ListViewAlign.LeftTop">
+            <summary>
+            左上方对齐
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.ListViewAlign.RightBottom">
+            <summary>
+            右下方对齐
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.gui.HIS.txtListView.ListViewAlign.RightTop">
+            <summary>
+            右上方对齐
+            </summary>
+        </member>
+    </members>
+</doc>

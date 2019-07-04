@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SoundControl</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.iCare.SoundControl.clsPlaySound">
+            <summary>
+            播放声音的类
+            Alex Huang
+            2005-01-13
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.SoundControl.clsPlaySound.#ctor">
+            <summary>
+            播放声音的类
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.SoundControl.clsPlaySound.m_mthPlay(System.Int32)">
+            <summary>
+            播放声音
+            </summary>
+            <param name="p_intSoungName">声音名称索引</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.SoundControl.clsPlaySound.m_strGetSoundPath(System.Int32)">
+            <summary>
+            获得声音路径
+            </summary>
+            <param name="p_intSoungName">声音名称索引</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.SoundControl.enmSoundName">
+            <summary>
+            各类声音名称
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.enmSoundName.ShortAlert">
+            <summary>
+            短警报声
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.SoundControl.clsWaveSoundControl">
+            <summary>
+            声音播放控制类
+            Alex Huang
+            2005-01-13
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.PlaySound(System.Byte[],System.Int32)">
+            <summary>
+            Alex Huang
+            
+            </summary>
+            <param name="wfname"></param>
+            <param name="fuSound"></param>
+            <returns></returns>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.SND_SYNC">
+            <summary>
+            play synchronously (default)
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.SND_ASYNC">
+            <summary>
+            play asynchronously
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.SND_NODEFAULT">
+            <summary>
+            silence (!default) if sound not found 
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.SND_MEMORY">
+            <summary>
+            pszSound points to a memory file
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.SND_LOOP">
+            <summary>
+            loop the sound until next sndPlaySound 
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.SND_NOSTOP">
+            <summary>
+            don't stop any currently playing sound 
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.SND_NOWAIT">
+            <summary>
+            don't wait if the driver is busy 
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.SND_ALIAS">
+            <summary>
+            name is a registry alias 
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.SND_ALIAS_ID">
+            <summary>
+            alias is a predefined ID 
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.SND_FILENAME">
+            <summary>
+             name is file name 
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.SND_RESOURCE">
+            <summary>
+            name is resource name or atom 
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.SND_PURGE">
+            <summary>
+            purge non-static events for task 
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.SND_APPLICATION">
+            <summary>
+            look for application specific association 
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.m_mthPlay(System.String,System.Int32)">
+            <summary>
+            开始播放
+            </summary>
+            <param name="wfname"></param>
+            <param name="SoundFlags"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.SoundControl.clsWaveSoundControl.m_mthStopPlay">
+            <summary>
+            停止播放
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.SoundControl.frmMainControl">
+            <summary>
+            声音播放控制界面
+            Alex Huang
+            2005-01-13
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.SoundControl.frmMainControl.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.SoundControl.frmMainControl.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.SoundControl.frmMainControl.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.SoundControl.frmMainControl.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.SoundControl.frmMainControl.Main">
+            <summary>
+            应用程序的主入口点。
+            </summary>
+        </member>
+    </members>
+</doc>

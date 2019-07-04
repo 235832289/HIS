@@ -1,0 +1,624 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MenuExtend</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface">
+            <summary>
+            菜单接口，实现右键菜单功能
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.s_objPatientInfo">
+            <summary>
+            当前病人(全院)
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.s_objPatient">
+            <summary>
+            当前病人(电子病历)
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.s_strPatientID">
+            <summary>
+            当前病人ID
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.s_ctlAccept">
+            <summary>
+            当前需要处理的输入框
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthSetARDataShareCondition(System.String,System.Windows.Forms.Control)">
+            <summary>
+            设置当前病人和输入框
+            </summary>
+            <param name="p_strPatientID">病人ID</param>
+            <param name="p_ctlAccept">接受内容的控件</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthSetARDataShareCondition(iCare.clsPatient,System.Windows.Forms.Control)">
+            <summary>
+            设置当前病人和输入框
+            </summary>
+            <param name="objPatient"></param>
+            <param name="p_ctlAccept">接受内容的控件</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthSetARDataShareCondition(iCareData.clsPatientInfo_Value,System.Windows.Forms.Control)">
+            <summary>
+            设置当前病人和输入框
+            </summary>
+            <param name="p_objPatientInfo"></param>
+            <param name="p_ctlAccept">接受内容的控件</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthInertText(System.String)">
+            <summary>
+            在当前输入框插入值
+            </summary>
+            <param name="p_strText"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthSetDataShareSubMenu(System.Windows.Forms.MenuItem,System.Boolean)">
+            <summary>
+            初始化数据复用菜单
+            </summary>
+            <param name="p_mniDataShare">菜单</param>
+            <param name="p_blnDirectInvoking">true=直接数据引用;false=智能数据引擎</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthInitDataShareItems(System.Windows.Forms.MenuItem)">
+            <summary>
+            初始化数据复用字段
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthAssociateDataShareItemsEvent(System.Windows.Forms.MenuItem,System.Boolean)">
+            <summary>
+            设置数据复用菜单点击事件
+            </summary>
+            <param name="p_mniRoot"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthDataShareItemClick(System.Object,System.EventArgs)">
+            <summary>
+            数据复用格式
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthDataShareInvokingItemClick(System.Object,System.EventArgs)">
+            <summary>
+            直接数据复用
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthSetShareItem(System.Windows.Forms.MenuItem)">
+            <summary>
+            添加专科病历菜单
+            </summary>
+            <param name="p_mniPopuoItem"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthSetShareItem2(Crownwood.Magic.Menus.MenuCommand)">
+            <summary>
+            添加专科病历菜单
+            </summary>
+            <param name="p_mniPopuoItem"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthSetShareChildItem(System.Windows.Forms.MenuItem)">
+            <summary>
+            添加专科病历子菜单
+            </summary>
+            <param name="p_mniCaseItem"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthSetShareChildItem2(Crownwood.Magic.Menus.MenuCommand)">
+            <summary>
+            添加专科病历子菜单
+            </summary>
+            <param name="p_mniCaseItem"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_strGetTypeID(System.String)">
+            <summary>
+            根据菜单名称返回窗体ID
+            </summary>
+            <param name="p_strFormName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_strGetTypeName(System.String)">
+            <summary>
+            根据窗体ID返回窗体名称
+            </summary>
+            <param name="p_strTypeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mniAddMenuItem(iCareData.clsInpatMedRec_Type_Item,System.Windows.Forms.MenuItem,System.String)">
+            <summary>
+            递归添加菜单项
+            </summary>
+            <param name="p_strItemText"></param>
+            <param name="p_mniItem"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mniAddMenuItem2(iCareData.clsInpatMedRec_Type_Item,Crownwood.Magic.Menus.MenuCommand,System.String)">
+            <summary>
+            递归添加菜单项
+            </summary>
+            <param name="p_strItemText"></param>
+            <param name="p_mniItem"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthSetApplyReportSubMenu(Crownwood.Magic.Menus.MenuCommand)">
+            <summary>
+            图文工作站菜单添加
+            </summary>
+            <param name="p_mniDataShare"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.ApplyReprotItems_Click(System.Object,System.EventArgs)">
+            <summary>
+            图文工作站菜单事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthSetApplyReportSubMenu(System.Windows.Forms.MenuItem)">
+            <summary>
+            图文工作站菜单添加
+            </summary>
+            <param name="p_mniDataShare"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthInitSubScriptItems(System.Windows.Forms.MenuItem)">
+            <summary>
+            初始化上下标菜单
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.SuperSubScript_Click(System.Object,System.EventArgs)">
+            <summary>
+            上下标处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthInitSpecialSymbolItems(System.Windows.Forms.MenuItem)">
+            <summary>
+            初始化特殊符号菜单
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthInitDoubleStrikeItems(System.Windows.Forms.MenuItem)">
+            <summary>
+            初始化双划线删除菜单
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthInitLabCheckResultItems(System.Windows.Forms.MenuItem)">
+            <summary>
+            初始化检验结果菜单
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthInitCheckResultItems(System.Windows.Forms.MenuItem)">
+            <summary>
+            初始化数据复用字段
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mniCopy">
+            <summary>
+            控件插入值
+            </summary>
+            <param name="p_ctlInput"></param>
+            <param name="p_strValue"></param>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mniCut">
+            <summary>
+            控件插入值
+            </summary>
+            <param name="p_ctlInput"></param>
+            <param name="p_strValue"></param>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mniPaste">
+            <summary>
+            控件插入值
+            </summary>
+            <param name="p_ctlInput"></param>
+            <param name="p_strValue"></param>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mniUndo">
+            <summary>
+            控件插入值
+            </summary>
+            <param name="p_ctlInput"></param>
+            <param name="p_strValue"></param>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mniRedo">
+            <summary>
+            控件插入值
+            </summary>
+            <param name="p_ctlInput"></param>
+            <param name="p_strValue"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthInitEditMenu">
+            <summary>
+            添加菜单
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthInitEditItem(System.Windows.Forms.MenuItem)">
+            <summary>
+            绑定编辑菜单
+            </summary>
+            <param name="p_mniAnnex"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsMenuInteface.m_mthPerfromEdit(System.Int32)">
+            <summary>
+            设置编辑值
+            </summary>
+            <param name="p_intType">1＝copy；2＝Cut；3＝paste；4＝Redo；5＝Undo；</param>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain">
+            <summary>
+            手术记录单数据共享
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.m_lngGetBaseOperationValueArr(System.String,System.String,com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuBaseOperationValue[]@)">
+            <summary>
+            获取手术数据，只为住院病案首页提供共享
+            </summary>
+            <param name="p_strInPaitentID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_stuResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.m_lngGetLatestOperationInfo(System.String,System.String,System.DateTime,com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuLatestOperationValue@)">
+            <summary>
+            获取手术数据，只为手术后病程记录提供共享
+            </summary>
+            <param name="p_strInPaitentID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_dtmRecordDate">记录日期，获取次日期之前最近的信息</param>
+            <param name="p_stuResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuLatestOperationValue">
+            <summary>
+            手术后病程记录使用的字段
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuLatestOperationValue.m_strOperationBeginDate">
+            <summary>
+            手术开始日期
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuLatestOperationValue.m_strOperationName">
+            <summary>
+            手术名称
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuLatestOperationValue.m_strAnaesthesiaCategoryDosage">
+            <summary>
+            麻醉方式
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuLatestOperationValue.m_strDiagnoseAfterOperation">
+            <summary>
+            术后诊断
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuLatestOperationValue.m_strOperationProcess">
+            <summary>
+            手术过程
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuBaseOperationValue">
+            <summary>
+            住院病案首页中使用的字段
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuBaseOperationValue.m_strOperationBeginDate">
+            <summary>
+            手术开始日期
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuBaseOperationValue.m_strOperationName">
+            <summary>
+            手术名称
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuBaseOperationValue.m_strAnaesthesiaCategoryDosage">
+            <summary>
+            麻醉方式
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuBaseOperationValue.m_strAnaesther">
+            <summary>
+            麻醉医师
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuBaseOperationValue.m_strOperationDoctorName">
+            <summary>
+            术者名称
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuBaseOperationValue.m_strFirstAssistantName">
+            <summary>
+            一助名称
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuBaseOperationValue.m_strSecondAssistantName">
+            <summary>
+            二助名称
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuBaseOperationValue.m_strOperationDoctorID">
+            <summary>
+            术者ID
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuBaseOperationValue.m_strFirstAssistantID">
+            <summary>
+            一助ID
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsOperationRecordDoctorShareDomain.stuBaseOperationValue.m_strSecondAssistantID">
+            <summary>
+            二助ID
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsGeneralDiseaseRecordShareDomain">
+            <summary>
+            Summary description for clsGeneralDiseaseRecordShareDomain.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsGeneralDiseaseRecordShareDomain.m_lngGetFirstDiseaseInfoShareValue(System.String,System.String,com.digitalwave.iCare.Public.MenuExtend.DataShare.clsGeneralDiseaseRecordShareDomain.stuFirstDiseaseInfoShare@)">
+            <summary>
+            获取首次病程记录的内容
+            </summary>
+            <param name="p_strInPaitentID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_stuShare"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsGeneralDiseaseRecordShareDomain.stuFirstDiseaseInfoShare">
+            <summary>
+            存放数据的结构体
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolManage">
+            <summary>
+            Summary description for frmSpecialSymbolManage.
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolManage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolManage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolManage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolManage.m_mthSpecialSymbolLoad">
+            <summary>
+            填充符号到ListView控件m_lsvSpecialSymbolValue
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolManage.m_lngCopy">
+            <summary>
+            复制操作
+            </summary>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolManage.m_lngCut">
+            <summary>
+            剪切操作
+            </summary>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolManage.m_lngPaste">
+            <summary>
+            粘贴操作
+            </summary>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolManage.m_mthSetGUIFromContent(iCareData.clsSpecialSymbolValue)">
+            <summary>
+            设置界面值
+            </summary>
+            <param name="p_objContent"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolManage.m_objGetContentFromGUI">
+            <summary>
+            从界面获取表单值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolList">
+            <summary>
+            Summary description for frmSpecialSymbolList.
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolList.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolList.m_strOutputSpectialSymbol">
+            <summary>
+            传出的特殊字符
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolList.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.frmSpecialSymbolList.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsDataShareTool">
+            <summary>
+            数据复用工具
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsDataShareTool.s_mthReplaceDataShareValue(iCare.clsPatient,System.String[])">
+            <summary>
+            替换数据复用内容
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsDataShareTool.s_mthReplacePatientInfoShareValue(System.String[])">
+            <summary>
+            替换病人基本资料
+            </summary>
+            <param name="p_strArr"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsDataShareTool.s_mthReplacePatientInfoShareValue(System.String@)">
+            <summary>
+            替换病人基本资料
+            </summary>
+            <param name="p_strContent"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsDataShareTool.s_mthReplaceDataShareValue(iCare.clsPatient,System.String@)">
+            <summary>
+            替换数据复用内容
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsDataShareTool.s_mthIMR_ReplaceDataShareValue(iCare.clsPatient,iCareData.clsInpatMedRec_Type_Item,System.String@)">
+            <summary>
+            新病历替换数据复用内容
+            </summary>
+            <param name="p_objPatient"></param>
+            <param name="p_objContent"></param>
+            <param name="p_strContent"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsDataShareTool.s_mthIMR_ReplaceDataShareValue(iCare.clsPatient,System.String[])">
+            <summary>
+            新病历替换数据复用内容
+            </summary>
+            <param name="p_objPatient"></param>
+            <param name="p_strContentArr"></param>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsBeforeOperSumShareDomain">
+            <summary>
+            Summary description for clsBeforeOperSumShareDomain.
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsBeforeOperSumShareDomain.stuShare">
+            <summary>
+            存放数据的结构体
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.frmLISResult">
+            <summary>
+            检验结果
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.frmLISResult.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.frmLISResult.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.frmLISResult.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.clsSpecialSymbolDomain">
+            <summary>
+            特殊符号业务逻辑层
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsSpecialSymbolDomain.m_lngAddNewRecord2DB(iCareData.clsSpecialSymbolValue)">
+            <summary>
+            保存记录到数据库。
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsSpecialSymbolDomain.m_lngModifyRecord2DB(iCareData.clsSpecialSymbolValue,iCareData.clsSpecialSymbolValue)">
+            <summary>
+            修改记录
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.clsSpecialSymbolDomain.m_lngDeleteRecord2DB(iCareData.clsSpecialSymbolValue)">
+            <summary>
+            删除记录
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordContent"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.clsMenuExtend">
+            <summary>
+            菜单扩展接口，实现必要的菜单应用
+            如模板、数据复用等
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsInPatientCaseHisoryDefaultDomain">
+            <summary>
+            Summary description for clsInPatientCaseHisoryDefaultDomain.
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsThreeMeasureShareDomain">
+            <summary>
+            Summary description for clsThreeMeasureShareDomain.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsThreeMeasureShareDomain.m_lngGetNearestValue(System.String,System.String,System.DateTime,System.String[]@)">
+            <summary>
+            获取最邻近时间的数据
+            </summary>
+            <param name="p_strInPaitentID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_dtmCompare"></param>
+            <param name="p_strResult"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsThreeMeasureShareDomain.stuFirstValue">
+            <summary>
+            三测表的第一个记录
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsThreeMeasureShareDomain.stuFirstValue.m_strDiastolicValue">
+            <summary>
+            舒张压
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsThreeMeasureShareDomain.stuFirstValue.m_strSystolicValue">
+            <summary>
+            收缩压
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsThreeMeasureShareDomain.stuFirstValue.m_strDiastolicValue2">
+            <summary>
+            舒张压2
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsThreeMeasureShareDomain.stuFirstValue.m_strSystolicValue2">
+            <summary>
+            收缩压2
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsThreeMeasureShareDomain.stuFirstValue.m_strPulseValue">
+            <summary>
+            脉搏
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsThreeMeasureShareDomain.stuFirstValue.m_strTemperatureValue">
+            <summary>
+            体温
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.Public.MenuExtend.DataShare.clsThreeMeasureShareDomain.stuFirstValue.m_strBreathValue">
+            <summary>
+            呼吸
+            </summary>
+        </member>
+    </members>
+</doc>

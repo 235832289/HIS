@@ -1,0 +1,352 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EMR_ICU_Service</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.clsICUControlServ.clsICUControlServ">
+            <summary>
+            Summary description for clsICUControlServ.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.clsICUControlServ.clsICUControlServ.lngGetICUControlInfo(System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            得到ICUControl信息: "是否加锁","优先级",和 "当前用户优先级" ,Jacky-2002-11-30
+            </summary>
+            <param name="strInHospitalID"></param>
+            <param name="strEID"></param>
+            <param name="strBedID"></param>
+            <param name="strEmployeeID">当前用户ID</param>
+        </member>
+        <member name="M:com.digitalwave.clsICUControlServ.clsICUControlServ.lngUpdateICUControlInfo(System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            更新ICUControl信息: 先更新旧记录(如果存在),再插入一条新记录,Jacky-2002-11-30
+            </summary>
+            <param name="strInHospitalID"></param>
+            <param name="strEID"></param>
+            <param name="strBedID"></param>
+            <param name="strEmployeeID">当前用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.clsICUControlServ.clsICUControlServ.lngDeleteICUControlInfo(System.String,System.String,System.String)">
+            <summary>
+            删除ICUControl信息,(更新旧记录),Jacky-2002-11-30
+            </summary>
+            <param name="strInHospitalID"></param>
+            <param name="strEID"></param>
+            <param name="strBedID"></param>
+            <param name="strEmployeeID">当前用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.clsMedicalParameterCollateServ.clsMedicalParameterCollateServ">
+            <summary>
+            检验项目参照中间件
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.clsMedicalParameterCollateServ.clsMedicalParameterCollateServ.m_lngGetData(System.String,System.Data.DataTable@)">
+            <summary>
+            得到数据
+            </summary>
+            <param name="p_strSQL"></param>
+            <param name="p_dtRecords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.clsMedicalParameterCollateServ.clsMedicalParameterCollateServ.m_lngExecSQL(System.Collections.ArrayList)">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="p_arlSQL"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.SettingICUParameterServ.clsSettingICUParameterServ">
+            <summary>
+            Summary description for SettingICUParameterServ.
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.ICU_Service.clsICU_120Service">
+            <summary>
+            ICU 120
+            </summary>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.ICU_Service.clsICU_120Service.m_lngGet120PatientInArea(System.Security.Principal.IPrincipal,System.String,System.DateTime,System.DateTime,System.Data.DataTable@)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:com.digitalwave.ICU_Service.clsICU_120Service.m_lngGet120PatientByN0(System.Security.Principal.IPrincipal,System.String,System.Int32,System.Data.DataTable@)”忽略有格式错误的 XML 注释 -->
+        <member name="M:com.digitalwave.ICU_Service.clsICU_120Service.m_lngGetCutPic(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            获取截图
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_str120ID">120ID</param>
+            <param name="p_arrPic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ICU_Service.clsICU_120Service.m_lngGetTransportRecord(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            获取转运资料
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_str120ID">120ID</param>
+            <param name="p_dtbRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ICU_Service.clsICU_120Service.m_lngGetCurveData(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            获取波形
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_str120ID">120ID</param>
+            <param name="p_dtbRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ICU_Service.clsICU_120Service.m_lngGetLatestCheckIDByPatient(System.Security.Principal.IPrincipal,System.String,System.String@)">
+            <summary>
+            获取最近一次的影像检查号
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatientID">病人ID</param>
+            <param name="p_strCheckID">检查号</param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.ICU_Service.clsICU_120Service.m_lngGetPACSPicSeriesuidByCheckID(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)”忽略有格式错误的 XML 注释 -->
+        <member name="M:com.digitalwave.ICU_Service.clsICU_120Service.m_lngGetPACSPicBySeriesuid(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            根据检查号、影像类别、序列号获取图片
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strCheckID">检查号</param>
+            <param name="p_strModality">影像类别</param>
+            <param name="p_strSeriesuid">序列号</param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.clsICUGEMaintenanceServ.clsICUGEMaintenanceServ">
+            <summary>
+            clsICUGEMaintenanceServ 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.clsICUGEMaintenanceServ.clsICUGEMaintenanceServ.m_lngGetGEInf(System.String,System.Data.DataTable@)">
+            <summary>
+            得到仪器信息 p_strGENo=""取出全部仪器信息
+            </summary>
+            <param name="_strGENo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.clsICUGEMaintenanceServ.clsICUGEMaintenanceServ.m_lngAddNewParamRecordArr(iCareData.clsICUGEPARAMParamValue[])">
+            <summary>
+            添加GE仪器输出参数记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.MiddleTiers.clsHRPICUServ">
+            <summary>
+            Summary description for clsHRPICUServ.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngGetTrendData(System.String,System.String,System.Int64,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            获取ICU的趋势数据
+            </summary>
+            <param name="p_strStartTime">趋势开始时间</param>
+            <param name="p_strEndTime">趋势结束时间</param>
+            <param name="p_lngSamplyTime">趋势采样时间，以秒为单位</param>
+            <param name="p_strInHospitalID">住院号</param>
+            <param name="p_strTableName">数据表名称</param>
+            <param name="p_strXMLSet">返回结果的Xml</param>
+            <param name="p_intRows">返回结果的数据条数</param>
+            <returns>
+            -1，参数错误。
+            0，查询失败
+            1，成功查询。
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngGetCMSTrendData(System.String,System.String,System.Int64,System.String,System.String@,System.Int32@)">
+            <summary>
+            获取监护仪的趋势数据
+            </summary>
+            <param name="p_strStartTime">趋势开始时间</param>
+            <param name="p_strEndTime">趋势结束时间</param>
+            <param name="p_lngSamplyTime">趋势采样时间，以秒为单位</param>
+            <param name="p_strInHospitalID">住院号</param>
+            <param name="p_strXMLSet">返回结果的Xml</param>
+            <param name="p_intRows">返回结果的数据条数</param>
+            <returns>
+            -1，参数错误。
+            0，查询失败
+            1，成功查询。
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngGetVentilatorTrendData(System.String,System.String,System.Int64,System.String,System.String@,System.Int32@)">
+            <summary>
+            获取呼吸机的趋势数据
+            </summary>
+            <param name="p_strStartTime">趋势开始时间</param>
+            <param name="p_strEndTime">趋势结束时间</param>
+            <param name="p_lngSamplyTime">趋势采样时间，以秒为单位</param>
+            <param name="p_strInHospitalID">住院号</param>
+            <param name="p_strXMLSet">返回结果的Xml</param>
+            <param name="p_intRows">返回结果的数据条数</param>
+            <returns>
+            -1，参数错误。
+            0，查询失败
+            1，成功查询。
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngGetICUTrendData(System.String,System.String,System.Int64,System.String,System.String@,System.Int32@,System.String@,System.Int32@,System.String,System.Data.DataSet@)">
+            <summary>
+            获取所有ICU仪器的趋势数据
+            </summary>
+            <param name="p_strStartTime">趋势开始时间</param>
+            <param name="p_strEndTime">趋势结束时间</param>
+            <param name="p_lngSamplyTime">趋势采样时间，以秒为单位</param>
+            <param name="p_strInHospitalID">住院号</param>
+            <param name="p_strCMSXMLSet">返回监护仪结果的Xml</param>
+            <param name="p_intCMSRows">返回监护仪结果的数据条数</param>
+            <param name="p_strVentilatorXMLSet">返回呼吸机结果的Xml</param>
+            <param name="p_intVentilatorRows">返回呼吸机结果的数据条数</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngGetTrendData(System.String,System.String,System.Int64,System.String,System.String,System.Data.DataSet@)">
+            <summary>
+            获取GE监护仪采集的参数.
+            </summary>
+            <param name="p_strStartTime">开始时间</param>
+            <param name="p_strEndTime">结束时间</param>
+            <param name="p_lngSamplyTime">间隔时间</param>
+            <param name="p_strGEIP">监护仪IP</param>
+            <param name="p_set">输出结果</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngGetICUGEDataByTime(System.String,System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            得到GE参数，根据传入的时间
+            </summary>
+            <param name="p_strInHospitalID">病人ID</param>
+            <param name="p_strCollectTime">要查找的数据的时间范围</param>
+            <param name="p_strInHospitalTime">住院日期</param>
+            <param name="p_dtGECMS">返回数据的结果集</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngGetICUGEDataByTime(System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            根据仪器IP和时间获取GE参数信息
+            </summary>
+            <param name="p_strMONITOR_IP">仪器IP</param>
+            <param name="p_strCollectTime">获取记录的事件范围 最接近此时间的记录</param>
+            <param name="p_dtGECMS">返回值</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngGetICUDataByTime(System.String,System.String,System.String,System.String@,System.Int32@,System.String@,System.Int32@)">
+            <summary>
+            获取最接近给定时间的ICU数值。
+            </summary>
+            <param name="p_strInHospitalID">住院号</param>
+            <param name="p_strBedID">床位号</param>
+            <param name="p_strCollectTime">采集时间。（该时间之后，当天内最接近的数值）</param>
+            <param name="p_strCMSXml">返回监护仪数据的XML</param>
+            <param name="p_intCMSRows">返回监护仪数据的条数</param>
+            <param name="p_strVenXml">返回呼吸机数据的XML</param>
+            <param name="p_intVenRows">返回呼吸机数据的条数</param>
+            <returns>
+            -1，参数错误。
+            0，查询失败
+            1，成功查询。
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngGetICUEquipmentInfo(System.String,System.String@,System.Int32@)">
+            <summary>
+            获得ICU设备的信息
+            </summary>
+            <param name="p_strInHospitalID">住院号</param>
+            <param name="p_strXML">返回设备信息的XML</param>
+            <param name="p_intRows">返回设备信息的条数</param>
+            <returns>
+            -1，参数错误。
+            0，查询失败
+            1，成功查询。
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngGetUsedICUEquipment(System.String,System.String@,System.Int32@)">
+            <summary>
+            获取病人使用过的仪器。
+            </summary>
+            <param name="p_strInHospitalID">住院号</param>
+            <param name="p_strXML">返回设备信息的XML</param>
+            <param name="p_intRows">返回设备信息的条数</param>
+            <returns>
+            -1，参数错误。
+            0，查询失败
+            1，成功查询。
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngGetICUNumericParmat(System.String,System.String,System.String,System.String,System.String[],System.Data.DataTable@,System.Data.DataTable@)">
+            <summary>
+            根据时间取得此次住院中各项指定的ICU监护仪，呼吸机的参数的最新数据
+            </summary>
+            <param name="p_strInHospitalID">病人住院号</param>
+            <param name="p_strBedID">病床</param>
+            <param name="p_strInHospitalTime">住院时间</param>
+            <param name="p_strCollectTime">指定取值的时间（为空就取当前时间）</param>
+            <param name="p_strTypeArry">获取参数的数组(【HEARTRATE】心律，【PULSERATE】脉搏，【NPB】无创血压，【NPBSYSTOLIC】无创收缩压，【NPB_DIASTOLIC】无创舒张压，【SPO21】血氧饱和度，【TEMP1】体温，【RESPRATE】呼吸频率，【O2CONCENTRATION】，【ENDEXPPRESSURE】，【EXPTIDALVOLUME】，【PEAKPRESSURE】，【BLOODNUM1】，【RESPDETECTNUM】监护仪呼吸数据)</param>
+            <param name="p_dtCMS">返回的菲利普监护仪的数据集</param>
+            <param name="p_dtVen">返回的西门子呼吸机的数据集</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngSaveICUTrendColorAttrib(System.String,System.Int32,System.String)">
+            <summary>
+            存储ICU趋势分析用户设定的颜色等属性。
+            </summary>
+            <param name="p_strFormName">趋势分析的窗体名称</param>
+            <param name="p_intMonitorColor">表示要储存的颜色属性属于那一部分（0:表示监护仪，1:表示呼吸机）</param>
+            <param name="p_strVenColor">存放颜色属性的XML形式的内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngGetICUTrendColorAttrib(System.String,System.Data.DataTable@)">
+            <summary>
+            得到存储的ICU趋势分析的颜色配置内容
+            </summary>
+            <param name="p_strFormName">ICU趋势分析的窗体名称</param>
+            <param name="p_dtRecord">返回数据的结果集</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngGetICUGEWaveParam(System.Data.DataTable@)">
+            <summary>
+            获取ICU中GE控件的波形的样式颜色等信息。
+            </summary>
+            <param name="p_dtRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.MiddleTiers.clsHRPICUServ.m_lngGetICUGEParam(System.Data.DataTable@,System.Data.DataTable@)">
+            <summary>
+            获取ICU中GE控件的波形的样式颜色等信息。
+            </summary>
+            <param name="p_dtRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.InitICUParameterServ.clsInitICUParameterServ">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.InitICUParameterServ.clsInitICUParameterServ.lngGetAllEquipmentTypes(System.String@,System.Int32@)">
+            <summary>
+            提取所有设备类型
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.InitICUParameterServ.clsInitICUParameterServ.lngGetAllStandardParam(System.Data.DataTable@)">
+            <summary>
+            获取所有标准参数 HB - 2004-11-18
+            </summary>
+            <param name="p_dtbValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.InitICUParameterServ.clsInitICUParameterServ.lngGetICUDataInfoArr(System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            得到所有对应的 ICUDataInfo,Jacky-2002-12-2
+            </summary>
+            <param name="strEquipmentTypeID"></param>
+            <param name="strEquipmentModelID"></param>
+            <param name="strXML"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

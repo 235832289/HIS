@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MenuExtendServ</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.Service.clsBeforeOperSumShareService2">
+            <summary>
+            术前小结共享数据
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.Service.clsSpecialSymbolServ">
+            <summary>
+            特殊符号中间件
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.Service.clsSpecialSymbolServ.m_lngGetAllSpecialSymbolValue(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            获取科室使用的特殊符号
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.Service.clsSpecialSymbolServ.m_lngAddNewRecord2DB(System.Security.Principal.IPrincipal,iCareData.clsSpecialSymbolValue)">
+            <summary>
+            保存记录到数据库。
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.Service.clsSpecialSymbolServ.m_lngModifyRecord2DB(System.Security.Principal.IPrincipal,iCareData.clsSpecialSymbolValue,iCareData.clsSpecialSymbolValue)">
+            <summary>
+            修改记录
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objOldRecordContent"></param>
+            <param name="p_objNewRecordContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.Service.clsSpecialSymbolServ.m_lngDeleteRecord2DB(System.Security.Principal.IPrincipal,iCareData.clsSpecialSymbolValue)">
+            <summary>
+            删除记录
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordContent"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.Service.clsDefaultValueService2">
+            <summary>
+            操作默认值的中间层
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.Service.clsDefaultValueService2.m_lngGetDefaultValue(System.Security.Principal.IPrincipal,System.String,System.String,System.String,iCareData.clsCustomDefaultValue[]@)">
+            <summary>
+            获取默认值
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_strFormName"></param>
+            <param name="p_objArr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.Service.clsThreeMeasureShareService2">
+            <summary>
+            Summary description for clsThreeMeasureShareService.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.Service.clsThreeMeasureShareService2.m_lngGetFirstValue(System.Security.Principal.IPrincipal,System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPaitentID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.Service.clsThreeMeasureShareService2.m_lngGetNearestValue(System.Security.Principal.IPrincipal,System.String,System.String,System.DateTime,System.String[]@)">
+            <summary>
+            获取最邻近时间的数据
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPaitentID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_dtmCompare"></param>
+            <param name="p_strResult"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.Service.clsInPatientCaseHisoryDefaultService2">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.Service.clsGeneralDiseaseRecordShareService2">
+            <summary>
+            Summary description for clsGeneralDiseaseRecordShareService.
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.Public.MenuExtend.Service.clsOperationRecordDoctorShareService2">
+            <summary>
+            手术记录单数据共享
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.Service.clsOperationRecordDoctorShareService2.m_lngGetBaseOperationValue(System.Security.Principal.IPrincipal,System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            获取手术数据，只为住院病案首页提供共享
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPaitentID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.Public.MenuExtend.Service.clsOperationRecordDoctorShareService2.m_lngGetLatestOperationInfo(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            获取最近的手术数据，只为手术后病程记录提供共享
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPaitentID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strRecordDate">记录日期，获取次日期之前最近的信息</param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

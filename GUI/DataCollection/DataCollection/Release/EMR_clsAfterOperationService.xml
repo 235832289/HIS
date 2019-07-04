@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EMR_clsAfterOperationService</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.DiseaseTrackService.clsAfterOperationService">
+             <summary>
+            实现特殊记录的中间件。
+            手术后病程记录中间件
+             </summary>
+        </member>
+        <member name="F:com.digitalwave.DiseaseTrackService.clsAfterOperationService.c_strModifyRecordSQL">
+            <summary>
+            修改记录到AfterOperationRecord
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.DiseaseTrackService.clsAfterOperationService.m_lngGetRecordTimeList(System.Security.Principal.IPrincipal,System.String,System.String,System.String[]@,System.String[]@)">
+            <summary>
+            获取病人的该记录时间列表。
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPatientID">住院号</param>
+            <param name="p_strInPatientDate">入院日期</param>
+            <param name="p_strCreateDateArr">用户填写的创建时间数组</param>
+            <param name="p_strOpenDateArr">系统生成的开始时间数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DiseaseTrackService.clsAfterOperationService.m_lngUpdateFirstPrintDate(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.DateTime)">
+            <summary>
+            更新数据库中的首次打印时间。
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPatientID">住院号</param>
+            <param name="p_strInPatientDate">入院日期</param>
+            <param name="p_strOpenDate">记录时间</param>
+            <param name="p_dtmFirstPrintDate">首次打印时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DiseaseTrackService.clsAfterOperationService.m_lngGetDeleteRecordTimeList(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String[]@,System.String[]@)">
+            <summary>
+            获取病人的已经被删除记录时间列表。
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPatientID">住院号</param>
+            <param name="p_strInPatientDate">入院日期</param>
+            <param name="p_strDeleteUserID">删除者ID</param>
+            <param name="p_strCreateDateArr">用户填写的创建时间数组</param>
+            <param name="p_strOpenDateArr">系统生成的开始时间数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DiseaseTrackService.clsAfterOperationService.m_lngGetDeleteRecordTimeListAll(System.Security.Principal.IPrincipal,System.String,System.String,System.String[]@,System.String[]@)">
+            <summary>
+            获取病人的已经被删除记录时间列表。
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPatientID">住院号</param>
+            <param name="p_strInPatientDate">入院日期</param>
+            <param name="p_strCreateDateArr">用户填写的创建时间数组</param>
+            <param name="p_strOpenDateArr">系统生成的开始时间数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DiseaseTrackService.clsAfterOperationService.m_lngGetRecordContentWithServ(System.String,System.String,System.String,com.digitalwave.iCare.middletier.HRPService.clsHRPTableService,iCareData.clsTrackRecordContent@)">
+            <summary>
+            获取指定记录的内容。
+            </summary>
+            <param name="p_strInPatientID">住院号</param>
+            <param name="p_strInPatientDate">入院日期</param>
+            <param name="p_strOpenDate">记录时间</param>
+            <param name="p_objHRPServ"></param>
+            <param name="p_objRecordContent">记录内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DiseaseTrackService.clsAfterOperationService.m_lngCheckCreateDate(iCareData.clsTrackRecordContent,com.digitalwave.iCare.middletier.HRPService.clsHRPTableService,iCareData.clsPreModifyInfo@)">
+            <summary>
+            查看是否有相同的记录时间
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <param name="p_objHRPServ"></param>
+            <param name="p_objModifyInfo">若有相同记录,返回该相同记录的操作信息,否则为空</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DiseaseTrackService.clsAfterOperationService.m_lngAddNewRecord2DB(iCareData.clsTrackRecordContent,com.digitalwave.iCare.middletier.HRPService.clsHRPTableService)">
+            <summary>
+            保存记录到数据库。添加主表,添加子表.
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <param name="p_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DiseaseTrackService.clsAfterOperationService.m_lngCheckLastModifyRecord(iCareData.clsTrackRecordContent,com.digitalwave.iCare.middletier.HRPService.clsHRPTableService,iCareData.clsPreModifyInfo@)">
+            <summary>
+            查看当前记录是否最新的记录。
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <param name="p_objHRPServ"></param>		
+            <param name="p_objModifyInfo">若当前记录不是最新的记录,返回该最新记录的操作信息,否则为空</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DiseaseTrackService.clsAfterOperationService.m_lngModifyRecord2DB(iCareData.clsTrackRecordContent,com.digitalwave.iCare.middletier.HRPService.clsHRPTableService)">
+            <summary>
+            把新修改的内容保存到数据库。更新主表,添加子表.
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <param name="p_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DiseaseTrackService.clsAfterOperationService.m_lngDeleteRecord2DB(iCareData.clsTrackRecordContent,com.digitalwave.iCare.middletier.HRPService.clsHRPTableService)">
+            <summary>
+            把记录从数据中“删除”。
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <param name="p_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DiseaseTrackService.clsAfterOperationService.m_lngGetModifyDateAndFirstPrintDate(System.String,System.String,System.String,com.digitalwave.iCare.middletier.HRPService.clsHRPTableService,System.DateTime@,System.String@)">
+            <summary>
+            获取数据库中最新的修改时间和首次打印时间
+            </summary>
+            <param name="p_strInPatientID">住院号</param>
+            <param name="p_strInPatientDate">入院日期</param>
+            <param name="p_strOpenDate">记录时间</param>
+            <param name="p_objHRPServ"></param>
+            <param name="p_dtmModifyDate">修改时间</param>
+            <param name="p_strFirstPrintDate">首次打印时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DiseaseTrackService.clsAfterOperationService.m_lngGetDeleteRecordContentWithServ(System.String,System.String,System.String,com.digitalwave.iCare.middletier.HRPService.clsHRPTableService,iCareData.clsTrackRecordContent@)">
+            <summary>
+            获取指定已经被删除记录的内容。
+            </summary>
+            <param name="p_strInPatientID">住院号</param>
+            <param name="p_strInPatientDate">入院日期</param>
+            <param name="p_strOpenDate">记录时间</param>
+            <param name="p_objHRPServ"></param>
+            <param name="p_objRecordContent">记录内容</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

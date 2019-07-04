@@ -1,0 +1,2436 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DigitalWaveControls</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.controls.ctlTimePicker">
+            <summary>
+            Summary description for dwtTimePick.
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlTimePicker.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlTimePicker.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlTimePicker.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlTimePicker.m_fltFieldRangeArr">
+            <summary>
+            [0..1：年][2..3：月][4..5：日][6..7：“日”][8..9：时][10..11：分][12..13：秒]
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlTimePicker.m_enmCurrentFlag">
+            <summary>
+            当前输入框所在的日期字段
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlTimePicker.m_enmVisibleFlag">
+            <summary>
+            当前允许显示到的字段
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlTimePicker.m_blnOnlyTime">
+            <summary>
+            标记是否只是计时
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlTimePicker.m_mthReInitVisible">
+            <summary>
+            重置显示内容
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlTimePicker.m_mthResetSize">
+            <summary>
+            根据显示字段调整大小
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlTimePicker.m_EnmVisibleFlag">
+            <summary>
+            当前允许显示到的字段的获取和设置
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlTimePicker.m_BlnOnlyTime">
+            <summary>
+            标记是否只是计时的获取和设置
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlTimePicker.enmDateTimeFlag">
+            <summary>
+            日期字段
+            </summary>
+        </member>
+        <!-- 对于成员“T:com.digitalwave.controls.MedicineStoreControls.ctlDataGridView_EnterAsTab”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“F:com.digitalwave.controls.MedicineStoreControls.ctlDataGridView_EnterAsTab.components”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:com.digitalwave.controls.MedicineStoreControls.ctlDataGridView_EnterAsTab.Dispose(System.Boolean)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:com.digitalwave.controls.MedicineStoreControls.ctlDataGridView_EnterAsTab.InitializeComponent”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:com.digitalwave.controls.MedicineStoreControls.ctlDataGridView_EnterAsTab.#ctor”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“E:com.digitalwave.controls.MedicineStoreControls.ctlDataGridView_EnterAsTab.ArriveLastColoumn”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“E:com.digitalwave.controls.MedicineStoreControls.ctlDataGridView_EnterAsTab.EnterKeyPress”忽略有格式错误的 XML 注释 -->
+        <member name="T:com.digitalwave.controls.ctlComboBox">
+            <summary>
+            Summary description for dwtFlatComboBox.
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlComboBox.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlComboBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlComboBox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlComboBox.DropDownStyle">
+            <summary>
+            设置下拉的风格
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.datagrid.frmDataGridEditor">
+            <summary>
+            frmDataGridEditor 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.datagrid.frmDataGridEditor.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.frmDataGridEditor.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.frmDataGridEditor.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlComboBoxBase">
+            <summary>
+            Style为DropDownList时显示；Style为DropDown时，在上面显示TextBox
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.clsHRPColor">
+            <summary>
+            系统使用的颜色定义及工具
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsHRPColor.s_clrHightLight">
+            <summary>
+            输入控件高亮度时颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsHRPColor.c_clrDefaultInputBack">
+            <summary>
+            缺省输入控件的背景色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsHRPColor.s_clrInputBack">
+            <summary>
+            输入控件的背景色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsHRPColor.s_blnInputBackChanged">
+            <summary>
+            输入控件的背景色是否被修改
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.clsHRPColor.s_mthChangeInputBackColor(System.Windows.Forms.Control)">
+            <summary>
+            改变输入控件的背景色
+            </summary>
+            <param name="p_ctlControl">改变控件的父容器，此控件颜色不被改变</param>
+        </member>
+        <member name="F:com.digitalwave.controls.clsHRPColor.s_blnInputForeChanged">
+            <summary>
+            输入控件的前景色是否被修改
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsHRPColor.c_clrDefaultInputFore">
+            <summary>
+            缺省输入控件的前景色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsHRPColor.s_clrInputFore">
+            <summary>
+            输入控件的前景色
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.clsHRPColor.s_mthChangeInputForeColor(System.Windows.Forms.Control)">
+            <summary>
+            改变输入控件的前景色
+            </summary>
+            <param name="p_ctlControl">改变控件的父容器，此控件颜色不被改变</param>
+        </member>
+        <member name="F:com.digitalwave.controls.clsHRPColor.s_blnTitleLabelChanged">
+            <summary>
+            标题性Label颜色是否被修改
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsHRPColor.c_clrDefaultTitleLabel">
+            <summary>
+            缺省标题性Label颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsHRPColor.s_clrTitleLabel">
+            <summary>
+            标题性Label颜色
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.clsHRPColor.s_mthChangeLabelColor(System.Windows.Forms.Control)">
+            <summary>
+            改变Label颜色
+            </summary>
+            <param name="p_ctlControl">改变控件的父容器，此控件颜色不被改变</param>
+        </member>
+        <member name="M:com.digitalwave.controls.clsHRPColor.s_mthChangeColorInContainer(System.Windows.Forms.Control)">
+            <summary>
+            改变容器内控件的颜色
+            </summary>
+            <param name="p_ctlContainerControl"></param>
+        </member>
+        <member name="P:com.digitalwave.controls.clsHRPColor.s_ClrHightLight">
+            <summary>
+            输入控件高亮度时颜色的获取和设置
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.clsHRPColor.s_ClrInputBack">
+            <summary>
+            输入控件背景色的获取和设置
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.clsHRPColor.s_ClrInputFore">
+            <summary>
+            输入控件前景色的获取和设置
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.clsHRPColor.s_ClrTitleLabel">
+            <summary>
+            标题性Label颜色的获取和设置
+            </summary>
+        </member>
+        <!-- 对于成员“T:com.digitalwave.controls.MedicineStoreControls.ArriveDataGridViewLastColoumn”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“T:com.digitalwave.controls.MedicineStoreControls.EnterKeyPressInCurrentCell”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“T:com.digitalwave.controls.MedicineStoreControls.DataGridViewCalendarColumn”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“F:com.digitalwave.controls.MedicineStoreControls.DataGridViewCalendarColumn.components”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:com.digitalwave.controls.MedicineStoreControls.DataGridViewCalendarColumn.Dispose(System.Boolean)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:com.digitalwave.controls.MedicineStoreControls.DataGridViewCalendarColumn.InitializeComponent”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:com.digitalwave.controls.MedicineStoreControls.DataGridViewCalendarColumn.#ctor”忽略有格式错误的 XML 注释 -->
+        <member name="T:System.clsWin32">
+            <summary>
+            clsWin32 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlFindTextBox">
+            <summary>
+            ctlFindTextBox 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.clsJudgeCharType">
+            <summary>
+            Summary description for clsJudgeCharType.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.clsJudgeCharType.s_enmGetCharType(System.Char)">
+            <summary>
+            判断字符的类型
+            </summary>
+            <param name="p_chr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.clsJudgeCharType.s_mthMoveLastLetters(System.String@)">
+            <summary>
+            去掉字符串后面的英文字母
+            </summary>
+            <param name="p_strMain"></param>
+        </member>
+        <member name="M:com.digitalwave.controls.clsJudgeCharType.s_mthMoveLastNumbersOrDot(System.String@)">
+            <summary>
+            去掉字符串最后的数字或'.'
+            </summary>
+            <param name="p_strMain"></param>
+        </member>
+        <member name="F:com.digitalwave.controls.enmCharType.Normal">
+            <summary>
+            一般
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.enmCharType.Punctuation">
+            <summary>
+            标点符号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.enmCharType.Letter">
+            <summary>
+            字母
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.enmCharType.Number">
+            <summary>
+            数值
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.clsDoubleStrikeThoughEventArg">
+            <summary>
+            双划线事件的参数
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsDoubleStrikeThoughEventArg.m_strDeleteText">
+            <summary>
+            双划线的文本
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsDoubleStrikeThoughEventArg.m_clrDST">
+            <summary>
+            双划线的颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsDoubleStrikeThoughEventArg.m_strUserID">
+            <summary>
+            添加双划线的用户ID
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsDoubleStrikeThoughEventArg.m_strUserName">
+            <summary>
+            添加双划线的用户姓名
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsDoubleStrikeThoughEventArg.m_dtmDeleteTime">
+            <summary>
+            添加双划线的时间
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.clsInsertEventArg">
+            <summary>
+            新添文本事件的参数
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsInsertEventArg.m_strInsertText">
+            <summary>
+            新添文本的内容
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsInsertEventArg.m_clrInsert">
+            <summary>
+            新添文本的颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsInsertEventArg.m_strUserID">
+            <summary>
+            新添文本的用户ID
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsInsertEventArg.m_strUserName">
+            <summary>
+            新添文本的用户姓名
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsInsertEventArg.m_intUserSeq">
+            <summary>
+            新添文本用户的索引号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsInsertEventArg.m_dtmInsertTime">
+            <summary>
+            新添文本的时间
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlRichTextBox">
+            <summary>
+            医院书写规范控件
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.c_intSuperSubScriptSize">
+            <summary>
+            上标or下标字体大小
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.c_intSuperScriptCharOffSet">
+            <summary>
+            上标
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.c_intSubScriptCharOffSet">
+            <summary>
+            下标
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.s_rtbRTFTrans">
+            <summary>
+            在文本内容替换时使用的工具
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_arlDoubleStrikeThrough">
+            <summary>
+            标记有双删除线的区间,存放clsDSTInfo
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_arlDSTView">
+            <summary>
+            双删除线的显示区间
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_arlInsertView">
+            <summary>
+            新添加的文本显示信息，计算鼠标是否在新添加的文本上时使用。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_clrDefaultViewText">
+            <summary>
+            缺省的视图(字体)颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.s_clrBaseColor">
+            <summary>
+            第一个用户所使用的文本颜色
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.s_strGetRightText(System.String,System.String)">
+            <summary>
+            获取正确的文本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.s_strGetRightText(System.String,System.String,System.DateTime,com.digitalwave.controls.ctlRichTextBox.clsDSTInfo[]@,com.digitalwave.controls.ctlRichTextBox.clsUserContentInfo[]@,com.digitalwave.controls.ctlRichTextBox.clsModifyUserInfo[]@,com.digitalwave.controls.ctlRichTextBox.clsSuperSubScript[]@)">
+            <summary>
+            获取指定时刻的正确文本
+            </summary>
+            <param name="p_strText"></param>
+            <param name="p_strXml"></param>
+            <param name="p_dtmSeparateTime">将去掉该时间之前的双划线信息(即无记录删除)和用户信息</param>
+            <param name="p_objDSTIndexArr"></param>
+            <param name="p_objContentInfoArr"></param>
+            <param name="p_objModifyUserArr"></param>
+            <param name="p_objSuperSubScriptArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.s_strGetRightText(System.String,System.String,System.DateTime,System.String@)">
+            <summary>
+            获取正确的文本
+            </summary>
+            <param name="p_strText">原文本</param>
+            <param name="p_strXml">原Xml</param>
+            <param name="p_dtmSeparateTime">分割的时间</param>
+            <param name="p_strNewXml">新的Xml</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.s_strCombineXml(System.String[])">
+            <summary>
+            合并XML
+            </summary>
+            <param name="p_strXmlArr">Xml数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthSplitXml(System.String,System.String,System.Int32,System.String[]@,System.String[]@)">
+            <summary>
+            拆分
+            </summary>
+            <param name="p_strText">文本</param>
+            <param name="p_strXml">Xml</param>
+            <param name="p_intCharPerLine">一行有多少个字符</param>
+            <param name="p_strTextArr">拆分后的文本</param>
+            <param name="p_strXmlArr">Xml</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthSplitXmlByBytes(System.String,System.String,System.Int32,System.String[]@,System.String[]@)">
+            <summary>
+            拆分
+            </summary>
+            <param name="p_strText">文本</param>
+            <param name="p_strXml">Xml</param>
+            <param name="p_intBytesPerLine">一行有多少个字节</param>
+            <param name="p_strTextArr">拆分后的文本</param>
+            <param name="p_strXmlArr">Xml</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.s_objGetUserXMLInfo(System.String)">
+            <summary>
+            根据Xml内容获取存放XML内容的信息
+            </summary>
+            <param name="p_strXml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.s_strGetSubXml(com.digitalwave.controls.ctlRichTextBox.clsUserXMLInfo,System.Int32,System.Int32)">
+            <summary>
+            获取子Xml信息
+            </summary>
+            <param name="p_objUserXmlInfo">用户Xml信息</param>
+            <param name="p_intStartIndex">开始索引</param>
+            <param name="p_intEndIndex">结束索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.s_strRemoveUserInfoFromXml(System.String)">
+            <summary>
+            从Xml中去除用户信息
+            </summary>
+            <param name="strOldXml"></param>
+            <returns></returns>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_strUserID">
+            <summary>
+            当前用户ID
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_strUserName">
+            <summary>
+            当前用户姓名
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_blnUnderLineDST">
+            <summary>
+            全局控制，标记双划线是否下双划线
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_blnIsReadOnly">
+            <summary>
+            指定控件内容是否只读
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_clrDST">
+            <summary>
+            当前用户的双删除线的颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_clrOldPartInsertText">
+            <summary>
+            当前用户在旧的部分输入文字的颜色,默认黑色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_blnIgnoreUserInfo">
+            <summary>
+            是否忽略用户信息,默认否
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthFireEvtTextChange(System.Boolean)">
+            <summary>
+            触发m_evtTextChange事件
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_objXmlStream">
+            <summary>
+            生成XML的内存
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_objXmlWriter">
+            <summary>
+            生成XML的工具
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_objXmlParser">
+            <summary>
+            读取XML的工具
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_objUndoRedoUtil">
+            <summary>
+            Undo、Redo的工具
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_pntEndVisible">
+            <summary>
+            最后可见的坐标,始终保持为控件的右下角偏移(-5,-5)
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_intFontHeight">
+            <summary>
+            字体高度,始终为控件所采用的字体的高度
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_blnIsSelectedChanged">
+            <summary>
+            用户交互时是否已经选择了文本
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_blnCanSelectedChanged">
+            <summary>
+            是否处理选择改变的事件
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_intPreviouslyLen">
+            <summary>
+            用户改变文本内容之前的长度
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_intCurrentCursorIndex">
+            <summary>
+            当前光标索引
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_intSelectedTextStartIndex">
+            <summary>
+            记录用户选择文本的开始索引
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_intSelectedTextLength">
+            <summary>
+            记录用户选择文本的长度
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_blnIsBackspace">
+            <summary>
+            标记是后退键还是删除键
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_blnCanTextChanged">
+            <summary>
+            标记是否处理TextChanged事件,通常在内部设置控件文本内容时用
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_blnCanModifySelection">
+            <summary>
+            标记是否可以修改选择的内容
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_intCurrentDSTIndex">
+            <summary>
+            当前双删除线的区间索引
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_intCurrentInsertIndex">
+            <summary>
+            当前插入文本区间索引
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_pntMousePositionTemp">
+            <summary>
+            记录鼠标坐标的临时变量
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_intTextLenght">
+            <summary>
+            文本长度
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_objCurrentEventArg">
+            <summary>
+            当前的双删除线事件参数
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_objCurrentInsertEventArg">
+            <summary>
+            当前的插入文本事件参数
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_strPrevioslyText">
+            <summary>
+            前一次的文本内容(RTF)
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_blnIMEInput">
+            <summary>
+            是否是在输入法模式下，如果时，不重画。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_sbdTemp">
+            <summary>
+            拼接字符串的临时缓冲
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_objCurrentModifyUser">
+            <summary>
+            当前用户信息
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_arlModifyUsers">
+            <summary>
+            所有修改用户的信息
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_arlTextContentInfos">
+            <summary>
+            存放clsUserContentInfo对象
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.m_arlContentViewInfo">
+            <summary>
+            在旧的内容中插入的文本段的位置信息,存放clsUserContentViewInfo对象,
+            在重画中计算位置,在鼠标时间中用到
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthInitUndoRedo">
+            <summary>
+            初始化Undo\Rodo工具
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthCopyDST(System.Collections.ArrayList,System.Collections.ArrayList,System.Boolean)">
+            <summary>
+            复制双删除线信息
+            </summary>
+            <param name="p_arlSourceDST">原信息集</param>
+            <param name="p_arlDestDST">目标信息集</param>
+            <param name="p_blnClearDest">是否清空目标信息集</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthCopyTextContentInfo(System.Collections.ArrayList,System.Collections.ArrayList,System.Boolean)">
+            <summary>
+            复制文本内容信息
+            </summary>
+            <param name="p_arlSourceTextContentInfo">原信息集</param>
+            <param name="p_arlDestTextContentInfo">目标信息集</param>
+            <param name="p_blnClearDest">是否清空目标信息集</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthAddCurrentDo">
+            <summary>
+            添加当前操作信息
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.s_queDoItemPool">
+            <summary>
+            DoItem缓冲池
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.s_objGetDoItemFromPool">
+            <summary>
+            从缓冲池获取DoItem。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.s_mthAddDoItemInPool(com.digitalwave.Utility.clsDoItem[])">
+            <summary>
+            添加DoItem到缓冲池
+            </summary>
+            <param name="p_objDoItemArr">DoItem数组</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.s_mthAddDoItemInPool(com.digitalwave.Utility.clsDoItem)">
+            <summary>
+            添加DoItem到缓冲池
+            </summary>
+            <param name="p_objDoItem">DoItem</param>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.s_queDSTPool">
+            <summary>
+            双划线记录的缓冲池
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.s_objGetDSTInfoFromPool">
+            <summary>
+            从缓冲池获取双划线记录。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.s_mthAddDSTInfoInPool(com.digitalwave.controls.ctlRichTextBox.clsDSTInfo)">
+            <summary>
+            添加双划线记录到缓冲池
+            </summary>
+            <param name="p_objDSTInfo"></param>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.s_queContentPool">
+            <summary>
+            添加文本信息的缓冲池
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.s_objGetTextContentFromPool">
+            <summary>
+            从缓冲池获取文本信息。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.s_mthAddContentInfoInPool(com.digitalwave.controls.ctlRichTextBox.clsUserContentInfo)">
+            <summary>
+            添加文本信息到缓冲池
+            </summary>
+            <param name="p_objContentInfo"></param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthSelectionDoubleStrikeThough(System.Boolean)">
+            <summary>
+            设置选择的字符串有无双删除线
+            </summary>
+            <param name="p_blnAddDST">是否是添加双删除线,为false时可去掉现有的删除线</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthHandleSelectedChanged">
+            <summary>
+            用户选择了文本后再交互 , Handle
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthHandleNotSelectedChanged">
+            <summary>
+            处理用户没有选择文本而进行的交互
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthHandleInsert(System.Int32)">
+            <summary>
+            处理添加
+            </summary>
+            <param name="p_intNewLen">新添加的长度</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthHandleReplace(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            处理替换
+            </summary>
+            <param name="p_intStartIndex">改变文本的开始索引</param>
+            <param name="p_intOldLength">旧文本的长度</param>
+            <param name="p_intDiffLength">新文本和旧文本相差的长度。</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthHandleReplace(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            扩展原m_mthHandleReplace, 仅在针对双划线时使用
+            参数p_blnToDoubleStrikeForInclude指定当被替换文本被包含在双划线内容中时是否将被替换文本全部置为双划线格式,默认为true
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthHandleDelete(System.Int32)">
+            <summary>
+            处理删除
+            </summary>
+            <param name="p_intOldLen">删除的长度</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthUpdateCurrentStatus">
+            <summary>
+            记录当前光标的位置和用户按键信息，判断是否需要控制
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthSetCustomNewText(System.String,System.String,System.Drawing.Color)">
+            <summary>
+            设置新的文本信息,此方法将使控件字体颜色与p_clrSet一致
+            </summary>
+            <param name="p_strText">文字信息</param>
+            <param name="p_strXml">文字格式的Xml信息</param>
+            <param name="p_clrSet">文字颜色</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthSetNewText(System.String,System.String)">
+            <summary>
+            设置新的文本信息
+            </summary>
+            <param name="p_strText">文字信息</param>
+            <param name="p_strXml">文字格式的Xml信息</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_strGetXmlText">
+            <summary>
+            获取XML文本
+            </summary>
+            <returns>XML文本</returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_thCompareModifyUser(com.digitalwave.controls.ctlRichTextBox.clsModifyUserInfo,com.digitalwave.controls.ctlRichTextBox.clsModifyUserInfo)">
+            <summary>
+            比较当前modifyuser与xml痕迹modifyuser是否一样
+            用于无痕迹修改时比较
+            create by tfzhang at 2005-12-8 9:37
+            </summary>
+            <param name="p_ModifyUserA">当前modifyuser</param>
+            <param name="p_ModifyUserB">xml中modifyuser</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthFinishEdit">
+            <summary>
+            标记结束修改，记录修改时间
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthClearText">
+            <summary>
+            清空文本内容
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_strGetRightText">
+            <summary>
+            获取正确的文本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_intGetModifyUserCount">
+            <summary>
+            获取参与修改的用户数目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_objGetModifyUserArr">
+            <summary>
+            获取参与修改的用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthReShow">
+            <summary>
+            重新显示文本
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthInsertText(System.String,System.Int32)">
+            <summary>
+            处理外部添加
+            </summary>
+            <param name="p_strText">新添加的文本</param>
+            <param name="p_intStartIndex">插入点</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthDeleteText(System.Int32,System.Int32)">
+            <summary>
+            处理外部删除
+            </summary>
+            <param name="p_intTextLength">删除文本的长度</param>
+            <param name="p_intStartIndex">开始删除的位置</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthReplace(System.String,System.String)">
+            <summary>
+            处理外部替换
+            </summary>
+            <param name="p_strOldValue">旧文本</param>
+            <param name="p_strNewValue">新文本</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthSetSelectionScript(System.Int32)">
+            <summary>
+            设置所选文字为上标或下标
+            </summary>
+            <param name="p_intType">0：上标；1：下标</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_mthUndoSuperSubScript">
+            <summary>
+            撤消上下标
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.m_ptGetCharPositionRightDown(System.Int32,System.Drawing.Graphics)">
+            <summary>
+             获取指定位置字符右下角的坐标.for Dst
+            </summary>
+            <param name="intCharIndex"></param>
+            <param name="g"></param>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlRichTextBox.m_BlnIsTextChanged">
+            <summary>
+            用于判断内容是否有改动,此属性必须在m_mthFinishEdit()之前调用(即在m_strGetRightText()和m_strGetXmlText()之前调用)
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlRichTextBox.m_ClrDefaultViewText">
+            <summary>
+            缺省的视图(字体)颜色
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlRichTextBox.m_BlnPartControl">
+            <summary>
+            此属性无效,仅为兼容
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlRichTextBox.m_IntPartControlStartIndex">
+            <summary>
+            此属性无效,仅为兼容
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlRichTextBox.m_IntPartControlLength">
+            <summary>
+            此属性无效,仅为兼容
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlRichTextBox.m_StrUserID">
+            <summary>
+            当前用户ID的设置和获取
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlRichTextBox.m_StrUserName">
+            <summary>
+            当前用户姓名的设置和获取
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlRichTextBox.m_BlnUnderLineDST">
+            <summary>
+            全局控制双划线是否下双划线
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlRichTextBox.m_BlnCanModifyLast">
+            <summary>
+            判断最后操作者是否可以修改该操作者所写的内容
+            只有操作者本身才能修改自己的内容。设置为true 由外调用设定
+            接着控件内做判断如果还在时限内则允许修改
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlRichTextBox.m_BlnReadOnly">
+            <summary>
+            指定控件内容是否只读
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlRichTextBox.m_ClrDST">
+            <summary>
+            当前用户的双删除线颜色的设置和获取
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlRichTextBox.m_ClrOldPartInsertText">
+            <summary>
+            当前用户在旧的部分输入文字颜色的设置和获取
+            </summary>
+        </member>
+        <member name="E:com.digitalwave.controls.ctlRichTextBox.m_evtMouseEnterDeleteText">
+            <summary>
+            鼠标进入双删除线区间事件
+            </summary>
+        </member>
+        <member name="E:com.digitalwave.controls.ctlRichTextBox.m_evtMouseLeaveDeleteText">
+            <summary>
+            鼠标离开双删除线区间事件
+            </summary>
+        </member>
+        <member name="E:com.digitalwave.controls.ctlRichTextBox.m_evtMouseEnterInsertText">
+            <summary>
+            鼠标进入插入文本区间事件
+            </summary>
+        </member>
+        <member name="E:com.digitalwave.controls.ctlRichTextBox.m_evtMouseLeaveInsertText">
+            <summary>
+            鼠标离开插入文本区间事件
+            </summary>
+        </member>
+        <member name="E:com.digitalwave.controls.ctlRichTextBox.m_evtTextChange">
+            <summary>
+            文本内容发生变化,包括上下标,双划线等,替代原来的TextChange事件.
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlRichTextBox.clsRichTextItemStatus">
+            <summary>
+            当前控件的内容状态，在Undo、Redo时用
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsRichTextItemStatus.m_strRTF">
+            <summary>
+            当前的RTF内容
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsRichTextItemStatus.m_intCurrentCursorIndex">
+            <summary>
+            当前光标的索引
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsRichTextItemStatus.m_arlDoubleStrikeThrough">
+            <summary>
+            当前双划线的信息
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsRichTextItemStatus.m_arlTextContentInfos">
+            <summary>
+            当前文本内容的信息
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsModifyUserInfo.m_strUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsModifyUserInfo.m_strUserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsModifyUserInfo.m_clrText">
+            <summary>
+            文本颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsModifyUserInfo.m_dtmModifyDate">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsModifyUserInfo.m_intUserSequence">
+            <summary>
+            用户索引
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsUserContentInfo.objUserInfo">
+            <summary>
+            修改用户信息
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsUserContentInfo.m_intStartIndex">
+            <summary>
+            内容开始索引
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsUserContentInfo.m_intEndIndex">
+            <summary>
+            内容结束索引
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsUserContentViewInfo.m_objUserContentInfo">
+            <summary>
+            用户修改内容信息
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsUserContentViewInfo.m_intStartX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsUserContentViewInfo.m_intEndX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsUserContentViewInfo.m_intUpY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsUserContentViewInfo.m_intDownY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlRichTextBox.clsXMLInfos">
+            <summary>
+            信息
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsXMLInfos.m_objDSTArr">
+            <summary>
+            双划线
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsXMLInfos.m_objCIArr">
+            <summary>
+            每段内容的信息
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsXMLInfos.m_objUserInfo">
+            <summary>
+            用户信息，以时间排序
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlRichTextBox.clsXMLInfos.m_objScripts">
+            <summary>
+            上下标信息
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlRichTextBox.clsUserXMLInfo">
+            <summary>
+            存放XML内容的信息
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.clsUserXMLInfo.#ctor">
+            <summary>
+            内部使用的构造函数
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlRichTextBox.clsSuperSubScript">
+            <summary>
+            上下标
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.clsXmlTool.s_objGetXMLInfo(System.String)">
+            <summary>
+            从XML获取信息对象
+            </summary>
+            <param name="p_strXml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.clsXmlTool.s_strGetXmlFromInfo(System.Collections.ArrayList,System.Collections.ArrayList,System.Collections.ArrayList,System.Collections.ArrayList)">
+            <summary>
+            从XMLInfo对象获取xml文本
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.clsXmlTool.s_strCombineXml(System.String[])">
+            <summary>
+            合并XML
+            </summary>
+            <param name="p_strXmlArr">Xml数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.clsXmlTool.s_mthSplitXml(System.String,System.String,System.Int32,System.String[]@,System.String[]@)">
+            <summary>
+             拆分Xml
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.clsXmlTool.s_mthSplitXmlByBytes(System.String,System.String,System.Int32,System.String[]@,System.String[]@)">
+            <summary>
+             拆分Xml
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.clsXmlTool.s_strMakeDSTXml(System.String,System.String,System.String,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            生成DST文本的Xml
+            </summary>
+            <param name="p_strText">文本</param>
+            <param name="p_strUserID">用户ID</param>
+            <param name="p_strUserName">用户名称</param>
+            <param name="p_clrDST">双划线颜色</param>
+            <param name="p_clrText">文本颜色</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.clsXmlTool.s_strMakeTextXml(System.String,System.String,System.String,System.Drawing.Color)">
+            <summary>
+            生成正确文本Xml
+            </summary>
+            <param name="p_strText">文本</param>
+            <param name="p_strUserID">用户ID</param>
+            <param name="p_strUserName">用户名称</param>
+            <param name="p_clrText">文本颜色</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.clsXmlTool.s_strMakeXml(System.String,System.String,System.String,System.Drawing.Color,System.Drawing.Color,System.String,System.Boolean)">
+            <summary>
+            生成文本Xml
+            </summary>
+            <param name="p_strText">文本</param>
+            <param name="p_strUserID">用户ID</param>
+            <param name="p_strUserName">用户名称</param>
+            <param name="p_clrDST">双划线颜色</param>
+            <param name="p_clrText">文本颜色</param>
+            <param name="p_strMakeTime">生成时间</param>
+            <param name="p_blnAllDST">是否全文删除</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.clsXmlTool.s_strGetRightText(System.String,System.String,System.DateTime,System.String@)">
+            <summary>
+            获取正确的文本
+            </summary>
+            <param name="p_strText">原文本</param>
+            <param name="p_strXml">原Xml</param>
+            <param name="p_dtmSeparateTime">分割的时间</param>
+            <param name="p_strNewXml">新的Xml</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.clsXmlTool.m_strSortXML(System.Xml.XmlDocument)">
+            <summary>
+            将DI结点的值按S排序
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.clsXmlTool.s_strGetRightText(System.String,System.String)">
+            <summary>
+            获取正确的文本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlRichTextBox.clsXmlTool.s_strGetRightText(System.String,System.String,com.digitalwave.controls.ctlRichTextBox.clsSuperSubScript[]@)">
+            <summary>
+            获取正确的文本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlDataGridBaseTool">
+            <summary>
+            Summary description for ctlDataGridBaseTool.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_mthAddColumnWithListView(System.Int32,com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.d_mthBeforeListViewShowHandler,com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.d_mthListViewDoubleClickHandler)">
+            <summary>
+            添加TextChange中显示的ListView
+            </summary>
+            <param name="p_intColumnIndex">列的索引，从0开始</param>
+            <param name="p_evtBeforeListViewShow">显示ListView之前的事件</param>
+            <param name="p_evtListViewDoubleClick">ListView双击的事件</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_mthInitListViewColumnExt(System.Int32,System.Windows.Forms.ListView)">
+            <summary>
+            初始化ListView的列
+            </summary>
+            <param name="p_intColumnIndex">列的索引，从0开始</param>
+            <param name="p_lsvList">ListView</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_mthInitListViewItemExt(System.Int32,System.String,System.Windows.Forms.ListView)">
+            <summary>
+            初始化ListView的内容
+            </summary>
+            <param name="p_intColumnIndex">列的索引，从0开始</param>
+            <param name="p_strText">用户输入的内容</param>
+            <param name="p_lsvList">ListView</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_objMakeDataExt(System.Int32,System.Windows.Forms.ListViewItem)">
+            <summary>
+            在ListView双击后，获取一行数据
+            </summary>
+            <param name="p_intColumnIndex">列的索引，从0开始</param>
+            <param name="p_lviSelectedItem">用户选择的ListView的内容</param>
+            <returns>放入DataTable的内容</returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_mthAddColumnWithListViewExt(System.Int32)">
+            <summary>
+            添加列与ListView绑定。使用此统一操作，必须实现各个Ext结尾的函数。		
+            </summary>
+            <param name="p_intColumnIndex">列的索引，从0开始</param>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlDataGridBaseTool.m_intPreColumnIndexExt">
+            <summary>
+            之前ListView所绑定的列
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_mthInitGrid">
+            <summary>
+            初始化，必须在窗体的Load事件中调用
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_mthAddList">
+            <summary>
+            添加列与ListView的关联
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_mthAddRow(System.Object[])">
+            <summary>
+            添加行
+            </summary>
+            <param name="p_objDataArr">行的数据</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_intRowCount">
+            <summary>
+            获取数据的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_objGetRow(System.Int32)">
+            <summary>
+            获取行的数据
+            </summary>
+            <param name="p_intRowIndex">行的索引，如果索引不正确，返回null</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_objGetRowAll">
+            <summary>
+            获取全部数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_mthUpdateRow(System.Int32,System.Object[])">
+            <summary>
+            更新行数据
+            </summary>
+            <param name="p_intRowIndex">行的索引，如果索引不正确，不做更新</param>
+            <param name="p_objDataArr">行的数据</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_mthDeleteRow(System.Int32)">
+            <summary>
+            删除行
+            </summary>
+            <param name="p_intRowIndex">行的索引，如果索引不正确，不做删除</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_mthInsertRow(System.Int32,System.Object[])">
+            <summary>
+            插入功能
+            </summary>
+            <param name="p_intRowIndex">插入到的索引，新数据将在此索引</param>
+            <param name="p_objDataArr">插入的数据</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_mthClearRow">
+            <summary>
+            清空所有Row
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.m_mthSetCellSelected(System.Int32,System.Int32)">
+            <summary>
+            提供使某一个Cell选中的功能
+            </summary>
+            <param name="p_intRowIndex"></param>
+            <param name="p_intColumnIndex"></param>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlDataGridBaseTool.m_LsvGridShow">
+            <summary>
+            DataGrid文字内容改变时出现的ListView
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt">
+            <summary>
+            内部实现ListView与Column绑定功能
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.m_intColumnIndex">
+            <summary>
+            第几列
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.m_objCurrentCell">
+            <summary>
+            当前的Cell
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.#ctor(System.Windows.Forms.DataGridTextBoxColumn,System.Int32,System.Windows.Forms.ListView)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="p_dtxtcText">与ListView绑定的列</param>
+            <param name="p_intColumnIndex">列的索引</param>
+            <param name="p_lsvShow">ListView</param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.m_blnIsThisListViewCall">
+            <summary>
+            判断是否当前的ListView事件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.m_bolIfResponseSpaceBar">
+            <summary>
+            设置DataGird中的DatagridTextBox是否响应空格键出ListView
+            (默认是True)
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.m_mthLostFocus(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.m_mthListViewDoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            ListView双击
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.m_mthListViewSelected">
+            <summary>
+            用户选择了项目
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.m_mthBeforeListViewShow">
+            <summary>
+            ListView显示之前
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.m_mthShowListView">
+            <summary>
+            显示ListView
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.m_mthHideListView">
+            <summary>
+            隐藏ListView
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.m_strGetCurrentText">
+            <summary>
+            获取用户输入的内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.m_objGetCurrentCell">
+            <summary>
+            当前的Cell
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.m_intGetColumnIndex">
+            <summary>
+            当前工具绑定的列的索引
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.controls.ctlDataGridBaseTool.clsGridListViewExt.m_BolIfResponseSpaceBar">
+            <summary>
+            设置DataGird中的DatagridTextBox是否响应空格键出ListView(默认是True)
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.ctlExtTextBox">
+            <summary>
+            带模糊查询的TextBox
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.ctlExtTextBox.m_lsvList">
+            <summary>
+            模糊显示
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.ctlExtTextBox.m_objValueObject">
+            <summary>
+            保存值对象
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Utility.ctlExtTextBox.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.#ctor">
+            <summary>
+            带模糊查询的TextBox
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器 
+            修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_lsvList_DoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            双击显示列表
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_txtText_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            键入字符的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_mthShowList">
+            <summary>
+            显示列表
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_mthLoadListData(System.String)">
+            <summary>
+            载入数据
+            </summary>
+            <param name="p_strInput"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_mthListFocus">
+            <summary>
+            显示列表获得焦点
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_mthTextBoxFocus">
+            <summary>
+            TextBox获得焦点
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_bolCheckItemExisted">
+            <summary>
+            判断
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:com.digitalwave.Utility.ctlExtTextBox.m_bolLostFocusEffect">
+            <summary>
+            设置lostfocus事件是否有效（默认有效）
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_txtText_Leave(System.Object,System.EventArgs)">
+            <summary>
+            TextBox失去焦点
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_lsvList_Leave(System.Object,System.EventArgs)">
+            <summary>
+            显示列表失去焦点
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_mthListCollapse(System.Boolean)">
+            <summary>
+            使显示列表消失
+            </summary>
+            <param name="p_blnGetValue"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_lsvList_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            显示列表的键盘事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_blnCheckTextBoxStringIfEffect">
+            <summary>
+            检查TextBox中输入的字符是否已经过检验(虚函数)
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_strGetValueObject">
+            <summary>
+            获得值对象,基类将调用此方法给基类实例成员 m_objValueObject 赋值;
+            基类为空实现,返回 null;
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_strGetItemName">
+            <summary>
+            获得项目名称,基类将调用此方法给基类实例属性 Text 赋值;
+            基类为空实现,返回 null;
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_mthSetListAppearance">
+            <summary>
+            设置列表显示样式,基类将调用此方法给列表框设置显示样式;
+            基类为空实现,以默认样式显示,单列,无标头,详细模式;
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Utility.ctlExtTextBox.m_mthClear">
+            <summary>
+            清空控件的文本和值对象,(虚函数)
+            </summary>
+        </member>
+        <member name="E:com.digitalwave.Utility.ctlExtTextBox.evtLostFocus">
+            <summary>
+            在文本框和列表框都失去焦点时产生
+            </summary>
+        </member>
+        <member name="E:com.digitalwave.Utility.ctlExtTextBox.evtBeforeValueChange">
+            <summary>
+            在值对象改变之前产生
+            </summary>
+        </member>
+        <member name="E:com.digitalwave.Utility.ctlExtTextBox.evtValueChanged">
+            <summary>
+            在值对象改变之后产生
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Utility.ctlExtTextBox.m_ObjValueObject">
+            <summary>
+            子类访问值对象的接口
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Utility.clsExBeforeValueChangeEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.datagrid.clsDataGridEditor">
+            <summary>
+            clsDataGridEditor 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.clsPrintRichTextContext">
+            <summary>
+            Summary description for clsPrintRichTextContext.
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintRichTextContext.m_intCurrentIndex">
+            <summary>
+            开始打印的字符索引
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintRichTextContext.m_blnUnderLineDST">
+            <summary>
+            全局控制，标记双划线是否下双划线
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.clsPrintRichTextContext.m_intMeasureBlockHeightBySimSun(System.Single,System.Int32,System.Drawing.Graphics)">
+            <summary>
+            量度打印内容所需要的高度
+            </summary>
+            <param name="p_fltFontSize">打印字体大小</param>
+            <param name="p_intWidth">打印区域的宽度</param>
+            <param name="p_objGrp">打印变量</param>
+            <returns>打印内容所需要的高度</returns>
+        </member>
+        <member name="M:com.digitalwave.controls.clsPrintRichTextContext.m_blnPrintAllBySimSun(System.Single,System.Drawing.Rectangle,System.Drawing.Graphics,System.Int32@,System.Boolean)">
+            <summary>
+            使用SimSun字体打印，如果内容超出范围也打印所有内容
+            </summary>
+            <param name="p_fltFontSize">打印字体大小</param>
+            <param name="p_rtgBlock">打印区域</param>
+            <param name="p_objGrp">打印变量</param>
+            <param name="p_intRealHeight">实际需要打印的区域高度</param>
+            <param name="p_blnPrintInMiddleBlock">如果打印区域可以容纳所有内容，是否自动调整内容在区域中间打印。true，调整；false，不调整</param>
+            <returns>实际打印范围是否超出指定区域范围（指定区域范围是调整后的范围）</returns>
+        </member>
+        <member name="M:com.digitalwave.controls.clsPrintRichTextContext.m_blnPrintInBlock_Old(System.String,System.Single,System.Drawing.Rectangle,System.Drawing.Graphics,System.Boolean,System.Int32@,System.Boolean,System.Boolean)">
+            <summary>
+            在指定区域内打印
+            </summary>
+            <param name="p_strFontFamilyName">打印字体名称</param>
+            <param name="p_fltFontSize">打印字体大小</param>
+            <param name="p_rtgBlock">打印区域</param>
+            <param name="p_objGrp">打印变量</param>
+            <param name="p_blnNoClip">如果实际区域超出所给范围，是否打印。true，打印；false，不打印</param>
+            <param name="p_intRealHeight">实际需要打印的区域高度</param>
+            <param name="p_blnResizeBlock">是否自动调整打印区域为整行</param>
+            <param name="p_blnPrintInMiddleBlock">如果打印区域可以容纳所有内容，是否自动调整内容在区域中间打印。true，调整；false，不调整</param>
+            <returns>实际打印范围是否超出指定区域范围（如果自动调整区域，指定区域范围是调整后的范围）</returns>
+        </member>
+        <member name="M:com.digitalwave.controls.clsPrintRichTextContext.m_blnPrintInBlock(System.String,System.Single,System.Drawing.Rectangle,System.Drawing.Graphics,System.Boolean,System.Int32@,System.Boolean,System.Boolean)">
+            <summary>
+            在指定区域内打印
+            </summary>
+            <param name="p_strFontFamilyName">打印字体名称</param>
+            <param name="p_fltFontSize">打印字体大小</param>
+            <param name="p_rtgBlock">打印区域</param>
+            <param name="p_objGrp">打印变量</param>
+            <param name="p_blnNoClip">如果实际区域超出所给范围，是否打印。true，打印；false，不打印</param>
+            <param name="p_intRealHeight">实际需要打印的区域高度</param>
+            <param name="p_blnResizeBlock">是否自动调整打印区域为整行</param>
+            <param name="p_blnPrintInMiddleBlock">如果打印区域可以容纳所有内容，是否自动调整内容在区域中间打印。true，调整；false，不调整</param>
+            <returns>实际打印范围是否超出指定区域范围（如果自动调整区域，指定区域范围是调整后的范围）</returns>
+        </member>
+        <member name="M:com.digitalwave.controls.clsPrintRichTextContext.m_fltGetXOffsetOfMeasureRegion(System.Drawing.Font,System.Drawing.Graphics)">
+            <summary>
+            获取打印字串时X向的位置偏移
+            </summary>
+            <param name="fntDraw"></param>
+            <param name="g"></param>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.controls.clsPrintRichTextContext.m_BlnUnderLineDST">
+            <summary>
+            全局控制双划线是否下双划线
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.clsPrintText">
+            <summary>
+            clsPrintText 的摘要说明。
+            打印文本,按行宽自动换行,自动调整行中字符间距是行两端对齐,可以设置段落起始行的缩进以及行间距离.
+            对任意字符都能控制(目前直能控制字体,颜色,上下标,双划线)
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintText.c_chrLF">
+            <summary>
+            换行符
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintText.c_chrSpace">
+            <summary>
+            空格
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintText.c_intSuperScript">
+            <summary>
+            上标
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintText.c_intSubScript">
+            <summary>
+            下标
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintText.m_intRowIndent">
+            <summary>
+            段落首行的缩进,默认20
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintText.m_intRowSpacing">
+            <summary>
+            行间距,默认2,最小为2
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintText.m_objScriptFont">
+            <summary>
+            上下标字体,默认宋体7号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintText.m_blnAimToBothSide">
+            <summary>
+            对齐到两端
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.clsPrintText.m_mthToPaint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Boolean)">
+            <summary>
+            打印文本
+            </summary>
+            <param name="g">Graphics对象</param>
+            <param name="rectPrint">打印的区域,包括位置和大小</param>
+            <param name="intRowSpacing">指定行间距</param>
+            <param name="blnAutoIncreaseRows">指定当区域高度不足打印所有行时,是否自动增加行数直至全部打印完毕</param>
+            <returns>返回打印的区域的实际高度</returns>
+        </member>
+        <member name="M:com.digitalwave.controls.clsPrintText.m_mthPrintRows(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.SizeF[],System.Collections.ArrayList,System.Boolean)">
+            <summary>
+            输出行
+            </summary>
+            <param name="g"></param>
+            <param name="rectPrint">打印区域</param>
+            <param name="rectChars">打印字符的大小</param>
+            <param name="arlRows">行信息</param>
+            <param name="intRowSpacing">行间距</param>
+            <param name="blnAutoIncreaseRows">是否自动增加行直至打印全部</param>
+            <returns>返回打印的行数</returns>
+        </member>
+        <member name="M:com.digitalwave.controls.clsPrintText.m_mthGetRows(System.Drawing.Graphics,System.Single,System.Drawing.SizeF[]@,System.Collections.ArrayList@)">
+            <summary>
+            将文本拆分成若干行
+            </summary>
+            <param name="g"></param>
+            <param name="fltWidth">行宽</param>
+            <param name="rectChars">返回字符大小</param>
+            <param name="arlRows">返回行信息</param>
+        </member>
+        <member name="M:com.digitalwave.controls.clsPrintText.m_mthSetDeleteChar(System.Int32,System.Boolean)">
+            <summary>
+            设置为双划线删除
+            </summary>
+            <param name="intPos">指定字符</param>
+            <param name="blnShowDeleteChar">是否显示该双划线字符</param>
+        </member>
+        <member name="M:com.digitalwave.controls.clsPrintText.m_mthSetScriptChar(System.Int32,System.Boolean)">
+            <summary>
+            设置上下标
+            </summary>
+            <param name="intPos">指定字符</param>
+            <param name="blnSuperScript">是否为上标</param>
+        </member>
+        <member name="P:com.digitalwave.controls.clsPrintText.m_intSuperScript">
+            <summary>
+            上标偏移,默认4
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.clsPrintText.m_intSubScript">
+            <summary>
+            下标偏移,默认-4
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintText.clsCustomChar.s_penDeleteLine">
+            <summary>
+            双划线颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintText.clsCustomChar.m_blnHaveDeleteLine">
+            <summary>
+            有双划线
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintText.clsCustomChar.m_intCharOffset">
+            <summary>
+            字符偏移(上下位置)
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintText.clsCustomChar.m_objBrush">
+            <summary>
+            颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintText.clsCustomChar.m_objFont">
+            <summary>
+            字体
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintText.clsCustomChar.m_blnVisible">
+            <summary>
+            是否输出(可以在不显示双划线时用)
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.clsPrintXmlText">
+            <summary>
+            调用clsPrintText打印双划线控件内容.
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintXmlText.m_fntScript">
+            <summary>
+            上下标字体,默认宋体7号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintXmlText.m_intRowSpacing">
+            <summary>
+            行间距,默认2
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintXmlText.m_intRowIndent">
+            <summary>
+            行首缩进,默认20
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintXmlText.m_intSuperScript">
+            <summary>
+            上标偏移,默认4
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsPrintXmlText.m_intSubScript">
+            <summary>
+            下标偏移,默认-4
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.clsPrintXmlText.m_mthInit(System.Drawing.Font,System.Drawing.Color,System.String,System.String,System.Boolean)">
+            <summary>
+            初始化
+            </summary>
+            <param name="objFont">字体</param>
+            <param name="objColor">颜色</param>
+            <param name="strText">文本</param>
+            <param name="strXml">文本的Xml</param>
+            <param name="blnPrintDeleteText">是否打印双划线文本</param>
+        </member>
+        <member name="M:com.digitalwave.controls.clsPrintXmlText.#ctor(System.Drawing.Font,System.Drawing.Color,System.String,System.String,System.Boolean)">
+            <summary>
+            初始化
+            </summary>
+            <param name="objFont">字体</param>
+            <param name="objColor">颜色</param>
+            <param name="strText">文本</param>
+            <param name="strXml">文本的Xml</param>
+            <param name="blnPrintDeleteText">是否打印双划线文本</param>
+        </member>
+        <member name="M:com.digitalwave.controls.clsPrintXmlText.#ctor(System.Drawing.Font,System.Drawing.Color,System.String,System.String)">
+            <summary>
+            初始化 (打印双划线)
+            </summary>
+            <param name="objFont">字体</param>
+            <param name="objColor">颜色</param>
+            <param name="strText">文本</param>
+            <param name="strXml">文本的Xml</param>
+        </member>
+        <member name="M:com.digitalwave.controls.clsPrintXmlText.m_mthToPaint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Boolean)">
+            <summary>
+            输出文本
+            </summary>
+            <param name="g"></param>
+            <param name="rectPrint">位置</param>
+            <param name="blnAutoIncreaseRows"></param>
+        </member>
+        <member name="T:com.digitalwave.controls.datagrid.ctlDataGrid">
+            <summary>
+            ctlDataGrid 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.datagrid.ctlDataGrid.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要使用代码编辑器 
+            修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthCreateGrid">
+            <summary>
+            创建表格(在EndInit时被调用)
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthAppendRow">
+            <summary>
+            添加空行
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthAppendRow(System.Object[])">
+            <summary>
+            添加一行
+            </summary>
+            <param name="arrValues"></param>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.NewRow">
+            <summary>
+            创建一个具有相同结构的新行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthAppendRows(System.Data.DataRow[])">
+            <summary>
+            添加若干行
+            </summary>
+            <param name="arrRows"></param>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthFormatCell(System.Int32,System.Int32,System.Drawing.Font,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            格式化指定格
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthSetRowColor(System.Int32,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            设置某一行的颜色
+            </summary>
+            <param name="intRow"></param>
+            <param name="clrFore"></param>
+            <param name="clrBack"></param>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthFormatReset(System.Int32,System.Int32)">
+            <summary>
+            将指定数据格的格式复位
+            </summary>
+            <param name="intRow"></param>
+            <param name="intCol"></param>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthFormatReset(System.Int32)">
+            <summary>
+            将指定数据列中所有格的格式复位
+            </summary>
+            <param name="intCol"></param>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthFormatReset">
+            <summary>
+            所有数据格的格式复位
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthAddEnterToSpaceColumn(System.Int32)">
+            <summary>
+            添加需要进行回车控制的列,如果intCol小于0,则清空该设置
+            这些列在回车时不会自动移到下一列
+            </summary>
+            <param name="intCol"></param>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthSelectARow(System.Int32)">
+            <summary>
+            选中某一行
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthSelectRow(System.Int32,System.Boolean)">
+            <summary>
+            将指定行设置为选中或未选中
+            </summary>
+            <param name="intRow"></param>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthClearSelectedRow">
+            <summary>
+            清除所有选中行
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthSelectAllRow(System.Boolean)">
+            <summary>
+            选中/取消选中所有行
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_blnRowIsSelected(System.Int32)">
+            <summary>
+            判断某一行是否被选中
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_arrSelectRows">
+            <summary>
+            被选中的Row
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthSetDataTable(System.Data.DataTable)">
+            <summary>
+            将DataGrid和指定DataTable相绑定
+            </summary>
+            <param name="objDT"></param>
+        </member>
+        <member name="F:com.digitalwave.controls.datagrid.ctlDataGrid.m_blnIsUpdating">
+            <summary>
+            指示当前是否正在更新
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.BeginUpdate">
+            <summary>
+            开始更新
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.EndUpdate">
+            <summary>
+            更新完毕
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_objGetRow(System.Int32)">
+            <summary>
+            获取数据行
+            </summary>
+            <param name="intRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.ctlDataGrid.m_mthAppendNotVisibleColumn(System.String,System.Type)">
+            <summary>
+            添加隐藏列
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:com.digitalwave.controls.datagrid.ctlDataGrid.Columns">
+            <summary>
+            列集合
+            </summary>		
+        </member>
+        <member name="P:com.digitalwave.controls.datagrid.ctlDataGrid.RowCount">
+            <summary>
+            记录数(行数)
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.datagrid.ctlDataGrid.clsIntSorter">
+            <summary>
+            对整数排序
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.datagrid.clsDataGridProxy.m_objDataTable">
+            <summary>
+            DataGrid内部所用的DataTable,尽量不要修改其结构
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.datagrid.clsDataGridProxy.m_objGridStyle">
+            <summary>
+            DataGrid内部所用的GridStyle,尽量不要修改其结构
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlMessagePanel">
+            <summary>
+            ctlMessagePanel,消息面板 ,显示ctlQComboBox等控件的内容
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlMessagePanel.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlMessagePanel.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlMessagePanel.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要使用代码编辑器 
+            修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlHighLightFocus">
+            <summary>
+            选中时高亮度的工具
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlHighLightFocus.#ctor(System.Drawing.Color)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="p_clrHighLight"></param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlHighLightFocus.m_mthAddControlInContainer(System.Windows.Forms.Control)">
+            <summary>
+            添加容器内容的控件
+            </summary>
+            <param name="p_ctlContainerControl"></param>
+        </member>
+        <member name="T:com.digitalwave.controls.frmListView">
+            <summary>
+            frmListView 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.frmListView.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.frmListView.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.frmListView.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.datagrid.Form1">
+            <summary>
+            Form1 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.datagrid.Form1.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.Form1.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.Form1.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.Form1.Main">
+            <summary>
+            应用程序的主入口点。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.datagrid.clsDataGrid">
+            <summary>
+            System.Windows.Forms.DataGrid的子类
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.datagrid.clsDataGridTextBoxColumn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.datagrid.clsTextBoxColumnEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlDataGridView.m_clrForef">
+            <summary>
+            字体颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlDataGridView.m_clrBackf">
+            <summary>
+            背景颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlDataGridView.m_clrBackBf">
+            <summary>
+            间隔背景颜色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.ctlDataGridView.m_clrForeBf">
+            <summary>
+            间隔字体颜色
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.datagrid.clsColumnCollection">
+            <summary>
+            列集合类
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.datagrid.clsColumnInfo">
+            <summary>
+            列信息
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.datagrid.clsFormatInfo">
+            <summary>
+            格式信息
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.datagrid.clsFormatInfo.TextFont">
+            <summary>
+            文本字体
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.datagrid.clsFormatInfo.ForeColor">
+            <summary>
+            文本颜色
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.datagrid.clsFormatInfo.BackColor">
+            <summary>
+            背景色
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.datagrid.clsColumnInfo.m_arrCell">
+            <summary>
+            列中的单元格格式
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.clsColumnInfo.m_objGetCellFormat(System.Int32)">
+            <summary>
+            获取指定单元格的格式
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.datagrid.clsColumnInfo.m_mthSetCellFormat(System.Int32,com.digitalwave.controls.datagrid.clsFormatInfo)">
+            <summary>
+            设置指定单元格的格式
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.datagrid.clsColumnInfo.ColumnName">
+            <summary>
+            列名
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.datagrid.clsColumnInfo.HeadText">
+            <summary>
+            列标题
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.datagrid.clsColumnInfo.ColumnWidth">
+            <summary>
+            列宽
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.datagrid.clsColumnInfo.ColumnIndex">
+            <summary>
+            列序号
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.datagrid.clsColumnInfo.ColumnType">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.datagrid.clsColumnInfo.DataGridTextBoxColumn">
+            <summary>
+            相关联的网格列,尽量不要直接修改其属性!
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.controls.datagrid.clsColumnInfo.DataTableColumn">
+             <summary>
+            相关联的数据列,尽量不要直接修改其属性!
+             </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.datagrid.clsCellInfo.RowIndex">
+            <summary>
+            行标识已改为DataRow,该成员保留
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.datagrid.clsDGTextKeyPressEventArgs">
+            <summary>
+            DataGridTextBox的KeyPress事件参数
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.datagrid.clsDGTextKeyEventArgs">
+            <summary>
+            DataGridTextBox的KeyDown事件参数
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.datagrid.clsDGTextKeyEventArgs.m_intColNumber">
+            <summary>
+            当前列序号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.datagrid.clsDGTextKeyEventArgs.m_intRowNumber">
+            <summary>
+            当前行序号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.datagrid.clsDGTextKeyEventArgs.m_ptPositionInScreen">
+            <summary>
+            文本框在屏幕中的绝对位置
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.datagrid.clsDGTextKeyEventArgs.m_ptPositionInDataGrid">
+            <summary>
+            文本框相对于DataGrid的位置
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.datagrid.clsDGTextKeyEventArgs.m_szTextBoxSize">
+            <summary>
+            文本框大小
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.datagrid.clsDGTextKeyEventArgs.m_strText">
+            <summary>
+            文本框内容
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlBorderTextBox">
+            <summary>
+            Summary description for dwtBorderTextBox.
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlBorderLabel">
+            <summary>
+            Summary description for dwtBorderTextBox.
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.controls.ctlQComboBox">
+            <summary>
+            ctlQComboBox ,继承自ComboBox,能自动通过输入码定位到相应的条目
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlQComboBox.m_intAddItem(System.String,System.String)">
+            <summary>
+             添加元素,使用序号做输入码
+            </summary>
+            <param name="strID"></param>
+            <param name="strText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlQComboBox.m_intAddItem(com.digitalwave.controls.clsQComboBoxItem)">
+            <summary>
+            添加元素
+            </summary>
+            <param name="objItem"></param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlQComboBox.m_mthAddRange(com.digitalwave.controls.clsQComboBoxItem[])">
+            <summary>
+            一次添加多个元素
+            </summary>
+            <param name="arrItems"></param>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlQComboBox.m_objGetItem(System.Int32)">
+            获取某一项
+        </member>
+        <member name="M:com.digitalwave.controls.ctlQComboBox.m_strGetID(System.Int32)">
+            <summary>
+            获取ID
+            </summary>
+            <param name="intIndex">指定项索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlQComboBox.m_strGetText(System.Int32)">
+            <summary>
+            获取显示文本
+            </summary>
+            <param name="intIndex">指定项索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlQComboBox.m_strGetInputCode(System.Int32)">
+            <summary>
+            获取输入码
+            </summary>
+            <param name="intIndex">指定项索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.controls.ctlQComboBox.m_strGetTag(System.Int32)">
+            <summary>
+            获取附加信息
+            </summary>
+            <param name="intIndex">指定项索引</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.controls.clsBorderTool">
+            <summary>
+            改变控件边框颜色的类。
+            
+            原理：使用控件的属性，把边框去掉。然后在控件的父控件中，
+            	  在控件的四周画边框。这样做可以不改变原控件的功能，
+            	  也只会占用少量资源。
+            	  
+            liyi 2002-9-8
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsBorderTool.m_hasParents">
+            <summary>
+            记录父控件的哈希表，里面保存一个 ArrayList 来保存父控件包含的
+            需要改变边框颜色的子控件。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.controls.clsBorderTool.m_clrBorder">
+            <summary>
+            边框颜色
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.controls.clsBorderTool.#ctor(System.Drawing.Color)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="p_clrBorder">
+            边框颜色
+            </param>
+        </member>
+        <member name="M:com.digitalwave.controls.clsBorderTool.m_mthChangedControlsArrayBorder(System.Windows.Forms.Control[])">
+            <summary>
+            改变一组控件的边框
+            </summary>
+            <param name="p_ctlItemsArr">
+            需要改变边框的控件
+            </param>
+        </member>
+        <member name="M:com.digitalwave.controls.clsBorderTool.m_mthChangedControlBorder(System.Windows.Forms.Control)">
+            <summary>
+            改变控件边框
+            </summary>
+            <param name="p_ctlItem">
+            需要改变边框的控件
+            </param>
+        </member>
+        <member name="M:com.digitalwave.controls.clsBorderTool.m_mthDrawBorder(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            响应父控件的重画事件
+            </summary>
+            <param name="sender">
+            发送事件的父控件
+            </param>
+            <param name="e">
+            重画参数
+            </param>
+        </member>
+        <member name="M:com.digitalwave.controls.clsBorderTool.m_mthUnChangedControlBorder(System.Windows.Forms.Control)">
+            <summary>
+            取消为控件改变的边框
+            </summary>
+            <param name="p_ctlItem">
+            需要取消的控件
+            </param>
+        </member>
+        <member name="M:com.digitalwave.controls.clsBorderTool.m_mthChangedSubControlsBorder(System.Windows.Forms.Control)">
+            <summary>
+            为控件所包含的子控件，和子控件包含的子控件改变边框。
+            可以改变边框的子控件类型：
+            TextBox、CheckBox、DataGrid、ListBox、CheckedListBox、
+            ListView、TreeView、DomainUpDown、NumericUpDown、
+            RichTextBox。
+            </summary>
+            <param name="p_ctlContainer">
+            父控件。
+            </param>
+        </member>
+    </members>
+</doc>

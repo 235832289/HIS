@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StorageSvc</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc">
+            <summary>
+            仓库服务层
+            Create by kong 2004-06-10
+            </summary>
+            
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngDoAddNewStroageType(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsStorageType_VO)">
+            <summary>
+            新增仓库类型
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_objItem">仓库类型数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngDoUpdStroageTypeByID(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsStorageType_VO)">
+            <summary>
+            修改仓库类型
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_objItem">仓库类型数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngDoDeleteStroageTypeByID(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            按仓库类型代码删除仓库类型
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_strID">仓库类型代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngDoAddNewStroage(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsStorage_VO)">
+            <summary>
+            新增仓库
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_objItem">仓库数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngDoUpdStroageByID(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsStorage_VO)">
+            <summary>
+            修改仓库
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_objItem">仓库数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngDoDeleteStroageByID(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            按仓库代码删除仓库
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_strID">仓库代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.CopyDataToVO(System.Data.DataTable,com.digitalwave.iCare.ValueObject.clsStorageType_VO[]@)">
+            <summary>
+            将DataTable传递到仓库类型VO
+            </summary>
+            <param name="dtbSource">DataTable数据</param>
+            <param name="objResultArr">仓库类型数据</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.CopyDataToVO(System.Data.DataTable,com.digitalwave.iCare.ValueObject.clsStorage_VO[]@)">
+            <summary>
+            将DataTable传递到仓库VO
+            </summary>
+            <param name="dtbSource">DataTable数据</param>
+            <param name="objResultArr">仓库数据</param>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngFindStroageTypeByAny(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsStorageType_VO[]@)">
+            <summary>
+            模糊查找仓库类型
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_strSQL">SQL语句</param>
+            <param name="p_objResultArr">输出数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngFindStroageTypeByID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsStorageType_VO[]@)">
+            <summary>
+            按仓库类型代码来查找仓库类型
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_strID">仓库类型代码</param>
+            <param name="p_objResultArr">输出数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngFindAllStroageType(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsStorageType_VO[]@)">
+            <summary>
+            查找所有仓库类型
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_objResultArr">输出数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngFindStroageByAny(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsStorage_VO[]@)">
+            <summary>
+            模糊查找仓库
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_strSQL">SQL语句</param>
+            <param name="p_objResultArr">输出数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngFindStroageByID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsStorage_VO[]@)">
+            <summary>
+            按仓库代码查找仓库
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_strID">仓库代码</param>
+            <param name="p_objResultArr">输出数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngFindStroageByType(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsStorage_VO[]@)">
+            <summary>
+            按仓库类型查找仓库
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_strTypeID">仓库类型代码</param>
+            <param name="p_objResultArr">输出数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngFindAllStroage(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsStorage_VO[]@)">
+            <summary>
+            查找所有的仓库
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_objResultArr">输出数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngGetMaxStorageTypeID(System.Security.Principal.IPrincipal,System.String@)">
+            <summary>
+            获得最大仓库类型ID
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_strResult">输出值</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngGetMaxStorageID(System.Security.Principal.IPrincipal,System.String@)">
+            <summary>
+            获得最大仓库ID
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_strResult">输出值</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.StorageSvc.clsStorageBaseSvc.m_lngGetStorageInitFlag(System.Security.Principal.IPrincipal,System.String,System.Int32@)">
+            <summary>
+            查询仓库的初始化标志
+            </summary>
+            <param name="p_objPrincipal">安全标识</param>
+            <param name="p_strID">仓库代码</param>
+            <param name="p_intInitFlag">初始化化标志</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

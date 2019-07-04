@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RIS_Svc</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc">
+            <summary>
+            clsCardiogramManageSvc 的摘要说明。
+            Alex 2004-5-6
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngAddNewCardiogramReport(System.Security.Principal.IPrincipal,System.String@,com.digitalwave.iCare.ValueObject.clsRIS_CardiogramReport_VO)">
+            <summary>
+            添加心电图报告
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRecordID"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngGetCardiogramReportArr(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsRIS_CardiogramReport_VO[]@)">
+            <summary>
+            获得心电图报告
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngGetSportReportArr(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsafmt_report_VO[]@)">
+            <summary>
+            获得运动心电图
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResultArrSport"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngModifyCardiogramReport(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsRIS_CardiogramReport_VO)">
+            <summary>
+            修改心电图报告
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngDeleteCardiogramReport(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsRIS_CardiogramReport_VO)">
+            <summary>
+            删除心电图报告
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngGetCardiogramReportByID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsRIS_CardiogramReport_VO@)">
+            <summary>
+            获得心电图报告
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strID"></param>
+            <param name="p_objResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngAddNewDCardiogramReport(System.Security.Principal.IPrincipal,System.String@,com.digitalwave.iCare.ValueObject.clsRIS_DCardiogramReport_VO)">
+            <summary>
+            添加动态心电图报告
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRecordID"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngModifyDCardiogramReport(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsRIS_DCardiogramReport_VO)">
+            <summary>
+            修改动态心电图报告
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngDeleteDCardiogramReport(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsRIS_DCardiogramReport_VO)">
+            <summary>
+            删除动态心电图报告
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngGetDCardiogramReportArr(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsRIS_DCardiogramReport_VO[]@)">
+            <summary>
+            获得动态心电图
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngGetDCardiogramReportByID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsRIS_DCardiogramReport_VO@)">
+            <summary>
+            获得动态心电图
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strID"></param>
+            <param name="p_objResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngGetDCardiogramReportByCondition(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsRIS_DCardiogramReport_VO[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strFromDat"></param>
+            <param name="p_strToDat"></param>
+            <param name="p_strPatientNo"></param>
+            <param name="p_strInPatientNo"></param>
+            <param name="p_strPatientName"></param>
+            <param name="p_strDept"></param>
+            <param name="p_strReportNo"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngAddNewSportReport(System.Security.Principal.IPrincipal,System.String@,com.digitalwave.iCare.ValueObject.clsafmt_report_VO)">
+            <summary>
+            添加心电图（运动平板运动实验报告）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRecordID"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngModifySportReport(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsafmt_report_VO)">
+             <summary>
+            修改心电图（运动平板运动实验报告） 
+             </summary>
+             <param name="p_objPrincipal"></param>
+             <param name="p_objRecord"></param>
+             <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngGetSportReport(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsafmt_report_VO@)">
+            <summary>
+            根据ID获取数据（运动平板运动实验报告）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strID"></param>
+            <param name="p_objResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngDeleteSportReport(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            根据ID删除数据（运动平板运动实验报告）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngDeleteSportReportEmp(System.Security.Principal.IPrincipal,System.String,System.String,System.String)">
+            <summary>
+             审核（运动平板运动实验报告）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordID"></param>
+            <param name="strEmpID"></param>
+            <param name="strEmpName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngGetSportReportByCondition(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsafmt_report_VO[]@)">
+            <summary>
+            根据条件组合查询活动平板运动试验报告单
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strFromDat"></param>
+            <param name="p_strToDat"></param>
+            <param name="p_strPatientNo"></param>
+            <param name="p_strInPatientNo"></param>
+            <param name="p_strPatientName"></param>
+            <param name="p_strDept"></param>
+            <param name="p_strReportNo"></param>
+            <param name="strIsSpecail"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_lngGetPat(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            根据卡号检索病人资料
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="carID">卡号</param>
+            <param name="tbPat">返回病人资料</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsCardiogramManageSvc.m_mthGetApplTypeID(System.String@)">
+            <summary>
+            获取对应申请单的类型ID(心电图）
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.RIS.clsEEGManageSvc">
+            <summary>
+            clsCardiogramManageSvc 的摘要说明。
+            Alex 2004-5-6
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsEEGManageSvc.m_mthGetApplTypeIDRISEEGR(System.String@)">
+            <summary>
+            获取对应申请单的类型ID(脑电图）
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsEEGManageSvc.m_lngAddNewTCDReport(System.Security.Principal.IPrincipal,System.String@,com.digitalwave.iCare.ValueObject.clsRIS_TCD_REPORT_VO)">
+            <summary>
+            添加经颅多普勒TCD报告单
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRecordID"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsEEGManageSvc.m_lngGetTCDReportArr(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsRIS_TCD_REPORT_VO[]@)">
+            <summary>
+            获得经颅多普勒TCD报告单
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsEEGManageSvc.m_lngModifyTCDReport(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsRIS_TCD_REPORT_VO)">
+            <summary>
+            修改经颅多普勒TCD报告单
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsEEGManageSvc.m_lngDeleteTCDReport(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsRIS_TCD_REPORT_VO)">
+            <summary>
+            删除经颅多普勒TCD报告单
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsEEGManageSvc.m_lngGetTCDReportByCondition(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsRIS_TCD_REPORT_VO[]@)">
+             <summary>
+            根据条件组合查询脑电图报告
+             </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsEEGManageSvc.m_lngGetTCDReportDtb(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.Data.DataTable@,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            用于生成TCD报表
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strFromDat"></param>
+            <param name="p_strToDat"></param>
+            <param name="p_strDept"></param>
+            <param name="p_objResultDtb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsEEGManageSvc.m_mthAgeChange(System.String)">
+            <summary>
+            年龄转换
+            </summary>
+            <param name="strage"></param>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.RIS.clsRIS_EEGManageSvc">
+            <summary>
+            提供对EEG闹电图数据的访问
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsRIS_EEGManageSvc.m_lngAddNewEEGReport(System.Security.Principal.IPrincipal,System.String@,com.digitalwave.iCare.ValueObject.clsRIS_EEG_REPORT_VO)">
+            <summary>
+            添加脑电图EEG报告单
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsRIS_EEGManageSvc.m_lngGetEEGReportArr(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsRIS_EEG_REPORT_VO[]@)">
+            <summary>
+            获得脑电图EEG报告单
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsRIS_EEGManageSvc.m_lngGetEEGReportByID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsRIS_EEG_REPORT_VO@)">
+             <summary>
+            获得脑电图EEG报告单BYID
+             </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsRIS_EEGManageSvc.m_lngModifyEEGReport(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsRIS_EEG_REPORT_VO)">
+             <summary>
+            修改脑电图EEG报告单
+             </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsRIS_EEGManageSvc.m_lngDeleteEEGReport(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsRIS_EEG_REPORT_VO)">
+            <summary>
+            删除脑电图EEG报告单
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsRIS_EEGManageSvc.m_lngGetEEGReportByCondition(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsRIS_EEG_REPORT_VO[]@)">
+            <summary>
+            根据条件组合查询脑电图EEG报告  2004.06.23
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsRIS_EEGManageSvc.m_lngGetEEGReportDtb(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.Data.DataTable@,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            用于生成EEG报表
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strFromDat"></param>
+            <param name="p_strToDat"></param>
+            <param name="p_strDept">SQL条件</param>
+            <param name="p_objResultDtb"></param>
+            <param name="strFirstType">第一年龄单位</param>
+            <param name="strFirstValue">第一年龄值</param>
+            <param name="strLastType">第二年龄单位</param>
+            <param name="strLastValue">第二年龄值</param>
+            <param name="flag">true表示一般查询,false表示按年龄段查询</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.RIS.clsRIS_EEGManageSvc.m_mthAgeChange(System.String)">
+            <summary>
+            年龄转换
+            </summary>
+            <param name="strage"></param>
+        </member>
+    </members>
+</doc>

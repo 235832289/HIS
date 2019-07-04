@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration text="数据库连接字符串">
+  <OracleServerSecurityStrings text="Oracle">
+    <bytICare text="主体数据库" userid="icare" password="SG1Ouqe+x1fUOZ7F2y9uFg==" />
+    <bytPACS text="影像数据库" userid="icare" password="SG1Ouqe+x1fUOZ7F2y9uFg==" />
+    <bytUltraSound text="B超数据库" servername="icare" userid="icare" password="SG1Ouqe+x1fUOZ7F2y9uFg==" />
+    <bytReport text="报表数据库" servername="icare" userid="icare" password="SG1Ouqe+x1fUOZ7F2y9uFg==" />
+    <bytStorage text="存储数据库" servername="icare" userid="icare" password="SG1Ouqe+x1fUOZ7F2y9uFg==" />
+    <bytLIS text="检验数据库" servername="icare" userid="icare" password="SG1Ouqe+x1fUOZ7F2y9uFg==" />
+  </OracleServerSecurityStrings>
+  <ODBCServerSecurityStrings text="ODBC">
+    <!--
+    <bytICare text="主体数据库" userid="emr" password="iNDUJbV6Shx6joPEj35XXQ==" />
+    <bytPACS text="影像数据库" userid="icare" password="SG1Ouqe+x1fUOZ7F2y9uFg==" />
+    -->
+    <bytGDCASE text="病案接口数据库" userid="emr" password="iNDUJbV6Shx6joPEj35XXQ==" />
+  </ODBCServerSecurityStrings>
+  <!--
+  <SQLServerSecurityStrings text="SQL Server">
+    <bytGDCASE text="病案接口数据库" userid="emr" password="iNDUJbV6Shx6joPEj35XXQ==" />
+  </SQLServerSecurityStrings>
+  <DB2ServerSecurityStrings text="DB2">
+    <strbytDB2 text="主体数据库" userid="icare" password="oktEZ3YJKjhZ4vUIP8D2+A==" />
+  </DB2ServerSecurityStrings>
+  -->
+</configuration>

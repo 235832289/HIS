@@ -1,0 +1,1784 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LIS_Svc</name>
+    </assembly>
+    <members>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetCheckResultVO(System.Security.Principal.IPrincipal,System.String,System.String,com.digitalwave.iCare.ValueObject.clsCheckResult_VO@)">
+            <summary>
+            查询得到  CheckResultVO
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strSampleID"></param>
+            <param name="p_strCheckItemID"></param>
+            <param name="p_objResultVO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetCheckResultTable(System.Security.Principal.IPrincipal,System.String,System.String,System.Boolean,System.Data.DataTable@)">
+            <summary>
+            查询得到  CheckResultTable 刘彬 2004.06.04
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAppID"></param>
+            <param name="p_strReportID"></param>
+            <param name="p_strGroupID"></param>
+            <param name="p_blnRealResult"></param>
+            <param name="p_dtbResultList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetReportInfoByReportGroupIDAndApplicationID(System.Security.Principal.IPrincipal,System.String,System.String,System.Boolean,System.Data.DataTable@)">
+            <summary>
+            根据report_group_id和application_id_chr查询报告单相关信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strReportGroupID">报告组ID</param>
+            <param name="p_strApplID">申请单ID</param>
+            <param name="p_blnConfirmed">是否审核</param>
+            <param name="p_dtbReportInfo">返回报告单相关信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetCheckResultByReportGroupIDAndApplicationID(System.Security.Principal.IPrincipal,System.String,System.String,System.Boolean,System.Data.DataTable@)">
+            <summary>
+            根据report_group_id和application_id_chr查询报告的结果记录
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="strApplicationID">申请单ID</param>
+            <param name="strReportGroupID">报告组ID</param>
+            <param name="blnConfirmed">是否审核</param>
+            <param name="dtbCheckResult">返回结果信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngAddCheckResultList(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsCheckResult_VO[],System.String[],System.String)">
+            <summary>
+            调用本方法时,必需传入 p_strSampleIDArr 中的所有的样本的所有检验项目结果,且只能传入
+            在 p_strSampleIDArr 列表之中的样本的检验项目结果;
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objCheckResultList"></param>
+            <param name="p_strSampleIDArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetDeviceResultLogByCondition(System.Security.Principal.IPrincipal,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsResultLogVO[]@)">
+            <summary>
+            根据检验日期和仪器编号查询DeviceResultLog
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strCheckDatFrom"></param>
+            <param name="p_strCheckDatTo"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetDeviceRelationByAppID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsT_LIS_DeviceRelationVO[]@)">
+            <summary>
+            根据申请号得到对应样本的仪器关联
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAppID"></param>
+            <param name="p_objDRVOArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngSetDeviceSamplesRecheck(System.Security.Principal.IPrincipal,System.String,System.Int32)">
+            <summary>
+            设置仪器样本重做标志
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_intImportReq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetDeviceSampleListByCondition(System.Security.Principal.IPrincipal,System.String,System.String,com.digitalwave.iCare.ValueObject.clsResultLogVO[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strImpReq"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetDeviceSampleListByCondition(System.Security.Principal.IPrincipal,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsResultLogVO[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeviceSampleID"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_strCheckDat"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngSetUseFlagByCondition(System.Security.Principal.IPrincipal,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDevcieID"></param>
+            <param name="p_strDeviceSampleID"></param>
+            <param name="p_strCheckDat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngQueryBindAndGetDeviceDataByAppointment(System.Security.Principal.IPrincipal,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsDeviceReslutVO[]@)">
+            <summary>
+            以指定编号方式,根据指定的仪器编号,检验日期(trunc),和仪器样本编号查询绑定和提取数据
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_strDeviceSampleID"></param>
+            <param name="p_strCheckDate"></param>
+            <param name="p_objResultArr"></param>
+            <returns>
+            小于等于 0 : 查询失败; 
+            100: 无可绑定的仪器样本; 
+            300: 指定的仪器样本号无历史记录; 
+            400:指定的仪器样本无原始数据; 
+            其它: 成功返回
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngQueryBindByAppointment(System.Security.Principal.IPrincipal,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsResultLogVO@)">
+            <summary>
+            以指定编号方式,根据指定的仪器编号,检验日期(trunc),和仪器样本编号查询绑定 刘彬 2004.06.10
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_strDeviceSampleID"></param>
+            <param name="p_strCheckDate"></param>
+            <param name="p_objResultLogVO">以此到仪器结果表提取数据</param>
+            <returns>
+            小于等于 0 : 查询失败;
+            100: 无可绑定的仪器样本;
+            300: 指定的仪器样本号无历史记录;
+            其它: 成功返回
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetDeviceData(System.Security.Principal.IPrincipal,System.String,System.Int32,com.digitalwave.iCare.ValueObject.clsDeviceReslutVO[]@)">
+            <summary>
+             根据指定的仪器编号,REQ ,查询 DeviceResultLog 和提取仪器数据 刘彬 2004.06.10	
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_intImportReq"></param>
+            <param name="p_objDeviceResultList"></param>
+            <returns>
+            小于 0 : 查询失败;
+            300:指定的仪器样本无历史记录
+            400:指定的仪器样本无原始数据
+            其它: 成功返回 
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngQueryResultLog(System.Security.Principal.IPrincipal,System.String,System.Int32,com.digitalwave.iCare.ValueObject.clsResultLogVO@)">
+            <summary>
+            根据指定的仪器编号,REQ 查询DeviceResultLog 刘彬 2004.06.10
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_intImportReq"></param>
+            <param name="p_objResultLogVO">以此到仪器结果表提取数据</param>
+            <returns>
+            小于 0 : 查询失败; 
+            300: 指定的仪器样本号无历史记录; 
+            其它: 成功返回 
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetDeviceData(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.Int32,System.Int32,com.digitalwave.iCare.ValueObject.clsDeviceReslutVO[]@)">
+            <summary>
+             根据指定的仪器编号,检验日期,和仪器样本编号,及开始索引和结束索引提取仪器数据 刘彬 2004.06.10
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_strDeviceSampleID"></param>
+            <param name="p_strCheckDate"></param>
+            <param name="p_intBeginIndex"></param>
+            <param name="p_intEndIndex"></param>
+            <param name="p_objDeviceResultList"></param>
+            <returns>
+            小于等于 0 : 查询失败; 
+            400:指定的仪器样本无原始数据
+            其它: 成功返回 
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngQueryBindAndGetDeviceDataByAutoBind(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsDeviceReslutVO[]@)">
+            <summary>
+            以指定编号方式,根据指定的仪器编号,和仪器样本编号查询绑定和提取数据
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_objResultArr"></param>
+            <returns>
+            小于 0 : 查询失败; 
+            100: 无可绑定的仪器样本;
+            300: 指定的仪器样本号存在且未绑定,但无历史记录; 
+            400:指定的仪器样本无原始数据; 
+            其它: 成功返回
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngQueryBindByAutoBind(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsResultLogVO@)">
+            <summary>
+            以自动绑定方式,根据指定的仪器编号 查询绑定 刘彬 2004.06.10
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_objResultLogVO">以此到仪器结果表提取数据</param>
+            <returns>
+            小于 0 : 查询失败;
+            100: 无可绑定的仪器样本;
+            300: 可绑定的仪器样本号存在且未绑定,但无历史记录 
+            其它: 成功返回
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetDeviceSampleList(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            
+            </summary>
+            <param name="strDeviceId">设备ID</param>
+            <param name="dtBegin">查询开始时间</param>
+            <param name="dtEnd">查询结束时间</param>
+            <param name="dtbDeviceSampleList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetDeviceSampleList(System.Security.Principal.IPrincipal,System.String,System.DateTime,System.DateTime,System.Int32,System.Data.DataTable@)">
+            <summary>
+            
+            </summary>
+            <param name="strDeviceId">设备ID</param>
+            <param name="dtBegin">查询开始时间</param>
+            <param name="dtEnd">查询结束时间</param>
+            <param name="intDeviceSampleObj">0-全部标本;1-未审核标本</param>
+            <param name="dtbDeviceSampleList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetDeviceSampleList(System.Security.Principal.IPrincipal,System.String,System.DateTime,System.DateTime,System.String,System.Int32,System.Data.DataTable@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_dtBegin"></param>
+            <param name="p_dtEnd"></param>
+            <param name="strCheckGroupID">组合ID（不包含子组）</param>
+            <param name="p_intDeviceSampleObj">0-全部标本;1-未审核标本</param>
+            <param name="p_dtbDeviceSample"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetDeviceResultList(System.Security.Principal.IPrincipal,System.Data.DataTable,System.Data.DataTable@)">
+            <summary>
+            注意，这里是从t_opr_lis_result表中查询，所得到的结果为仪器输出的结果
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbDeviceSampleList">此结构和上面方法的DataTable结构相同</param>
+            <param name="p_dtbDeviceResultList"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.iCare.middletier.LIS.clsCheckResultSvc.m_lngGetResultList(System.Security.Principal.IPrincipal,System.Data.DataTable,System.Data.DataTable@)”忽略有格式错误的 XML 注释 -->
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsReportSvc">
+            <summary>
+            clsReportSvc 统计报表的Svc
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsDeviceSvc.m_lngGetDeviceList(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            查询所有当前可用检验仪器列表,
+            停用日期为NULL 或 大于 当前日期 且 起用日期 小于等于当前日期,  
+            刘彬 2004.05.26
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbDeviceList">
+            table:t_bse_lis_device
+            column:
+            deviceid_chr
+            device_model_id_chr
+            dataacquisitioncomputerip_chr
+            begin_date_dat
+            end_date_dat
+            devicename_vchr
+            place_vchr
+            deptid_chr
+            isdatatrans_int
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsTmdWorkGroupSvc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdWorkGroupSvc.ConstructVO(System.Data.DataRow,com.digitalwave.iCare.ValueObject.clsLisWorkGroupVO@)">
+            <summary>
+            
+            </summary>
+            <param name="p_dtrSource"></param>
+            <param name="p_objWorkGroup"></param>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsTmdQCRulesSvc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdQCRulesSvc.m_lngInsert(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisQCRuleVO,System.Int32@)">
+            <summary>
+            增加一条检测方法
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objCheckMethod">检测方法实体</param>
+            <param name="p_intSeq">检测方法序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdQCRulesSvc.m_lngUpdate(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisQCRuleVO)">
+            <summary>
+            增加一条检测方法
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objCheckMethod">检测方法实体</param>
+            <param name="p_intSeq">检测方法序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdQCRulesSvc.m_lngFind(System.Security.Principal.IPrincipal,System.Int32,com.digitalwave.iCare.ValueObject.clsLisQCRuleVO@)">
+            <summary>
+            根据检验方法序号查找
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_intID"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdQCRulesSvc.ConstructVO(System.Data.DataRow,com.digitalwave.iCare.ValueObject.clsLisQCRuleVO@)">
+            <summary>
+            从数据库中构造实体
+            </summary>
+            <param name="p_dtrSource"></param>
+            <param name="p_objRule"></param>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsLIS_Svc">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsTmdVendorSvc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdVendorSvc.m_lngInsert(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisVendorVO,System.Int32@)">
+            <summary>
+            增加一条检测方法
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objCheckMethod">检测方法实体</param>
+            <param name="p_intSeq">检测方法序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdVendorSvc.m_lngUpdate(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisVendorVO)">
+            <summary>
+            增加一条检测方法
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objCheckMethod">检测方法实体</param>
+            <param name="p_intSeq">检测方法序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdVendorSvc.m_lngFind(System.Security.Principal.IPrincipal,System.Int32,com.digitalwave.iCare.ValueObject.clsLisVendorVO@)">
+            <summary>
+            根据检验方法序号查找
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_intID"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdVendorSvc.ConstructVO(System.Data.DataRow,com.digitalwave.iCare.ValueObject.clsLisVendorVO@)">
+            <summary>
+            从数据库中构造实体
+            </summary>
+            <param name="p_dtrSource"></param>
+            <param name="p_objVendor"></param>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsAssistantSvc">
+            <summary>
+            clsAssistantSvc 的摘要说明。
+            刘彬 2004.05.27
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsLisSearchSvc">
+            <summary>
+            LIS查询Svc
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisSearchSvc.m_lngGetAppAndSampleInfo(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsLisApplMainVO[]@)">
+            <summary>
+            【住院采集样本】组合查询查询已发送申请单及样本信息
+            </summary>
+            <remarks>住院部分不关联收费信息</remarks>
+            <param name="sampleStatus"></param>
+            <param name="areaId"></param>
+            <param name="beginDate"></param>
+            <param name="endDate"></param>
+            <param name="patientName"></param>
+            <param name="patientCardId"></param>
+            <param name="hosipitalNo"></param>
+            <param name="bedNo"></param>
+            <param name="p_objAppVOArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisSearchSvc.m_objConstructAppMainVO(System.Data.DataRow)">
+            <summary>
+            构建 clsLisApplMainVO 
+            </summary>
+            <param name="p_objRow"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetAppInfoByConditionAndInHospitalNO(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLISApplicationSchVO,System.String,com.digitalwave.iCare.ValueObject.clsLisApplMainVO[]@)">
+            <summary>
+            联合查询（包括病人住院号）申请单信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objSchVO"></param>
+            <param name="p_strInHospitalNO">承载联合查询条件的VO,其中值为NULL的成员会被必忽略</param>
+            <param name="p_objAppVOArr">返回的承载申请单信息的数组</param>
+            <returns>0:失败;1:成功</returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngAddNewAppAndSampleInfoWithBarcode(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisApplMainVO,com.digitalwave.iCare.ValueObject.clsLisApplMainVO@,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_REPORT_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_SAMPLE_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_CHECK_ITEM_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_APPLY_UNIT_VO[],com.digitalwave.iCare.ValueObject.clsLisAppUnitItemVO[])">
+            <summary>
+            增加-组新的检验申请信息(包含报告组,申请单元,样本组,检验项目,和样本在内(barcode为seq中取得)的全部信息)
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objLisApplMainVO"></param>
+            <param name="p_objReportArr"></param>
+            <param name="p_objAppSampleArr"></param>
+            <param name="p_objAppItemArr"></param>
+            <param name="p_objAppUnitArr"></param>
+            <param name="p_objAppUnitItemArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetSampleRemark(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsSampleGroup_VO[]@)">
+            <summary>
+            根据申请单取得对应样本的采样说明
+            </summary>
+            <param name="p_Principal"></param>
+            <param name="p_ApplicationID"></param>
+            <param name="p_objSampleGroupVOArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetCollocate(System.Security.Principal.IPrincipal,System.Boolean@,System.String)">
+            <summary>
+            获取配置信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="blIS"></param>
+            <param name="strsetid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetCollocate(System.Security.Principal.IPrincipal,System.String@,System.String)">
+            <summary>
+            获取配置信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="blIS"></param>
+            <param name="strsetid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngPISApplication(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsPISApplicationInfoToLIS,System.String[]@)">
+            <summary>
+            PIS申请
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <param name="p_strApplicationIDArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngFindApplyReportArrByExamineIDItemGroupID(System.Security.Principal.IPrincipal,System.String,System.String,com.digitalwave.iCare.ValueObject.clsLisApplyReportInfo_VO[]@)">
+            <summary>
+            根据体检号和体检组合项目ID查询PIS申请报告单
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strExamineID"></param>
+            <param name="p_strItemGroupID"></param>
+            <param name="p_objApplyReportArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngFindApplyReportArrByExamineID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsLisApplyReportInfo_VO[]@)">
+            <summary>
+            查询根据体检号PIS申请报告单
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strExamineID"></param>
+            <param name="p_objApplyReportArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngDeleteDeviceRelationByApplicationID(System.Security.Principal.IPrincipal,System.String,System.String)">
+            <summary>
+            根据申请单ID作废相应的仪器关联
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strApplicationID"></param>
+            <param name="p_strOringinDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngSetApplicationAndSamplePatientInfo(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisApplMainVO)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objApplVO">clsLisApplMainVO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetResultInfo(System.Security.Principal.IPrincipal,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsLISPatientCheckResultInfoVO[]@)">
+            <summary>
+            根据病人住院号和住院日期查询,出院日期 查询得到 检验结果信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPatientNO"></param>
+            <param name="p_strInHospitalDate"></param>
+            <param name="p_strOutHospitalDate"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetApplicationReportInfo(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsLisApplyReportInfo_VO@)">
+            <summary>
+            根据申请单ID查询打印申请单信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strApplicationID"></param>
+            <param name="p_objResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetLISInfoByApplicationID(System.Security.Principal.IPrincipal,System.String,System.String,com.digitalwave.iCare.ValueObject.clsLISInfoVO@)">
+            <summary>
+            根据申请单ID查询得到申请单详细信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strApplicationID"></param>
+            <param name="p_strOringinDate"></param>
+            <param name="p_objLISInfoVO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngAddNewAppUnitItem(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisAppUnitItemVO)">
+            <summary>
+            添加一条记录到申请单申请单元项目表
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngAddNewAppUintItemArr(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisAppUnitItemVO[])">
+            <summary>
+            为表 添加一批记录到申请单申请单元项目表
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordVOArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngDeleteApp(System.Security.Principal.IPrincipal,System.String,System.String)">
+            <summary>
+            删除申请
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAppID"></param>
+            <param name="p_strOpID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetAppInfoByCondition(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLISApplicationSchVO,com.digitalwave.iCare.ValueObject.clsLisApplMainVO[]@)">
+            <summary>
+            联合查询申请单信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objSchVO">承载联合查询条件的VO,其中值为NULL的成员会被必忽略</param>
+            <param name="p_objAppVOArr">返回的承载申请单信息的数组</param>
+            <returns>0:失败;1:成功</returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetAppAndSampleInfo(System.Security.Principal.IPrincipal,System.Int32,System.String,System.String,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsLisApplMainVO[]@)">
+            <summary>
+            组合查询查询已发送申请单及样本信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_intSampleStatus">1为未采集,2为已采集,0为所有</param>
+            <param name="p_strAppDept"></param>
+            <param name="p_strFromDatApp"></param>
+            <param name="p_strToDatApp"></param>
+            <param name="p_objAppVOArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetAppAndSampleInfo(System.Security.Principal.IPrincipal,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsLisApplMainVO[]@)">
+            <summary>
+            [住院采集样本］组合查询查询已发送申请单及样本信息
+            </summary>
+            <remarks>住院部分不关联收费信息</remarks>
+            <param name="p_objPrincipal"></param>
+            <param name="p_intSampleStatus"></param>
+            <param name="p_strAppDept"></param>
+            <param name="p_strFromDatApp"></param>
+            <param name="p_strToDatApp"></param>
+            <param name="p_strPatientName"></param>
+            <param name="p_strPatiendCardID"></param>
+            <param name="p_strHosipitalNO"></param>
+            <param name="bedNo"></param>
+            <param name="p_objAppVOArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetApplicationVOArrByCondition(System.Security.Principal.IPrincipal,System.String,System.String,System.Boolean,System.Boolean,com.digitalwave.iCare.ValueObject.clsLisApplMainVO[]@)">
+            <summary>
+            根据申请日期、发送状态组合查询申请单信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strFromDat"></param>
+            <param name="p_strToDat"></param>
+            <param name="p_blnSend"></param>
+            <param name="p_blnUnSend"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetAppReportVOArrByApplicationID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_REPORT_VO[]@)">
+            <summary>
+            根据申请单ID查询申请单下的报告组
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strApplicationID"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetAppSampleGroupVOArr(System.Security.Principal.IPrincipal,System.String,System.String,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_SAMPLE_VO[]@)">
+            <summary>
+            根据申请单ID和报告组ID查询申请申请单下的标本组
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strApplicationID"></param>
+            <param name="p_strReportGroupID"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetAppSampleGroupVOArr(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_SAMPLE_VO[]@)">
+            <summary>
+            根据申请单ID查询申请单下的标本组
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strApplicationID"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetAppCheckItemVOArr(System.Security.Principal.IPrincipal,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_CHECK_ITEM_VO[]@)">
+            <summary>
+            根据申请单ID、样本组ID和报告组ID查询申请单下的检验项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strApplicationID">申请单ID</param>
+            <param name="p_strSampleGroupID">样本组ID</param>
+            <param name="p_strReportGroupID">报告组ID</param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetAppCheckItemVOArr(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_CHECK_ITEM_VO[]@)">
+            <summary>
+            根据申请单查询申请单下的检验项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strApplicationID">申请单ID</param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetAppApplyUnitVOByApplicationID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_APPLY_UNIT_VO[]@)">
+            <summary>
+            根据申请单ID查询申请单下的申请单元
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strApplicationID">申请单ID</param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetAppReportVOArrByCondition(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_REPORT_VO[]@)">
+            <summary>
+            组合查询,得到申请单下的报告组VOArr 刘彬 2004.05.27
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strQueryCondition"></param>
+            <param name="p_objResultArr">clsT_OPR_LIS_APP_REPORT_VO 的数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetAppSampleGroupVOArrByCondition(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_SAMPLE_VO[]@)">
+            <summary>
+            组合查询,得到申请单下的标本组VOArr 刘彬 2004.05.26
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strQueryCondition"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetAppCheckItemVOArrByCondition(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_CHECK_ITEM_VO[]@)">
+            <summary>
+            组合查询,得到申请单下的检验项目VOArr 刘彬 2004.05.26
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strQueryCondition"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetAppApplyUintVOArrByCondition(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_APPLY_UNIT_VO[]@)">
+            <summary>
+            组合查询,得到申请单下的申请单元VOArr 刘彬 2004.05.26
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strQueryCondition"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngAddNewAppApplyUint(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_APPLY_UNIT_VO[])">
+            <summary>
+            为表 T_OPR_LIS_APP_APPLY_UNIT 新增记录时用 刘彬 2004.05.26
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordVOArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngAddNewAppCheckItem(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_CHECK_ITEM_VO[])">
+            <summary>
+            为表 T_OPR_LIS_APP_CHECK_ITEM 新增记录时用 刘彬 2004.05.26
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordVOArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngAddNewAppSampleGroup(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_SAMPLE_VO[])">
+            <summary>
+            为表 T_OPR_LIS_APP_SAMPLE 新增记录时用 刘彬 2004.05.26
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordVOArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngInsertAppReportRecord(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_REPORT_VO[])">
+            <summary>
+            为表 t_opr_lis_app_report 新增,修改,删除 记录时用 
+            刘彬 2004.05.26
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordVOArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngAddNewAppl(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisApplMainVO,com.digitalwave.iCare.ValueObject.clsLisApplMainVO@)">
+            <summary>
+            增加新的检验申请记录(修改,删除时都为新增记录) 刘彬 2004.06.3
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objLisApplMainVO"></param>
+            <param name="p_objLisApplMainOutVO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngAddNewAppInfo(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisApplMainVO,com.digitalwave.iCare.ValueObject.clsLisApplMainVO@,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_REPORT_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_SAMPLE_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_CHECK_ITEM_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_APPLY_UNIT_VO[],com.digitalwave.iCare.ValueObject.clsLisAppUnitItemVO[])">
+            <summary>
+            增加-组新的检验申请信息(包含报告组,申请单元,样本组,检验项目在内的全部信息)
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objLisApplMainVO"></param>
+            <param name="p_objReportArr"></param>
+            <param name="p_objAppSampleArr"></param>
+            <param name="p_objAppItemArr"></param>
+            <param name="p_objAppUnitArr"></param>
+            <param name="p_objAppUnitItemArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngAddNewAppAndSampleInfo(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisApplMainVO,com.digitalwave.iCare.ValueObject.clsLisApplMainVO@,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_REPORT_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_SAMPLE_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_CHECK_ITEM_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_APPLY_UNIT_VO[],com.digitalwave.iCare.ValueObject.clsLisAppUnitItemVO[])">
+            <summary>
+            增加-组新的检验申请信息(包含报告组,申请单元,样本组,检验项目,和样本在内的全部信息)
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objLisApplMainVO"></param>
+            <param name="p_objReportArr"></param>
+            <param name="p_objAppSampleArr"></param>
+            <param name="p_objAppItemArr"></param>
+            <param name="p_objAppUnitArr"></param>
+            <param name="p_objAppUnitItemArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngModifyAppInfo(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisApplMainVO,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_REPORT_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_SAMPLE_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_CHECK_ITEM_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_APPLY_UNIT_VO[],com.digitalwave.iCare.ValueObject.clsLisAppUnitItemVO[])">
+            <summary>
+            增加-组新的检验申请信息(包含报告组,申请单元,样本组,检验项目在内的全部信息)
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objLisApplMainVO"></param>
+            <param name="p_objReportArr"></param>
+            <param name="p_objAppSampleArr"></param>
+            <param name="p_objAppItemArr"></param>
+            <param name="p_objAppUnitArr"></param>
+            <param name="p_objAppUnitItemArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngConfirmAppReport(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String)">
+            <summary>
+            确认报告,同时确定样本
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAppID"></param>
+            <param name="p_strReportID"></param>
+            <param name="p_strConfirmerID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngUpdateAppSampleGroupSampleID(System.Security.Principal.IPrincipal,System.String,System.String)">
+            <summary>
+            更新SampleID 到 AppSampleGroup 刘彬 2004.06.26
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAppID"></param>
+            <param name="p_strSampleID"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetApplByQuery(System.Security.Principal.IPrincipal,System.Int32,System.String,System.String,System.String,System.String,System.Boolean,System.Data.DataTable@)”忽略有格式错误的 XML 注释 -->
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetApplInfoByDateRange(System.Security.Principal.IPrincipal,System.Int32,System.String,System.DateTime,System.DateTime,System.String,System.Data.DataTable@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_intDateQueryType">0-申请日期;1-采样日期; 2-检验日期、审核日期</param>
+            <param name="p_strDateFieldName"></param>
+            <param name="p_dtBegin"></param>
+            <param name="p_dtEnd"></param>
+            <param name="p_dtbAppl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetApplInfoByFieldValue(System.Security.Principal.IPrincipal,System.String,System.String,System.Int32,System.String,System.DateTime,System.DateTime,System.Data.DataTable@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strFieldName"></param>
+            <param name="p_strFieldValue"></param>
+            <param name="p_intDateQueryType">0-申请日期;1-采样日期 2-检验日期、审核日期</param>
+            <param name="p_strDateFieldName"></param>
+            <param name="p_dtBegin"></param>
+            <param name="p_dtEnd"></param>
+            <param name="p_dtbAppl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationSvc.m_lngGetApplInfoByFieldValue(System.Security.Principal.IPrincipal,System.String,System.Int32,System.String,System.DateTime,System.DateTime,System.Data.DataTable@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strGroupID"></param>
+            <param name="p_intDateQueryType">0-申请日期;1-采样日期 2-检验日期、审核日期</param>
+            <param name="p_strDateFieldName"></param>
+            <param name="p_dtBegin"></param>
+            <param name="p_dtEnd"></param>
+            <param name="p_dtbAppl"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsAppGroupSvc">
+            <summary>
+            clsAppGroupSvc 的摘要说明。
+             刘彬 2004.05.27
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsStatSvc">
+            <summary>
+            clsStatSvc 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsStatSvc.m_lngGetScienceStatByCondition(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDatFrom"></param>
+            <param name="p_strDatTo"></param>
+            <param name="p_strCheckItemID"></param>
+            <param name="p_strResultFrom"></param>
+            <param name="p_strResultTo"></param>
+            <param name="p_strAgeFrom"></param>
+            <param name="p_strAgeTo"></param>
+            <param name="p_strSex"></param>
+            <param name="p_strLowCompare">下限比较符</param>
+            <param name="p_strCondition">比较条件</param>
+            <param name="p_strUpCompare">上限比较符</param>
+            <param name="dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsStatSvc.m_lngGetScienceStatByCondition(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsLisScienceStatItemQueryCondition[],System.Data.DataTable@)">
+            <summary>
+            根据条件查询学术统计的信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDatFrom"></param>
+            <param name="p_strDatTo"></param>
+            <param name="p_strAgeFrom"></param>
+            <param name="p_strAgeTo"></param>
+            <param name="p_strSex"></param>
+            <param name="p_objRecordArr"></param>
+            <param name="dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsStatSvc.m_lngGetScienceStatByCondition(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsLisScienceStatItemQueryCondition[],System.Data.DataTable@,System.Data.DataTable@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDatFrom"></param>
+            <param name="p_strDatTo"></param>
+            <param name="p_strAgeFrom"></param>
+            <param name="p_strAgeTo"></param>
+            <param name="p_strSex"></param>
+            <param name="p_objRecordArr"></param>
+            <param name="dtbHead"></param>
+            <param name="dtbDetail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsStatSvc.m_lngGetSamplesCheckTotal(System.Security.Principal.IPrincipal,System.Data.DataTable@,System.String,System.String)">
+            <summary>
+            病区标本送检量
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <param name="strDateFrom"></param>
+            <param name="strDateTo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsStatSvc.m_lngGetGermOccurRate(System.Security.Principal.IPrincipal,System.Data.DataTable@,System.String,System.String)">
+            <summary>
+            病区标本送检量
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <param name="strDateFrom"></param>
+            <param name="strDateTo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsStatSvc.m_lngGetGermDistributeTrend(System.Security.Principal.IPrincipal,System.Data.DataTable@,System.String,System.String)">
+            <summary>
+            细菌分布趋势报表
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <param name="strDateFrom"></param>
+            <param name="strDateTo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsStatSvc.m_blnIsGermTrendContainMonthInfo(System.Data.DataTable,System.DateTime,System.String)">
+            <summary>
+            判断细菌趋势是否包含某个月份的统计
+            </summary>
+            <param name="p_GermTrend"></param>
+            <param name="dt"></param>
+            <param name="GermName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsStatSvc.m_lngGetAnimalculeCheckTotal(System.Security.Principal.IPrincipal,System.Data.DataTable@,System.String,System.String,System.Collections.ArrayList,System.Collections.ArrayList)">
+            <summary>
+            微生物检测汇总
+            </summary>
+            <param name="p_objPrincipal">权限密探</param>
+            <param name="p_dtbResult">符合条件的DataTable</param>
+            <param name="strDateFrom">开始日期</param>
+            <param name="strDateTo">终止日期</param>
+            <param name="listSamples">标本集合</param>
+            <param name="listPatientArea">病区集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsStatSvc.m_strConstructSql(System.Collections.ArrayList,System.Collections.ArrayList)">
+            <summary>
+            根据部门集合和标本集合构造查询条件
+            </summary>
+            <param name="listSamples"></param>
+            <param name="listPatientArea"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsStatSvc.m_dtbGetSamplesList">
+            <summary>
+            获取样本列表
+            </summary>
+            <returns>样本列表的集合DataTable</returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsStatSvc.m_dtbGetDeptList">
+            <summary>
+            获取部门列表
+            </summary>
+            <returns>部门列表的集合DataTable</returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsStatSvc.m_lngGetDateTableBySql(System.String,System.Data.DataTable@)">
+            <summary>
+            通过sql语句获得datatable
+            </summary>
+            <param name="sql">sql语句</param>
+            <param name="dtbResult">结果数据</param>
+            <returns>dataTable数据</returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsStatSvc.m_lngGetDataTableBySql(System.Security.Principal.IPrincipal,System.Data.DataTable@,System.String)">
+            <summary>
+            根据Sql语句获取DataTable数据
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult">DataTable数据</param>
+            <param name="p_strSql">sql语句</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsCheckItemSvc">
+            <summary>
+            Summary description for clsCheckItemSvc.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckItemSvc.m_lngReuseTemplate(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisValueTemplateItem_VO,com.digitalwave.iCare.ValueObject.clsLisValueTemplateItem_VO)">
+            <summary>
+            复用模板
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objOldRecord">原有的记录（没有则为空）</param>
+            <param name="p_objNewRecord">新的记录</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckItemSvc.m_lngGetCheckItemVOByCheckItemID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsCheckItem_VO@)">
+            <summary>
+            根据check_item_id查询对应的检验项目信息VO
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strCheckItemID"></param>
+            <param name="p_objCheckItemVO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckItemSvc.m_lngGetCheckCategory(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsCheckCategory_VO[]@)">
+            <summary>
+            查询出所有的检验类别
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strID"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsCheckItemSvc.m_lngGetCheckItemByCategoryID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsCheckItem_VO[]@)">
+            <summary>
+            查询出该类别的检验项目
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsCheckGroupSvc">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsTmdCheckMethodSvc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdCheckMethodSvc.m_lngInsert(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisCheckMethodVO,System.Int32@)">
+            <summary>
+            增加一条检测方法
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objCheckMethod">检测方法实体</param>
+            <param name="p_intSeq">检测方法序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdCheckMethodSvc.m_lngUpdate(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisCheckMethodVO)">
+            <summary>
+            增加一条检测方法
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objCheckMethod">检测方法实体</param>
+            <param name="p_intSeq">检测方法序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdCheckMethodSvc.m_lngFind(System.Security.Principal.IPrincipal,System.Int32,com.digitalwave.iCare.ValueObject.clsLisCheckMethodVO@)">
+            <summary>
+            根据检验方法序号查找
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_intID"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsReportGroupSvc">
+            <summary>
+            clsReportGroupSvc 的摘要说明。
+            刘彬 2004.05.27
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsReportGroupSvc.m_lngGetReportGoupVOBySampleGroupID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsReportGroup_VO@)">
+            <summary>
+            根据检验标本组ID得到它所在报告组的VO 刘彬 2004.06.1
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strCheckItemID"></param>
+            <param name="p_objSampleGroupVO"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsBnsQCBatchSvc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsSampleGroupSvc">
+            <summary>
+            clsSampleGroupSvc 的摘要说明。
+            刘彬 2004.05.27
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleGroupSvc.m_lngGetApplUnitBySampleGroupID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsLisSampleGroupUnit_VO[]@)">
+            <summary>
+            根据样本组ID查询该样本组下包含的申请单元
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strSampleGroupID">＝"" || =null为查询全部</param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleGroupSvc.m_lngGetSampleGroupModelArr(System.Security.Principal.IPrincipal,System.String,System.String[]@)">
+            <summary>
+            根据样本组ID 得到样本组对应的仪器型号列表
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strSampleGroupID"></param>
+            <param name="p_strSampleGroupModelArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleGroupSvc.m_lngGetSampleGroupList(System.Security.Principal.IPrincipal,System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            得到样本组的列表
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strCategory"></param>
+            <param name="p_strSampleType"></param>
+            <param name="p_dtpResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleGroupSvc.m_lngGetSampleGoupVOByApplyUnitID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsSampleGroup_VO@)">
+            <summary>
+            根据检验项目ID得到它所在标本组的VO,及打印顺序 刘彬 2004.06.1
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strCheckItemID"></param>
+            <param name="p_intPrintSeq"></param>
+            <param name="p_objSampleGroupVO"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsLisInterfaceSvc">
+            <summary>
+            接口服务类
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisInterfaceSvc.CreateApplicationArray(com.digitalwave.iCare.ValueObject.clsLisApplyAppliationInfo[])">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisInterfaceSvc.CreateSendApplicationArray(com.digitalwave.iCare.ValueObject.clsLisApplyAppliationInfo[],System.Boolean)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsApplicationMainSvc">
+            <summary>
+            检验申请单SVc
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationMainSvc.m_lngSetApplPrintedStatus(System.String[],System.Boolean)">
+            <summary>
+            设置打印状态
+            </summary>
+            <param name="arrApplicationId"></param>
+            <param name="isPrinted"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSchQCBatchSvc.m_lngFindQCBatchCombinatorial(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisQCBatchSchVO,com.digitalwave.iCare.ValueObject.clsLisQCBatchVO[]@)">
+            <summary>
+            根据组合条件查询质控批
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strFromDat"></param>
+            <param name="p_strToDat"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdConcentrationSvc.ConstructVO(System.Data.DataRow,com.digitalwave.iCare.ValueObject.clsLisConcentrationVO@)">
+            <summary>
+            构造vo
+            </summary>
+            <param name="p_dtrSource"></param>
+            <param name="p_objConcentration"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdConcentrationSvc.GetInsertDataParameterArr(com.digitalwave.iCare.ValueObject.clsLisConcentrationVO,System.Int32)">
+            <summary>
+            insert的参数组
+            </summary>
+            <param name="p_objConcentration"></param>
+            <param name="p_intSeq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsTmdConcentrationSvc.m_lngInsert(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisConcentrationVO,System.Int32@)">
+            <summary>
+            update的参数组
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objConcentration"></param>
+            <param name="p_intSeq"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsSampleSvc">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngUpdateSampleFlag(System.Security.Principal.IPrincipal,System.String[],System.Int32,System.Int32)">
+             <summary>
+             更新样本标志位
+              刘彬 2004.10.31
+             </summary>
+             <param name="p_objPrincipal"></param>
+             <param name="p_strSampleIDArr"></param>
+             <param name="p_intSourceStatus"></param>
+             <param name="p_intTargetStatus"></param>
+             <returns>
+             小于等于0:出错;
+            1:成功。
+             </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngUpdateSampleFlag(System.Security.Principal.IPrincipal,System.String[],System.Int32,System.Int32,System.String)">
+             <summary>
+             更新样本标志位
+              刘彬 2004.10.31
+             </summary>
+             <param name="p_objPrincipal"></param>
+             <param name="p_strSampleIDArr"></param>
+             <param name="p_intSourceStatus"></param>
+             <param name="p_intTargetStatus"></param>
+             <returns>
+             小于等于0:出错;
+            1:成功。
+             </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_mthGetUnReceivedSampleByBarCode(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsSampleReceive_VO@)">
+            <summary>
+            根据BarCode查询待接收的样本信息
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngReceiveSample(System.Security.Principal.IPrincipal,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            接收标本或退回
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_intStatus">3-核收 7-退回</param>
+            <param name="p_strSampleID"></param>
+            <param name="p_strReceiveDat">核收日期</param>
+            <param name="p_strReceiveEmp">核收员工</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngAddNewSampleAndModifyAppSampleGroup(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_SAMPLE_VO)">
+            <summary>
+            增加一个样本,同时修改申请样本组
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAppID"></param>
+            <param name="p_strReportID"></param>
+            <param name="p_strSampleGroupID"></param>
+            <param name="p_objRecordVO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngGetSampleVOArrByCondition(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_SAMPLE_VO[]@)">
+            <summary>
+            组合查询,得到标本VOArr 刘彬 2004.05.27
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strQueryCondition"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngGetDeviceRelationVOArrByCondition(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsT_LIS_DeviceRelationVO[]@)">
+            <summary>
+            组合查询,得到核收VOArr 刘彬 2004.05.27
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strQueryCondition"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngInsertSampleRecord(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_SAMPLE_VO[])">
+            <summary>
+            为表 t_opr_lis_sample 新增,修改,删除 记录时用 ;
+            刘彬 2004.05.26
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordVOArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngAddNewDeviceRelation(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsT_LIS_DeviceRelationVO)">
+            <summary>
+            为表 t_opr_lis_device_relation  新增 记录时用 刘彬 2004.05.26
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngDeleteDeviceRelation(System.Security.Principal.IPrincipal,System.String,System.String,System.String)">
+            <summary>
+            删除仪器关联
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_strRelationDate"></param>
+            <param name="p_strSeq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngDeleteDeviceRelation(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsT_LIS_DeviceRelationVO)">
+            <summary>
+            删除仪器关联
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRelation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngModifyBind(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsT_LIS_DeviceRelationVO,com.digitalwave.iCare.ValueObject.clsT_LIS_DeviceRelationVO)">
+            <summary>
+            删除仪器关联
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objSourceVO"></param>
+            <param name="p_objTargetVO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngGetSampleTypeList(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            获得全部的样品种类的列表 
+            刘彬 2004.05.13
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbSampleType">
+            SAMPLE_TYPE_ID_CHR, 
+            SAMPLE_TYPE_DESC_VCHR, 
+            PYCODE_CHR, 
+            WBCODE_CHR, 
+            STDCODE1_CHR, 
+            STDCODE2_CHR, 
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngGetSampleState(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            得到所有的样本状态信息列表
+             刘彬 2004.05.27
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbSampleState">
+            table:t_aid_lis_sample_character
+            column:
+            character_desc_vchr
+            pycode_chr
+            wbcode_chr
+            sample_type_id_chr
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngGetSampleState(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            根据样品类别ID查询样本状态信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strSampleTypeID"></param>
+            <param name="p_dtbSampleState">
+            character_desc_vchr
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngGetAllNotReceptSample(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            查询所有未核收的标本（含未审请的） 刘彬 2004.05.06
+            </summary>
+            <param name="p_objPrincipal"></param>		
+            <param name="dtbAllNotReceptSample"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsSampleSvc.m_lngAuditingSample(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            审核样本,并修改相关的所有标志位 
+            刘彬 2004.05.11
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strSampleID"></param>
+            <returns>
+            小于等于0,为数据库操作出错, 
+            -10 : 指定的样本不存在(或结果还未经处理,或已经审核), 
+            1： 成功审核, 
+            2：成功审核，并且该标本所属的检验单下的所有标本业已全部审核, 
+            3：成功审核，并且该标本所属的申请单下的所有标本都已审核。
+            </returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsLisDeviceSvc">
+            <summary>
+            clsLisDeviceSvc 的摘要说明。
+            Alex 2004-5-6
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.iCare.middletier.LIS.clsLisDeviceSvc.m_strGetLisDeviceByDeviceID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisDeviceSvc.m_lngGetCheckItemByDeviceCheckItem(System.Security.Principal.IPrincipal,System.String,System.String,com.digitalwave.iCare.ValueObject.clsCheckItem_VO[]@)">
+            <summary>
+            根据 DeviceModelID, CheckItemID 得到对应的 CheckItemID
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_strDeviceItemName"></param>
+            <param name="p_objCheckItemVO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisDeviceSvc.m_lngGetDeviceCheckItemInfo(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            得到所有的仪器项目及对应的检验项目信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisDeviceSvc.m_lngGetDeviceList(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            查询所有当前可用检验仪器列表,
+            停用日期为NULL 或 大于 当前日期 且 起用日期 小于等于当前日期,  
+            刘彬 2004.05.26
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbDeviceList">
+            table:t_bse_lis_device
+            column:
+            deviceid_chr
+            device_model_id_chr
+            dataacquisitioncomputerip_chr
+            begin_date_dat
+            end_date_dat
+            devicename_vchr
+            place_vchr
+            deptid_chr
+            isdatatrans_int
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisDeviceSvc.m_lngGetDeviceByDeviceModelID(System.Security.Principal.IPrincipal,System.String[],System.Data.DataTable@)">
+            <summary>
+             根据仪器型号ID查找所有的具体仪器 刘彬 2004.05.07
+            </summary>
+            <param name="p_objPrinipal"></param>
+            <param name="p_strDeviceModelID"></param>
+            <param name="p_dtbDevice"></param>
+            <returns>
+            DEVICEID_CHR
+            DEVICENAME_VCHR
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisDeviceSvc.m_lngGetLisDeviceByDeviceID(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            根据检验项目分类ID获得检验项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeviceID"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisDeviceSvc.m_lngGetLisDeviceCategory(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisDeviceCategory_VO[]@)">
+            <summary>
+            获得检验设备的种类列表
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisDeviceSvc.m_lngGetListDevice(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsLisDevice_VO[]@)">
+            <summary>
+            获得检验设备
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeviceCategoryID"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisDeviceSvc.m_lngGetCheckItemByModelID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsCheckItemAndDeviceItem_VO[]@)">
+            <summary>
+            获得该型号检验设备的检验项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strModelID"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisDeviceSvc.m_lngDoAddNewDeviceItem(System.Security.Principal.IPrincipal,System.String,System.Int32,com.digitalwave.iCare.ValueObject.clsCheckItemAndDeviceItem_VO)">
+            <summary>
+            添加设备检验项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strModelID"></param>
+            <param name="p_intGraphFlag"></param>
+            <param name="p_objItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisDeviceSvc.m_lngDoModifyDeviceItem(System.Security.Principal.IPrincipal,System.String,System.Int32,com.digitalwave.iCare.ValueObject.clsCheckItemAndDeviceItem_VO)">
+            <summary>
+            修改设备检验项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strModelID"></param>
+            <param name="p_intGraphFlag"></param>
+            <param name="p_objItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisDeviceSvc.m_lngGetDeviceCheckItemID(System.String,System.String@)">
+            <summary>
+            获得最大的DeviceCheckItemID
+            </summary>
+            <param name="p_strModelID"></param>
+            <param name="p_strItemID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisDeviceSvc.m_lngDeleteDeviceCheckItem(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsCheckItemAndDeviceItem_VO)">
+            <summary>
+            删除设备检验项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strModelID"></param>
+            <param name="p_objItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplyPropertySv.m_lngGetAllPropertyId(System.Security.Principal.IPrincipal,System.String[]@)">
+            <summary>
+            返回所有的使用的属性id
+            </summary>
+            <param name="p_objPrincipal">是否有权限</param>
+            <param name="p_objResultArr">结果集合</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplyPropertySv.m_lngGetPropertyValue(System.Security.Principal.IPrincipal,System.String,System.String,System.Collections.ArrayList@)">
+            <summary>
+            返回满足条件的属性值集合
+            </summary>
+            <param name="p_objPrincipal">是否有权限</param>
+            <param name="p_strPropertyId">属性id</param>
+            <param name="p_strApplyUnitId">申请单元id</param>
+            <param name="p_arlResult">返回结果集合</param>
+            <returns>是否成功</returns>
+        </member>
+        <!-- 对于成员“T:com.digitalwave.iCare.middletier.LIS.clsLisMainSvc”忽略有格式错误的 XML 注释 -->
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisMainSvc.m_lngGetSystemSetting(System.Int32@,System.String)">
+            <summary>
+            获取系统设置
+            </summary>
+            <param name="setResult">设置结果</param>
+            <param name="setId">设置的Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsApplicationBizSvc">
+            <summary>
+            生成、修改、删除申请单Svc
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationBizSvc.m_lngAddNewApplication(com.digitalwave.iCare.ValueObject.clsLisApplMainVO,com.digitalwave.iCare.ValueObject.clsLisApplMainVO@,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_REPORT_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_SAMPLE_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_CHECK_ITEM_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_APPLY_UNIT_VO[],com.digitalwave.iCare.ValueObject.clsLisAppUnitItemVO[])">
+            <summary>
+            增加-组新的检验申请信息(包含报告组,申请单元,样本组,检验项目在内的全部信息)
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objLisApplMainVO"></param>
+            <param name="p_objReportArr"></param>
+            <param name="p_objAppSampleArr"></param>
+            <param name="p_objAppItemArr"></param>
+            <param name="p_objAppUnitArr"></param>
+            <param name="p_objAppUnitItemArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationBizSvc.m_lngAddNewAppAndSampleInfoWithBarcode(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLisApplMainVO,com.digitalwave.iCare.ValueObject.clsLisApplMainVO@,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_REPORT_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_SAMPLE_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_CHECK_ITEM_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_APPLY_UNIT_VO[],com.digitalwave.iCare.ValueObject.clsLisAppUnitItemVO[])">
+            <summary>
+            增加一组新的检验申请信息(跳过采集和核收)
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objLisApplMainVO"></param>
+            <param name="p_objLisApplMainOutVO"></param>
+            <param name="p_objReportArr"></param>
+            <param name="p_objAppSampleArr"></param>
+            <param name="p_objAppItemArr"></param>
+            <param name="p_objAppUnitArr"></param>
+            <param name="p_objAppUnitItemArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationBizSvc.m_lngAddNewAppl(com.digitalwave.iCare.ValueObject.clsLisApplMainVO,com.digitalwave.iCare.ValueObject.clsLisApplMainVO@)">
+            <summary>
+            增加新的检验申请记录(修改,删除时都为新增记录)
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objLisApplMainVO"></param>
+            <param name="p_objLisApplMainOutVO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationBizSvc.m_lngAddNewAppCheckItem(com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_CHECK_ITEM_VO[])">
+            <summary>
+            为表 T_OPR_LIS_APP_CHECK_ITEM 新增记录时用 刘彬 2004.05.26
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordVOArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationBizSvc.m_lngAddNewAppSampleGroup(com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_SAMPLE_VO[])">
+            <summary>
+            T_OPR_LIS_APP_SAMPLE 新增
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordVOArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationBizSvc.m_lngAddNewAppApplyUint(com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_APPLY_UNIT_VO[])">
+            <summary>
+            为表 T_OPR_LIS_APP_APPLY_UNIT 新增记录时用 刘彬 2004.05.26
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordVOArr"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.iCare.middletier.LIS.clsApplicationBizSvc.m_lngAddNewAppUintItemArr(com.digitalwave.iCare.ValueObject.clsLisAppUnitItemVO[])”忽略有格式错误的 XML 注释 -->
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationBizSvc.m_lngInsertAppReportRecord(com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_REPORT_VO[])">
+            <summary>
+            t_opr_lis_app_report 新增,修改,删除
+            </summary>
+            <param name="p_objRecordVOArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationBizSvc.m_lngAddNewAppUnitItem(com.digitalwave.iCare.ValueObject.clsLisAppUnitItemVO)">
+            <summary>
+            添加一条记录到申请单申请单元项目表
+            </summary>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplicationBizSvc.m_lngModifyAppInfo(com.digitalwave.iCare.ValueObject.clsLisApplMainVO,com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_REPORT_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_SAMPLE_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_CHECK_ITEM_VO[],com.digitalwave.iCare.ValueObject.clsT_OPR_LIS_APP_APPLY_UNIT_VO[],com.digitalwave.iCare.ValueObject.clsLisAppUnitItemVO[])">
+            <summary>
+            增加-组新的检验申请信息(包含报告组,申请单元,样本组,检验项目在内的全部信息)
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objLisApplMainVO"></param>
+            <param name="p_objReportArr"></param>
+            <param name="p_objAppSampleArr"></param>
+            <param name="p_objAppItemArr"></param>
+            <param name="p_objAppUnitArr"></param>
+            <param name="p_objAppUnitItemArr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsChargeInfoStatusSvc">
+            <summary>
+            检验申请单收费状态Svc
+            </summary>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.iCare.middletier.LIS.clsChargeInfoStatusSvc.m_lngFind(System.String,com.digitalwave.iCare.ValueObject.clsChargeStatusVO@)”忽略有格式错误的 XML 注释 -->
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsChargeInfoStatusSvc.ConstructVO(System.Data.DataRow)">
+            <summary>
+            构造VO
+            </summary>
+            <param name="dtRow"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“T:com.digitalwave.iCare.middletier.LIS.clsST360Svc”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:com.digitalwave.iCare.middletier.LIS.clsST360Svc.m_lngFindSTGroupResult(System.Collections.Generic.List{com.digitalwave.iCare.ValueObject.clsDeviceReslutVO}@)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:com.digitalwave.iCare.middletier.LIS.clsST360Svc.ConstructVO(System.Data.DataRow,com.digitalwave.iCare.ValueObject.clsDeviceReslutVO@)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“T:com.digitalwave.iCare.middletier.LIS.clsST360CheckResultSvc”忽略有格式错误的 XML 注释 -->
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsST360CheckResultSvc.m_lngFindBoardName(System.String[]@,System.DateTime,System.DateTime)">
+            <summary>
+            查找历史记录中所有的微板编号
+            </summary>
+            <param name="arrBoardName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsST360CheckResultSvc.m_lngFindBoardName(System.String[]@)">
+            <summary>
+            查找历史记录中所有的微板编号
+            </summary>
+            <param name="arrBoardName"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.iCare.middletier.LIS.clsST360CheckResultSvc.m_lngFind(System.String,com.digitalwave.iCare.ValueObject.clsST360CheckResultVO[]@)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:com.digitalwave.iCare.middletier.LIS.clsST360CheckResultSvc.ConstructVO(System.Data.DataRow,com.digitalwave.iCare.ValueObject.clsST360CheckResultVO@)”忽略有格式错误的 XML 注释 -->
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsInputGroupSvc">
+            <summary>
+            clsInputGroupSvc 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsApplyUnitSvc">
+            <summary>
+            clsApplyUnitSvc 的摘要说明。
+            刘彬 2004.05.27
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsApplyUnitSvc.m_lngGetAllApplUnit(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsApplUnit_VO[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="objApplUnitVOList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisInerfaceSvc.m_lngGetChargeItemName(System.String,System.String@)">
+            <summary>
+            根据检验申请单Id获取收费项目名称
+            </summary>
+            <param name="applicationId"></param>
+            <param name="chargeItemName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsLisInerfaceSvc.m_lngGetOrderDicItemName(System.String,System.String@)">
+             <summary>
+             根据检验申请单Id获取诊疗项目名称
+             </summary>
+             <param name="applicationId">检验申请单Id</param>
+            <param name="orderDicItemName">诊疗项目名称</param>
+             <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsDictSvc">
+            <summary>
+            clsDictSvc 的摘要说明。
+            刘彬 2004.05.26
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsDictSvc.m_lngGetDictListFor(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            根据字典种类得到内容列表(除去第一条的类型说明) 
+            刘彬 2004.05.26 
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDictKind"></param>
+            <param name="p_dtbDictList">
+            table name : t_aid_dict
+            column:
+            dictid_chr
+            dictkind_chr
+            dictname_vchr
+            pycode_chr
+            wbcode_chr
+            jxcode_chr
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.LIS.clsBaseCheckGroupSvc">
+            <summary>
+            Summary description for clsBaseCheckGroupSvc.
+            刘彬 2004.05.07
+            封装有关基本检验组的数据通迅逻辑
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsBaseCheckGroupSvc.m_lngGetBaseCheckGroupBySampleTypeID(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            根据样本的类型ID查询所有可能做的基本检验组 刘彬 2004.05.07
+            </summary>
+            <param name="p_objPrinipal"></param>
+            <param name="p_strSampleTypeID"></param>
+            <param name="p_dtbGroup"></param>
+            <returns>
+            GROUPID_CHR
+            GROUPNAME_VCHR
+            </returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.LIS.clsBaseCheckGroupSvc.m_lngGetDeviceModelByBaseCheckGroupID(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            根据基本检验组ID查找能做这组检验的所有的仪器类型ID 刘彬 2004.05.07
+            </summary>
+            <param name="p_objPrinipal"></param>
+            <param name="p_strBaseCheckGroupID"></param>
+            <param name="p_dtbDeviceModel"></param>
+            <returns>
+            DEVICE_MODEL_ID_CHR
+            DEVICE_MODEL_DESC_VCHR
+            </returns>
+        </member>
+    </members>
+</doc>

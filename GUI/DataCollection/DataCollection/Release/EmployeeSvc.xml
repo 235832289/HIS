@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EmployeeSvc</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.iCare.middletier.EmployeeSvc.clsEmployeeSvc">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.EmployeeSvc.clsEmployeeSvc.m_lngGetEmployeeList(System.Security.Principal.IPrincipal,System.String,System.String,com.digitalwave.iCare.ValueObject.clsEmployeeVO[]@)">
+            <summary>
+            获得员工信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="strEmpID">员工ID</param>
+            <param name="strDepID">部门ID</param>
+            <param name="objResult">员工集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.EmployeeSvc.clsEmployeeSvc.m_lngGetEmployeeArrByInput(System.Security.Principal.IPrincipal,System.Int32,System.String,System.String,com.digitalwave.iCare.ValueObject.clsEmployeeVO[]@)">
+            <summary>
+            获得员工信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="strEmpID">员工ID</param>
+            <param name="strDepID">部门ID</param>
+            <param name="objResult">员工集合</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

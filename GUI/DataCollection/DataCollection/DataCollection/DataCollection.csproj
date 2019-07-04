@@ -1,0 +1,195 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63881D33-7D54-4D21-B098-9669FBE841CD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.digitalwave.iCare.gui.DataCollection</RootNamespace>
+    <AssemblyName>DataCollection</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <ApplicationIcon>Mac OS X Modern Icon 41.ico</ApplicationIcon>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\Bin\release_new\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.MSComCtl2, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Debug\AxInterop.MSComCtl2.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonInfo, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Debug\CommonInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Grouper, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Debug\Grouper.dll</HintPath>
+    </Reference>
+    <Reference Include="iCareData, Version=2.0.0.1, Culture=neutral, PublicKeyToken=90ad5968fbc6e760, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Debug\iCareData.dll</HintPath>
+    </Reference>
+    <Reference Include="MiddleTierBase, Version=2.0.0.1, Culture=neutral, PublicKeyToken=bcb959104966b6d1, processorArchitecture=MSIL" />
+    <Reference Include="ObjectGenerator, Version=2.0.0.1, Culture=neutral, PublicKeyToken=f32520148b720498, processorArchitecture=MSIL" />
+    <Reference Include="pinkieControls, Version=1.0.1362.15156, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\ICARE_VER2005_3yuan\Code\Bin\Debug\pinkieControls.dll</HintPath>
+    </Reference>
+    <Reference Include="RIS_File, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin\debug\RIS_File.dll</HintPath>
+    </Reference>
+    <Reference Include="Security_GUI, Version=2.0.0.1, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\debug\Security_GUI.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceLibrary, Version=1.2.2.0, Culture=neutral, PublicKeyToken=96907d46c0a9af87, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\debug\SourceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utility, Version=2.0.0.1, Culture=neutral, PublicKeyToken=a48271451c5bd35f, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\clsCtl_UploadMain.cs" />
+    <Compile Include="Controller\clsIniFileIO.cs" />
+    <Compile Include="Controller\clsReceiveData.cs" />
+    <Compile Include="Controller\clsUploadData.cs" />
+    <Compile Include="ctlPaddingGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlPaddingGridView.Designer.cs">
+      <DependentUpon>ctlPaddingGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DomainController\clsDcl_Check.cs" />
+    <Compile Include="DomainController\clsDcl_ZY.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Controller\clsCtl_HisMZReportTo.cs" />
+    <Compile Include="DomainController\clsDcl_HisMZReportTo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Viewer\frmAnimation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmAnimation.Designer.cs">
+      <DependentUpon>frmAnimation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmCommunityTran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmCommunityTran.Designer.cs">
+      <DependentUpon>frmCommunityTran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmDbConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmDbConfig.Designer.cs">
+      <DependentUpon>frmDbConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmHisMZReportTo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmHisMZReportTo.Designer.cs">
+      <DependentUpon>frmHisMZReportTo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmReportProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmReportProgress.Designer.cs">
+      <DependentUpon>frmReportProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\frmUploadMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\frmUploadMain.Designer.cs">
+      <DependentUpon>frmUploadMain.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ctlPaddingGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ctlPaddingGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmAnimation.resx">
+      <DependentUpon>frmAnimation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmCommunityTran.resx">
+      <DependentUpon>frmCommunityTran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmDbConfig.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDbConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmHisMZReportTo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHisMZReportTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmReportProgress.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmReportProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\frmUploadMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUploadMain.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mac OS X Modern Icon 41.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataCollection_Svc\DataCollection_Svc.csproj">
+      <Project>{2AB9970D-0238-4F0D-8644-9AC09CB0A104}</Project>
+      <Name>DataCollection_Svc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataCollectValueObject\DataCollectValueObject.csproj">
+      <Project>{0480E404-3029-44A2-9721-454A94B99AA2}</Project>
+      <Name>DataCollectValueObject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

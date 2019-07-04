@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ExtendPrintTool</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.Print.PhysicianOrder_Long">
+            <summary>
+            长期医嘱打印
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Long.#ctor">
+            <summary>
+            长期医嘱打印
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Long.m_mthPrintTitleInfo(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            打印表头
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Long.m_mthPrintTitleInfo(System.Drawing.Printing.PrintPageEventArgs,System.Int32)">
+            <summary>
+            打印表头
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Long.m_mthPrint(System.String,System.Data.DataTable)">
+            <summary>
+            打印
+            </summary>
+            <param name="p_strRegisterID">入院登记ID</param>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Long.m_mthPrintPriew(System.Data.DataTable,System.Data.DataTable)">
+            <summary>
+            打印
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Long.m_mthDosageUnit(System.String)">
+            <summary>
+            格式化领量单位
+            </summary>
+            <param name="p_strDosageUnit">领量单位</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Long.IsAfterOperator(System.Data.DataTable,System.Int32)">
+            <summary>
+            是否是术后医嘱
+            </summary>
+            <param name="dtbValues"></param>
+            <param name="index">序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Long.IsShowLeft(System.Data.DataTable,System.Int32)">
+            <summary>
+            是否显示开医嘱时间,否则显示竖线
+            </summary>
+            <param name="dtbValues"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Long.DrawGorupRelation(System.Drawing.Printing.PrintPageEventArgs,System.Data.DataTable,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            画父子医嘱的包含括号
+            </summary>
+            <param name="e"></param>
+            <param name="dtbValues"></param>
+            <param name="intPos">括号所在得位置</param>
+            <param name="index">第几行</param>
+            <param name="intY">高度</param>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Long.GetMaxLength(System.Data.DataTable,System.String)">
+            <summary>
+            获取同一方号医嘱内容最长的医嘱内容
+            </summary>
+            <param name="recipeNo"></param>
+            <param name="dtbValues"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Long.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Long.m_mthPrintContent(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            打印内容
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Long.m_mthPrintContentGrid(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            打印吧表格
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Long.m_mthPrintHeadGrid(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            打印表头
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:com.digitalwave.Print.PhysicianOrder_Long.m_IntNameWidth">
+            <summary>
+            医嘱名称打印宽度
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Print.PhysicianOrder_Long.m_IntDosageWidth">
+            <summary>
+            剂量及单位打印宽度
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Print.PhysicianOrder_Long.m_IntDoseTypeWidth">
+            <summary>
+            用法打印宽度
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Print.PhysicianOrder_Long.m_IntExecfreqWidth">
+            <summary>
+            用量打印宽度
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Print.PhysicianOrder_Long.m_BlnPrintDocName">
+            <summary>
+            是否打印开医嘱者姓名：true ＝ 打印
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Print.PhysicianOrder_Long.PrintGridOnly">
+            <summary>
+            是否只打印表格
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Print.PhysicianOrder_Long.PrintContentOnly">
+            <summary>
+            是否只打印内容
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.Print.PhysicianOrder_Temp">
+            <summary>
+            临时医嘱打印
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.Print.PhysicianOrder_Temp.m_strRegisterID">
+            <summary>
+            入院登记ID
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.#ctor">
+            <summary>
+            临时医嘱打印
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.m_mthPrint(System.String,System.Data.DataTable)">
+            <summary>
+            打印
+            </summary>
+            <param name="p_strRegisterID">入院登记ID</param>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.m_mthPrintPriew(System.Data.DataTable,System.Data.DataTable)">
+            <summary>
+            打印
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.m_mthPrintTitleInfo(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            打印表头
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.m_mthPrintTitleInfo(System.Drawing.Printing.PrintPageEventArgs,System.Int32)">
+            <summary>
+            打印表头
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.m_mthDosageUnit(System.String)">
+            <summary>
+            格式化领量单位
+            </summary>
+            <param name="p_strDosageUnit">领量单位</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.IsShowLeft(System.Data.DataTable,System.Int32)">
+            <summary>
+            是否显示开医嘱时间,否则显示竖线
+            </summary>
+            <param name="dtbValues"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.IsAfterOperator(System.Data.DataTable,System.Int32)">
+            <summary>
+            是否是术后医嘱
+            </summary>
+            <param name="dtbValues"></param>
+            <param name="index">序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.DrawGorupRelation(System.Drawing.Printing.PrintPageEventArgs,System.Data.DataTable,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            画父子医嘱的包含括号
+            </summary>
+            <param name="e"></param>
+            <param name="dtbValues"></param>
+            <param name="intPos">括号所在得位置</param>
+            <param name="index">第几行</param>
+            <param name="intY">高度</param>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.GetMaxLength(System.Data.DataTable,System.String)">
+            <summary>
+            获取同一方号医嘱内容最长的医嘱内容
+            </summary>
+            <param name="recipeNo"></param>
+            <param name="dtbValues"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.m_mthPrintContent(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            打印内容
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.PrintGrid(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            只打印表格
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.m_mthPrintContentGrid(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            打印内容表格
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.Print.PhysicianOrder_Temp.m_mthPrintHeadGrid(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            打印表头表格
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:com.digitalwave.Print.PhysicianOrder_Temp.m_IntNameWidth">
+            <summary>
+            医嘱名称打印宽度
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Print.PhysicianOrder_Temp.m_IntDosageWidth">
+            <summary>
+            剂量及单位打印宽度
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Print.PhysicianOrder_Temp.m_IntDoseTypeWidth">
+            <summary>
+            用法打印宽度
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Print.PhysicianOrder_Temp.m_IntExecfreqWidth">
+            <summary>
+            用量打印宽度
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Print.PhysicianOrder_Temp.m_BlnPrintDocName">
+            <summary>
+            是否打印开医嘱者姓名：true ＝ 打印
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Print.PhysicianOrder_Temp.PrintContentOnly">
+            <summary>
+            设置只打印内容
+            </summary>
+        </member>
+        <member name="P:com.digitalwave.Print.PhysicianOrder_Temp.PrintGridOnly">
+            <summary>
+            设置只打印表格
+            </summary>
+        </member>
+    </members>
+</doc>

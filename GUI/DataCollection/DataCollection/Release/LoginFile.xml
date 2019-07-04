@@ -1,0 +1,400 @@
+<?xml version="1.0"?>
+<Main>
+  <MiddleServers>
+  </MiddleServers>
+  <ser1>10.37.0.25:8083</ser1>
+  <ser2>10.37.0.24:8083</ser2>
+  <ser3>10.37.0.23:8083</ser3>
+  <PACS>
+    <Department>878778</Department>
+    <Employee>AnyOne</Employee>
+    <Color_printer>Epson LQ-300K</Color_printer>
+    <Simple_Printer>Epson LQ-300K</Simple_Printer>
+    <CT>1.740423.130879247.39764.19117.3046087337.2317394141</CT>
+    <MR>1.2.840.113619.2.67.2202943862.23972050104094315.10003</MR>
+    <DX>1.2.840.113619.2.67.2202943862.12356050325165246.19</DX>
+    <DX-A>WLXQI</DX-A>
+    <DX-B>WLXRD</DX-B>
+    <RIS>H:\pacs\思创\思创\db\EE\db\RIS.MDB</RIS>
+    <synchronization>是否同步思创,1同步;0不同步</synchronization>
+    <ACCESSNUM>1098119305</ACCESSNUM>
+    <BOOKINTIME key="AnyOne" value="120" />
+    <ImageInfoFilter key="AnyOne" value="111111111111111111" />
+    <MouseMiddleEnlarge key="AnyOne" value="1" />
+    <AdjustWindow key="AnyOne" value="1" />
+    <UseFlowEnlarge key="AnyOne" value="1" />
+    <UseFlowEnlargeSize key="AnyOne" value="120" />
+    <UseSimpleForm key="AnyOne" value="1" />
+    <PrintContent key="PageRoot" value="地址:东莞市茶山镇彩虹路92号 邮编:523382 放射科电话:0769-86400922 重要资料 注意保存 复查请带回" />
+  </PACS>
+  <DicomPrinter>
+    <Printer2>
+      <PrintName>Printer2</PrintName>
+      <AE_Title>called</AE_Title>
+      <HostName>10.37.9.62</HostName>
+      <Port>104</Port>
+      <FilmFormat>STANDARD\2,2</FilmFormat>
+      <JobPrior>HIGH</JobPrior>
+      <JobCopies>1</JobCopies>
+      <JobMedium>BLUE FILM</JobMedium>
+      <FilmOrientation>PORTRAIT</FilmOrientation>
+      <FilmSize>14INX17IN</FilmSize>
+      <FilmResolution>200 DPI</FilmResolution>
+      <FilmDestination>BIN_1</FilmDestination>
+      <FilmMagnification>CUBIC</FilmMagnification>
+      <FilmSmoothing>MEDIUM</FilmSmoothing>
+      <FilmTrim>NO</FilmTrim>
+      <FilmBorder>BLACK</FilmBorder>
+      <MinDensity>0</MinDensity>
+      <MaxDensity>0</MaxDensity>
+      <Empty>0</Empty>
+      <FilmLabel>
+      </FilmLabel>
+      <DefaultPrinter>1</DefaultPrinter>
+      <SCUAE_Title>
+      </SCUAE_Title>
+    </Printer2>
+    <LastPrintConfig>
+      <Empty>0</Empty>
+      <FilmBorder>BLACK</FilmBorder>
+      <FilmDestination>BIN_1</FilmDestination>
+      <FilmFormat>STANDARD\1,1</FilmFormat>
+      <FilmLabel>
+      </FilmLabel>
+      <FilmMagnification>CUBIC</FilmMagnification>
+      <FilmOrientation>PORTRAIT</FilmOrientation>
+      <FilmResolution>200 DPI</FilmResolution>
+      <FilmSize>14INX17IN</FilmSize>
+      <FilmSmoothing>MEDIUM</FilmSmoothing>
+      <FilmTrim>YES</FilmTrim>
+      <JobCopies>1</JobCopies>
+      <JobMedium>BLUE FILM</JobMedium>
+      <JobPrior>HIGH</JobPrior>
+      <MaxDensity>0</MaxDensity>
+      <MinDensity>0</MinDensity>
+      <SCUAE_Title>
+      </SCUAE_Title>
+    </LastPrintConfig>
+  </DicomPrinter>
+  <register>
+    <UseCall key="AnyOne" value="0" />
+    <!--启用门诊叫号消息队列模式 0-关闭 1-打开-->
+    <EnableCallMSMQ key="AnyOne" value="0" />
+    <PEWorkStation key="AnyOne" value="0" />
+    <MedInfoRefreshTime key="AnyOne" value="5" />
+    <EmpNo key="AnyOne" value="WQ03000035" />
+    <InvoiceNo key="AnyOne" value="QQ10596987" />
+    <WMedicinestore key="AnyOne" value="0001" windows="0013" />
+    <CMedicinestore key="AnyOne" value="0002" windows="0004" />
+    <MaterialStore key="AnyOne" value="0004" windows="0006" />
+    <MedStoreRefreshTime key="AnyOne" value="60" />
+    <!--该药房电子屏设置作废，新的设置详见下面的统一格式！    <MedStoreScreenID key="AnyOne" value="2" />
+    <MedStoreScreenHeight key="AnyOne" value="112" />
+    <MedStoreScreenWidth key="AnyOne" value="320" />
+    <MedStoreScreenComm key="AnyOne" value="1" />
+    <MedStoreScreenMode key="AnyOne" value="0" />
+    <MedStoreScreenSpeed key="AnyOne" value="0" />
+    <MedStoreScreenDelayTime key="AnyOne" value="0" />
+    <MedStoreScreenColorSwap key="AnyOne" value="0" />
+    <MedStoreScreenRgSwap key="AnyOne" value="0" />
+    <MedStoreScreenFontSize key="AnyOne" value="12" />
+    <MedStoreBScreenCallTime key="AnyOne" value="10" />
+    <MedStoreBScreenID key="AnyOne" value="2" />
+    <MedStoreBScreenHeight key="AnyOne" value="12" />
+    <MedStoreBScreenWidth key="AnyOne" value="32" />
+    <MedStoreBScreenComm key="AnyOne" value="1" />
+    <MedStoreBScreenMode key="AnyOne" value="0" />
+    <MedStoreBScreenSpeed key="AnyOne" value="0" />
+    <MedStoreBScreenDelayTime key="AnyOne" value="0" />
+    <MedStoreBScreenColorSwap key="AnyOne" value="0" />
+    <MedStoreBScreenRgSwap key="AnyOne" value="0" />
+    <MedStoreBScreenFontSize key="AnyOne" value="12" />
+    -->
+  </register>
+  <BillPrint>
+    <dwwlPrinter key="AnyOne" value="Microsoft Office Document Image Writer" />
+    <sftyPrinter key="AnyOne" value="Microsoft Office Document Image Writer" />
+  </BillPrint>
+  <OPCharge>
+    <LEDWelcome key="AnyOne" value="祝您身体健康!" />
+    <LEDIdleTime key="AnyOne" value="20" />
+    <LEDTitleBar key="AnyOne" value="1" />
+    <LEDPosX key="AnyOne" value="267" />
+    <LEDPosY key="AnyOne" value="228" />
+    <LEDWidth key="AnyOne" value="640" />
+    <LEDHeight key="AnyOne" value="480" />
+    <LEDShow key="AnyOne" value="门诊社保结算窗口" />
+    <TipsFont name="宋体" value="20" />
+  </OPCharge>
+  <DGCS_MedicineStore>
+    <LEDRefreshTime key="AnyOne" value="4" />
+    <LEDPosX key="AnyOne" value="273" />
+    <LEDPosY key="AnyOne" value="102" />
+    <LEDWidth key="AnyOne" value="457" />
+    <LEDHeight key="AnyOne" value="157" />
+  </DGCS_MedicineStore>
+  <MedicineStore>
+    <MedStorePreviewLEDRefreshTime key="AnyOne" value="4" />
+    <!--预览电子屏的刷新时间,默认4秒.-->
+    <MedStoreDispenseTime key="AnyOne" value="1" />
+    <!--自动打印发药单之后，设置经过多少秒自动配药,默认10秒.-->
+    <MedStorePrintSendMedicineBill key="AnyOne" value="1" />
+    <!--是否打印发药单，0-不打印；1-打印-->
+    <MedStoreSendMedicine key="AnyOne" value="0" />
+    <!--是否打印标签发药单，0-打印旧格式发药单；1-打印标签发药单-->
+  </MedicineStore>
+  <Pathology>
+    <PathologyIDNumericPart key="AnyOne" value="23304" />
+    <HTMLDefaultTemplatePathology key="AnyOne" value="D:\ICARE_VER2\Code\BIN\Debug\HTMLTemplate\Pathology\Pathology.htm" />
+    <PathologyHtmlPrintTitle key="AnyOne" value="彩色病理组织图文报告书" />
+    <HTMLDefaultTemplateBultraSound key="AnyOne" value="D:\ICARE_VER2\Code\BIN\Debug\HTMLTemplate\Pathology\BultraSound.htm" />
+    <BUltraSoundHtmlPrintTitle key="AnyOne" value="超声检查报告单" />
+  </Pathology>
+  <HTMLTemplate>
+    <HTMLTemplateAutoSelectPath key="AnyOne" value="0" />
+  </HTMLTemplate>
+  <GLS_CBWorkstation>
+    <AV800Brightness key="AnyOne" value="190" />
+    <AV800Contrast key="AnyOne" value="114" />
+    <AV800Hue key="AnyOne" value="37" />
+    <AV800Saturation key="AnyOne" value="127" />
+    <AV800Fluff key="AnyOne" value="5" />
+    <AV800Chroma key="AnyOne" value="60" />
+    <AV800Source key="AnyOne" value="4" />
+    <AV800Compresstype key="AnyOne" value="4" />
+    <AV800Resolution key="AnyOne" value="4" />
+    <AV800BitRate key="AnyOne" value="1150000" />
+    <AV800CBRVBR key="AnyOne" value="0" />
+    <AV800TFF key="AnyOne" value="0" />
+    <AV800HHR key="AnyOne" value="0" />
+    <DefaultTitle key="AnyOne" value="介入图文报告单" />
+    <HTMLDefaultTemplateCB key="AnyOne" value="D:\ICARE_VER2\Code\BIN\Debug\HTMLTemplate\GLS_CB\CB.htm" />
+  </GLS_CBWorkstation>
+  <Reserve>
+    <BIHInvoiceNo key="AnyOne" value="AB00000012" />
+    <BIHClearNo key="AnyOne" value="CD00000002" />
+  </Reserve>
+  <Printer>
+    <SendMedicine PrinterName="\\192.168.0.153\Epson LQ-300K" />
+    <InitPatientPrinter PrinterName="\\192.168.0.153\Epson LQ-300K" />
+    <tiepenPatientPrinter PrinterName="\\\\192.168.0.153\Epson LQ-300K" />
+    <tiepenPatientPrinterWidth key="AnyOne" value="8" />
+    <tiepenPatientPrinterHeight key="AnyOne" value="5.9" />
+  </Printer>
+  <RecipeType>0</RecipeType>
+  <RecipeTypeEmer>2</RecipeTypeEmer>
+  <InvoiceExpression>^[A-Za-z]{2}[0-9]{8}$</InvoiceExpression>
+  <barCodeName>c39p12dhtt</barCodeName>
+  <PATIENbarCodeName>c39p12dhtt</PATIENbarCodeName>
+  <lisBarCodeName>c39p12dhtt</lisBarCodeName>
+  <MultApplication>0</MultApplication>
+  <BeInHospital>
+    <CurrRegisterID key="AnyOne" value="000000016559" />
+    <CurrInPatientID key="AnyOne" value="58163" />
+    <InvoiceNoExp key="AnyOne" value="^[A-Za-z]{2}[0-9]{8}$" />
+    <CurrInvoiceNo key="AnyOne" value="LK00000013" />
+    <PrepayBillNoExp key="AnyOne" value="^[0-9]{7}$" />
+    <CurrPrepayBillNo key="AnyOne" value="5892173" />
+  </BeInHospital>
+  <QPSendMedcinePrint>
+    <MedNameShowStyle key="AnyOne" value="1" />
+    <MedNameLength key="AnyOne" value="10" />
+  </QPSendMedcinePrint>
+  <QueueSystemServer>
+    <PrintXP print="false" />
+    <Voice play="true" />
+    <TimeSplit>
+      <add time="0" />
+    </TimeSplit>
+    <Windows>
+      <add windowNO="1" IP="192.168.0.219" />
+      <add windowNO="2" IP="192.168.0.6" />
+    </Windows>
+    <RefreshTime Time="20" />
+  </QueueSystemServer>
+  <QueueSystemClient>
+    <WindowNO NO="2" />
+    <Server IP="192.168.0.219" Port="5233" />
+    <LEDShowChargeInfo Show="true" />
+  </QueueSystemClient>
+  <MFZ_GUI>
+    <!--门诊分诊护士工作站配置,所在诊区ID-->
+    <Area ID="12" />
+    <!--医生值班安排　Font 字体 FontSize 字体大小　LineNum　显示行数　ColumnNum 显示列数-->
+    <DoctArrange Tilte="妇科门诊医师当日开诊表" Font="宋体" FontSize="30" LineNum="4" ColumnNum="2" />
+    <PatientQueue Font="宋体" FontSize="50" LineNum="5" ColumnNum="5" />
+    <LedContentStyle CallPatient="请 {0} 到{1}就诊" PreparePatient=",请 {0} 稍候" />
+    <LCDRoomWidth key="1" name="横排五诊室方案" value="240" />
+    <LCDRoomHeight key="1" name="横排五诊室方案" value="280" />
+    <LCDRoomWidth key="default" name="超人毕加索" value="240" />
+    <LCDRoomHeight key="default" name="超人毕加索" value="260" />
+  </MFZ_GUI>
+  <MFZClient>
+    <!--分诊系统工作站配置,护士工作站的IP和Port-->
+    <Server IP="10.37.4.253" Port="5234" />
+  </MFZClient>
+  <LEDManager>
+    <etc>
+      <!-- 
+      Port:              串口设置(1,2)
+      LEDNO:            屏号(1,2,3,4....)
+      Width:                 屏幕宽度(点数)
+      Heigth:                 屏幕高度(点数)
+      mode:              显示的方式(0..8一般情况下设置为0) 
+         0<立即显示
+         1<从右向左移入
+         2<从左向右移入
+         3<从下向上卷入
+         4<从上向下卷入
+         5<从左向右展开
+         6<从右向左展开
+         7<从上向下展开
+         8<从下向上展开
+
+      speed:             显示的速度(0..254表示做方式的速度快慢,0最快)
+      delaytime:         做完方式停留的时间(0..254,一般设置为5如果快速刷新则可以设置大一点)
+      colorswap:         数据方向(0,1得到反白的效果)
+      rgswap:            红绿数据交换(0,1)      
+      -->
+      <LED name="大厅主屏" port="1" LEDNO="2" width="192" height="96" rgswap="0">
+        <Master mode="3" speed="0" delaytime="5" colorswap="0">
+          <CustomStyle Font="宋体" FontSize="9" />
+        </Master>
+        <Slaver mode="0" speed="0" delaytime="5" colorswap="0" doTime="3" image="0325.bmp" />
+        <FunctionLED>
+          <Function name="WaitFor" mode="1" speed="0" delaytime="5" colorswap="0" image="Wait.bmp" />
+        </FunctionLED>
+      </LED>
+      <LED name="大厅副屏" port="1" LEDNO="3" width="192" height="96" rgswap="0">
+        <Master mode="2" speed="0" delaytime="5" colorswap="0">
+          <CustomStyle Colums="3" Rows="4" />
+        </Master>
+        <Slaver mode="0" speed="0" delaytime="5" colorswap="0" doTime="3" image="200506.bmp" />
+        <FunctionLED>
+          <Function name="DoWork" mode="3" speed="0" delaytime="5" colorswap="0" image="work04.bmp" />
+        </FunctionLED>
+      </LED>
+    </etc>
+    <QueueSystemClient>
+      <LED name="主屏" port="1" LEDNO="2" width="192" height="80" rgswap="0">
+        <Master mode="0" speed="0" delaytime="5" colorswap="0">
+          <CustomStyle Font="宋体" FontSize="12.5" />
+        </Master>
+        <Slaver mode="0" speed="0" delaytime="5" colorswap="0" doTime="10" image="192_80_01.bmp" />
+        <FunctionLED>
+          <Function name="Wait" mode="0" speed="0" delaytime="5" colorswap="0" image="192_80_wait.bmp" />
+        </FunctionLED>
+      </LED>
+    </QueueSystemClient>
+    <MedstoreSendWindow>
+      <LED name="药房发药窗口主屏" port="1" LEDNO="2" width="192" height="96" rgswap="0">
+        <Master mode="0" speed="0" delaytime="5" colorswap="0">
+          <CustomStyle Font="宋体" UpFontSize="11" DownFontSize="11" Description="请以下人员准备取药，等待叫号!" />
+          <!--Description 等待取药队列上面的说明文字-->
+        </Master>
+        <Slaver doTime="8">
+          <Pages mode="0" speed="0" delaytime="5" colorswap="0">
+            <Page mode="0" speed="5" delaytime="0" image="192_80_01.bmp" />
+          </Pages>
+        </Slaver>
+        <FunctionLED>
+          <Function name="Wait" mode="0" speed="0" delaytime="5" colorswap="0" image="192_80_wait.bmp" />
+        </FunctionLED>
+      </LED>
+    </MedstoreSendWindow>
+    <MedstoreBigScreen>
+      <LED name="药房大屏" port="1" LEDNO="2" width="320" height="112" rgswap="0">
+        <Master mode="0" speed="0" delaytime="5" colorswap="0">
+          <CustomStyle Font="宋体" FontSize="12" CallTime="5" />
+          <!--CallTime 药房发药窗口叫号的间隔时间-->
+        </Master>
+        <Slaver doTime="8">
+          <Pages mode="0" speed="0" delaytime="5" colorswap="0">
+            <Page mode="0" speed="5" delaytime="0" image="BigScreen_01.bmp" />
+          </Pages>
+        </Slaver>
+        <FunctionLED>
+          <Function name="Wait" mode="0" speed="0" delaytime="5" colorswap="0" image="BigScreen_wait.bmp" />
+        </FunctionLED>
+      </LED>
+    </MedstoreBigScreen>
+    <QueueSystemServer>
+      <LED name="主屏" port="1" LEDNO="2" width="320" height="112" rgswap="0">
+        <Master mode="0" speed="0" delaytime="5" colorswap="0">
+          <CustomStyle ColumnCount="3" LinesNum="8" Font="宋体" FontSize="9" />
+        </Master>
+        <Slaver mode="0" speed="0" delaytime="5" colorswap="0" doTime="10" image="192_80_01.bmp" />
+        <FunctionLED>
+        </FunctionLED>
+      </LED>
+      <LED name="左通道屏" port="1" LEDNO="3" width="192" height="80" rgswap="0">
+        <Master mode="0" speed="0" delaytime="5" colorswap="0">
+          <CustomStyle ColumnCount="3" LinesNum="8" Font="宋体" FontSize="9" />
+        </Master>
+        <Slaver mode="0" speed="0" delaytime="5" colorswap="0" doTime="8" image="01.bmp" />
+        <FunctionLED>
+        </FunctionLED>
+      </LED>
+      <LED name="右通道屏" port="1" LEDNO="4" width="192" height="80" rgswap="0">
+        <Master mode="0" speed="0" delaytime="5" colorswap="0">
+          <CustomStyle ColumnCount="3" LinesNum="8" Font="宋体" FontSize="9" />
+        </Master>
+        <Slaver mode="0" speed="0" delaytime="5" colorswap="0" doTime="8" image="01.bmp" />
+        <FunctionLED>
+        </FunctionLED>
+      </LED>
+    </QueueSystemServer>
+    <MFZServer>
+      <LED name="主屏" port="1" LEDNO="29" width="1440" height="700" rgswap="0">
+        <Master mode="0" speed="0" delaytime="1" colorswap="0">
+          <CustomStyle Font="宋体" FontSize="25" LineNum="8" RefreshTime="1" />
+        </Master>
+        <Slaver doTime="0">
+          <Pages mode="3" speed="0" delaytime="0" colorswap="0">
+            <Page mode="0" speed="5" delaytime="0" image="MFZ_GUI_DEPT_ARRANGE_0.bmp" />
+            <Page delaytime="3" image="MFZ_GUI_DEPT_ARRANGE_1.bmp" />
+            <Page delaytime="3" image="MFZ_GUI_DEPT_ARRANGE_2.bmp" />
+            <Page delaytime="3" image="MFZ_GUI_DEPT_ARRANGE_3.bmp" />
+            <Page delaytime="3" image="MFZ_GUI_DEPT_ARRANGE_4.bmp" />
+          </Pages>
+        </Slaver>
+        <FunctionLED>
+        </FunctionLED>
+      </LED>
+    </MFZServer>
+    <BUltraSound>
+      <LED name="B超叫号显示屏" port="1" LEDNO="2" width="256" height="80" rgswap="0">
+        <Master mode="0" speed="0" delaytime="5" colorswap="0">
+          <CustomStyle Font="宋体" UpFontSize="10" DownFontSize="11" RefreshTime="5" />
+        </Master>
+        <Slaver doTime="8">
+          <Pages mode="0" speed="0" delaytime="5" colorswap="0">
+            <Page mode="0" speed="5" delaytime="0" image="BigScreen_01.bmp" />
+          </Pages>
+        </Slaver>
+        <FunctionLED>
+          <Function name="Wait" mode="0" speed="0" delaytime="5" colorswap="0" image="BigScreen_wait.bmp" />
+        </FunctionLED>
+      </LED>
+    </BUltraSound>
+  </LEDManager>
+  <!--
+    SDK2000卡属性设置:设置和得到显示的宽、高、类型    注：Type = 0(RGB555)、1(RGB24)、2(YUY2)、3(YVU9)、4(YV12)、-1(Other)
+        VideoStandard：设置视频属性的制式(0-NTSC，1-PAL，2-SECAM）,Brightness：设置亮度(范围：0-10000，默认值：5000);Contrast：设置对比度(范围：0-10000，默认值：5000);Hue：设置色度(范围：0-10000，默认值：5000);Saturation：设置饱和度(范围：0-10000，默认值：5000)-->
+  <BUltraSoundCapture>
+    <setting width="320" height="240" type="1" VideoStandard="1" Brightness="5000" Contrast="5000" Hue="5000" Saturation="5000" />
+  </BUltraSoundCapture>
+  <!-- B超工作站采集卡类型设置：0-SDK2000; 1-AV800;2-winnov;-->
+  <BUltraSoundCaptureCardType>
+    <setting type="2" />
+  </BUltraSoundCaptureCardType>
+  <iCareUpdateClient>
+    <AutoUpdate enable="false" />
+    <Server IP="10.37.0.24" Port="5230" />
+    <CurrentVersion ver="11.9" />
+  </iCareUpdateClient>
+  <HISMZ>
+    <ChangeMoney key="AnyOne" value="36.70" />
+    <ChangeMoney key="AnyOne" value="36.04" />
+  </HISMZ>
+</Main>

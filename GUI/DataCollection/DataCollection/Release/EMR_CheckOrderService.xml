@@ -1,0 +1,729 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EMR_CheckOrderService</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.MRIApplyServ.clsMRIApplyServ">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.CheckOrderService.clsPSGOrderService">
+            <summary>
+            Summary description for clsPSGOrderService.
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.CheckOrderService.clsPSGOrderService.m_DeleteRecordSQL">
+             <summary>
+            系统中采用的删除操作是通过更新操作，更改数据表的Status属性，将属性由0设为1
+             </summary>
+        </member>
+        <member name="M:com.digitalwave.CheckOrderService.clsPSGOrderService.m_lngGetTimeInfoOfAPatient(System.Security.Principal.IPrincipal,System.String,System.String,System.String[]@)">
+            <summary>
+            获得所有Create Date
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.CheckOrderService.clsPSGOrderService.m_lngGetPSGOrder(System.Security.Principal.IPrincipal,System.String,System.String,System.String,iCareData.clsPSGOrder@)">
+            <summary>
+            获取病人的PSG记录
+            </summary>
+            <param name="p_strInPatientID">病人住院ID</param>
+            <param name="p_objPSGOrderArr">PSG记录对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.CheckOrderService.clsPSGOrderService.m_lngUpdatePSGOrder(iCareData.clsPSGOrder,com.digitalwave.CheckOrderService.enmUpdateAction)">
+             <summary>
+            更新记录。包含新增，修改，删除操作
+             </summary>
+             <param name="p_objPSGOrder"></param>
+             <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.ApplyReportServer.clsApplyReportServer">
+            <summary>
+            申请报告单中间件
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngSaveData(System.Collections.ArrayList)">
+            <summary>
+            保存
+            </summary>
+            <param name="p_arlSQL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngSaveDataToPic(System.String,iCareData.clsPictureBoxValue[])">
+            <summary>
+            保存图片
+            </summary>
+            <param name="p_strSQL"></param>
+            <param name="p_objPictureBoxValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngGetData(System.String,System.Data.DataTable@)">
+            <summary>
+            获取数据
+            </summary>
+            <param name="p_strSQL"></param>
+            <param name="p_dtRecords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordBySQL(System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+            通过SQL获取记录
+            </summary>
+            <param name="p_strSql"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByRecID(System.String,iCareData.clsApplyReportList_VO@)">
+            <summary>
+            根据记录ID获取记录信息
+            </summary>
+            <param name="p_strRecordID"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByForm(System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+            获取某张单所有记录
+            </summary>
+            <param name="p_strFormClsName"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByFormAndInpID(System.String,System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+             根据住院号某张单最新记录
+            </summary>
+            <param name="p_strFormClsName"></param>
+            <param name="p_strInpatientID"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByFormTimeslice(System.String,System.String,System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+            根据日期段获取某张单所有记录
+            </summary>
+            <param name="p_strFormClsName"></param>
+            <param name="p_strFirstTime"></param>
+            <param name="p_strLastTime"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByPatientForm(System.String,System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+            获取某病人某张单的记录
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_strFormClsName"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByPatient(System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+            获取某病人所有的记录
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByType(System.Int32,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+            获取申请单或报告单的所有记录
+            </summary>
+            <param name="p_intTypeStatus"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByTimeslice(System.Int32,System.String,System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+            根据日期段获取申请单或报告单的所有记录
+            </summary>
+            <param name="p_intTypeStatus">0－申请单；1－报告单</param>
+            <param name="p_strFirstTime">开始时间</param>
+            <param name="p_strLastTime">结束时间</param>
+            <param name="p_objRecordArr">记录列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_objGetRecord(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="p_strSql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_objGetRelaForm(System.String)">
+            <summary>
+            获取关联的报告单
+            </summary>
+            <param name="p_strRecordID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngGetARForm(System.Int32,iCareData.clsAR_Form_VO[]@)">
+            <summary>
+            获取表单
+            </summary>
+            <param name="p_intTypeStatus">0－申请单；1－报告单；2－其它</param>
+            <param name="p_objApplyFormArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngGetAR_PicValue(System.String,iCareData.clsPictureBoxValue[]@)">
+            <summary>
+            获取某记录的图片
+            </summary>
+            <param name="p_strRecordID"></param>
+            <param name="p_objPicArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngSetReferStatus(System.String)">
+            <summary>
+            提交表单
+            </summary>
+            <param name="p_strRecordID">记录ID</param>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_lngSetReadStatus(System.String)">
+            <summary>
+            设置表单状态为已读
+            </summary>
+            <param name="p_strRecordID">记录ID</param>
+        </member>
+        <member name="M:com.digitalwave.ApplyReportServer.clsApplyReportServer.m_blnIsInitForm(System.String)">
+            <summary>
+            判断表单是否已经初始化过
+            </summary>
+            <param name="p_strFormClsName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.LabCheckItemAdminService.clsLabCheckItemAdminService">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.LabCheckItemAdminService.clsLabCheckItemAdminService.m_lngGetLabCheckItems(System.Security.Principal.IPrincipal,iCareData.clsLabCheckItem[]@)">
+            <summary>
+            获取所有检验项目的名称和ID
+            </summary>
+            <param name="p_objHRPServ"></param>
+            <param name="p_objRecordContentArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabCheckItemAdminService.clsLabCheckItemAdminService.m_lngGetLabCheckItemsSpecial(System.Security.Principal.IPrincipal,System.String,iCareData.clsLabCheckItem@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objRecordContentArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabCheckItemAdminService.clsLabCheckItemAdminService.m_lngGetLabCheckGroupSpecial(System.Security.Principal.IPrincipal,System.String,iCareData.clsLabCheckGroup@)">
+            <summary>
+            
+            </summary>
+            <param name="p_strItemID"></param>
+            <param name="p_objRecordContentArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabCheckItemAdminService.clsLabCheckItemAdminService.m_lngGetUnGroupLabCheckItems(System.Security.Principal.IPrincipal,iCareData.clsLabCheckItem[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objRecordContentArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabCheckItemAdminService.clsLabCheckItemAdminService.m_lngGetLabCheckGroups(System.Security.Principal.IPrincipal,iCareData.clsLabCheckGroup[]@)">
+            <summary>
+            获取所有检验项目分组
+            </summary>
+            <param name="p_objRecordContentArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabCheckItemAdminService.clsLabCheckItemAdminService.m_lngGetLabCheckGroupItem(System.Security.Principal.IPrincipal,System.String,iCareData.clsLabCheckItem[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_strGroupID"></param>
+            <param name="p_objRecordContentArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabCheckItemAdminService.clsLabCheckItemAdminService.m_lngGetMaxGroupID(System.Security.Principal.IPrincipal,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="p_strGroupID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabCheckItemAdminService.clsLabCheckItemAdminService.m_lngAddNewGroup(System.Security.Principal.IPrincipal,iCareData.clsLabCheckGroup)">
+            <summary>
+            
+            </summary>
+            <param name="p_objLabCheckGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabCheckItemAdminService.clsLabCheckItemAdminService.m_lngAddNewGroupItem(System.Security.Principal.IPrincipal,iCareData.clsLabCheckGroupItem[])">
+            <summary>
+            
+            </summary>
+            <param name="p_objLabCheckGroupItemArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabCheckItemAdminService.clsLabCheckItemAdminService.m_lngModifyGroupItem(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="p_strGroupID"></param>
+            <param name="p_objLabCheckGroupItemArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabCheckItemAdminService.clsLabCheckItemAdminService.m_lngDeleteGroupItem(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="p_strGroupID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabCheckItemAdminService.clsLabCheckItemAdminService.m_lngModifyGroupDesc(System.Security.Principal.IPrincipal,System.String,iCareData.clsLabCheckGroup)">
+            <summary>
+            
+            </summary>
+            <param name="p_strGroup_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.c_strGetAllLabCheckAliasSQL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.c_strGetTimeListSQL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.c_strGetSendTimeAndBarCodeListSQL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.c_strCheckCreateDateSQL_Oracle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.c_strAddNewContentSQL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.c_strAddNewSubContentSQL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.c_strGetContenSQL_Oracle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.c_strGetSubContenSQL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.c_strDeleteContenSQL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.c_strGetMaxBarCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.c_strGetBarCodeList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.c_strGetBarCodeList_Pat_ID">
+            <summary>
+            这里的BarCode相当于检验号Pat_ID
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.m_lngAddNewRecord2DB(System.Security.Principal.IPrincipal,iCareData.clsLabCheckOrderContent)">
+            <summary>
+            
+            </summary>
+            <param name="p_objRecordContent"></param>
+            <param name="p_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.m_lngGetRecordTimeList(System.Security.Principal.IPrincipal,System.String,System.String,System.String[]@,System.String[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strCreateDateArr"></param>
+            <param name="p_strOpenDateArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.m_lngCheckCreateDate(System.Security.Principal.IPrincipal,iCareData.clsLabCheckOrderContent,iCareData.clsPreModifyInfo@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objRecordContent"></param>
+            <param name="p_objHRPServ"></param>
+            <param name="p_objPreModifyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.m_lngGetMaxBarCode(System.Security.Principal.IPrincipal,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="p_strBarCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.m_lngGetBarCodeList(System.Security.Principal.IPrincipal,System.String,System.String[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_strBarCode"></param>
+            <param name="p_strBarCodeArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.m_lngGetBarCodeList_Pat_ID(System.Security.Principal.IPrincipal,System.String,System.String[]@,System.String[]@)">
+            <summary>
+            获取所有的检验号
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strBarCode"></param>
+            <param name="p_strBarCodeArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.m_lngGetReportInfomation(System.Security.Principal.IPrincipal,System.String,iCareData.clsJY_BRZL@,iCareData.clsJY_JG[]@,iCareData.clsJY_QXJG[]@,iCareData.clsJY_DYJG[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_strBarCode"></param>
+            <param name="p_objPatient"></param>
+            <param name="p_objResultArr"></param>
+            <param name="p_objQXResultArr"></param>
+            <param name="p_objDYResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.m_lngGetAllLabCheckAlias(System.Security.Principal.IPrincipal,iCareData.clsPublicIDAndName[]@)">
+            <summary>
+            得到所有的检验结果的别名
+            </summary>
+            <param name="p_strAliasArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.m_lngGetCheckItem(System.Security.Principal.IPrincipal,System.String,iCareData.clsJY_BRZL[]@)">
+            <summary>
+            根据病历号获取检验项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPatientID"></param>
+            <param name="p_objPatientArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.m_lngGetCheckResult(System.Security.Principal.IPrincipal,System.String,iCareData.clsJY_JG[]@)">
+            <summary>
+            根据检验号获取所有检验结果
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatID"></param>
+            <param name="p_objResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.m_lngGetJY_MSJG(System.Security.Principal.IPrincipal,System.String,iCareData.clsJY_MSJG[]@)">
+            <summary>
+            根据检验号获取所有描述结果
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatID"></param>
+            <param name="p_objResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.m_lngGetJY_YMJG(System.Security.Principal.IPrincipal,System.String,iCareData.clsJY_YMJG[]@)">
+            <summary>
+            根据检验号获取所有药敏结果
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatID"></param>
+            <param name="p_objResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.LabAnalysisOrderService.clsLabAnalysisOrderService.m_lngGetLabCheckItemResultArr(System.Security.Principal.IPrincipal,System.String,System.String[],iCareData.clsJY_JG[]@)">
+            <summary>
+            获取所有检验项目的结果
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPatientID"></param>
+            <param name="p_strSendDate"></param>
+            <param name="p_strItemNameArr"></param>
+            <param name="p_objRecordContentArr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.CTCheckOrderServ.clsCTCheckOrderServ">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.CTCheckOrderServ.clsCTCheckOrderServ.m_lngGetTimeInfoOfAPatient(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            所有的CT申请的时间
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.BUltrasonicCheckOrderServ.clsBUltrasonicCheckOrderServ">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.BUltrasonicCheckOrderServ.clsBUltrasonicCheckOrderServ.m_lngAddNew(System.Security.Principal.IPrincipal,System.String,iCareData.ImageRequest,System.String@,System.Boolean)">
+            <summary>
+            添加信息
+            </summary>		
+        </member>
+        <member name="M:com.digitalwave.BUltrasonicCheckOrderServ.clsBUltrasonicCheckOrderServ.m_lngGetTimeInfoOfAPatient(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            获得所有Create Date
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.BUltrasonicCheckOrderServ.clsBUltrasonicCheckOrderServ.GetBUltrasonicCheckOrder(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            获得主表的记录
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strCreateDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.XRayCheckOrderServ.clsXRayCheckOrderServ">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.XRayCheckOrderServ.clsXRayCheckOrderServ.m_lngGetTimeInfoOfAPatient(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            获得所有Create Date
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.XRayCheckOrderServ.clsXRayCheckOrderServ.m_lngAddNew(System.Security.Principal.IPrincipal,System.String,System.String[],System.String[],System.String[],iCareData.ImageRequest,System.String@,System.Boolean)">
+            <summary>
+            添加信息
+            </summary>	
+        </member>
+        <member name="M:com.digitalwave.XRayCheckOrderServ.clsXRayCheckOrderServ.GetXRayCheckOrder(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            获得主表的记录
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strCreateDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.XRayCheckOrderServ.clsXRayCheckOrderServ.GetXRayCommonRecor(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            获得从表的记录 -- Commond Record
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strCreateDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.XRayCheckOrderServ.clsXRayCheckOrderServ.GetXRaySpecialRecor(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            获得从表的记录 -- Special Record
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strCreateDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.XRayCheckOrderServ.clsXRayCheckOrderServ.GetXRayOperator(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            获得从表的记录 -- Special Record
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strCreateDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.SPECTCheckOrderServ.clsSPECTCheckOrderServ">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.SPECTCheckOrderServ.clsSPECTCheckOrderServ.m_lngGetTimeInfoOfAPatient(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            所有的SPECT申请的时间
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.PathologyOrgCheckOrderServ.clsPathologyOrgCheckOrderServ">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.PathologyOrgCheckOrderServ.clsPathologyOrgCheckOrderServ.m_lngGetTimeInfoOfAPatient(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            获得所有Create Date
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PathologyOrgCheckOrderServ.clsPathologyOrgCheckOrderServ.m_lngAddNew(System.Security.Principal.IPrincipal,System.String,System.String[])">
+            <summary>
+            添加信息
+            </summary>	
+        </member>
+        <member name="M:com.digitalwave.PathologyOrgCheckOrderServ.clsPathologyOrgCheckOrderServ.GetPathologyOrgCheckOrder(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            获得主表的记录
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strCreateDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PathologyOrgCheckOrderServ.clsPathologyOrgCheckOrderServ.GetPathologyOrgOperator(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            获得从表的记录 -- Operator
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strCreateDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.CheckOrderService.clsNuclearOrderService">
+            <summary>
+            Summary description for clsNuclearOrderService.
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.CheckOrderService.clsNuclearOrderService.m_DeleteRecordSQL">
+             <summary>
+            系统中采用的删除操作是通过更新操作，更改数据表的Status属性，将属性由0设为1
+             </summary>
+        </member>
+        <member name="M:com.digitalwave.CheckOrderService.clsNuclearOrderService.m_lngGetTimeInfoOfAPatient(System.Security.Principal.IPrincipal,System.String,System.String,System.String[]@)">
+            <summary>
+            获得所有Create Date
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.CheckOrderService.clsNuclearOrderService.m_lngGetNuclearOrder(System.Security.Principal.IPrincipal,System.String,System.String,System.String,iCareData.clsNuclearOrder@)">
+            <summary>
+            获取病人的Nuclear记录
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_objNuclearOrderArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.CheckOrderService.clsNuclearOrderService.m_lngUpdateNuclearOrder(iCareData.clsNuclearOrder,com.digitalwave.CheckOrderService.enmUpdateAction)">
+             <summary>
+            更新记录。包含新增，修改，删除操作
+             </summary>
+             <param name="p_objNuclearOrder"></param>
+             <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.CheckOrderService.enmUpdateAction">
+            <summary>
+            Summary description for clsEKGOrderService.
+            </summary>	
+        </member>
+        <member name="F:com.digitalwave.CheckOrderService.clsEKGOrderService.m_DeleteRecordSQL">
+             <summary>
+            系统中采用的删除操作是通过更新操作，更改数据表的Status属性，将属性由0设为1
+             </summary>
+        </member>
+        <member name="M:com.digitalwave.CheckOrderService.clsEKGOrderService.m_lngGetTimeInfoOfAPatient(System.Security.Principal.IPrincipal,System.String,System.String,System.String[]@)">
+            <summary>
+            获得所有Create Date
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.CheckOrderService.clsEKGOrderService.m_lngGetEKGOrder(System.Security.Principal.IPrincipal,System.String,System.String,System.String,iCareData.clsEKGOrder@)">
+            <summary>
+            获取病人的EKG记录
+            </summary>
+            <param name="p_strInPatientID">病人住院ID</param>
+            <param name="p_objEKGOrderArr">EKG记录对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.CheckOrderService.clsEKGOrderService.m_lngUpdateEKGOrder(iCareData.clsEKGOrder,com.digitalwave.CheckOrderService.enmUpdateAction)">
+             <summary>
+            更新记录。包含新增，修改，删除操作
+             </summary>
+             <param name="p_objEKGOrder"></param>
+             <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.HighOxygenServ.clsHighOxygenServ">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.HighOxygenServ.clsHighOxygenServ.m_lngGetTimeInfoOfAPatient(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            所有的HighOxygen申请的时间
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <param name="p_strXml"></param>
+            <param name="intRows"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
