@@ -1,0 +1,1403 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DoctorOrderService</name>
+    </assembly>
+    <members>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsUCmedSvc.m_lngGetMedItem(System.Security.Principal.IPrincipal,System.Data.DataTable@,System.String)">
+            <summary>
+            获取药品数据
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsUCmedSvc.m_lngAddUC(System.Security.Principal.IPrincipal,System.String,System.String,System.String)">
+            <summary>
+            药品对应的药典
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="strMedId"></param>
+            <param name="UCID"></param>
+            <param name="UCNAME"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsUCmedSvc.m_lngdeleUC(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            删除药品对应的药典
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="strMedId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsUCmedSvc.m_lngGetRemark(System.Security.Principal.IPrincipal,System.String,System.String@)">
+            <summary>
+            获取药典的备注信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="UCID"></param>
+            <param name="strRemark"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsUCmedSvc.m_lngGetUcid(System.Security.Principal.IPrincipal,System.String,System.String@)">
+            <summary>
+            获取药品对的药典ＩＤ
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="strMedCode"></param>
+            <param name="strUcid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc">
+            <summary>
+            检验——中间层	create by wjqin	(2005.12.20)
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_lngFindPatient(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="strCode"></param>
+            <param name="p_dtbResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_lngGetDataFormiCare(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            获取病区
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_lngGetEmployeeDept(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            获取员工所属科室病区
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strEmployeeID"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_lngGetPatientInfoByID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsPatientInfo_VO@)">
+            <summary>
+            根据病人ID获取病人基本信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatientID">病人ID</param>
+            <param name="p_objResult">返回病人基本信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_mthGetPERFORMEDList(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            获取执行科室
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_mthGetLabItemClassList(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            根据执行科室获得检验类别
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="deptcode"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_mthGetSPECIMEN(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            获取执行科室
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_mthGetCHARGE_TYPE(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            获取费用类别
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_lngGetClinicItemDict(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsClinic_Item_dict_VO[]@,System.Data.DataTable@)">
+            <summary>
+            根据检验分类获取相关检验项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="m_strLabItemCode"></param>
+            <param name="p_objResult"></param>
+            <param name="dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.SaveToLabTestMaster(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLabTestMaster_VO,com.digitalwave.iCare.ValueObject.clsLab_Test_Items_VO[])">
+            <summary>
+            保存申请单
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <param name="m_objLabTestITem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_mthGetBigId(System.Int32,System.String,System.String,System.String@)">
+            <summary>
+            获取字符型的最大数字再增1
+            </summary>
+            <param name="field_length"></param>
+            <param name="field_name"></param>
+            <param name="table_name"></param>
+            <param name="p_strRecordID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_mthGetFieldNo(System.Int32,System.String,System.String,System.String@)">
+            <summary>
+            获取申请单号
+            </summary>
+            <param name="field_length"></param>
+            <param name="field_name"></param>
+            <param name="table_name"></param>
+            <param name="p_strRecordID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_lngGetLabItemsArr(System.Security.Principal.IPrincipal,System.String,System.Int32,System.Data.DataTable@)">
+            <summary>
+            查询 检验项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="m_strPATIENT_ID"></param>
+            <param name="intBMSTATUS_INT"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_lngDeleLabItemsArr(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLabTestMaster_VO)">
+            <summary>
+            删除申请项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="m_objTest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_lngSubLabItemsArr(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            查询 检验子项目(全部）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_lngSubLabItemsArrByTestNO(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            根据检验号获取检验子项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strTestNo"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_lngGetClinicGroupItemDict(System.Security.Principal.IPrincipal,System.String,System.String,com.digitalwave.iCare.ValueObject.clsClinic_Item_dict_VO[]@)">
+            <summary>
+            增加组套项目到项目列表中
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="m_strDeptCode"></param>
+            <param name="m_strLabItemCode"></param>
+            <param name="p_objResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_mthGetGroupItemDList(System.Security.Principal.IPrincipal,System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            获取组套项目列表
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="m_strDeptCode"></param>
+            <param name="m_strLabItemCode"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_lngGetGroupItemDictByID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsClinic_Item_dict_VO[]@,System.Data.DataTable@)">
+            <summary>
+            根据组套ID获取项目明细
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="GROUP_ID"></param>
+            <param name="p_objResult"></param>
+            <param name="dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_lngSubLabItemsPriceArr(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            查询 检验项目相关价格表(全部）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLabMain_Svc.m_lngGetLabApplyInfoByPatientId(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            根据病人ID查询所有的申请单ID
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc">
+            <summary>
+            医嘱医生工作站——中间层	glzhang	2005.11.3
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetData(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            txtListView从数据库获取数据
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strSQL">SQL语句</param>
+            <param name="p_dtbResult">结果集</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetDataFormiCare(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            iCare数据库获取数据
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strSQL">SQL语句</param>
+            <param name="p_dtbResult">结果集</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetPatientInfoByID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsPatientInfo_VO@)">
+            <summary>
+            根据病人ID获取病人基本信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatientID">病人ID</param>
+            <param name="p_objResult">返回病人基本信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetPatientInfoByName(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsPatientInfo_VO[]@)">
+            <summary>
+            根据病人姓名获取病人基本信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatientName">病人姓名</param>
+            <param name="p_objResult">返回病人基本信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetPatientOrderByID(System.Security.Principal.IPrincipal,System.String,System.Decimal,System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            根据病人ID获取医嘱信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatientID">病人ID</param>
+            <param name="p_decVisitID">住院标识</param>
+            <param name="p_strSQL">医嘱查询筛选语句</param>
+            <param name="p_strOrderBy">排序语句</param>
+            <param name="p_dtbResult">返回医嘱信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetClinicClass(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            从字典表获取医嘱类别
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetNurseOrderByID(System.Security.Principal.IPrincipal,System.String,System.Decimal,System.Data.DataTable@)">
+            <summary>
+            根据病人ID获取护士医嘱信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatientID">病人ID</param>
+            <param name="p_decVisitID">住院标识</param>
+            <param name="p_dtbResult">返回医嘱信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngAddNewDocOrder(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO@)">
+            <summary>
+            新增医嘱
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord">医嘱VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngAddNewGroupDocOrder(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO@)">
+            <summary>
+            新增组套医嘱
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord">医嘱VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngCopyDocOrder(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO@)">
+            <summary>
+            复制医嘱
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord">医嘱VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngStopDocOrder(System.Security.Principal.IPrincipal,System.Int32,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO@)">
+            <summary>
+            停止医嘱
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_intOrderType">选择护士医嘱列表停:0;选择医生医嘱列表停:1</param>
+            <param name="p_objRecord">医嘱VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngDelDocterOrder(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO)">
+            <summary>
+            删除医嘱信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngDelSpecifyDocterOrder(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO)">
+            <summary>
+            删除指定医嘱信息(删除检验时操作)
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngCheckIsHasTransfer(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO,System.Data.DataTable@)">
+            <summary>
+            检查医嘱是否已转抄
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <param name="p_dtbDoctorOrder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngEditDocOrder(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO@)">
+            <summary>
+            修改医嘱信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord">医嘱VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngCommitDocOrder(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO@)">
+            <summary>
+            提交医嘱信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord">医嘱VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngChangeDocOrderTime(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO@)">
+            <summary>
+            修改下嘱时间
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord">医嘱VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngConcelDocOrder(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO)">
+            <summary>
+            作废医嘱
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord">医嘱VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetPatientOrderByID(System.String,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO[]@)">
+            <summary>
+            根据病人ID获取医嘱信息
+            </summary>
+            <param name="p_strDepartID"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetOrderNoByRelatedOrderNO(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO,System.String@,System.String@)">
+            <summary>
+            根据护士处理后的医嘱号获取医生医嘱号
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objOrder">护士处理后的医嘱</param>
+            <param name="p_strOrderID">医嘱号</param>
+            <param name="p_strOrderSubID">医嘱子序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetOrderStatusByRelatedOrderNO(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO,System.Int32,System.String@)">
+            <summary>
+            查看与护理处理医嘱相关联的医生医嘱状态
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objOrder">护士处理后的医嘱</param>
+            <param name="p_intDocOrNurse">0:选择护士医嘱列表停止医嘱;1:选择医生医嘱列表停止医嘱</param>
+            <param name="p_strOrderStatus">医嘱状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetNurseOrderStatusByRelatedOrderNO(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsDoctorOrder_VO,System.String@)">
+            <summary>
+            查看与医生医嘱相关联的护士医嘱状态
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objOrder">医生医嘱</param>
+            <param name="p_strOrderStatus">护士医嘱状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetDeptIDFromICare(System.Security.Principal.IPrincipal,System.String,System.String@)">
+            <summary>
+            根据军惠数据库的科室ID获取iCare的科室ID
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_str8iDeptID">军惠数据库的科室ID</param>
+            <param name="p_striCareDeptID">iCare的科室ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetOutPatientInfoByID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsPatientInfo_VO[]@)">
+            <summary>
+            根据病人ID获取出院病人基本信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatientID">病人ID</param>
+            <param name="p_objResult">返回病人基本信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetOutPatientInfoByName(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsPatientInfo_VO[]@)">
+            <summary>
+            根据病人姓名获取出院病人基本信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatientName">病人姓名</param>
+            <param name="p_objResult">返回病人基本信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngCheckRoleByEmpIDAndRoleName(System.Security.Principal.IPrincipal,System.String,System.String,System.String@)">
+            <summary>
+            判断该员工是否享有该权限,如果返回的权限ID不为空，则表明享有该权限
+            </summary>	
+            <param name="p_objPrincipal"></param>	
+            <param name="p_strEmpID">员工ID</param>	
+            <param name="p_strRoleName">权限名称</param>
+            <param name="p_strRoleID">权限ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetClinicClassCode(System.Security.Principal.IPrincipal,System.String,System.String@)">
+            <summary>
+            获取医嘱类别代码
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strOrderClassCode"></param>
+            <param name="p_strClinicClassCode">医嘱类别代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngCheckHasPrescriptionRight(System.Security.Principal.IPrincipal,System.String,System.Boolean@)">
+            <summary>
+            检查用户是否有处方权
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strEMPID">用户ID</param>
+            <param name="p_blnHasRight">是否有权力</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngCheckKeyHasPrescriptionRight(System.Security.Principal.IPrincipal,System.String,System.Boolean@)">
+            <summary>
+            检查Key持有人是否有处方权
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strSerialNumber">Key盘序列号</param>
+            <param name="p_blnHasRight">是否有权力</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngFindPatientOrderByID(System.Security.Principal.IPrincipal,System.String,System.Decimal,System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            根据病人ID查找医嘱信息(医嘱查询)
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatientID">病人ID</param>
+            <param name="p_decVisitID">住院标识</param>
+            <param name="p_strSQL">医嘱查询筛选语句</param>
+            <param name="p_strOrderBy">排序语句</param>
+            <param name="p_dtbResult">返回医嘱信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetDBServerTime(System.Security.Principal.IPrincipal,System.DateTime@)">
+            <summary>
+            获取数据库时间
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtmTime">数据库时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsOrder_Svc.m_lngGetDeadOrderPatientIdAndTimes(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            获取在床病人是否有死亡通知医嘱
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptId"></param>
+            <param name="p_dtbTimes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.HIS.ClsExamineMain_Svc">
+            <summary>
+            检查——中间层	create by wjqin	(2005.12.30)
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsExamineMain_Svc.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsExamineMain_Svc.m_lngGetEXAMCLASSList(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            获取主类别
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsExamineMain_Svc.m_lngGetEXAM_SUB_CLASS(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            根据主类获得子类别
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="deptcode"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsExamineMain_Svc.m_lngGetExamineItemDict(System.Security.Principal.IPrincipal,System.String,System.String,com.digitalwave.iCare.ValueObject.clsClinic_Item_dict_VO[]@)">
+            <summary>
+            根据检查分类获取相关检查项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="m_strItemCode"></param>
+            <param name="m_strSubItemCode"></param>
+            <param name="p_objResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsExamineMain_Svc.m_mthGetPERFORMEDList(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            获取检查类执行科室
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsExamineMain_Svc.SaveToEXAM_MASTER(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsEXAM_MASTER_VO,com.digitalwave.iCare.ValueObject.clsLab_Test_Items_VO[])">
+            <summary>
+            保存检查申请单
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <param name="m_objLabTestITem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsExamineMain_Svc.m_lngGetExamItemsArr(System.Security.Principal.IPrincipal,System.String,System.String,System.Int32,System.Data.DataTable@)">
+            <summary>
+            查询 检查项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="m_strDeptID"></param>
+            <param name="m_strPATIENT_ID"></param>
+            <param name="intBMSTATUS_INT"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsExamineMain_Svc.m_lngSubExamItemsArr(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            查询 检查子项目(全部）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsExamineMain_Svc.m_lngSubExamItemsArrByExamNO(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            根据指定申请号获取检查子项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strExamNO"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsExamineMain_Svc.m_lngDeleExamItemsArr(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsEXAM_MASTER_VO)">
+            <summary>
+            删除申请项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="m_objTest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsExamineMain_Svc.m_mthGetBigId(System.Int32,System.String,System.String,System.String@)">
+            <summary>
+            获取字符型的最大数字再增1
+            </summary>
+            <param name="field_length"></param>
+            <param name="field_name"></param>
+            <param name="table_name"></param>
+            <param name="p_strRecordID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsExamineMain_Svc.m_mthGetFirstIllnessRecord(System.String,System.DateTime,System.String@)">
+            <summary>
+            获取首次病程记录初步诊断
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_dtmInDate"></param>
+            <param name="p_strDiagnosis"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc">
+            <summary>
+            检验——中间层	create by wjqin	(2005.12.20)
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngGetDeptClass(System.Security.Principal.IPrincipal,System.Int32,com.digitalwave.iCare.ValueObject.clsDept_Dict_VO[]@)">
+            <summary>
+            获取部门类别字典
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="i2"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngGetLabItemClass(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsLab_Item_Class_Dict_VO[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_cmdAddDeptLabitemMap(System.Security.Principal.IPrincipal,System.String@,com.digitalwave.iCare.ValueObject.clsDept_LabItemClass_Map_VO)">
+            <summary>
+            增加科室-检验分类关系
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRecordID"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_cmdDelDeptLabitemMap(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsDept_LabItemClass_Map_VO[])">
+            <summary>
+            删除科室-检验分类关系
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngGetDeptLabitemMap(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsDept_LabItemClass_Map_VO[]@)">
+            <summary>
+            获取科室-检验分类关系
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="m_strDEPT_CODE"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngGetSpecialDept(System.Security.Principal.IPrincipal,System.Int32,com.digitalwave.iCare.ValueObject.clsSpecialDept[]@)">
+            <summary>
+            获取特殊科室配置
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="i"></param>
+            <param name="p_objResultArr"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngAddSpecialDept(System.Security.Principal.IPrincipal,System.Int32,System.String,System.String@)">
+            <summary>
+            新增特殊科室配置
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="i"></param>
+            <param name="p_strDEPTCODE"></param>
+            <param name="p_strID"></param>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngDeleteSpecialDept(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            删除特殊科室配置 
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngResearchDept(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsDept_Dict_VO[]@)">
+            <summary>
+            查询科室字典
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPyCode"></param>
+            <param name="p_objArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngGetSpecimen_Cat(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsSpecimen_Cat_VO[]@)">
+            <summary>
+            获取样本类型表
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngAddSpecimen_Cat(System.Security.Principal.IPrincipal,System.String@,com.digitalwave.iCare.ValueObject.clsSpecimen_Cat_VO)">
+            <summary>
+            新增标本类型
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strID"></param>
+            <param name="p_objArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngDeleteSpecimen_Cat(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            删除标本类型记录
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngUpdateSpecimen_Cat(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsSpecimen_Cat_VO)">
+            <summary>
+            修改标本类型
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngGetSpeciman_dict(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsSpeciman_DICT[]@)">
+            <summary>
+            获取样本字典表
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_str1"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngGetDept_Speciman_Map(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsDept_Speciman_map[]@)">
+            <summary>
+            获取科室-样本表
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_str"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngAddDept_Speciman_Map(System.Security.Principal.IPrincipal,System.String@,com.digitalwave.iCare.ValueObject.clsDept_Speciman_map)">
+            <summary>
+            新增科室-标本关系
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="strID"></param>
+            <param name="p_objArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngDeleteDept_speciman(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            删除科室-标本关系
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_mthGetLabItemClassList(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            根据执行科室获得检验类别
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="deptcode"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngGetClinicItemDict(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsClinic_Item_dict_VO[]@)">
+            <summary>
+            根据检验分类获取相关检验项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="m_strLabItemCode"></param>
+            <param name="p_objResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngGetGroup_Check(System.Security.Principal.IPrincipal,System.String,System.String,com.digitalwave.iCare.ValueObject.clsGroup_Check_VO[]@)">
+            <summary>
+            根据检验分类获取检验组套
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="m_strDept_code"></param>
+            <param name="m_strLabItemCode"></param>
+            <param name="p_objResArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngAddGroup_Check(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsGroup_Check_VO,System.String@)">
+            <summary>
+            新增检验组套名称
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResArr"></param>
+            <param name="m_strID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngUpdateGroup_Check(System.Security.Principal.IPrincipal,System.String,System.String)">
+            <summary>
+            修改检验组套名称
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strID"></param>
+            <param name="p_strGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngDeleteGroup_Check(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            删除检验组套
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngByGroup_CheckID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsGroup_Check_Items[]@)">
+            <summary>
+            根据组套ID获取组套成员 
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strGroupID"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngAddGroup_Items(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsGroup_Check_Items,System.String@)">
+            <summary>
+            新增组套成员—诊疗项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRltArr"></param>
+            <param name="p_serial_NO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngDeleteGroup_Items(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            删除组套成员—诊疗项目
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strSerial_NO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngSaveCheckItemSort(System.Security.Principal.IPrincipal,System.String,System.String)">
+            <summary>
+            保存检验标本顺序
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strSerial_NO"></param>
+            <param name="p_strSortNO">顺序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngSaveChkClinicSort(System.Security.Principal.IPrincipal,System.String,System.String)">
+            <summary>
+            保存检验组套项目顺序
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strSerial_NO"></param>
+            <param name="p_strSortNO">顺序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsClinicalLab_Svc.m_lngSaveClinic_item_dictSort(System.Security.Principal.IPrincipal,System.String,System.String,System.String)">
+            <summary>
+            保存检验诊疗项目顺序
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strItemClass"></param>
+            <param name="p_strItemCode"></param>
+            <param name="p_strSortNO">顺序号</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.HIS.ClsOperation_Svc">
+             <summary>
+            手术申请——中间层	glzhang	2005.12.15
+             </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsOperation_Svc.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsOperation_Svc.m_lngGetOperationList(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsOperation_schedule_VO[]@)">
+            <summary>
+            获取手术安排列表
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strSQL"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsOperation_Svc.m_lngAddNewOperation(System.Security.Principal.IPrincipal,System.String@,com.digitalwave.iCare.ValueObject.clsOperation_schedule_VO)">
+            <summary>
+            新增手术申请
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRecordID">手术安排标识</param>
+            <param name="p_objRecord">手术安排VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsOperation_Svc.m_lngDelOperation(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsOperationDetial_VO)">
+            <summary>
+            删除手术申请
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord">手术明细VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsOperation_Svc.m_lngModifyOperation(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsOperation_schedule_VO)">
+            <summary>
+            修改手术申请
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord">手术安排VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsOperation_Svc.m_lngAddNewOperationDetial(System.Security.Principal.IPrincipal,System.String@,com.digitalwave.iCare.ValueObject.clsOperationDetial_VO)">
+            <summary>
+            新增手术明细
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRecordID">手术安序号</param>
+            <param name="p_objRecord">手术明细VO</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc">
+            <summary>
+            医嘱医生工作站——中间层	glzhang	2005.11.3
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngGetClinicItem(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsClinic_Item_VO[]@)">
+            <summary>
+            获取诊疗项目类型列表
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngGetClinicItem_Ext(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsClinicItemExt_VO[]@)">
+            <summary>
+            获取诊疗项目类型设置
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngAddClinicItem_Ext(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsClinicItemExt_VO)">
+            <summary>
+            增加诊疗项目类型设置
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngDelItem(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            删除诊疗项目类型设置
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strClassItemID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngModifyClinicItem_Ext(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsClinicItemExt_VO)">
+            <summary>
+            修改诊疗项目类型设置
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngGetOrderStatus(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsOrderStatus_VO[]@)">
+            <summary>
+            获取医嘱状态配置
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngSetOrderStatus(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsOrderStatus_VO)">
+            <summary>
+            设置医嘱状态配置
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngGetPerFormFreq(System.Security.Principal.IPrincipal,System.Int32,com.digitalwave.iCare.ValueObject.clsPerFormFreq_VO[]@)">
+            <summary>
+            获取(临时)医嘱执行频率字典
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_intFlag">0=医嘱执行频率字典,1=临时医嘱执行频率字典</param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngAddPreFormFreqExt(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            增加临时医嘱执行频率
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strFreqDec"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngDelPreFormFreqExt(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            删除临时医嘱执行频率
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strFreqDec"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngGetOrderClass(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsOrderClass_VO[]@)">
+            <summary>
+            获取医嘱类别字典
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngGetOrderClinicMap(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsOrderClinicMap_VO[]@)">
+            <summary>
+            获取医嘱类别诊疗项目分类关系
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strOrderClassID">医嘱类别ID</param>
+            <param name="p_objResultArr">结果集</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngAddNewOrderClinicMap(System.Security.Principal.IPrincipal,System.String@,com.digitalwave.iCare.ValueObject.clsOrderClinicMap_VO)">
+            <summary>
+            增加医嘱类别诊疗项目分类关系
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRecordID"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngDelOrderClinicMap(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            删除医嘱类别诊疗项目分类关系
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngFindOrderClinicMap(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsOrderClinicMap_VO[]@)">
+            <summary>
+            查询医嘱类别诊疗项目分类关系
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strItemID">诊疗项目ID</param>
+            <param name="p_objResultArr">结果集</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngGetBloodTypeList(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsBloodType_VO[]@)">
+            <summary>
+            获取输血成份基本字典
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResultArr">血成份字典VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngAddNewBloodType(System.Security.Principal.IPrincipal,System.String@,com.digitalwave.iCare.ValueObject.clsBloodType_VO)">
+            <summary>
+            新增输血成份
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRecordID">成份D</param>
+            <param name="p_objRecord">输血成份VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngModifyBloodType(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsBloodType_VO)">
+            <summary>
+            修改输血成份
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecord">输血成份VO</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsDataConfigSvc.m_lngDelBloodType(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            删除输血成份
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRecordID">记录ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.HIS.ClsBloodOrd_Svc">
+            <summary>
+            ClsBloodOrd_Svc 的摘要说明。
+            </summary>
+            
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsBloodOrd_Svc.m_lngGetOrderNO(System.Security.Principal.IPrincipal,System.String@)">
+            <summary>
+            获取当天的最大申请单号
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="P_outOrderNo">返回当天的最大申请单号，如返回只有4位字符串则当天还没有申请单号</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsBloodOrd_Svc.m_lngGetOrderID(System.Security.Principal.IPrincipal,System.String@)">
+            <summary>
+            获取当天的最大申请单号
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="P_outOrderNo">返回当天的最大申请单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsBloodOrd_Svc.m_lngAddNewBloodOrder(System.Security.Principal.IPrincipal,System.String@,com.digitalwave.iCare.ValueObject.clsbloodrequest_vo,com.digitalwave.iCare.ValueObject.clsbloodrequest_type_VO[])">
+            <summary>
+            写入输血申请单
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRecordID"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsBloodOrd_Svc.m_lngCheckBloodHistory(System.String,System.Int64@)">
+            <summary>
+            检查是否曾经输血
+            </summary>
+            <param name="p_strPatientID">病人ID</param>
+            <param name="p_lngRows">返回行数</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsBloodOrd_Svc.m_lngGetCurrDayData(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsbloodrequest_vo[]@,System.DateTime,System.DateTime)">
+            <summary>
+            查询申请单数据
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResultArr"></param>
+            <param name="begingDate"></param>
+            <param name="endDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsBloodOrd_Svc.m_lngGetSpecifyData(System.Security.Principal.IPrincipal,com.digitalwave.iCare.ValueObject.clsbloodrequest_vo[]@,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            查询申请单数据
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objResultArr"></param>
+            <param name="begingDate"></param>
+            <param name="endDate"></param>
+            <param name="p_strDeptID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsBloodOrd_Svc.m_lngGetAcceptBloodType">
+            <summary>
+            获取受血成份表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsBloodOrd_Svc.m_lngGetNewData(System.String)">
+            <summary>
+            获取病人最新一次的检查数据
+            </summary>
+            <param name="patantID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsBloodOrd_Svc.m_lngCancelOrder(System.Security.Principal.IPrincipal,System.String,System.String)">
+            <summary>
+            作废申请单
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="strDoctorID"></param>
+            <param name="strOrderID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.ClsBloodOrd_Svc.m_lngDeleData(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            删除数据（当电子签名失败的时候使用）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="P_outOrderID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc">
+            <summary>
+            医嘱套餐定义 中间件 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngGetData(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            txtListView从数据库获取数据
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strSQL">SQL语句</param>
+            <param name="p_dtbResult">结果集</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngGetTimeUnit(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            获取时间单位
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngGetUseMethod(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            获取用法途径
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngGetDosageUnit(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            获取剂量单位
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngGetPerformFreq(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            获取执行频率
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngGetDoctorTitle(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            获取医嘱名称
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="strDepID"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngGetDoctorTitle(System.Security.Principal.IPrincipal,System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            获取医嘱名称
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="strDepID"></param>
+            <param name="p_strFindCode"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngGetDeptName(System.Security.Principal.IPrincipal,System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            获取科室名称
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_Info"></param>
+            <param name="p_strFindCode"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngGetOrderContent(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            获取医嘱内容
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strFindCode"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngGetTypeName(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            获取类别名称
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngGetContentByGroupID(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsGroup_Item_VO[]@)">
+            <summary>
+            根据组合医嘱ID获取内容
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strID"></param>
+            <param name="p_objResultArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngAddRecord(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsGroup_Item_VO,com.digitalwave.iCare.ValueObject.clsGroup_Item_VO@)">
+            <summary>
+            新增记录
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strId"></param>
+            <param name="p_objArr"></param>
+            <param name="objResltArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngUpdateRecord(System.Security.Principal.IPrincipal,System.String,com.digitalwave.iCare.ValueObject.clsGroup_Item_VO,com.digitalwave.iCare.ValueObject.clsGroup_Item_VO@)">
+            <summary>
+            修改记录
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strId"></param>
+            <param name="p_objArr"></param>
+            <param name="p_objArr2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngDeleteRecord(System.Security.Principal.IPrincipal,System.String,System.String,System.String)">
+            <summary>
+            删除记录
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_str"></param>
+            <param name="p_str2"></param>
+            <param name="p_str3"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngSubRecord(System.Security.Principal.IPrincipal,System.Boolean,System.String,System.String,System.String,com.digitalwave.iCare.ValueObject.clsGroup_Item_VO)">
+            <summary>
+            子医嘱记录
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="flage"></param>
+            <param name="p_strId"></param>
+            <param name="p_strNO"></param>
+            <param name="p_strSubNO"></param>
+            <param name="p_objArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngAddGroup(System.Security.Principal.IPrincipal,System.String,System.String,System.String@)">
+            <summary>
+            新增医嘱组套名称
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptCode"></param>
+            <param name="p_strGroupName"></param>
+            <param name="p_strGroupID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngUpdateGroup(System.Security.Principal.IPrincipal,System.String,System.String)">
+            <summary>
+            修改医嘱组套名称
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strGroupID"></param>
+            <param name="p_strGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.iCare.middletier.HIS.clsGroupItem_Svc.m_lngDeleteGroup(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strGroupID"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

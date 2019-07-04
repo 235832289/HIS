@@ -1,0 +1,712 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GLS_WS_CommonApply</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.GLS_WS.Logic.FormPrinter">
+            <summary>
+            打印相应的检查申请单,居中打印
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.FormPrinter.PrintPreviewInvoke(System.String)">
+            <summary>
+            外部调用
+            </summary>
+            <param name="applyID"></param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.FormPrinter.Print(System.Data.DataTable)">
+            <summary>
+            直接打印
+            </summary>
+            <param name="dsApply"></param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.FormPrinter.SelectTypePrint(System.Data.DataTable)">
+            <summary>
+            选择检查类型直接打印
+            </summary>
+            <param name="dsApply"></param>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.Logic.FormPrinter.tableRows">
+            <summary>
+            打印通用检查申请单
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:com.digitalwave.GLS_WS.clsApplyForm">
+            <summary>	/// 
+            描述:通用检查申请单外部调用入口
+            引用:DigitalWave.BaseForm.dll , DigitalWave.DbService.dll , CommonApplyForm.dll
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.clsApplyForm.OpenForm(System.String)">
+            <summary>
+            打开相应的检查申请单
+            </summary>
+            <param name="applyID">索引号</param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.clsApplyForm.Print(System.String)">
+            <summary>
+            直接打印检查申请单
+            </summary>
+            <param name="applyID">索引号</param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.clsApplyForm.PintPreview(System.String)">
+            <summary>
+            打印预览检查申请单
+            </summary>
+            <param name="applyID">索引号</param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.clsApplyForm.Delete(System.String)">
+            <summary>
+            删除指定检查单,成功返回true
+            </summary>
+            <param name="applyID"></param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.clsApplyForm.SetChargeStatus(System.String,System.String,System.String)">
+            <summary>
+            申请单交费状态修改
+            </summary>
+            <param name="sysFromID">来源 {1=门诊;2=住院;3=电子病历;4=其它}</param>
+            <param name="sourceItemID">源id {if (门诊) = 处方id; if (住院) = 医嘱id}</param>
+            <param name="newChargeStatus">缴费信息 0-不记录缴费信息 1-未缴费 2-已缴费 3-已退费</param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.clsApplyForm.SaveWithVO(com.digitalwave.GLS_WS.VO.clsApplyRecord)">
+            <summary>
+            保存一个申请检查单VO.(弹出检查类型选择框)
+            </summary>
+            <returns>VO</returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.clsApplyForm.GetIDWithVO(com.digitalwave.GLS_WS.VO.clsApplyRecord)">
+            <summary>
+            根据VO保存数据，并返回申请单ID
+            </summary>
+            <param name="vo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.clsApplyForm.OpenWithVO(com.digitalwave.GLS_WS.VO.clsApplyRecord)">
+            <summary>
+            打开一个检查申请单VO供编辑,保存后返回单号
+            </summary>
+            <param name="vo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.clsApplyForm.ShowDictionary">
+            <summary>
+            显示检查类型字典维护窗体
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.clsApplyForm.GetApplyRecordByDate(System.DateTime,System.DateTime,System.String)">
+            <summary>
+            返回两个日期之间的申请单
+            </summary>
+            <param name="fromDate"></param>
+            <param name="toDate"></param>
+            <param name="typeID">NULL，或单个ID或“1,2,3,4,5”--多个ID用逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.clsApplyForm.GetAllCheckTypes">
+            <summary>
+            返回所有检查类型,仅 m_strTypeID 和 m_strTypeName(检查类型名称)有用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.clsApplyForm.GetSpecCheckTypes(System.String[])">
+            <summary>
+            返回所有检查类型,仅 m_strTypeID 和 m_strTypeName(检查类型名称)有用
+            </summary>
+            <param name="p_strARTypeArr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.GLS_WS.UI.frmSelectType">
+             <summary>
+            摘要说明：选择多个申请单类型，并保存
+             </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.UI.frmSelectType.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.UI.frmSelectType.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.UI.frmSelectType.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.UI.frmSelectType.ShowSelect">
+            <summary>
+            显示多选检查类型对话框
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.UI.frmSelectType.ShowSingleSelect">
+            <summary>
+            显示单选检查类型框
+            </summary>		
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.UI.frmSelectType.ShowSelect(com.digitalwave.GLS_WS.VO.clsApplyRecord)">
+            <summary>
+            显示多选检查类型对话框(带VO)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.UI.frmSelectType.GetChargeInfo(com.digitalwave.iCare.ValueObject.clsChargeItem_VO)">
+            <summary>
+            格式化查询到的收费信息为文本
+            </summary>
+            <param name="objResult"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.GLS_WS.Logic.clsMenuItem">
+            <summary>
+            clsMenuItem 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.GLS_WS.Data.DataProcess">
+            <summary>
+            DataProcess 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Data.DataProcess.GetApplyList">
+            <summary>
+            返回检查申请单类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Data.DataProcess.GetNextID(System.String,System.String)">
+            <summary>
+            取得数下一个数字型ID
+            </summary>
+            <param name="tableName"></param>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Data.DataProcess.GetReportForm(System.String)">
+            <summary>
+            返回一个检查类型对应的报表
+            </summary>
+            <param name="typeID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.GLS_WS.UI.frmProject">
+            <summary>
+            frmProject 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.UI.frmProject.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.UI.frmProject.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.UI.frmProject.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.UI.frmProject.Initial">
+            <summary>
+            初始化数据
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.UI.frmProject.Create">
+            <summary>
+            用静态方法创建对象，把私有成员与逻辑层绑定
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.GLS_WS.Logic.clsTransApply_VOToReport_VO">
+            <summary>
+            clsTransApply_VOToReport_VO 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.clsTransApply_VOToReport_VO.#ctor(com.digitalwave.GLS_WS.VO.clsApplyRecord)">
+            <summary>
+            构造函数，接收当前申请单的VO和关联报告的窗体名
+            </summary>
+            <param name="objCommApply_VO">申请单的VO</param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.clsTransApply_VOToReport_VO.objReport_T_VO">
+            <summary>
+            转化VO
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.GLS_WS.Form1">
+            <summary>
+            Form1 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.Form1.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Form1.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Form1.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.GLS_WS.UI.frmDictManage">
+            <summary>
+            frmDictManage 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.UI.frmDictManage.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.UI.frmDictManage.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.UI.frmDictManage.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.GLS_WS.VO.clsApplyRecord">
+            <summary>
+            表"AR_COMMON_APPLY"的VO
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strApplyID">
+            <summary>
+            检查单号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strApplyTitle">
+            <summary>
+            检查标题
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strDeposit">
+            <summary>
+            预交费
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strBalance">
+            <summary>
+            补交费
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_datApplyDate">
+            <summary>
+            申请日期
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strCheckNO">
+            <summary>
+            检查号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strClinicNO">
+            <summary>
+            门诊号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strBIHNO">
+            <summary>
+            住院号 
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strSex">
+            <summary>
+            性别：男，女。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strAge">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strDepartment">
+            <summary>
+            科室
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strArea">
+            <summary>
+            病区
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strBedNO">
+            <summary>
+            床号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strTel">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strAddress">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strSummary">
+            <summary>
+            病历摘要
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strDiagnose">
+            <summary>
+            诊断
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strDiagnosePart">
+            <summary>
+            申请检查部位或送检组织
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strDiagnoseAim">
+            <summary>
+            申请检查目的或其它要求
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strDoctorName">
+            <summary>
+            医生姓名
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strDoctorNO">
+            <summary>
+            医生工号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_datFinishDate">
+            <summary>
+            完成日期
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strChargeDetail">
+            <summary>
+            收费信息
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strExtraNO">
+            <summary>
+            附加号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strCardNO">
+            <summary>
+            诊疗卡号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_intDeleted">
+            <summary>
+            是否删除,1-是.0-否.
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strTypeID">
+            <summary>
+            检查类型编号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_intSubmitted">
+            <summary>
+            是否提交[0,1]
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_intChargeStatus">
+            <summary>
+            缴费信息 0-不记录缴费信息 1-未缴费 2-已缴费 3-已退费
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strDeptID">
+            <summary>
+            部门ID
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strAreaID">
+            <summary>
+            病区ID
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strDoctorID">
+            <summary>
+            申请医生ID
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_objChargeItem">
+            <summary>
+            收费项目
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_objAttachRelation">
+            <summary>
+            关联项目对象
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsApplyRecord.m_strSTATUS_INT">
+            <summary>
+            申请单状态 0-已申请 1-已登记 2-已完成
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.GLS_WS.VO.clsAttachRelation">
+             <summary>
+            表 T_OPR_ATTACHRELATION 的VO
+             </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsAttachRelation.m_intSysFrom">
+            <summary>
+            来源 {1=门诊;2=住院;3=电子病历;4=其它}
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsAttachRelation.m_strSourceItemID">
+            <summary>
+            源id {if (门诊) = 处方id; if (住院) = 医嘱id}
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.GLS_WS.Logic.clsDataQuery">
+            <summary>
+            clsDataQuery 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.clsDataQuery.GetAllCheckTypes">
+            <summary>
+            返回所有检查类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.clsDataQuery.GetSpecCheckTypes(System.String[])">
+            <summary>
+            返回指定检查类型
+            </summary>
+            <param name="p_strARTypeArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.clsDataQuery.objGetVO(System.String)">
+            <summary>
+            根据检查单号获取VO
+            </summary>
+            <param name="applyID">检查单号</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.clsDataQuery.SetChargeStatus(System.String,System.String,System.String)">
+            <summary>
+            申请单交费状态修改
+            </summary>
+            <param name="sysFromID">来源 {1=门诊;2=住院;3=电子病历;4=其它}</param>
+            <param name="sourceItemID">源id {if (门诊) = 处方id; if (住院) = 医嘱id}</param>
+            <param name="newChargeStatus">缴费信息 0-不记录缴费信息 1-未缴费 2-已缴费 3-已退费</param>
+        </member>
+        <member name="T:com.digitalwave.GLS_WS.VO.clsCheckType">
+            <summary>
+            CheckTyp 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsCheckType.m_strTypeName">
+            <summary>
+            申请单检查类型
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsCheckType.m_strCheckPart">
+            <summary>
+            检查部位
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsCheckType.m_strCheckAim">
+            <summary>
+            检查目的
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsCheckType.m_strApplyID">
+            <summary>
+            对应的检查单号
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsCheckType.m_strChargeDetail">
+            <summary>
+            收费信息
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsCheckType.m_strTypeID">
+            <summary>
+            申请检查类型的ID
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.GLS_WS.VO.clsCheckType.objItem_VO">
+            <summary>
+            项目信息
+            </summary>
+        </member>
+        <member name="T:com.digitalwave.GLS_WS.Logic.ProjectEditor">
+            <summary>
+            ProjectEditor 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.ProjectEditor.Open(System.String)">
+            <summary>
+            打开相应单据供新建或编辑
+            </summary>
+            <param name="orderID">如果为null,则为新建</param>		
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.ProjectEditor.m_mthOpen(System.String,System.String)">
+            <summary>
+            打开相应单据供新建或编辑
+            </summary>
+            <param name="orderID">如果为null,则为新建</param>		
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.ProjectEditor.InitialCombo(System.String)">
+            <summary>
+            根据类型检查类型ID,初始化部位和目的列表
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.ProjectEditor.OpenWithVO(com.digitalwave.GLS_WS.VO.clsApplyRecord)">
+            <summary>
+            用指定的VO填充窗体并打开
+            </summary>
+            <param name="vo"></param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.ProjectEditor.SaveWithVO(com.digitalwave.GLS_WS.VO.clsApplyRecord)">
+            <summary>
+            直接把一个VO保存为相应检查申请单
+            </summary>
+            <param name="vo"></param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.ProjectEditor.GetIDWithVO(com.digitalwave.GLS_WS.VO.clsApplyRecord)">
+            <summary>
+            根据VO保存信息，并返回申请单ID
+            </summary>
+            <param name="vo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.ProjectEditor.Delete(System.String)">
+            <summary>
+            删除相应单据
+            </summary>
+            <param name="applyID"></param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.ProjectEditor.Save">
+            <summary>
+            保存检查单,返回单号列表.null时,表示保存被取消
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.ProjectEditor.GetChange">
+            <summary>
+            取得当前操作的数据集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.ProjectEditor.Submit">
+            <summary>
+            提交当前检查单
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.ProjectEditor.MonitorChange(System.Windows.Forms.Control)">
+            <summary>
+            监测每个可编辑控件是否被改动
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.ProjectEditor.GetChargeInfo(com.digitalwave.GLS_WS.VO.clsApplyRecord)">
+            <summary>
+            格式化收费信息为文本
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.ProjectEditor.SaveAttachRelation(com.digitalwave.GLS_WS.VO.clsApplyRecord,com.digitalwave.GLS_WS.VO.clsCheckType[])">
+            <summary>
+            保存关系关系到：T_OPR_ATTACHRELATION
+            </summary>
+            <param name="rs"></param>
+            <param name="selTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.ProjectEditor.dsPrintVO(com.digitalwave.GLS_WS.VO.clsApplyRecord)">
+            <summary>
+            不保存直接打印或预览相应检查申请单
+            </summary>
+            <param name="vo"></param>
+        </member>
+        <member name="T:com.digitalwave.GLS_WS.Logic.DictEditor">
+            <summary>
+            frmDictmanage的控制层
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.DictEditor.Initial(System.Object,System.EventArgs)">
+            <summary>
+            初始化窗体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.DictEditor.AddType(System.Object,System.EventArgs)">
+            <summary>
+            增加新的检查类型
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.DictEditor.DelType(System.Object,System.EventArgs)">
+            <summary>
+            删除新的检查类型
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.DictEditor.lvType_AfterLabelEdit(System.Object,System.Windows.Forms.LabelEditEventArgs)">
+            <summary>
+            保存的"检查类型"的更改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.DictEditor.miDelPart_Click(System.Object,System.EventArgs)">
+            <summary>
+            删除部位数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.DictEditor.miDelAim_Click(System.Object,System.EventArgs)">
+            <summary>
+            删除目的数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.Logic.DictEditor.CheckAssistCode(System.String,System.String,System.String@,System.String@)">
+            <summary>
+            判断数据库中是否已存在该助记码,true表示已存在
+            </summary>
+            <param name="strAssistCode"></param>
+            <param name="strTypeID"></param>
+            <param name="strPartName"></param>
+            <param name="strTypeName"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

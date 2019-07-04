@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GLS_WS_SERV</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer">
+            <summary>
+            申请报告单中间件
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngSaveData(System.Collections.ArrayList)">
+            <summary>
+            保存
+            </summary>
+            <param name="p_arlSQL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngSaveDataToPic(System.String,iCareData.clsPictureBoxValue[])">
+            <summary>
+            保存图片
+            </summary>
+            <param name="p_strSQL"></param>
+            <param name="p_objPictureBoxValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetData(System.String,System.Data.DataTable@)">
+            <summary>
+            获取数据
+            </summary>
+            <param name="p_strSQL"></param>
+            <param name="p_dtRecords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordBySQL(System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+            通过SQL获取记录
+            </summary>
+            <param name="p_strSql"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByRecID(System.String,iCareData.clsApplyReportList_VO@)">
+            <summary>
+            根据记录ID获取记录信息
+            </summary>
+            <param name="p_strRecordID"></param>
+            <param name="p_objRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByForm(System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+            获取某张单所有记录
+            </summary>
+            <param name="p_strFormClsName"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByFormAndInpID(System.String,System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+             根据住院号某张单最新记录
+            </summary>
+            <param name="p_strFormClsName"></param>
+            <param name="p_strInpatientID"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetPathologyIDByForm(System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+             获取最大病理号
+            </summary>
+            <param name="p_strFormClsName"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByFormTimeslice(System.String,System.String,System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+            根据日期段获取某张单所有记录
+            </summary>
+            <param name="p_strFormClsName"></param>
+            <param name="p_strFirstTime"></param>
+            <param name="p_strLastTime"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByPatientForm(System.String,System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+            获取某病人某张单的记录
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_strFormClsName"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByPatient(System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+            获取某病人所有的记录
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByType(System.Int32,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+            获取申请单或报告单的所有记录
+            </summary>
+            <param name="p_intTypeStatus"></param>
+            <param name="p_objRecordArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetARRecordByTimeslice(System.Int32,System.String,System.String,iCareData.clsApplyReportList_VO[]@)">
+            <summary>
+            根据日期段获取申请单或报告单的所有记录
+            </summary>
+            <param name="p_intTypeStatus">0－申请单；1－报告单</param>
+            <param name="p_strFirstTime">开始时间</param>
+            <param name="p_strLastTime">结束时间</param>
+            <param name="p_objRecordArr">记录列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_objGetRecord(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="p_strSql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_objGetRelaForm(System.String)">
+            <summary>
+            获取关联的报告单
+            </summary>
+            <param name="p_strRecordID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetARForm(System.Int32,iCareData.clsAR_Form_VO[]@)">
+            <summary>
+            获取表单
+            </summary>
+            <param name="p_intTypeStatus">0－申请单；1－报告单；2－其它</param>
+            <param name="p_objApplyFormArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetAR_PicValue(System.String,iCareData.clsPictureBoxValue[]@)">
+            <summary>
+            获取某记录的图片
+            </summary>
+            <param name="p_strRecordID"></param>
+            <param name="p_objPicArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngDelAR_Pic(System.String,System.Int32)">
+            <summary>
+            删除指定图片
+            </summary>
+            <param name="p_strRecordID"></param>
+            <param name="p_strImgID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngSetReferStatus(System.String)">
+            <summary>
+            提交表单
+            </summary>
+            <param name="p_strRecordID">记录ID</param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngSetReadStatus(System.String)">
+            <summary>
+            设置表单状态为已读
+            </summary>
+            <param name="p_strRecordID">记录ID</param>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_blnIsInitForm(System.String)">
+            <summary>
+            判断表单是否已经初始化过
+            </summary>
+            <param name="p_strFormClsName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetCreateDateByPatientID(System.String,System.String,System.String,System.String[]@,System.String[]@)">
+            <summary>
+            根据病人id获取指定图文工作站报告书的记录时间列表
+            </summary>
+            <param name="p_strPatientID">病人ID</param>
+            <param name="strQueryDate">指定字段时间列表</param>
+            <param name="strFormName">指定表单名称</param>
+            <param name="strCreateDateArr">返回时间列表</param>
+            <param name="strRecordIDArr">返回报告单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngGetApplyDateByPatientID(System.String,System.String,System.String,System.String[]@,System.String[]@)">
+            <summary>
+            根据病人id获取指定图文工作站申请单的记录时间列表
+            </summary>
+            <param name="p_strPatientID">病人ID</param>
+            <param name="strQueryDate">指定字段时间列表</param>
+            <param name="strFormName">指定类型表单</param>
+            <param name="strCreateDateArr">返回时间列表</param>
+            <param name="strRecordIDArr">返回申请单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.GLS_WS.ApplyReportServer.clsApplyReportServer.m_lngSetApplyComplete(System.String,System.DateTime@)">
+            <summary>
+            将指定申请单状态设置为已完成
+            </summary>
+            <param name="p_strApplyID"></param>
+            <param name="p_dtmFinishDate"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

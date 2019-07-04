@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCollection", "DataCollection\DataCollection.csproj", "{63881D33-7D54-4D21-B098-9669FBE841CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCollection_Svc", "DataCollection_Svc\DataCollection_Svc.csproj", "{2AB9970D-0238-4F0D-8644-9AC09CB0A104}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCollectValueObject", "DataCollectValueObject\DataCollectValueObject.csproj", "{0480E404-3029-44A2-9721-454A94B99AA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63881D33-7D54-4D21-B098-9669FBE841CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63881D33-7D54-4D21-B098-9669FBE841CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63881D33-7D54-4D21-B098-9669FBE841CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63881D33-7D54-4D21-B098-9669FBE841CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AB9970D-0238-4F0D-8644-9AC09CB0A104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB9970D-0238-4F0D-8644-9AC09CB0A104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB9970D-0238-4F0D-8644-9AC09CB0A104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB9970D-0238-4F0D-8644-9AC09CB0A104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0480E404-3029-44A2-9721-454A94B99AA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0480E404-3029-44A2-9721-454A94B99AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0480E404-3029-44A2-9721-454A94B99AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0480E404-3029-44A2-9721-454A94B99AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

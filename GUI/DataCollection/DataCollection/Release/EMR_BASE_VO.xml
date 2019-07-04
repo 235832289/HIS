@@ -1,0 +1,1081 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EMR_BASE_VO</name>
+    </assembly>
+    <members>
+        <member name="T:iCareData.clsEmrSigns_VO">
+            <summary>
+            clsEmrSigns_VO 的摘要说明。
+            签名员工类
+            create by tfzhang at 2005-12-28 18:11
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrSigns_VO.objEmployee">
+            <summary>
+            签名员工信息
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrSigns_VO.controlName">
+            <summary>
+            签名框
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrSigns_VO.m_strFORMID_VCHR">
+             <summary>
+            表单ID
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrSigns_VO.m_strREGISTERID_CHR">
+             <summary>
+            病人入院登记号
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrSigns_VO.m_dtmModiftDate">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:iCareData.clsEmrEmployee_VO">
+            <summary>
+            clsEmrEmployee_VO 的摘要说明。
+            员工数据类
+            created by tfzhang at 2005年9月9日 11:52:44
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strBEGINDATE_DAT">
+             <summary>
+            聘用时间
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strFIRSTNAME_VCHR">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strEMPIDCARD_CHR">
+             <summary>
+            身份证
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strPYCODE_CHR">
+             <summary>
+            拼音简码
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strSEX_CHR">
+             <summary>
+            性别
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strEDUCATIONALLEVEL_CHR">
+             <summary>
+            教育水平
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strMARITALSTATUS_CHR">
+             <summary>
+            婚姻状况
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strLANGUAGEABILITY_VCHR">
+             <summary>
+            语言能力
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strBIRTHDATE_DAT">
+             <summary>
+            出生日期
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strOFFICEPHONE_VCHR">
+             <summary>
+            办公电话
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strHOMEPHONE_VCHR">
+             <summary>
+            家庭电话
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strMOBILE_VCHR">
+             <summary>
+            移动电话
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strOFFICEADDRESS_VCHR">
+             <summary>
+            办公地址
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strOFFICEZIP_CHR">
+             <summary>
+            办公室住址邮编
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strHOMEADDRESS_VCHR">
+             <summary>
+            家庭住址
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strHOMEZIP_CHR">
+             <summary>
+            家庭住址邮编
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strEMAIL_VCHR">
+             <summary>
+            电子邮件
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strCONTACTNAME_VCHR">
+             <summary>
+            联系人
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strCONTACTPHONE_VCHR">
+             <summary>
+            联系人电话
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strREMARK_VCHR">
+             <summary>
+            备注
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strDEACTIVATE_DAT">
+             <summary>
+            不可用时间，删除时用
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strSHORTNAME_CHR">
+             <summary>
+            姓名简称或缩写
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strOPERATORID_CHR">
+             <summary>
+            修改或更新的操作人ID
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strHASPRESCRIPTIONRIGHT_CHR">
+             <summary>
+            是否有处方权
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strHASPSYCHOSISPRESCRIPTIONRIGHT_">
+             <summary>
+            是否有开精神病药的权利。
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strHASOPIATEPRESCRIPTIONRIGHT_CHR">
+             <summary>
+            是否有开麻醉药的权利。
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strISEXPERT_CHR">
+             <summary>
+            是否专家。
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_fltEXPERTFEE_MNY">
+             <summary>
+            专家费用
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strISEXTERNALEXPERT_CHR">
+             <summary>
+            是否外聘专家
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strANCESTORADDR_VCHAR">
+             <summary>
+            籍贯，可通过T_AID_DICT数据字典选取
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strEXPERIENCE_VCHR">
+             <summary>
+            工作经历
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strPSW_CHR">
+             <summary>
+            操作密码
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployee_VO.m_strDEPTCODE_CHR">
+             <summary>
+            科室自编码
+             </summary>
+        </member>
+        <member name="T:iCareData.clsEmrEmployeeBase_VO">
+            <summary>
+            员工数据类基本信息（最小信息集）
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployeeBase_VO.m_strEMPID_CHR">
+             <summary>
+            员工ID
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployeeBase_VO.m_strLASTNAME_VCHR">
+             <summary>
+            姓名
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployeeBase_VO.m_strTECHNICALRANK_CHR">
+             <summary>
+            技术职称
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployeeBase_VO.m_strTechnicalRank">
+             <summary>
+            技术职称(历史，保存时的)
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployeeBase_VO.m_strEMPNO_CHR">
+             <summary>
+            员工工号
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployeeBase_VO.m_strLEVEL_CHR">
+            <summary>
+            级别
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployeeBase_VO.m_strEMPPWD_VCHR">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployeeBase_VO.m_strEMPKEY_VCHR">
+            <summary>
+            Ekey盘key
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployeeBase_VO.m_strPYCODE_VCHR">
+            <summary>
+            助记码
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployeeBase_VO.m_intSTATUS_INT">
+             <summary>
+            状态 1：有效、0：无效、-1：历史
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployeeBase_VO.m_strDefaultDeptID">
+            <summary>
+            默认科室ID
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployeeBase_VO.m_strRoleIDArr">
+            <summary>
+            角色ID列表
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrEmployeeBase_VO.m_strRoleNameArr">
+            <summary>
+            角色名称列表
+            </summary>
+        </member>
+        <member name="M:iCareData.clsEmrEmployeeBase_VO.ToString">
+            <summary>
+            返回当前技术职称+姓名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:iCareData.clsEmrEmployeeBase_VO.m_blnIsShowTechnicalRank">
+            <summary>
+            是否在签名中向用户显示历史的技术职称
+            </summary>
+        </member>
+        <member name="M:iCareData.clsEmrEmployeeBase_VO.CompareTo(System.Object)">
+            <summary>
+            职称比较器
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iCareData.clsEmrEmployeeBase_VO.m_StrHistroyLevel">
+            <summary>
+            级别(历史，保存时的),当没有历史级别时返回最新的级别
+            </summary>
+        </member>
+        <member name="P:iCareData.clsEmrEmployeeBase_VO.m_strGetTechnicalRankAndName">
+            <summary>
+            获取历史的技术职称+姓名
+            </summary>
+        </member>
+        <member name="T:iCareData.clsEmrPatientBaseInfo_VO">
+            <summary>
+            病人基本信息的基类；
+            减少重复代码，以及方便小集与大集的转换
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientBaseInfo_VO.m_strPATIENTID_CHR">
+             <summary>
+            病人ID(唯一)
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientBaseInfo_VO.m_strINPATIENTID_CHR">
+             <summary>
+            病人住院号(唯一)
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientBaseInfo_VO.m_strLASTNAME_VCHR">
+             <summary>
+            病人名
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientBaseInfo_VO.m_strNAME_VCHR">
+             <summary>
+            名称
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientBaseInfo_VO.m_strREGISTERID_CHR">
+             <summary>
+            流水号
+             </summary>
+        </member>
+        <member name="T:iCareData.clsEmrPatient_VO">
+            <summary>
+            clsEmrPatient_VO 的摘要说明。
+            病人信息数据类
+            created by tfzhang at 2005年9月9日 14:43:31
+            </summary>
+        </member>
+        <member name="T:iCareData.clsEmrInBedPatient_VO">
+            <summary>
+            在床病人的基本信息(最小信息集)
+            created by tfzhang at 2005年9月12日 09:45:37
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strSEX_CHR">
+             <summary>
+            性别
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strBIRTH_DAT">
+             <summary>
+            出生年月
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strAGESHORT_CHR">
+            <summary>
+            年龄 岁数(带单位)
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strAGELONG_CHR">
+            <summary>
+            年龄 精确到月(带单位)
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_intAge">
+            <summary>
+            年龄 岁数(无单位)
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strDEPTID_CHR">
+             <summary>
+            入院科室
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strAREAID_CHR">
+             <summary>
+            入院病区
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strBEDID_CHR">
+             <summary>
+            病床id
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strCODE_CHR">
+             <summary>
+            床号
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strINPATIENT_DAT">
+             <summary>
+            入院日期
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_intINPATIENTCOUNT_INT">
+             <summary>
+            入院次数
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_intSTATE_INT">
+             <summary>
+            病情状态{1=危;2=急;3=普通}
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_intNurseClass">
+             <summary>
+            护理等级{-1=无护理;0=特级护理;1=一级护理;2=二级护理;3=三级护理}
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_intPSTATUS_INT">
+             <summary>
+             住院状态
+            {0=未上床;1=已上床;2=预出院;3=实际出院;4=请假}
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strEXTENDID_VCHR">
+            <summary>
+             病人扩展ID
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strEMRInPatientID">
+            <summary>
+            住院号(不会变动)
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strHISInPatientID">
+            <summary>
+            住院号(会有变动)
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_dtmEMRInDate">
+            <summary>
+            入院日期(不会变动)
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_dtmHISInDate">
+            <summary>
+            入院日期(会有变动)
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_intCharacter">
+            <summary>
+            获取或设置病人特征(0,普通病人;1,此病人所有病历只读，且不能选择其它病人)
+            </summary>
+        </member>
+        <member name="M:iCareData.clsEmrInBedPatient_VO.ToString">
+            <summary>
+            入院日期
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strCaseDoctorId">
+            <summary>
+            主治医生ID
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strCaseDoctorName">
+            <summary>
+            主治医生姓名
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_strDiagnos">
+            <summary>
+            入院诊断
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_intSelectedSessionIndex">
+            <summary>
+            当前选择的住院信息的索引（默认为最后一次）
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrInBedPatient_VO.m_arlSessionInfo">
+            <summary>
+            多次住院信息
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strIDCARD_CHR">
+             <summary>
+            身份证ID
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strMARRIED_CHR">
+             <summary>
+            婚否
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strBIRTHPLACE_VCHR">
+             <summary>
+            出生地
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strHOMEADDRESS_VCHR">
+             <summary>
+            家庭地址
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strNATIONALITY_VCHR">
+             <summary>
+            国籍
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strFIRSTNAME_VCHR">
+             <summary>
+            病人姓
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strRACE_VCHR">
+             <summary>
+            民族
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strNATIVEPLACE_VCHR">
+             <summary>
+            籍贯
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strOCCUPATION_VCHR">
+             <summary>
+            职业
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strHOMEPHONE_VCHR">
+             <summary>
+            家庭电话
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strOFFICEPHONE_VCHR">
+             <summary>
+            办公电话
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strINSURANCEID_VCHR">
+             <summary>
+            医疗保险卡？？
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strMOBILE_CHR">
+             <summary>
+            手机
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strOFFICEADDRESS_VCHR">
+             <summary>
+            办公地址
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strEMPLOYER_VCHR">
+             <summary>
+            单位
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strOFFICEPC_VCHR">
+             <summary>
+            办公邮编
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strHOMEPC_CHR">
+             <summary>
+            家庭邮编
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strEMAIL_VCHR">
+             <summary>
+            电子邮件
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strCONTACTPERSONFIRSTNAME_VCHR">
+             <summary>
+            联系人名称
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strCONTACTPERSONLASTNAME_VCHR">
+             <summary>
+            联系人姓
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strCONTACTPERSONADDRESS_VCHR">
+             <summary>
+            联系人地址
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strCONTACTPERSONPHONE_VCHR">
+             <summary>
+            联系电话
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strCONTACTPERSONPC_CHR">
+             <summary>
+            联系人邮编
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strPATIENTRELATION_VCHR">
+             <summary>
+            病人与联系人关系
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strFIRSTDATE_DAT">
+             <summary>
+            首次操作时间
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_intISEMPLOYEE_INT">
+             <summary>
+            是否员工
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_intSTATUS_INT">
+             <summary>
+            状态
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strDEACTIVATE_DAT">
+             <summary>
+            注销时间
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strOPERATORID_CHR">
+             <summary>
+            操作人ID
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strMODIFY_DAT">
+             <summary>
+            修改时间
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strPAYTYPEID_CHR">
+             <summary>
+            付款类型
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strPAYTYPEName_CHR">
+             <summary>
+            付款类型名称
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_intOPTIMES_INT">
+             <summary>
+            住院次数
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strGOVCARD_CHR">
+             <summary>
+            公费医疗证号
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strBLOODTYPE_CHR">
+             <summary>
+            血型
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_intIFALLERGIC_INT">
+             <summary>
+            是否有过敏史 1-有 0-无 2-不知道
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strALLERGICDESC_VCHR">
+             <summary>
+            过敏药名
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strDIFFICULTY_VCHR">
+             <summary>
+            特困证号
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strCurrentMODIFY_DAT">
+             <summary>
+            当前住院修改日期，操作日期
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_intISBOOKING_INT">
+             <summary>
+            是否预约
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_intTYPE_INT">
+             <summary>
+            入院方式{1=门诊;2=急诊;3=他院转入}
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strDIAGNOSE_VCHR">
+             <summary>
+            入院诊断
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_dblLIMITRATE_MNY">
+             <summary>
+            费用下限
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_intCurrentSTATUS_INT">
+             <summary>
+            当前住院病人状态（－1历史，0-无效，1有效）
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strCurrentOPERATORID_CHR">
+             <summary>
+            当前住院操作人
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strCASEDOCTOR_CHR">
+             <summary>
+            主治医师{=雇员.id}
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_intINPATIENTNOTYPE_INT">
+             <summary>
+            {1=正常;2=记帐号;3=临时病人号}
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strDES_VCHR">
+             <summary>
+            备注
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strMZDOCTOR_CHR">
+             <summary>
+            门诊医生ID
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strMZDIAGNOSE_VCHR">
+             <summary>
+            门诊诊断
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strDIAGNOSEID_CHR">
+             <summary>
+            医保诊断ID
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strINAREADATE_DAT">
+             <summary>
+            入院日期(新)
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strICD10DIAGID_VCHR">
+             <summary>
+            ICD10(ID)
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_strICD10DIAGTEXT_VCHR">
+             <summary>
+            ICD10(VALUE)
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatient_VO.m_imgPatient">
+            <summary>
+            病人相片
+            </summary>
+        </member>
+        <member name="M:iCareData.clsEmrPatient_VO.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:iCareData.clsEmrDigitalSign_VO">
+             <summary>
+             clsEmrDigitalSign_VO 的摘要说明。
+             电子签名数据类
+            created by tfzhang at 2005年11月1日 10:03:02
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDigitalSign_VO.m_intSIGNID_INT">
+            <summary>
+            流水号
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDigitalSign_VO.m_bteCONTENT_TXT">
+             <summary>
+            签名原文
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDigitalSign_VO.m_strDSCONTENT_TXT">
+             <summary>
+            签名密文
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDigitalSign_VO.m_datSIGNDATE_DAT">
+             <summary>
+            签名日期
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDigitalSign_VO.m_strSIGNIDID_VCHR">
+             <summary>
+            签名者ID
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDigitalSign_VO.m_strSIGNNAME_VCHR">
+             <summary>
+            签名者名称 考虑签名的准确，保存当时的名称
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDigitalSign_VO.m_strDESCRIPTION_VCHR">
+             <summary>
+            备注
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDigitalSign_VO.m_strFORMID_VCHR">
+             <summary>
+            表单ID
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDigitalSign_VO.m_strFORMRECORDID_VCHR">
+             <summary>
+            同一表单的唯一识别字段(住院号+日期)
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDigitalSign_VO.m_strSTRUCT_TXT">
+            <summary>
+            表单xml结构
+            包括版本号
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDigitalSign_VO.m_strRegisterId">
+            <summary>
+            病人住院流水号
+            </summary>
+        </member>
+        <member name="T:iCareData.clsEmrBed_VO">
+            <summary>
+            clsEmrBed_VO 的摘要说明。
+            病床数据类
+            created by tfzhang at 2005年9月9日 11:45:37
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrBed_VO.m_strBEDID_CHR">
+             <summary>
+            流水号
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrBed_VO.m_strAREAID_CHR">
+             <summary>
+            病区id
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrBed_VO.m_strCODE_CHR">
+             <summary>
+            床号
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrBed_VO.m_intSTATUS_INT">
+             <summary>
+            状态{1=空床;2=占床;3=预约占床;4=包床;5=删除}
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrBed_VO.m_dblRATE_MNY">
+             <summary>
+            床位费
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrBed_VO.m_intSEX_INT">
+             <summary>
+            男女床(1-男,2-女)
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrBed_VO.m_intCATEGORY_INT">
+             <summary>
+            {1=开放;2=加床;3=虚床}
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrBed_VO.m_dblAIRRATE_MNY">
+             <summary>
+            空调费
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrBed_VO.m_strCHARGEITEMID_CHR">
+             <summary>
+            收费项目ID
+             </summary>
+        </member>
+        <member name="M:iCareData.clsEmrBed_VO.ToString">
+            <summary>
+            重载ToString()函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:iCareData.clsEmrBed_VO.m_objInbedPatient">
+            <summary>
+            在床病人信息
+            </summary>
+        </member>
+        <member name="T:iCareData.clsEmrPatientSessionInfo_VO">
+            <summary>
+            记录病人多次住院信息（应按住院时间降序排列）
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_strRegisterId">
+            <summary>
+            住院登记号
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_strEMRInpatientId">
+            <summary>
+            电子病历表单用住院号
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_dtmEMRInpatientDate">
+            <summary>
+            电子病历表单用住院日期
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_strHISInpatientId">
+            <summary>
+            真正显示的住院号
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_dtmHISInpatientDate">
+            <summary>
+            真正显示的住院日期
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_dtmOutDate">
+            <summary>
+            出院日期
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_strInTimes">
+            <summary>
+            住院次数
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_strDeptId">
+            <summary>
+            科室ID
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_strDeptName">
+            <summary>
+            科室名称
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_strAreaId">
+            <summary>
+            病区ID
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_strAreaName">
+            <summary>
+            病区名称
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_strCaseDoctorId">
+            <summary>
+            主治医生ID
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_strCaseDoctorName">
+            <summary>
+            主治医生姓名
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_strDiagnos">
+            <summary>
+            入院诊断
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_strBedID">
+            <summary>
+            床位ID
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrPatientSessionInfo_VO.m_strPatientID">
+            <summary>
+            病人ID
+            </summary>
+        </member>
+        <member name="M:iCareData.clsEmrPatientSessionInfo_VO.ToString">
+            <summary>
+            返回真正显示的住院日期
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:iCareData.clsEmrDept_VO">
+            <summary>
+            clsEmrDept_VO 的摘要说明。
+            科室病区病房数据类 
+            created by tfzhang at 2005年9月9日 11:26:27
+            </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_strDEPTID_CHR">
+             <summary>
+            部门ID
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_strMODIFY_DAT">
+             <summary>
+            修改时间
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_strDEPTNAME_VCHR">
+             <summary>
+            部门名称
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_intCATEGORY_INT">
+             <summary>
+            0临床1辅助
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_intINPATIENTOROUTPATIENT_INT">
+             <summary>
+            0门诊1住院,2检验
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_strOPERATORID_CHR">
+             <summary>
+            操作人ID
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_strADDRESS_VCHR">
+             <summary>
+            办公地址
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_strSHORTNO_CHR">
+             <summary>
+            部门简码(改为电子病历专用，不可编辑）
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_strPYCODE_CHR">
+             <summary>
+            部门拼音码
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_strATTRIBUTEID">
+             <summary>
+            组织类型 1-部门 2-科室 3-病区 4-病房
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_strPARENTID">
+             <summary>
+            上级部门ID
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_strCREATEDATE_DAT">
+             <summary>
+            创建时间
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_intSTATUS_INT">
+             <summary>
+            状态
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_strDEACTIVATE_DAT">
+             <summary>
+            禁用事件
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_strWBCODE_CHR">
+             <summary>
+            五笔编码
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_strCODE_VCHR">
+             <summary>
+            部门编号
+             </summary>
+        </member>
+        <member name="F:iCareData.clsEmrDept_VO.m_intDEFAULT_INPATIENT_DEPT_INT">
+            <summary>
+            住院默认科室 0-否 1-是
+            </summary>
+        </member>
+        <member name="M:iCareData.clsEmrDept_VO.ToString">
+            <summary>
+            重载ToString()函数
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

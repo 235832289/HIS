@@ -1,0 +1,1366 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EMR_HospitalInfoService</name>
+    </assembly>
+    <members>
+        <member name="T:com.digitalwave.InBedInfoManagerService.clsInBedRelationManagerService">
+            <summary>
+            鐨勪腑闂翠欢銆?
+            </summary>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.InBedInfoManagerService.clsInBedRelationManagerService.m_lngGetDeptInBedRelationInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)”忽略有格式错误的 XML 注释 -->
+        <member name="M:com.digitalwave.InBedInfoManagerService.clsInBedRelationManagerService.m_lngInitEmployeeInAreaDept(System.Security.Principal.IPrincipal,System.String,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_strDepartmentID"></param>
+            <param name="p_strBeginDateAreaDept"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.DutyManagerService.clsDutyManagerService">
+            <summary>
+            鑱屽姟绠＄悊鐨勪腑闂翠欢銆?
+            </summary>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.DutyManagerService.clsDutyManagerService.m_lngGetEmployeeDutyInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)”忽略有格式错误的 XML 注释 -->
+        <member name="T:com.digitalwave.EMR_EmployeeManagerService.clsEMR_EmployeeManagerService">
+            <summary>
+            鍛樺伐绠＄悊鐨勪腑闂翠欢銆?
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.EMR_EmployeeManagerService.clsEMR_EmployeeManagerService.m_lngGetEmployeeBaseInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+             鑾峰彇鍛樺伐鐨勫熀鏈俊鎭?
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strEmployeeID"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.EMR_EmployeeManagerService.clsEMR_EmployeeManagerService.m_lngGetCurrentLoginEmployee(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)”忽略有格式错误的 XML 注释 -->
+        <member name="M:com.digitalwave.EMR_EmployeeManagerService.clsEMR_EmployeeManagerService.m_lngGetEmployeeIDLikeArr(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            妯＄硦鏌ヨ鑾峰緱鍖荤敓ID鍜屽悕绉帮紝鍙煡璇㈡湁閮ㄩ棬鐨勫尰鐢?
+            </summary>
+            <param name="p_strDoctorIDLike">瑕佹煡璇㈢殑鍖荤敓ID鎴栧悕绉板叧閿瓧</param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.EMR_EmployeeManagerService.clsEMR_EmployeeManagerService.m_lngGetAllEmployeeIDLikeArr(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            妯＄硦鏌ヨ鍏ㄩ儴鍖荤敓ID鍜屽悕绉?
+            </summary>
+            <param name="p_strDoctorIDLike">瑕佹煡璇㈢殑鍖荤敓ID鎴栧悕绉板叧閿瓧</param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.EMR_EmployeeManagerService.clsEMR_EmployeeManagerService.m_lngGetEmployeeByDeptID(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            鏍规嵁閮ㄩ棬ID鑾峰彇璇ラ儴闂ㄤ笅鐨勬墍鏈夊憳宸ワ紝钄℃矏蹇?2003-7-15
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.EMR_EmployeeManagerService.clsEMR_EmployeeManagerService.m_lngGetEmployeeByDeptID(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            获取指定科室所有员工
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_dtbEmp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.EMR_EmployeeManagerService.clsEMR_EmployeeManagerService.m_lngGetChargeDocByDeptID(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            鏍规嵁閮ㄩ棬ID鑾峰彇璇ラ儴闂ㄧ殑涓讳换鍖诲笀
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_dtRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.EMR_EmployeeManagerService.clsEMR_EmployeeManagerService.m_lngGetEmpArrByIDOrNameLike(System.String,System.Data.DataTable@)">
+            <summary>
+            根据输入的字符/字符串模糊查询员工ID及姓名
+            </summary>
+            <param name="p_strSome">输入的字符/字符串</param>
+            <param name="p_dtbValue">员工信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.EMR_EmployeeManagerService.clsEMR_EmployeeManagerService.m_lngGetAllEmp(System.Data.DataTable@)">
+            <summary>
+            获取所有员工ID及姓名 
+            </summary>
+            <param name="p_dtbValue">员工信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.EMR_EmployeeManagerService.clsEMR_EmployeeManagerService.m_lngGetPrescriptionRight(System.String,System.Int32@)">
+            <summary>
+            获取员工处方权
+            </summary>
+            <param name="p_strEMPID">员工ID</param>
+            <param name="p_intRight">处方权0,无处方权;1,有处方权</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.InBedInfoManagerService.clsInPatientRoomManagerService">
+            <summary>
+            鐨勪腑闂翠欢銆?
+            </summary>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.InBedInfoManagerService.clsInPatientRoomManagerService.m_lngGetRoomInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)”忽略有格式错误的 XML 注释 -->
+        <member name="T:com.digitalwave.DepartmentManagerService.clsDeptRecordDateTimeInfoService">
+            <summary>
+            Summary description for clsDeptRecordDateTimeInfo.
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDeptRecordDateTimeInfoService.m_lngGetRecordDateTimeInfo(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            获取指定部门的记录日期信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetDeptInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_strInfoResultXml"></param>
+            <param name="p_intInfoResultRows"></param>
+            <param name="p_strChildrenResultXml"></param>
+            <param name="p_intChildrenResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetDeptInfo2(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_strInfoResultXml"></param>
+            <param name="p_intInfoResultRows"></param>
+            <param name="p_strChildrenResultXml"></param>
+            <param name="p_intChildrenResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetDeptForAreaInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_strAreaXML"></param>
+            <param name="p_intAreaRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetAreaForRoomInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_strRoomXML"></param>
+            <param name="p_intRoomRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetRoomForBedInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRoomID"></param>
+            <param name="p_strBedXML"></param>
+            <param name="p_intBedRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetRoomForBedAndPatientInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRoomID"></param>
+            <param name="p_strBedXML"></param>
+            <param name="p_intBedRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetRoomForPatientInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRoomID"></param>
+            <param name="p_strBedXML"></param>
+            <param name="p_intBedRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetAreaForBedAndPatientInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_strBedXML"></param>
+            <param name="p_intBedRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetNextPatientInfoInArea(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_strBed_Name"></param>
+            <param name="p_strBedXML"></param>
+            <param name="p_intBedRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetPreviousPatientInfoInArea(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_strBed_Name"></param>
+            <param name="p_strBedXML"></param>
+            <param name="p_intBedRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetAllInDept(System.Security.Principal.IPrincipal,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetAllInDept1(System.Security.Principal.IPrincipal,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetAllDept(System.Security.Principal.IPrincipal,System.Data.DataTable@)">
+            <summary>
+            获取所有有效科室(改为病区过滤后获取所有病区)
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_dtbResult">查询结果</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetDeptLikeQuery(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptLikeString"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetAllDeptAndAreaInfo(System.Security.Principal.IPrincipal,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetPatientArrThatNotHasBed(System.Security.Principal.IPrincipal,System.String[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatientIDArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetAreaArr_EmployeeCanManage(System.Security.Principal.IPrincipal,System.String,iCareData.clsArea_Desc[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strEmployeeID"></param>
+            <param name="p_objAreaArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetEmployeeArrInArea(System.Security.Principal.IPrincipal,System.String,iCareData.clsEmployee_BaseInfo[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_objEmployeeArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetDeptArr_EmployeeCanManage(System.Security.Principal.IPrincipal,System.String,iCareData.clsDept_Desc[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strEmployeeID"></param>
+            <param name="p_objDeptArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetRelationDeptArr(System.Security.Principal.IPrincipal,System.String,iCareData.clsDept_Desc[]@)">
+            <summary>
+            获取与当前员工所属科室有关的所有科室(通过查周转表)
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strEmployeeID"></param>
+            <param name="p_objDeptArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetEmployeeArrInDept(System.Security.Principal.IPrincipal,System.String,iCareData.clsEmployee_BaseInfo[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_objEmployeeArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetEmployeeLikeArrInDept(System.Security.Principal.IPrincipal,System.String,System.String,iCareData.clsEmployee_BaseInfo[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strEmployeeLikeString"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_objEmployeeArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_blnCheckEmpInDept(System.Security.Principal.IPrincipal,System.String,System.String)">
+            <summary>
+            判断员工是否属于科室(true＝是)
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_strEmpID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetCaseType(System.String,iCareData.clsInpatMedRec_Type_Dept[]@)">
+            <summary>
+            
+            </summary>
+            <param name="p_strDeptID"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_objContentArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetAreaForBedAndPatientLeaveInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_strBedXML"></param>
+            <param name="p_intBedRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetBedStatus(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strBedID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngUnDoLeave(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="p_strPatientId"></param>
+            <param name="p_strEndBedDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngRelocate(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            为出院病人重新分配病床
+            </summary>
+            <param name="p_strPatientId"></param>
+            <param name="p_strEndBedDate"></param>
+            <param name="m_strDeptID"></param>
+            <param name="m_strAreaID"></param>
+            <param name="m_strBedID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetDepartmentByUserID(System.Security.Principal.IPrincipal,System.String,System.Data.DataTable@)">
+            <summary>
+            获取医院名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetDeptIDFromDetpConfig(System.Int32,System.String[]@)">
+            <summary>
+            从表T_BSE_DEPTCONFIG获取指定类型的科室ID
+            </summary>
+            <param name="p_intType">类型(1－ICU科室;2－麻醉科室)</param>
+            <param name="p_strDeptIDArr">科室ID数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetAllDept(iCareData.clsDept_Desc[]@)">
+            <summary>
+            获取所有科室
+            </summary>
+            <param name="p_objDeptArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetExtendDeptID(System.String,System.String@)">
+            <summary>
+            获取指定科室的扩展ID
+            </summary>
+            <param name="p_strDeptID">科室ID</param>
+            <param name="p_strExtendID">扩展ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetDeptIDByDeptName(System.String,System.String@)">
+            <summary>
+            根据科室名称获取科室ID
+            </summary>
+            <param name="p_strDeptName">科室名称</param>
+            <param name="p_strDeptID">科室ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentManagerService.m_lngGetExtendDeptIDArr(System.String,System.String[]@)">
+            <summary>
+            获取员工所属科室的扩展ID
+            </summary>
+            <param name="p_strDeptID">员工ID</param>
+            <param name="p_strExtendID">扩展ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.InBedInfoManagerService.clsInPatientBedManagerService">
+            <summary>
+            鐨勪腑闂翠欢銆?
+            </summary>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.InBedInfoManagerService.clsInPatientBedManagerService.m_lngGetBedInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)”忽略有格式错误的 XML 注释 -->
+        <member name="T:com.digitalwave.InBedInfoManagerService.clsInPatientAreaManagerService">
+            <summary>
+            鐨勪腑闂翠欢銆?
+            </summary>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.InBedInfoManagerService.clsInPatientAreaManagerService.m_lngGetAreaInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)”忽略有格式错误的 XML 注释 -->
+        <member name="T:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService">
+            <summary>
+            部门（包括科室、病区（病房）、病床）信息的添加、删除、修改
+            以及病人,员工的相关操作.Jacky-2003-6-19
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngCheckSame(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="p_strCheckString"></param>
+            <param name="p_strCheckSQL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngCheckID(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            查看是否有相同的部门ID
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngAddNewRecord2DB(System.Security.Principal.IPrincipal,iCareData.clsDept_Desc)">
+            <summary>
+            保存记录到数据库。添加主表,添加子表.
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngCheckLastModifyRecord(System.Security.Principal.IPrincipal,iCareData.clsDept_Desc)">
+            <summary>
+            查看当前记录是否最新的记录。
+            </summary>
+            <param name="p_objRecordContent"></param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngModifyRecord2DB(System.Security.Principal.IPrincipal,iCareData.clsDept_Desc,System.String)">
+            <summary>
+            把新修改的内容保存到数据库。更新主表,添加子表.(不需要修改DeptBaseInfo)
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngDeleteRecord2DB(System.Security.Principal.IPrincipal,iCareData.clsDept_Desc)">
+            <summary>
+            把记录从数据中“删除”。
+            1.首先检查有没有与下级(病区)的关联.
+            2.若没有关联,更新部门状态.
+            3.若有关联,返回不能删除信息.
+            </summary>
+            <param name="p_objRecordContent">记录内容,需要提供m_strDeptID,m_dtmDeActivedDate,m_strDeActivedOperatorID</param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngCheckID_Area(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            查看是否有相同的ID
+            </summary>
+            <param name="p_strAreaID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngCheckName_Area(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            查看是否有相同的Name
+            </summary>
+            <param name="p_strAreaName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngAddNewRecord2DB_Area(System.Security.Principal.IPrincipal,iCareData.clsArea_Desc)">
+            <summary>
+            保存记录到数据库。添加主表,添加子表.
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngCheckLastModifyRecord_Area(System.Security.Principal.IPrincipal,iCareData.clsArea_Desc)">
+            <summary>
+            查看当前记录是否最新的记录。
+            </summary>
+            <param name="p_objRecordContent"></param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngModifyRecord2DB_Area(System.Security.Principal.IPrincipal,iCareData.clsArea_Desc)">
+            <summary>
+            把新修改的内容保存到数据库。子表删除旧记录,添加一新记录.
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngDeleteRecord2DB_Area(System.Security.Principal.IPrincipal,iCareData.clsArea_Desc)">
+            <summary>
+            把记录从数据中“删除”。
+            1.首先检查有没有与下级(病房)的关联.
+            2.若没有关联,更新病区状态,并更新与上级(部门)的关联状态.
+            3.若有关联,返回不能删除信息.
+            </summary>
+            <param name="p_objRecordContent">记录内容,需要提供m_strArea_ID,m_dtmEnd_Date_Area</param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngGetNewID_Room(System.String@)">
+            <summary>
+            产生最新的病房编号
+            </summary>
+            <param name="p_strDeptID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngCheckID_Room(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            查看是否有相同的ID
+            </summary>
+            <param name="p_strDeptID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngCheckName_Room(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRoomName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngAddNewRecord2DB_Room(System.Security.Principal.IPrincipal,iCareData.clsRoom_Desc)">
+            <summary>
+            保存记录到数据库。添加主表,添加子表.
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngCheckLastModifyRecord_Room(System.Security.Principal.IPrincipal,iCareData.clsRoom_Desc)">
+            <summary>
+            查看当前记录是否最新的记录。
+            </summary>
+            <param name="p_objRecordContent"></param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngModifyRecord2DB_Room(System.Security.Principal.IPrincipal,iCareData.clsRoom_Desc)">
+            <summary>
+            把新修改的内容保存到数据库。子表删除旧记录,添加一新记录.
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngDeleteRecord2DB_Room(System.Security.Principal.IPrincipal,iCareData.clsRoom_Desc)">
+            <summary>
+            把记录从数据中“删除”。
+            1.首先检查有没有与下级(病床)的关联.
+            2.若没有关联,更新病房状态,并更新与上级(病区)的关联状态.
+            3.若有关联,返回不能删除信息.
+            </summary>
+            <param name="p_objRecordContent">记录内容,需要提供m_strRoom_ID,m_dtmEnd_Date_Room</param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngCheckID_Bed(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            查看是否有相同的ID
+            </summary>
+            <param name="p_strBedID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngAddNewRecord2DB_Bed(System.Security.Principal.IPrincipal,iCareData.clsBed_Desc,System.String@)">
+            <summary>
+            保存记录到数据库。添加主表,添加子表.
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngCheckLastModifyRecord_Bed(System.Security.Principal.IPrincipal,iCareData.clsBed_Desc)">
+            <summary>
+            查看当前记录是否最新的记录。
+            </summary>
+            <param name="p_objRecordContent"></param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngModifyRecord2DB_Bed(System.Security.Principal.IPrincipal,iCareData.clsBed_Desc)">
+            <summary>
+            把新修改的内容保存到数据库。子表删除旧记录,添加一新记录.
+            </summary>
+            <param name="p_objRecordContent">记录内容</param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngDeleteRecord2DB_Bed(System.Security.Principal.IPrincipal,iCareData.clsBed_Desc)">
+            <summary>
+            把记录从数据中“删除”。
+            更新病床状态,并更新与上级(病房)的关联状态.
+            
+            </summary>
+            <param name="p_objRecordContent">记录内容,需要提供m_strBed_ID,m_dtmEnd_Date_Bed</param>
+            <param name="m_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngCheckID_Patient(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            查看是否有相同的InPatientID
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPatientID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngAddNewPatientBaseInfo(System.Security.Principal.IPrincipal,iCareData.clsPatientBaseInfo)">
+            <summary>
+            添加病人基本信息
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_objRecordContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngAddNewPatientBaseInfo2(System.Security.Principal.IPrincipal,iCareData.clsPatientBaseInfo)">
+            <summary>
+            添加病人基本信息 ( 2004-07-12增加，病人入院时用 －－HB）
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_objRecordContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngModifyPatientBaseInfo(System.Security.Principal.IPrincipal,iCareData.clsPatientBaseInfo)">
+            <summary>
+            修改病人基本信息
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_objRecordContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngAddPatientBaseInfo_Flag(System.Security.Principal.IPrincipal,iCareData.clsPatientBaseInfo_ModifyFlag)">
+            <summary>
+            记录病人基本资料的修改标记
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngAddNewInPatientDateInfo(System.Security.Principal.IPrincipal,System.String,System.DateTime)">
+            <summary>
+            入院
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_dtmInPatientDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngAssignPatientToBed(System.Security.Principal.IPrincipal,iCareData.clsInDeptInfo)">
+            <summary>
+            分配床位
+            </summary>
+            <param name="p_objRecordContent">病床(住院)信息.(其中的InBedEndDate,Begin_Date_Area_Dept,Begin_Date_Room_Area,Begin_Date_Bed_Room不用赋值)</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngGetBegin_Date_Area_Dept(System.String,System.String,System.DateTime@)">
+            <summary>
+            提取m_dtmBegin_Date_Area_Dept
+            </summary>
+            <param name="p_strDepartmentID"></param>
+            <param name="p_strArea_ID"></param>
+            <param name="p_dtmBegin_Date_Area_Dept"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngGetBegin_Date_Room_Area(System.String,System.String,System.DateTime@)">
+            <summary>
+            提取m_dtmBegin_Date_Room_Area
+            </summary>
+            <param name="p_strArea_ID"></param>
+            <param name="p_strRoom_ID"></param>
+            <param name="p_dtmBegin_Date_Room_Area"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngGetBegin_Date_Bed_Room(System.String,System.String,System.DateTime@)">
+            <summary>
+            提取m_dtmBegin_Date_Bed_Room
+            </summary>
+            <param name="p_strRoom_ID"></param>
+            <param name="p_strBed_ID"></param>
+            <param name="p_dtmBegin_Date_Bed_Room"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngPatientTransferBed(System.Security.Principal.IPrincipal,iCareData.clsInDeptInfo)">
+            <summary> 
+            转床（包括转科）
+            1.更新表中对应记录的InBedEndDate(删除记录)
+            2.添加一条新记录.
+            </summary>
+            <param name="p_objRecordContent">要转到的病床(住院)信息.(其中的InBedEndDate,Begin_Date_Area_Dept,Begin_Date_Room_Area,Begin_Date_Bed_Room不用赋值)</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngDeleteInPatientDateInfo(System.Security.Principal.IPrincipal,System.String,System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            出院（包括死亡）
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_dtmInPatientDate"></param>
+            <param name="p_dtmInPatientEndDate"></param>
+            <param name="p_intEndReason"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngPatientLeaveBed(System.Security.Principal.IPrincipal,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            下床
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_dtmInPatientDate"></param>
+            <param name="p_dtmInBedEndDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngCheckID_Employee(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            查看是否有相同的员工ID
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPatientID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngAddNewEmployeeBaseInfo(System.Security.Principal.IPrincipal,iCareData.clsEmployee_BaseInfo)">
+            <summary>
+            添加病人基本信息
+            </summary>
+            <param name="p_strEmployeeID"></param>
+            <param name="p_objRecordContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngModifyEmployeeBaseInfo(System.Security.Principal.IPrincipal,iCareData.clsEmployee_BaseInfo)">
+            <summary>
+            修改病人基本信息
+            </summary>
+            <param name="p_strEmployeeID"></param>
+            <param name="p_objRecordContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngAssignArea_Employee(System.Security.Principal.IPrincipal,iCareData.clsInPatient_Area_Employee)">
+            <summary>
+            分配员工负责的病区
+            </summary>
+            <param name="p_objRecordContent">clsInPatient_Area_Employee对象(其中Begin_Date_Area_Dept,OperatorID,End_Date_Employee_Area不用赋值).</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngModifyArea_Employee(System.Security.Principal.IPrincipal,iCareData.clsInPatient_Area_Employee)">
+            <summary>
+            修改员工负责的病区
+            1.删除旧记录(更新End_Date_Employee_Area时间及OperatorID)
+            2.添加一条新记录.
+            </summary>
+            <param name="p_objRecordContent">新的clsInPatient_Area_Employee对象(其中Begin_Date_Area_Dept,End_Date_Employee_Area不用赋值,OperatorID要赋值当前登陆医师ID).</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngAssignDept_Employee(System.Security.Principal.IPrincipal,iCareData.clsDept_Employee)">
+            <summary>
+            分配员工负责的科室
+            </summary>
+            <param name="p_objRecordContent">clsDept_Employee对象(其中EndDate不用赋值).</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngAssignDept_Employee2(System.Security.Principal.IPrincipal,iCareData.clsDept_Employee,System.String)">
+            <summary>
+            分配员工负责的科室,指定权限
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordContent"></param>
+            <param name="p_strRoleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngModifyDept_Employee(System.Security.Principal.IPrincipal,iCareData.clsDept_Employee)">
+            <summary>
+            修改员工负责的科室
+            1.删除旧记录(更新EndDate)
+            2.添加一条新记录.
+            </summary>
+            <param name="p_objRecordContent">新的clsDept_Employee对象(其中EndDate不用赋值).</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngDeleteDept_Employee(System.Security.Principal.IPrincipal,iCareData.clsDept_Employee)">
+            <summary>
+            删除员工负责的科室
+            </summary>
+            <param name="p_objRecordContent">clsDept_Employee对象(其中ModifyDate不用赋值).</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngGetHospitalName(System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="p_strName"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.DepartmentManagerService.clsDepartmentHandlerService.m_lngGetHospitalInfo(System.String@,System.String@)”忽略有格式错误的 XML 注释 -->
+        <member name="T:com.digitalwave.PatientManagerService.clsWholeHosPatientManageServ">
+            <summary>
+            病人管理类（针对全院）
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsWholeHosPatientManageServ.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsWholeHosPatientManageServ.m_lngGetPatientByInPatID(System.String,iCareData.clsPatientInfo_Value@)">
+            <summary>
+            根据住院号取病人信息
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_objPatient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsWholeHosPatientManageServ.m_lngGetPatientByCardID(System.String,iCareData.clsPatientInfo_Value@)">
+            <summary>
+            根据病人卡号取病人信息
+            </summary>
+            <param name="p_strCardID"></param>
+            <param name="p_objPatient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsWholeHosPatientManageServ.m_lngGetPatientByID(System.String,iCareData.clsPatientInfo_Value@)">
+            <summary>
+            根据病人编号取病人信息
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_objPatient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsWholeHosPatientManageServ.m_lngGetPatient(System.String,iCareData.clsPatientInfo_Value@)">
+            <summary>
+            取病人信息（全院，包括门诊、住院、电子病历）
+            </summary>
+            <param name="p_strSql"></param>
+            <param name="p_objPatient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsWholeHosPatientManageServ.m_lngGetPatientNameByLike(System.String,System.String[0:,0:]@)">
+            <summary>
+            模糊查找病人姓名，返回病人ID和病人名称数组
+            </summary>
+            <param name="p_strLike"></param>
+            <param name="p_strNameArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsWholeHosPatientManageServ.m_lngGetEmployeeNameByLike(System.String,System.String[0:,0:]@)">
+            <summary>
+            模糊查找员工，返回员工ID和员工名称数组
+            </summary>
+            <param name="p_strLike"></param>
+            <param name="p_strNameArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsWholeHosPatientManageServ.m_lngGetBedNameByLike(System.String,System.String[0:,0:]@)">
+            <summary>
+            模糊查找床号，返回床号ID和床号名称数组
+            </summary>
+            <param name="p_strLike"></param>
+            <param name="p_strNameArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsWholeHosPatientManageServ.m_lngGetDeptAreaByLike(System.String,iCareData.clsDeptAreaInfo_Value[]@,System.String)">
+            <summary>
+            模糊查找科室病区
+            </summary>
+            <param name="p_strLike"></param>
+            <param name="p_strDeptArr"></param>
+            <param name="p_strDeptID">取病区的科室ID，默认时传入空值</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsWholeHosPatientManageServ.m_lngGetDeptAreaByLike(System.String,System.String[0:,0:]@,System.String)">
+            <summary>
+            返回科室ID和科室名称数组
+            </summary>
+            <param name="p_strLike"></param>
+            <param name="p_strDeptArr"></param>
+            <param name="p_strDeptID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsWholeHosPatientManageServ.m_dtbGetDept(System.String,System.String)">
+            <summary>
+            取得科室
+            </summary>
+            <param name="p_strLike"></param>
+            <param name="p_strDeptID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsWholeHosPatientManageServ.m_strGetInPatientIDByPatientID(System.String)">
+            <summary>
+            根据病人ID获取住院号
+            </summary>
+            <param name="p_strPatient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsWholeHosPatientManageServ.m_lngGetPatientByName(System.String,iCareData.clsPatientInfo_Value[]@)">
+            <summary>
+            根据住院号取病人信息
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_objPatient"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.PatientManagerService.clsPatientManagerService">
+            <summary>
+            通过床号模糊查询时，只查询当前正在住院的病人，通过住院号或姓名模糊查询时，查询所有的病人（包括已经出院的病人）
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngHospitalQuery(System.String,System.String,System.Data.DataTable@)">
+            <summary>
+            病案首页查询
+            </summary>
+            <param name="p_strDeptId"></param>
+            <param name="p_strPatantId"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetPatientInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+             <summary>
+             
+             </summary>
+             <param name="p_strResultXml">返回的结果</param>
+             <param name="p_intResultRows">记录的数量</param>
+             <returns>
+            操作结果。 0：失败。1：成功。
+             </returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetPatientInfoByRegisterID(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            根据入院登记号获取病人信息
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strRegisterID"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngInitInBedInfo(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)”忽略有格式错误的 XML 注释 -->
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetEMRInPatientInfo(System.String,System.String@,System.DateTime@)">
+            <summary>
+            从T_BSE_HISEMR_RELATION获取EMR住院号及EMR住院日期
+            </summary>
+            <param name="p_strRegisterID">入院登记流水号</param>
+            <param name="p_strEMRInPatientID">EMR住院号</param>
+            <param name="p_dtmEMRInDate">EMR住院日期</param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngInitInBedInfoOld(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)”忽略有格式错误的 XML 注释 -->
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetAllInPatient(System.Security.Principal.IPrincipal,System.String@,System.Int32@)">
+            <summary>
+            返回当前正在住院的病人，现在改为返回所有的病人（包括已经出院的病人）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetAllInPatientLikeQuery(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            模糊查询当前正在住院的病人，现在改为模糊查询所有的病人（包括已经出院的病人）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatientLikeString"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetAllPatientLikeQuery(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            模糊查询所有病人,包括已出院的。
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatientLikeString"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetInPatientByDeptID(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            获取当前正在住院的病人，现在改为获取所有的病人（包括已经出院的病人）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetInPatientByAreaID(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            获取当前正在住院的病人，现在改为获取所有的病人（包括已经出院的病人）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetInPatientByNoAreaID(System.Security.Principal.IPrincipal,System.String,System.String@,System.Int32@)">
+            <summary>
+            获取当前正在住院的病人，现在改为获取所有的病人（包括已经出院的病人）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetInPatientByDeptIDLike(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            模糊查询当前正在住院的病人，现在改为模糊查询所有的病人（包括已经出院的病人）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPatienIDLike"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetInPatientByAreaIDLike(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            模糊查询当前正在住院的病人，现在改为模糊查询所有的病人（包括已经出院的病人）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strInPatienIDLike"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetInPatientByDeptIDLike_PatientName(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            模糊查询当前正在住院的病人，现在改为模糊查询所有的病人（包括已经出院的病人）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatientNameLike"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetInPatientByAreaIDLike_PatientName(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            模糊查询当前正在住院的病人，现在改为模糊查询所有的病人（包括已经出院的病人）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strPatientNameLike"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetInPatientByDeptIDLike_BedNO(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            模糊查询当前正在住院的病人（不包括已经出院的病人）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strBedNOLike"></param>
+            <param name="p_strDeptID"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetInPatientByAreaIDLike_BedNO(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            模糊查询当前正在住院的病人（不包括已经出院的病人）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strBedNOLike"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetInPatientByNoAreaIDLike_BedNO(System.Security.Principal.IPrincipal,System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            模糊查询当前正在住院的病人（不包括已经出院的病人）
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_strBedNOLike"></param>
+            <param name="p_strAreaID"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_strGetPatientDiagnose(System.String,System.String)">
+            <summary>
+            查找病人初步诊断
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_strInPatientDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetEndDateInPatientByAreaID(System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            查找病区下某时间后出院的所有病人
+            </summary>
+            <param name="p_strAreaID"></param>
+            <param name="p_strFirstDate"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetBetwDateInPatientByAreaID(System.String,System.String,System.String,System.Boolean,System.Int32,System.String@,System.Int32@)">
+            <summary>
+            查找病区下一段时间内出院的病人
+            </summary>
+            <param name="p_strAreaID">病区或科室</param>
+            <param name="p_strStartDate">开始时间</param>
+            <param name="p_strEndDate">结束时间</param>
+            <param name="p_blnIsOutPatient">是否出院病人</param>
+            <param name="p_intDeptOrArea">科室或病区(0.科室;1.病区)</param>
+            <param name="p_strResultXml">查询结果</param>
+            <param name="p_intResultRows">行</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetInPatientByInPatientID(System.String,System.String@,System.Int32@)">
+            <summary>
+            根据住院号查找病人
+            </summary>
+            <param name="p_strInPatientID"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetInPatientByPatientName(System.String,System.String@,System.Int32@)">
+            <summary>
+            根据病人姓名查找病人信息
+            </summary>
+            <param name="p_strPatientName"></param>
+            <param name="p_strResultXml"></param>
+            <param name="p_intResultRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_strGetInPatientIDByPatientID(System.String)">
+            <summary>
+            根据病人ID获取住院号
+            </summary>
+            <param name="p_strPatient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetCreateDateByPatientID(System.String,System.String,System.String,System.String[]@,System.String[]@)">
+            <summary>
+            根据病人id获取指定表单的记录时间列表和住院时间列表
+            </summary>
+            <param name="p_strPatientID">病人ID</param>
+            <param name="strTableName">指定表单的表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetCreateDateByIDDate(System.String,System.String,System.String,System.String,System.String[]@)">
+            <summary>
+            根据病人id和入院时间获取指定表单的创建时间列表
+            </summary>
+            <param name="p_strPatientID">病人住院ID</param>
+            <param name="strTableName">指定表单的表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetOutHospitalDate(System.String,System.DateTime@)">
+            <summary>
+            根据入院登记流水号获取病人当次出院时间
+            </summary>
+            <param name="p_strRegisterID">入院登记流水号</param>
+            <param name="p_dtmOutTime">出院时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetPrepOutHospitalDate(System.String,System.DateTime@)">
+            <summary>
+            根据入院登记流水号获取病人预出院时间
+            </summary>
+            <param name="p_strRegisterID">入院登记流水号</param>
+            <param name="p_dtmPrepOutTime">预出院时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetRegisterIDByPatient(System.String,System.String,System.String@)">
+            <summary>
+            根据病人ID及住院日期取得登记流水号
+            </summary>
+            <param name="p_strPatientID"></param>
+            <param name="p_strInpatientDate"></param>
+            <param name="p_strRegisterID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetPatientInfoByID(System.String,System.Data.DataTable@)">
+            <summary>
+            根据病人ID获取该病人信息
+            </summary>
+            <param name="p_strPatientID">病人ID</param>
+            <param name="p_dtbPatient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetEMRIDByHISID(System.String,System.String@)">
+            <summary>
+            根据HISID获取EMRID
+            </summary>
+            <param name="p_strHISID">病人HISID</param>
+            <param name="p_strEMRID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGetHISIDByEMRID(System.String,System.String@)">
+            <summary>
+            根据EMRID获取HISID
+            </summary>
+            <param name="p_strEMRID"></param>
+            <param name="p_strHISID">病人HISID</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.PatientManagerService.clsPatientManagerService.m_lngGet120PatientInfo(System.String,System.Data.DataTable@)">
+            <summary>
+            patientid_chr ： 病人ID
+            lastname_vchr ： 姓名
+            idcard_chr    ： 身份证号
+            married_chr   ： 婚姻
+            homeaddress_vchr ： 家庭地址
+            sex_chr       ： 性别
+            birth_dat     ： 生日
+            Age           ：年龄
+            contactpersonlastname_vchr ： 联系人
+            nativeplace_vchr ： 籍贯
+            occupation_vchr ： 职业
+            insuranceid_vchr ： 医疗卡号
+            contactpersonphone_vchr ： 联系人电话
+            patientrelation_vchr ： 联系人关系
+            inpatientid_chr ： 住院号
+            inpatient_dat ： 住院时间
+            paytypeid_chr ： 付款类型
+            maindescriptionall ： 主诉
+            currentstatusall ： 现病史
+            beforetimestatusall ： 既往史
+            ownhistoryall ： 个人史
+            catameniahistoryall ： 生育史
+            primarydiagnoseall ： 入院诊断
+            familyhistoryall ： 家族史
+            DIAG_VCHR ： 门诊诊断
+            </summary>
+            <param name="p_strPatientCardId"></param>
+            <param name="p_dtbResult"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.digitalwave.clsEmployee_BaseInfoService.clsEmployee_BaseInfoService">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.clsEmployee_BaseInfoService.clsEmployee_BaseInfoService.c_strAddNewRecordSQL">
+            <summary>
+            添加记录到EmployeeBaseInfo
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.clsEmployee_BaseInfoService.clsEmployee_BaseInfoService.c_strAddNewRecordSQL_EmployeePSW">
+            <summary>
+            添加记录到Dept_Employee
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.clsEmployee_BaseInfoService.clsEmployee_BaseInfoService.c_strModifyRecordSQL">
+            <summary>
+            修改记录到EmployeeBaseInfo
+            </summary>
+        </member>
+        <member name="F:com.digitalwave.clsEmployee_BaseInfoService.clsEmployee_BaseInfoService.c_strDeleteRecordSQL">
+            <summary>
+            设置EmployeeBaseInfo中删除记录的信息
+            </summary>
+        </member>
+        <member name="M:com.digitalwave.clsEmployee_BaseInfoService.clsEmployee_BaseInfoService.m_lngAddNewRecord(System.Security.Principal.IPrincipal,iCareData.clsEmployee_BaseInfo,System.String@)">
+            <summary>
+            添加新记录。
+            </summary>
+            <param name="p_objRecordContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.clsEmployee_BaseInfoService.clsEmployee_BaseInfoService.m_lngModifyRecord(System.Security.Principal.IPrincipal,iCareData.clsEmployee_BaseInfo)">
+            <summary>
+            
+            </summary>
+            <param name="p_objPrincipal"></param>
+            <param name="p_objRecordContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.clsEmployee_BaseInfoService.clsEmployee_BaseInfoService.m_lngAddNewRecord2DB(iCareData.clsEmployee_BaseInfo,com.digitalwave.iCare.middletier.HRPService.clsHRPTableService,System.String@)">
+            <summary>
+            保存记录到数据库。
+            </summary>
+            <param name="p_objRecordContent">当前记录内容</param>
+            <param name="p_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.clsEmployee_BaseInfoService.clsEmployee_BaseInfoService.m_lngModifyRecord2DB(iCareData.clsEmployee_BaseInfo,com.digitalwave.iCare.middletier.HRPService.clsHRPTableService)">
+            <summary>
+            把新修改的内容保存到数据库。
+            </summary>
+            <param name="p_objRecordContent">当前记录内容</param>
+            <param name="p_objHRPServ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.digitalwave.clsEmployee_BaseInfoService.clsEmployee_BaseInfoService.m_lngDeleteRecord2DB(iCareData.clsEmployee_BaseInfo,com.digitalwave.iCare.middletier.HRPService.clsHRPTableService)">
+            <summary>
+            把记录从数据中“删除”。
+            </summary>
+            <param name="p_objRecordContent">当前记录内容</param>
+            <param name="p_objHRPServ"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
