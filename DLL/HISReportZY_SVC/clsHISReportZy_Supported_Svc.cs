@@ -2299,7 +2299,7 @@ namespace com.digitalwave.iCare.middletier.HIS.Report
         /// <param name="enmergencyFlg"></param>
         /// <returns></returns>
         [AutoComplete]
-        public long GetSampleAcceptable(out DataTable dtbResult, string dteStart, string dteEnd, string groupId, string applyUnitId, string strDept, string enmergencyFlg, string patType)
+        public long GetSampleAcceptable(out DataTable dtbResult, string dteStart, string dteEnd, string applyUnitId, string strDept, string enmergencyFlg, string patType)
         {
             long lngRes = 0;
             dtbResult = null;
@@ -2351,10 +2351,10 @@ namespace com.digitalwave.iCare.middletier.HIS.Report
                                 and to_date(?, 'yyyy-mm-dd hh24:mi:ss') 
                                 and e.deptid_chr is not null ";
 
-                if (!string.IsNullOrEmpty(groupId))
-                {
-                    strSQL += " and t2.check_category_id_chr = '" + groupId + "'";
-                }
+                //if (!string.IsNullOrEmpty(groupId))
+                //{
+                //    strSQL += " and t2.check_category_id_chr = '" + groupId + "'";
+                //}
 
                 if (!string.IsNullOrEmpty(strDept))
                 {
@@ -2775,6 +2775,43 @@ namespace com.digitalwave.iCare.middletier.HIS.Report
                 objHRPServ.CreateDatabaseParameter(1, out parm);
                 parm[0].Value = applyunitid;
                 lngRes = objHRPServ.lngGetDataTableWithParameters(strSQL, ref dtbResult, parm);
+
+                dtbResult = dtbResult.DefaultView.ToTable();
+            }
+            catch (Exception objEx)
+            {
+                lngRes = 0;
+                clsLogText objLogger = new clsLogText();
+                bool blnRes = objLogger.LogDetailError(objEx, true);
+            }
+            finally
+            {
+                objHRPServ = null;
+            }
+
+            return lngRes;
+        }
+        #endregion
+
+        #region  获取所有申请单元时间维护
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dtbResult"></param>
+        /// <returns></returns>
+        [AutoComplete]
+        public long GetAllLimitTime(out DataTable dtbResult)
+        {
+            long lngRes = 0;
+            dtbResult = null;
+            clsHRPTableService objHRPServ = null;
+
+            try
+            {
+                objHRPServ = new clsHRPTableService();
+
+                string strSQL = @"select * 	from t_limitTimeMaitain ";
+                lngRes = objHRPServ.lngGetDataTableWithoutParameters(strSQL, ref dtbResult);
 
                 dtbResult = dtbResult.DefaultView.ToTable();
             }

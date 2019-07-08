@@ -31,12 +31,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.cboEmergency = new System.Windows.Forms.ComboBox();
             this.tabContorl = new System.Windows.Forms.TabControl();
@@ -74,11 +74,6 @@
             this.cmdExit = new PinkieControls.ButtonXP();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvStat = new System.Windows.Forms.DataGridView();
-            this.dgvdata = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,6 +87,11 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.acceptFlg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvdata = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabContorl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).BeginInit();
@@ -574,68 +574,14 @@
             this.dgvStat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStat.Location = new System.Drawing.Point(0, 0);
             this.dgvStat.Name = "dgvStat";
+            this.dgvStat.RowHeadersWidth = 50;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvStat.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvStat.RowTemplate.Height = 23;
             this.dgvStat.Size = new System.Drawing.Size(919, 641);
             this.dgvStat.TabIndex = 172;
             this.dgvStat.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvStat_RowPrePaint);
-            // 
-            // dgvdata
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dgvdata.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvdata.Location = new System.Drawing.Point(0, 0);
-            this.dgvdata.Name = "dgvdata";
-            this.dgvdata.RowHeadersWidth = 35;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvdata.RowTemplate.Height = 23;
-            this.dgvdata.Size = new System.Drawing.Size(919, 641);
-            this.dgvdata.TabIndex = 167;
-            this.dgvdata.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "deptname";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Column1.HeaderText = "科室";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "itemCount";
-            this.Column2.HeaderText = "项目总数";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "acceptCount";
-            this.Column3.HeaderText = "检验报告发放时限符合数";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 170;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "acceptPer";
-            this.Column4.HeaderText = "检验报告发放时限符合率";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 170;
+            this.dgvStat.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvStat_RowStateChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -728,6 +674,62 @@
             this.acceptFlg.HeaderText = "符合";
             this.acceptFlg.Name = "acceptFlg";
             this.acceptFlg.Visible = false;
+            // 
+            // dgvdata
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dgvdata.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvdata.Location = new System.Drawing.Point(0, 0);
+            this.dgvdata.Name = "dgvdata";
+            this.dgvdata.RowHeadersWidth = 35;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvdata.RowTemplate.Height = 23;
+            this.dgvdata.Size = new System.Drawing.Size(919, 641);
+            this.dgvdata.TabIndex = 167;
+            this.dgvdata.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "deptname";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Column1.HeaderText = "科室";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "itemCount";
+            this.Column2.HeaderText = "项目总数";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "acceptCount";
+            this.Column3.HeaderText = "检验报告发放时限符合数";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 170;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "acceptPer";
+            this.Column4.HeaderText = "检验报告发放时限符合率";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 170;
             // 
             // frmSampleAcceptable
             // 

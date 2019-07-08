@@ -176,5 +176,10 @@ namespace com.digitalwave.iCare.gui.HIS
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void dgvStat_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            e.Row.HeaderCell.Value = (e.Row.Index + 1).ToString();  
+        }
     }
 }

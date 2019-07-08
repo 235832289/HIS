@@ -123,175 +123,179 @@ namespace com.digitalwave.iCare.gui.HIS.Reports
             string applyNameStr = string.Empty;
             string applyName = string.Empty;
             DataTable dtLimit = null;
-            string strDept = m_objViewer.DeptIdArr;
-            if (m_objViewer.cboEmergency.Text.Trim() == "急诊项目")
-                enmergencyFlg = "1";
-            else if (m_objViewer.cboEmergency.Text.Trim() == "非急诊项目")
-                enmergencyFlg = "0";
 
-            if (m_objViewer.cboDeptType.Text.Trim() == "住院")
-                patType = "1";
-            else if (m_objViewer.cboDeptType.Text.Trim() == "门诊")
-                patType = "2";
-
-            foreach (var item in dicGroup)
+            try
             {
-                if (item.Value == m_objViewer.cbxGroup.Text)
-                    groupId = item.Key;
-            }
+                string strDept = m_objViewer.DeptIdArr;
+                if (m_objViewer.cboEmergency.Text.Trim() == "急诊项目")
+                    enmergencyFlg = "1";
+                else if (m_objViewer.cboEmergency.Text.Trim() == "非急诊项目")
+                    enmergencyFlg = "0";
 
-            if (m_objViewer.dgvCheckItem.Rows.Count >= 2)
-                groupId = "";
+                if (m_objViewer.cboDeptType.Text.Trim() == "住院")
+                    patType = "1";
+                else if (m_objViewer.cboDeptType.Text.Trim() == "门诊")
+                    patType = "2";
 
-            if (!string.IsNullOrEmpty(groupId))
-            {
-                m_objManage.lngGetAllCheckItem(out dtbResult, groupId);
-                if (dtbResult != null && dtbResult.Rows.Count > 0)
+                foreach (var item in dicGroup)
+                {
+                    if (item.Value == m_objViewer.cbxGroup.Text)
+                        groupId = item.Key;
+                }
+
+                if (m_objViewer.dgvCheckItem.Rows.Count >= 2)
+                    groupId = "";
+
+                m_objManage.lngGetAllLimitTime(out dtLimit);
+
+                if (!string.IsNullOrEmpty(groupId))
+                {
+                    m_objManage.lngGetAllCheckItem(out dtbResult, groupId);
+                    if (dtbResult != null && dtbResult.Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in dtbResult.Rows)
+                        {
+                            applyUnitId = dr["项目编码"].ToString();
+                            applyName = dr["项目名称"].ToString();
+
+                            if (dtLimit != null && dtLimit.Rows.Count > 0)
+                            {
+                                DataRow[] drr = dtLimit.Select("applyunitid = '" + applyUnitId + "'");
+                                if (drr != null && drr.Length > 0)
+                                    applyUnitIdStr += "'" + drr[0]["applyunitid"].ToString() + "',";
+                            }
+                        }
+
+                        if (!string.IsNullOrEmpty(applyUnitIdStr))
+                            applyUnitIdStr = applyUnitIdStr.TrimEnd(',');
+                    }
+
+                    applyUnitIdStr = "(" + applyUnitIdStr.TrimEnd(',') + ")";
+                }
+
+                if (m_objViewer.dgvCheckItem.Rows.Count >= 2)
+                {
+                    applyUnitIdStr = string.Empty;
+
+                    for (int i = 0; i < m_objViewer.dgvCheckItem.Rows.Count - 1; i++)
+                    {
+                        applyUnitId = m_objViewer.dgvCheckItem.Rows[i].Cells[0].Value.ToString();
+                        applyName = m_objViewer.dgvCheckItem.Rows[i].Cells[1].Value.ToString();
+
+                        if (dtLimit != null && dtLimit.Rows.Count > 0)
+                        {
+                            DataRow[] drr = dtLimit.Select("applyunitid = '" + applyUnitId + "'");
+                            if (drr != null && drr.Length > 0)
+                                applyUnitIdStr += "'" + drr[0]["applyunitid"].ToString() + "'," ;
+                        }
+                    }
+
+                    if (!string.IsNullOrEmpty(applyUnitIdStr))
+                        applyUnitIdStr = applyUnitIdStr.TrimEnd(',');
+                }
+
+                clsPublic.PlayAvi("findFILE.avi", "正在查询项目信息，请稍候...");
+
+                long lngRes = m_objManage.lngGetSampleAcceptable(out dtbResult, dteStart, dteEnd, applyUnitIdStr, strDept, enmergencyFlg, patType);
+                int flgKS = 0;
+
+                if (lngRes > 0 && dtbResult.Rows.Count > 0)
                 {
                     foreach (DataRow dr in dtbResult.Rows)
                     {
-                        applyUnitId = dr["项目编码"].ToString();
-                        applyName = dr["项目名称"].ToString();
-                        m_objManage.lngGetLimitTime(out dtLimit, applyUnitId);
-                        if (dtLimit != null && dtLimit.Rows.Count > 0)
+                        flgKS = 0;
+                        decimal listime = Convert.ToDecimal(dr["listime"]);           // 审核-核收（时间）
+                        DateTime? acceptTime = null;
+                        DateTime? confirmTime = null;
+                        decimal energencyLimit = 0;
+
+                        if (dr["accepttime"] != DBNull.Value)
+                            acceptTime = Convert.ToDateTime(dr["acceptTime"]);     //核收时间
+                        if (dr["confirmTime"] != DBNull.Value)
+                            confirmTime = Convert.ToDateTime(dr["confirmTime"]);   //审核时间
+                        if (dr["emergencylimit"] != DBNull.Value)
+                            energencyLimit = Convert.ToDecimal(dr["emergencylimit"].ToString().Trim());
+
+                        for (int i = 0; i < data.Count; i++)
                         {
-                            applyUnitIdStr += "'" + applyUnitId + "',";
+                            if (dr["deptname"].ToString() == data[i].deptName)
+                            {
+                                flgKS = 1;
+
+                                if (listime >= 0)
+                                {
+                                    data[i].itemCount++;
+                                    // 急诊项目
+                                    if (dr["emergency_int"].ToString().Trim() == "1")
+                                    {
+                                        if (energencyLimit >= listime)
+                                            data[i].acceptCount++;
+                                    }
+                                    else     //非急诊
+                                    {
+                                        bool isAccept = IsAccept(dr);
+                                        if (isAccept)
+                                            data[i].acceptCount++;
+
+                                        data[i].acceptPer = Math.Round(((double)data[i].acceptCount / (double)data[i].itemCount) * 100, 2).ToString();
+                                    }
+                                }
+                            }
                         }
-                        else
+
+                        if (flgKS == 0)
                         {
-                            applyNameStr += applyName + ",";
-                        }
-                    }
-                }
-
-                applyUnitIdStr = "(" + applyUnitIdStr.TrimEnd(',') + ")";
-                if (!string.IsNullOrEmpty(applyNameStr))
-                {
-                    applyNameStr = applyNameStr.TrimEnd(',');
-                    MessageBox.Show("请维护：" + applyNameStr + "出报告时间！");
-                }
-            }
-            
-            if (m_objViewer.dgvCheckItem.Rows.Count >= 2)
-            {
-                for (int i = 0; i < m_objViewer.dgvCheckItem.Rows.Count - 1; i++)
-                {
-                    applyUnitId = m_objViewer.dgvCheckItem.Rows[i].Cells[0].Value.ToString();
-                    applyName = m_objViewer.dgvCheckItem.Rows[i].Cells[1].Value.ToString();
-                    m_objManage.lngGetLimitTime(out dtLimit, applyUnitId);
-                    if (dtLimit != null && dtLimit.Rows.Count > 0)
-                    {
-                        applyUnitIdStr += "'" + applyUnitId + "',";
-                    }
-                    else
-                    {
-                        applyNameStr += applyName + ",";
-                    }
-                }
-
-                applyUnitIdStr = "(" + applyUnitIdStr.TrimEnd(',') + ")";
-                if (!string.IsNullOrEmpty(applyNameStr))
-                {
-                    applyNameStr = applyNameStr.TrimEnd(',');
-                    MessageBox.Show("请维护：" + applyNameStr + "出报告时间！");
-                }
-            }
-
-            clsPublic.PlayAvi("findFILE.avi", "正在查询项目信息，请稍候...");
-
-            long lngRes = m_objManage.lngGetSampleAcceptable(out dtbResult, dteStart, dteEnd, groupId,applyUnitIdStr, strDept, enmergencyFlg, patType);
-            int flgKS = 0;
-
-            if (lngRes > 0 && dtbResult.Rows.Count > 0)
-            {
-                foreach (DataRow dr in dtbResult.Rows)
-                {
-                    flgKS = 0;
-                    decimal listime = Convert.ToDecimal(dr["listime"]);           // 审核-核收（时间）
-                    DateTime? acceptTime = null;
-                    DateTime? confirmTime = null;
-                    decimal energencyLimit = 0;
-
-                    if (dr["accepttime"] != DBNull.Value)
-                        acceptTime = Convert.ToDateTime(dr["acceptTime"]);     //核收时间
-                    if (dr["confirmTime"] != DBNull.Value)
-                        confirmTime = Convert.ToDateTime(dr["confirmTime"]);   //审核时间
-                    if (dr["emergencylimit"] != DBNull.Value)
-                        energencyLimit = Convert.ToDecimal(dr["emergencylimit"].ToString().Trim());
-
-                    for (int i = 0; i < data.Count; i++)
-                    {
-                        if (dr["deptname"].ToString() == data[i].deptName)
-                        {
-                            flgKS = 1;
-
+                            EnitySampleAcceptable vo = new EnitySampleAcceptable();
                             if (listime >= 0)
                             {
-                                data[i].itemCount++;
                                 // 急诊项目
                                 if (dr["emergency_int"].ToString().Trim() == "1")
                                 {
                                     if (energencyLimit >= listime)
-                                        data[i].acceptCount++;
+                                        vo.acceptCount++;
                                 }
                                 else     //非急诊
                                 {
                                     bool isAccept = IsAccept(dr);
                                     if (isAccept)
-                                        data[i].acceptCount++;
-                                        
-                                    data[i].acceptPer = Math.Round(((double)data[i].acceptCount / (double)data[i].itemCount) * 100, 2).ToString();
+                                        vo.acceptCount++;
                                 }
+                                vo.deptName = dr["deptname"].ToString();
+                                vo.itemCount = 1;
+                                vo.acceptPer = Math.Round(((double)vo.acceptCount / (double)vo.itemCount) * 100, 2).ToString();
+                                data.Add(vo);
                             }
-                        }
-                    }
-
-                    if (flgKS == 0)
-                    {
-                        EnitySampleAcceptable vo = new EnitySampleAcceptable();
-                        if (listime >= 0)
-                        {
-                            // 急诊项目
-                            if (dr["emergency_int"].ToString().Trim() == "1")
-                            {
-                                if (energencyLimit >= listime)
-                                    vo.acceptCount++;
-                            }
-                            else     //非急诊
-                            {
-                                bool isAccept = IsAccept(dr);
-                                if (isAccept)
-                                    vo.acceptCount++;
-                            }
-                            vo.deptName = dr["deptname"].ToString();
-                            vo.itemCount = 1;
-                            vo.acceptPer = Math.Round(((double)vo.acceptCount / (double)vo.itemCount) * 100, 2).ToString();
-                            data.Add(vo);
                         }
                     }
                 }
-            }
-            else
-            {
-                MessageBox.Show("没有相关数据。");
-            }
-
-            if (data.Count > 0)
-            {
-                EnitySampleAcceptable voSum = new EnitySampleAcceptable();
-                voSum.deptName = "全院合计";
-                for (int i = 0; i < data.Count; i++)
+                else
                 {
-                    voSum.acceptCount += data[i].acceptCount;
-                    voSum.itemCount += data[i].itemCount;
+                    MessageBox.Show("没有相关数据。");
                 }
-                voSum.acceptPer = Math.Round(((double)voSum.acceptCount / (double)voSum.itemCount) * 100, 2).ToString();
-                data.Add(voSum);
+
+                if (data.Count > 0)
+                {
+                    EnitySampleAcceptable voSum = new EnitySampleAcceptable();
+                    voSum.deptName = "全院合计";
+                    for (int i = 0; i < data.Count; i++)
+                    {
+                        voSum.acceptCount += data[i].acceptCount;
+                        voSum.itemCount += data[i].itemCount;
+                    }
+                    voSum.acceptPer = Math.Round(((double)voSum.acceptCount / (double)voSum.itemCount) * 100, 2).ToString();
+                    data.Add(voSum);
+                }
+
+                m_objViewer.dgvdata.DataSource = data;
             }
+            catch (Exception ex)
+            {
 
-            m_objViewer.dgvdata.DataSource = data;
-
-            clsPublic.CloseAvi();
+            }
+            finally
+            {
+                clsPublic.CloseAvi();
+            }
         }
 
         #endregion
@@ -315,113 +319,147 @@ namespace com.digitalwave.iCare.gui.HIS.Reports
             string applyName = string.Empty;
             DataTable dtLimit = null;
             string groupId = string.Empty;
-           
-            string strDept = m_objViewer.DeptIdArr;
-            if (m_objViewer.cboEmergency.Text.Trim() == "急诊项目")
-                enmergencyFlg = "1";
-            else if (m_objViewer.cboEmergency.Text.Trim() == "非急诊项目")
-                enmergencyFlg = "0";
 
-            if (m_objViewer.cboDeptType.Text.Trim() == "住院")
-                patType = "1";
-            else if (m_objViewer.cboDeptType.Text.Trim() == "门诊")
-                patType = "2";
-
-            
-            foreach (var item in dicGroup)
+            try
             {
-                if (item.Value == m_objViewer.cbxGroup.Text)
-                    groupId = item.Key;
-            }
+                string strDept = m_objViewer.DeptIdArr;
+                if (m_objViewer.cboEmergency.Text.Trim() == "急诊项目")
+                    enmergencyFlg = "1";
+                else if (m_objViewer.cboEmergency.Text.Trim() == "非急诊项目")
+                    enmergencyFlg = "0";
 
-            if (m_objViewer.dgvCheckItem.Rows.Count >= 2)
-                groupId = "";
+                if (m_objViewer.cboDeptType.Text.Trim() == "住院")
+                    patType = "1";
+                else if (m_objViewer.cboDeptType.Text.Trim() == "门诊")
+                    patType = "2";
 
-            if (m_objViewer.dgvCheckItem.Rows.Count >= 2)
-            {
-                for (int i = 0; i < m_objViewer.dgvCheckItem.Rows.Count - 1; i++)
+
+                foreach (var item in dicGroup)
                 {
-                    applyUnitId = m_objViewer.dgvCheckItem.Rows[i].Cells[0].Value.ToString();
-                    applyName = m_objViewer.dgvCheckItem.Rows[i].Cells[1].Value.ToString();
-                    m_objManage.lngGetLimitTime(out dtLimit, applyUnitId);
-                    if (dtLimit != null && dtLimit.Rows.Count > 0)
-                    {
-                        applyUnitIdStr += "'" + applyUnitId + "',";
-                    }
-                    else
-                    {
-                        applyNameStr += applyName + ",";
-                    }
+                    if (item.Value == m_objViewer.cbxGroup.Text)
+                        groupId = item.Key;
                 }
 
-                applyUnitIdStr = "(" + applyUnitIdStr.TrimEnd(',') + ")";
-                if (!string.IsNullOrEmpty(applyNameStr))
+                if (m_objViewer.dgvCheckItem.Rows.Count >= 2)
+                    groupId = "";
+
+                m_objManage.lngGetAllLimitTime(out dtLimit);
+
+                if (!string.IsNullOrEmpty(groupId))
                 {
-                    applyNameStr = applyNameStr.TrimEnd(',');
-                    MessageBox.Show("请维护：" + applyNameStr + " 出报告时间！");
-                }
-            }
-
-            clsPublic.PlayAvi("findFILE.avi", "正在查询项目信息，请稍候...");
-
-            long lngRes = m_objManage.lngGetSampleAcceptable(out dtbResult, dteStart, dteEnd,groupId, applyUnitId, strDept, enmergencyFlg, patType);
-
-            if (lngRes > 0 && dtbResult.Rows.Count > 0)
-            {
-                foreach (DataRow dr in dtbResult.Rows)
-                {
-                    decimal listime = Convert.ToDecimal(dr["listime"]);           // 审核-核收（时间）
-                    decimal energencyLimit = 0;
-    
-                    if (dr["emergencylimit"] != DBNull.Value)
-                        energencyLimit = Convert.ToDecimal(dr["emergencylimit"].ToString().Trim());
-    
-                    EntitySamepleDetail vo = new EntitySamepleDetail();
-                    if (listime >= 0)
+                    m_objManage.lngGetAllCheckItem(out dtbResult, groupId);
+                    if (dtbResult != null && dtbResult.Rows.Count > 0)
                     {
+                        foreach (DataRow dr in dtbResult.Rows)
+                        {
+                            applyUnitId = dr["项目编码"].ToString();
+                            applyName = dr["项目名称"].ToString();
+
+                            if (dtLimit != null && dtLimit.Rows.Count > 0)
+                            {
+                                DataRow[] drr = dtLimit.Select("applyunitid = '" + applyUnitId + "'");
+                                if(drr != null && drr.Length > 0)
+                                    applyUnitIdStr += "'" + drr[0]["applyunitid"].ToString() + "',";
+                            }
+                        }
+
+                        if (!string.IsNullOrEmpty(applyUnitIdStr))
+                            applyUnitIdStr = applyUnitIdStr.TrimEnd(',');
+                    }
+
+                    applyUnitIdStr = "(" + applyUnitIdStr.TrimEnd(',') + ")";
+                }
+
+                if (m_objViewer.dgvCheckItem.Rows.Count >= 2)
+                {
+                    applyUnitIdStr = string.Empty;
+
+                    for (int i = 0; i < m_objViewer.dgvCheckItem.Rows.Count - 1; i++)
+                    {
+                        applyUnitId = m_objViewer.dgvCheckItem.Rows[i].Cells[0].Value.ToString();
+                        applyName = m_objViewer.dgvCheckItem.Rows[i].Cells[1].Value.ToString();
+
+                        if (dtLimit != null && dtLimit.Rows.Count > 0)
+                        {
+                            DataRow[] drr = dtLimit.Select("applyunitid = '" + applyUnitId + "'");
+                            if (drr != null && drr.Length > 0)
+                                applyUnitIdStr += "'" + drr[0]["applyunitid"].ToString() + "',";
+                        }
+                    }
+
+                    if (!string.IsNullOrEmpty(applyUnitIdStr))
+                        applyUnitIdStr = applyUnitIdStr.TrimEnd(',');
+                }
+
+                clsPublic.PlayAvi("findFILE.avi", "正在查询项目信息，请稍候...");
+
+                long lngRes = m_objManage.lngGetSampleAcceptable(out dtbResult, dteStart, dteEnd, applyUnitIdStr, strDept, enmergencyFlg, patType);
+
+                if (lngRes > 0 && dtbResult.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dtbResult.Rows)
+                    {
+                        decimal listime = Convert.ToDecimal(dr["listime"]);           // 审核-核收（时间）
+                        decimal energencyLimit = 0;
+
+                        if (dr["emergencylimit"] != DBNull.Value)
+                            energencyLimit = Convert.ToDecimal(dr["emergencylimit"].ToString().Trim());
+
+                        EntitySamepleDetail vo = new EntitySamepleDetail();
                         if (listime >= 0)
                         {
-                            vo.acceptFlg = "F";
-                            // 急诊项目
-                            if (dr["emergency_int"].ToString().Trim() == "1")
+                            if (listime >= 0)
                             {
-                                if (energencyLimit >= listime)
-                                    vo.acceptFlg = "T";
+                                vo.acceptFlg = "F";
+                                // 急诊项目
+                                if (dr["emergency_int"].ToString().Trim() == "1")
+                                {
+                                    if (energencyLimit >= listime)
+                                        vo.acceptFlg = "T";
+                                }
+                                else     //非急诊
+                                {
+                                    bool isAccept = IsAccept(dr);
+
+                                    if (isAccept)
+                                        vo.acceptFlg = "T";
+                                }
+
+                                vo.HZXM = dr["HZXM"].ToString();
+                                vo.DEPTNAME = dr["DEPTNAME"].ToString();
+
+                                vo.BARCODE = dr["BARCODE"].ToString();
+                                vo.CARDNO = string.IsNullOrEmpty(dr["CARDNO"].ToString()) ? dr["patInNo"].ToString() : dr["CARDNO"].ToString();
+                                vo.ApplyTime = dr["applyTime"].ToString();
+                                vo.AcceptTime = dr["accepttime"].ToString();
+                                vo.HsWeek = calWeek(Convert.ToDateTime(vo.AcceptTime));
+                                vo.ConfirmTime = dr["confirmtime"].ToString();
+                                vo.Checker = dr["lastname_vchr"].ToString();
+                                vo.item = dr["checkContent"].ToString();
+                                if (dr["lisTime"] != DBNull.Value)
+                                    vo.lisTime = Convert.ToDecimal(dr["lisTime"]) > 0 ? Convert.ToDecimal(dr["lisTime"]) : 0;
+
+                                data.Add(vo);
                             }
-                            else     //非急诊
-                            {
-                                bool isAccept = IsAccept(dr);
-
-                                if (isAccept)
-                                    vo.acceptFlg = "T";
-                            }
-
-                            vo.HZXM = dr["HZXM"].ToString();
-                            vo.DEPTNAME = dr["DEPTNAME"].ToString();
-                            
-                            vo.BARCODE = dr["BARCODE"].ToString();
-                            vo.CARDNO = string.IsNullOrEmpty(dr["CARDNO"].ToString()) ? dr["patInNo"].ToString() : dr["CARDNO"].ToString();
-                            vo.ApplyTime = dr["applyTime"].ToString();
-                            vo.AcceptTime = dr["accepttime"].ToString();
-                            vo.HsWeek = calWeek(Convert.ToDateTime(vo.AcceptTime));
-                            vo.ConfirmTime = dr["confirmtime"].ToString();
-                            vo.Checker = dr["lastname_vchr"].ToString();
-                            vo.item = dr["checkContent"].ToString();
-                            if (dr["lisTime"] != DBNull.Value)
-                                vo.lisTime = Convert.ToDecimal(dr["lisTime"]) > 0 ? Convert.ToDecimal(dr["lisTime"]) : 0;
-
-                            data.Add(vo);
                         }
                     }
                 }
-            }
-            else
-            {
-                MessageBox.Show("没有相关数据。");
-            }
+                else
+                {
+                    MessageBox.Show("没有相关数据。");
+                }
 
-            m_objViewer.dgvStat.DataSource = data;
-            clsPublic.CloseAvi();
+                m_objViewer.dgvStat.DataSource = data;
+
+            }
+            catch (Exception ex)
+            {
+                
+            }
+            finally
+            {
+                clsPublic.CloseAvi();
+            }
         }
         #endregion
 

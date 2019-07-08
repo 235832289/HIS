@@ -25,11 +25,11 @@ namespace com.digitalwave.iCare.gui.HIS.Reports
         /// <param name="strDept"></param>
         /// <param name="enmergencyFlg"></param>
         /// <returns></returns>
-        public long lngGetSampleAcceptable(out DataTable dtbResult, string dteStart, string dteEnd, string groupId, string applyUnitId, string strDept, string enmergencyFlg, string patType)
+        public long lngGetSampleAcceptable(out DataTable dtbResult, string dteStart, string dteEnd,  string applyUnitId, string strDept, string enmergencyFlg, string patType)
         {
             using (clsHISReportZy_Supported_Svc svc = (clsHISReportZy_Supported_Svc)com.digitalwave.iCare.common.clsObjectGenerator.objCreatorObjectByType(typeof(clsHISReportZy_Supported_Svc)))
             {
-                return svc.GetSampleAcceptable(out dtbResult, dteStart, dteEnd, groupId,applyUnitId, strDept, enmergencyFlg, patType);
+                return svc.GetSampleAcceptable(out dtbResult, dteStart, dteEnd,applyUnitId, strDept, enmergencyFlg, patType);
             }
         }
         #endregion
@@ -57,11 +57,11 @@ namespace com.digitalwave.iCare.gui.HIS.Reports
         /// <param name="dtbResult"></param>
         /// <param name="applyunitid"></param>
         /// <returns></returns>
-        public long lngGetLimitTime(out DataTable dtbResult, string applyunitid)
+        public long lngGetAllLimitTime(out DataTable dtbResult)
         {
             using (clsHISReportZy_Supported_Svc svc = (clsHISReportZy_Supported_Svc)com.digitalwave.iCare.common.clsObjectGenerator.objCreatorObjectByType(typeof(clsHISReportZy_Supported_Svc)))
             {
-                return svc.GetLimitTime(out dtbResult, applyunitid);
+                return svc.GetAllLimitTime(out dtbResult);
             }
         }
 
