@@ -220,9 +220,6 @@ namespace com.digitalwave.iCare.gui.HIS
                         {
                             DataRow[] drr = dtbResult.Select("deptname = '" + data[i].deptName + "'");
 
-                            if (data[i].deptName == "神经外科")
-                                groupId = "";
-
                             if (drr.Length > 0)
                             {
                                 data[i].BBS = drr.Length;

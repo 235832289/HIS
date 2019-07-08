@@ -1213,6 +1213,7 @@ namespace iCare
         private enmReturnValue m_blnPrintOneRowValueCS(System.Drawing.Printing.PrintPageEventArgs e)
         {
             string strTemp;
+            string strNewDate = string.Empty;
             CharacterRange[] rgnDSTArr = new CharacterRange[1];
             rgnDSTArr[0] = new CharacterRange(0, 0);
             RectangleF rtfText = new RectangleF(0, 0, 10000, 100);
@@ -1236,7 +1237,11 @@ namespace iCare
             strTemp = m_strConvertObjectValue(objDataArr[m_intCurrentContentRow][intTempColumn]);
             if (strTemp.Trim().Length != 0)
             {
-                e.Graphics.DrawString(strTemp, m_fotTinyFont, Brushes.Black, m_intPosX + 3, m_intPosY + 15);
+                strNewDate = strTemp.Substring(0, 7);
+                e.Graphics.DrawString(strNewDate, m_fotTinyFont, Brushes.Black, m_intPosX + 3, m_intPosY + 3);
+                strNewDate = strTemp.Substring(7,3);
+                e.Graphics.DrawString(strNewDate, m_fotTinyFont, Brushes.Black, m_intPosX + 18, m_intPosY + 15);
+                //e.Graphics.DrawString(strNewDate, m_fotTinyFont, Brushes.Black, m_intPosX + 3, m_intPosY + 13);
                 strTempDate = strTemp;
             }
             //换行时第一行的日期不能省去,前数值不为空，现数值为空，且处于第一行
