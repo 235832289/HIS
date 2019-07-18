@@ -1,0 +1,10 @@
+D:\iCare_cs\code\Bin\Debug\Pylon.dll
+D:\iCare_cs\code\Bin\Debug\Pylon.pdb
+D:\iCare_cs\code\HIS\GUI\Pylon\obj\Debug\ResolveAssemblyReference.cache
+D:\iCare_cs\code\HIS\GUI\Pylon\obj\Debug\Pylon.dll
+D:\iCare_cs\code\HIS\GUI\Pylon\obj\Debug\Pylon.pdb
+D:\icare\iCare_cs\code\Bin\Debug\Pylon.dll
+D:\icare\iCare_cs\code\Bin\Debug\Pylon.pdb
+D:\icare\iCare_cs\code\LIS\LIS_Interface\Pylon\obj\Debug\ResolveAssemblyReference.cache
+D:\icare\iCare_cs\code\LIS\LIS_Interface\Pylon\obj\Debug\Pylon.dll
+D:\icare\iCare_cs\code\LIS\LIS_Interface\Pylon\obj\Debug\Pylon.pdb

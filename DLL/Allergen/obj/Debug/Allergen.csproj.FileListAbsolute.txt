@@ -1,0 +1,10 @@
+D:\icare\iCare_cs\code\Bin\Debug\Allergen.dll
+D:\icare\iCare_cs\code\Bin\Debug\Allergen.pdb
+D:\icare\iCare_cs\code\LIS\LIS_Interface\Allergen\obj\Debug\ResolveAssemblyReference.cache
+D:\icare\iCare_cs\code\LIS\LIS_Interface\Allergen\obj\Debug\Allergen.dll
+D:\icare\iCare_cs\code\LIS\LIS_Interface\Allergen\obj\Debug\Allergen.pdb
+D:\iCare_cs\code\Bin\Debug\Allergen.dll
+D:\iCare_cs\code\Bin\Debug\Allergen.pdb
+D:\iCare_cs\code\HIS\DLL\Allergen\obj\Debug\ResolveAssemblyReference.cache
+D:\iCare_cs\code\HIS\DLL\Allergen\obj\Debug\Allergen.dll
+D:\iCare_cs\code\HIS\DLL\Allergen\obj\Debug\Allergen.pdb
