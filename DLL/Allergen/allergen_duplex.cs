@@ -63,6 +63,7 @@ namespace Allergen
         /// </summary>
         string FilePath { get; set; }
 
+
         System.Windows.Forms.Timer timer;
 
 
@@ -204,7 +205,7 @@ namespace Allergen
                 foreach (FileInfo file in files)
                 {
 
-                    if (file.FullName.Contains(".md5"))
+                    if (!file.FullName.Contains(".xml"))
                     {
                         continue;
                     }
@@ -213,7 +214,7 @@ namespace Allergen
                     {
                         continue;
                     }
-                   
+
                     XmlDocument document = new XmlDocument();
                     document.Load(file.FullName);
                     XmlNodeList nodeList = document.SelectNodes(@"Analysis/Container");
@@ -225,6 +226,8 @@ namespace Allergen
                         {
                             vo = new clsLIS_Device_Test_ResultVO();
                             vo.strDevice_Sample_ID = node["Strip"]["Sample"]["Sample_ID"].InnerText.ToString();
+                            if (string.IsNullOrEmpty(vo.strDevice_Sample_ID))
+                                continue;
                             vo.strCheck_Date = checkDate;
 
                             #region
@@ -306,6 +309,8 @@ namespace Allergen
                     }
                 }
                 #endregion
+
+                
             }
             catch (Exception ex)
             {
